@@ -1,70 +1,96 @@
 @use "global" as *;
 
 /* カード型レイアウト */
-.c-card {
-    display: flex;
-    justify-content: space-between;
-    background: rgba(248, 248, 248, 0.80);
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+.cards {
+    text-align: left;
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    display: grid;
+    gap: rem(40) 3.333%;
+    grid-template-columns: 1fr 1fr 1fr;
 
     @include mq('md') {
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include mq('sm') {
+        grid-template-columns: 1fr;
     }
 }
 
-.c-card__img-wrapper {
+.card {
+    background-color: $white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 9.06%;
+    padding-right: 9.06%;
+
+    @include mq('md') {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+.card__img-wrapper {
     width: 100%;
     height: auto;
+    padding-top: rem(15);
     overflow: hidden;
-    flex-shrink: 0;
-    max-width: rem(346);
-
-    @include mq(md) {
-        max-width: 100%;
-    }
 
 }
 
-.c-card__img-wrapper img {
-    aspect-ratio: 346/211;
+.card__img-wrapper img {
+    aspect-ratio: 360/240;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease 0s;
+}
+
+.card:hover .card__img-wrapper img {
+    transform: scale(1.2);
+}
+
+.card__body {
+    padding-top: rem(16);
+    padding-bottom: rem(27);
 
     @include mq('md') {
-        aspect-ratio: 320/221;
+        padding-bottom: rem(20);
     }
 }
 
-.c-card__body {
-    padding: rem(32) rem(40);
-    height: 100%;
+.card__category {
+    color: $white;
+    background-color: black;
+    border-radius: rem(20);
+    padding: rem(7) rem(20);
 
     @include mq('md') {
-        padding: rem(24) rem(20);
+        padding: rem(5) rem(20);
     }
 }
 
-.c-card__time {
-    font-size: rem(15);
-    letter-spacing: .6px;
-
-    @include mq(md) {}
-}
-
-.c-card__text {
-    font-size: rem(18);
-    font-weight: 600;
-    margin-top: rem(16);
+.card__text {
+    font-weight: 700;
+    font-size: rem(14);
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-top: rem(5);
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
 
-    @include mq(md) {
-        line-height: 1.6;
-        font-weight: 300;
-        font-size: rem(15);
-        margin-top: rem(13);
-    }
+.card__time {
+    display: block;
+    font-size: rem(16);
+    margin-top: rem(20);
 }

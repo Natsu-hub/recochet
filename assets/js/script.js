@@ -247,6 +247,46 @@ function animation() {
 
 /***/ }),
 
+/***/ "./js/_checkbox.js":
+/*!*************************!*\
+  !*** ./js/_checkbox.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "checkbox": () => (/* binding */ checkbox)
+/* harmony export */ });
+function checkbox() {
+  document.addEventListener('DOMContentLoaded', function () {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"][name="category"]');
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener('change', function () {
+        // 他のすべてのチェックボックスを未選択にする
+        checkboxes.forEach(function (otherCheckbox) {
+          if (otherCheckbox !== checkbox) {
+            otherCheckbox.checked = false;
+          }
+        });
+
+        // 選択されたチェックボックスに基づいて遷移
+        if (checkbox.checked) {
+          switch (checkbox.value) {
+            case 'A':
+              window.location.href = '/document_type/useful'; // カテゴリーAのページに遷移
+              break;
+            case 'B':
+              window.location.href = '/document_type/service'; // カテゴリーBのページに遷移
+              break;
+          }
+        }
+      });
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./js/_common.js":
 /*!***********************!*\
   !*** ./js/_common.js ***!
@@ -12438,6 +12478,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _textScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_textScroll */ "./js/_textScroll.js");
 /* harmony import */ var _textHover__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_textHover */ "./js/_textHover.js");
 /* harmony import */ var _img__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_img */ "./js/_img.js");
+/* harmony import */ var _checkbox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_checkbox */ "./js/_checkbox.js");
 
 
 
@@ -12446,6 +12487,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+(0,_checkbox__WEBPACK_IMPORTED_MODULE_8__.checkbox)();
 (0,_img__WEBPACK_IMPORTED_MODULE_7__.img)();
 (0,_textHover__WEBPACK_IMPORTED_MODULE_6__.textHover)();
 (0,_textScroll__WEBPACK_IMPORTED_MODULE_5__.textScroll)();

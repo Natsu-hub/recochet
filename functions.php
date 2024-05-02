@@ -51,6 +51,28 @@ function my_script_init()
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
+
+  //カスタム投稿のパーマリンク
+  add_filter('post_type_link', 'custom_post_link', 1, 2);
+  function custom_post_link($link, $post) {
+	if($post -> post_type === 'document') {
+	  // カスタム投稿名が"document"の投稿のパーマリンクを「/document/投稿ID/」の形に書き換え
+	  return home_url('/document/'.$post->ID);
+	} else {
+	  return $link;
+	}
+  }
+  
+  //書き換えたパーマリンクに対応したリライトルールを追加
+  add_filter('rewrite_rules_array', 'custom_post_link_rewrite');
+  function custom_post_link_rewrite($rules) {
+	$rewrite_rules = array(
+	  'document/([0-9]+)/?$' => 'index.php?post_type=document&p=$matches[1]',
+	);
+	return $rewrite_rules + $rules;
+  }
+
+
 //管理画面の投稿名を変更
 function Change_menulabel() {
 	global $menu;
@@ -166,10 +188,13 @@ function SearchFilter( $query ) {
   add_action( 'wp_footer', 'add_origin_thanks_page' );
   function add_origin_thanks_page() {
   $thanks = home_url('/contact-thanks/');
+  $usefulThanks = home_url('/useful-thanks/');
+  $serviceThanks = home_url('/service-thanks/');
 	echo <<< EOC
 	  <script>
 		var thanksPage = {
-		  281: '{$thanks}',
+		  281: '{$usefulThanks}',
+		  734: '{$serviceThanks}',
 		};
 	  document.addEventListener( 'wpcf7mailsent', function( event ) {
 		location = thanksPage[event.detail.contactFormId];

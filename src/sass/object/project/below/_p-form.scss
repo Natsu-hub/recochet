@@ -1,253 +1,234 @@
 @use "global" as *;
 
-.cf7__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-}
-
-.cf7__list dt:nth-of-type(n + 2),
-.cf7__list dd:nth-of-type(n + 2) {
-    margin-top: rem(41);
-}
-
-.cf7__list dt {
-    width: 33%;
-    padding-top: rem(15);
-    font-size: rem(18);
-    font-weight: 600;
-    letter-spacing: .54px;
-}
-
-.cf7__list dd {
-    width: 67%;
-}
-
-/* 必須・任意 */
-.cf7__required,
-.cf7__optional {
-    margin-right: rem(22);
-    padding: rem(6) rem(17);
-    color: #fff;
-    font-size: rem(15);
-    vertical-align: 1px;
-    font-weight: 600;
-}
-
-.cf7__required {
-    background: #8E1616;
-}
-
-.cf7__optional {
-    background: #878787;
-}
-
-/* input・textarea */
-.cf7__list dd input[type="text"],
-.cf7__list dd input[type="tel"],
-.cf7__list dd input[type="email"],
-.cf7__list dd textarea {
-    width: 100%;
-    padding: rem(15) rem(20);
-    background: #E1E1E1;
-
-    @include mq(md) {
-        padding: rem(10) rem(20);
-    }
-}
-
-.cf7__list dd textarea {
-    height: rem(322);
-
-    @include mq(md) {
-        height: rem(153);
-    }
-}
-
-/* ドロップダウンメニュー */
-.cf7__select {
-    position: relative;
-}
-
-.cf7__select:before {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    z-index: 10;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: rem(8) solid #000;
-    border-right: rem(6) solid transparent;
-    border-left: rem(6) solid transparent;
-    pointer-events: none;
-    content: '';
-}
-
-.cf7__select select {
-    width: 100%;
-    padding: rem(13) rem(20);
-    background: #E1E1E1;
-    color: #333333;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-size: rem(18);
-    letter-spacing: .54px;
-
-    @include mq(md) {
-        padding: rem(8) rem(20);
-    }
-}
-
-/* チェックボックス・ラジオボタン */
-.cf7__list dd .wpcf7-checkbox,
-.cf7__list dd .wpcf7-radio {
-    display: block;
-    padding: rem(15) 0 rem(10);
-}
-
-/* 縦並び（チェックボックス・ラジオボタン） */
-.cf7__list dd .wpcf7-list-item {
-    display: block;
+/*==================================================================
+# 共通
+================================================================== */
+input[type="text"],
+input[type="email"],
+textarea {
     margin: 0;
-}
-
-.cf7__list dd .wpcf7-list-item:nth-child(n + 2) {
-    margin-top: rem(18);
-}
-
-/* マウスカーソル（チェックボックス・ラジオボタン） */
-.cf7__list dd .wpcf7-list-item label {
-    cursor: pointer;
-}
-
-/* チェックボックス・ラジオボタン */
-input[type="checkbox"],
-input[type="radio"] {
-    position: relative;
-    width: rem(18);
-    height: rem(18);
-    margin-right: rem(8);
-    border: 1px solid #bcbcbc;
-    vertical-align: rem(-3);
-    cursor: pointer;
+    padding: 0;
+    background: none;
+    background-image: none;
+    border-style: none;
+    border: none;
+    outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    color: inherit;
+    font-family: inherit;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-size: rem(16);
+    padding: rem(10) rem(16);
+    line-height: 1;
+    width: 100%;
+    // outline: 1px solid black;
+
+    &:focus {
+        border: 2px solid $black;
+    }
 }
 
-/* チェックボックス */
-input[type="checkbox"]:checked {
-    border: 1px solid #000;
-    background: #000;
+input::placeholder,
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="checkbox"]:checked:before {
-    position: absolute;
-    top: rem(2);
-    left: rem(5);
-    transform: rotate(50deg);
-    width: rem(6);
-    height: rem(10);
-    border-right: rem(2) solid #fff;
-    border-bottom: rem(2) solid #fff;
-    content: '';
+.form {
+    width: 60%;
+    margin-inline: auto;
+    font-weight: 500;
+
+    @include mq('md') {
+        width: 100%;
+    }
 }
 
-/* ラジオボタン */
-input[type="radio"] {
-    border-radius: 50%;
+.form__item:not(:first-child) {
+    margin-top: rem(24);
 }
 
-input[type="radio"]:checked:before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: rem(9);
-    height: rem(9);
-    border-radius: 50%;
-    background: #000;
-    content: '';
+.form__items {
+    margin-top: rem(45);
 }
 
-/* プレースホルダー */
-/* Google Chrome / Safari / Mozilla Firefox / Opera */
-.cf7__list dd input[type="text"]::placeholder,
-.cf7__list dd input[type="tel"]::placeholder,
-.cf7__list dd input[type="email"]::placeholder,
-.cf7__list dd textarea::placeholder {
-    color: #a5a5a5;
+.form__item dt {
+    padding: rem(8) rem(16);
 }
 
-/* Microsoft Edge */
-.cf7__list dd input[type="text"]::-ms-input-placeholder,
-.cf7__list dd input[type="tel"]::-ms-input-placeholder,
-.cf7__list dd input[type="email"]::-ms-input-placeholder,
-.cf7__list dd textarea::-ms-input-placeholder {
-    color: #a5a5a5;
+.form__item dd {
+    font-size: rem(16);
+    // flex: 0 1 100%;
+    // display: flex;
+    // align-items: center;
 }
 
-/* Internet Explorer */
-.cf7__list dd input[type="text"]:-ms-input-placeholder,
-.cf7__list dd input[type="tel"]:-ms-input-placeholder,
-.cf7__list dd input[type="email"]:-ms-input-placeholder,
-.cf7__list dd textarea:-ms-input-placeholder {
-    color: #a5a5a5;
+textarea {
+    height: rem(228);
 }
 
-/* 送信ボタン */
-.cf7__button {
+.form__item-inline {
+    display: inline-block;
+    vertical-align: middle;
+    color: red;
+    font-size: rem(14);
+    margin-left: rem(24);
+}
+
+.form__item-inline.form__item-inline--check {
+    @include mq('md') {
+        margin-left: 0;
+    }
+}
+
+//submit
+
+.form__submit {
+    margin-top: rem(75);
+    // width: rem(280);
+    // max-width: 100%;
+    margin-inline: auto;
+
+    @include mq("md") {
+        margin-top: rem(42);
+    }
+}
+
+.form__submit p {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+[type=submit] {
+    height: 100%;
+    width: 100%;
+}
+
+//checkbox
+.form__label {
+    position: relative;
+}
+
+.form__check {
+    margin-top: rem(25);
     text-align: center;
 }
 
-.wpcf7-spinner {
-    display: none !important;
+.form__check input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
 }
 
-input[type="submit"] {
-    width: rem(311);
-    height: rem(60);
-    height: rem(76);
-    background: #151F37;
-    color: #fff;
-    transition: opacity .6s;
+.form__check-text {
+    @include mq('md') {
+        margin-top: rem(30);
+        display: block;
+    }
 }
 
-input[type="submit"]:hover {
-    opacity: .6;
+.form__item .form__check {
+    margin-top: 0;
 }
 
-/* ajax-loader */
-.wpcf7-spinner {
+[type="checkbox"]+span {
+    padding-left: rem(32);
+    display: inline-block;
+    position: relative;
     vertical-align: middle;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $white;
+        width: rem(24);
+        height: rem(24);
+        border: 1px solid $black;
+
+        @include mq('md') {
+            top: 40%;
+        }
+
+        @include mq('sm') {
+            top: 20%;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-@include mq(md) {
-    .cf7__list dt {
+[type="checkbox"]:checked+span::after {
+    content: "";
+    display: block;
+    height: rem(14);
+    width: rem(24);
+    border-bottom: rem(4) solid $black;
+    border-left: rem(4) solid $black;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.form__check a {
+    border-bottom: 1px solid $black;
+}
+
+.form__item-inline--check {
+    @include mq('sm') {
+        text-align: left;
+        margin-top: rem(10);
+        display: block;
+    }
+}
+
+.form__check {
+    font-size: rem(14);
+
+    @include mq('sm') {
+        width: fit-content;
+    }
+}
+
+//contact-form7
+span.wpcf7-spinner {
+    display: none;
+}
+
+.wpcf7-form.invalid .wpcf7-response-output {
+    // display: none;
+}
+
+.wpcf7-form.sent .wpcf7-response-output {
+    // display: none;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.contact__grecaptcha {
+    margin-top: rem(60);
+    width: 60%;
+    margin-inline: auto;
+
+    @include mq('md') {
+        margin-top: rem(40);
         width: 100%;
-        margin-bottom: rem(15);
-        padding-top: 0;
     }
+}
 
-    .cf7__list dd {
-        width: 100%;
-    }
-
-    .cf7__list dd:nth-of-type(n + 2) {
-        margin-top: 0;
-    }
-
-    .cf7__list dd .wpcf7-checkbox,
-    .cf7__list dd .wpcf7-radio {
-        padding: rem(15) 0 0;
-    }
-
-    /* 送信ボタン */
-    input[type="submit"] {
-        width: rem(180);
-        height: rem(56);
-    }
-
+.contact__grecaptcha a {
+    border-bottom: 1px solid $black;
 }

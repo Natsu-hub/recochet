@@ -12,8 +12,8 @@
 
 .p-archive-blog__cards {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: rem(32) 0px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(32) rem(20);
 
   @include mq('md') {
     gap: rem(24) 0;

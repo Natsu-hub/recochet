@@ -6,7 +6,9 @@ import { wipeAnimation } from "./_wipeAnimation";
 import { textScroll } from "./_textScroll";
 import { textHover } from "./_textHover";
 import { img } from "./_img";
+import { checkbox } from "./_checkbox";
 
+checkbox();
 img();
 textHover();
 textScroll();
