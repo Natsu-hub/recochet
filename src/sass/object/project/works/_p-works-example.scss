@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.p-works-example {
+    background: url(../images/below/works_bg01.png) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    color: $white03;
+}
+
+.p-works-example__title-wrap {
+    text-align: center;
+    @include mq(md) {
+        white-space: nowrap;
+    }
+}
+
+.p-works-example__lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30) rem(30);
+    margin-top: rem(108);
+
+    @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(sm) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(16);
+        margin-top: rem(48);
+    }
+}
+
+.p-works-example__item {
+    position: relative;
+    height: 100%;
+    background-color: $white03;
+}
+
+.p-works-example__item-img {
+    width: 100%;
+}
+
+.p-works-example__item-img img {
+    width: 100%;
+    aspect-ratio: 420/240;
+    object-fit: cover;
+
+    @include mq(md) {
+        aspect-ratio: 320/182;
+    }
+}
+
+.p-works-example__item-category {
+    padding: rem(11) rem(30);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: rem(15);
+    color: $white03;
+    background-color: $black04;
+
+    @include mq(md) {
+        padding: rem(8) rem(26);
+        font-size: rem(12);
+    }
+}
+
+.p-works-example__item-content {
+    color: $black;
+    padding-block: rem(40);
+    padding-inline: rem(10);
+    text-align: center;
+
+    @include mq(md) {
+        padding-block: rem(15);
+    }
+}
+
+.p-works-example__item-title {
+    font-size: rem(18);
+    font-weight: 500;
+    letter-spacing: .18px;
+
+    @include mq(md) {
+        font-size: rem(15);
+        letter-spacing: .15px;
+    }
+}
+
+.p-works-example__text {
+    margin-top: rem(56);
+    text-align: right;
+    font-size: rem(18);
+    display: block;
+
+    @include mq(md) {
+        margin-top: rem(16);
+        font-size: rem(15);
+        text-align: left;
+    }
+}

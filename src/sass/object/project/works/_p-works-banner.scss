@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-works-banner {
+    position: relative;
+    min-height: rem(456);
+
+    @include mq(md) {}
+}
+
+.p-works-banner__inner {
+    height: inherit;
+    min-height: inherit;
+}
+
+.p-works-banner__logo {
+    max-width: rem(456);
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    @include mq(md) {
+        max-width: rem(400);
+        height: auto;
+    }
+
+    @include mq('sm') {
+        max-width: 66.4%;
+    }
+}
+
+.p-works-banner__logo img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.p-works-banner__btn {
+    right: calc(50% - min(50vw, #{rem(720)}));
+    position: absolute;
+    z-index: 2;
+    bottom: rem(35);
+    color: $white04;
+    width: rem(252);
+    max-width: 100%;
+    height: rem(45);
+    margin-right: rem(60);
+
+    @include mq(md) {
+        right: auto;
+        margin-left: rem(28);
+        margin-right: auto;
+    }
+}
+.p-works-banner__img,
+.p-works-banner__img img {
+    height: inherit;
+    min-height: inherit;
+}
+
+.p-works-banner__img img {
+    width: 100%;
+    object-fit: cover;
+}
