@@ -58,10 +58,10 @@ get_header();
     if ($terms && !is_wp_error($terms)) {
         foreach ($terms as $term) {
             if ($term->slug == 'useful') {
-                echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ"]');
+                echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ_useful"]');
                 break;
             } elseif ($term->slug == 'service') {
-                echo do_shortcode('[contact-form-7 id="734" title="お問い合わせ"]');
+                echo do_shortcode('[contact-form-7 id="734" title="お問い合わせ_service"]');
                 break;
             }
         }

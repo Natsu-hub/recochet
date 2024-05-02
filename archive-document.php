@@ -21,13 +21,8 @@ get_header();
 <!-- archive-info -->
 <section class="p-archive-blog l-section--below">
 <div class="p-archive-blog__inner l-inner--small">
-<!-- <div class="p-form__check">
-                  <label class="p-form__label form__label--check"
-                    ><input type="checkbox" value="同意する" />
-                    <span>個人情報の取り扱いに同意する</span>
-                      </label>
-                </div> -->
-<label class="custom-checkbox">
+
+<!-- <label class="custom-checkbox">
     <input type="checkbox" id="categoryA" name="category" value="A">
     <span class="checkbox-label">カテゴリーA</span>
 </label>
@@ -35,7 +30,26 @@ get_header();
 <label class="custom-checkbox">
     <input type="checkbox" id="categoryB" name="category" value="B">
     <span class="checkbox-label">カテゴリーB</span>
-</label>
+</label> -->
+
+<div class="works__tabs">
+    <?php
+    $terms = get_terms(array(
+        'taxonomy' => 'document_type',
+        'hide_empty' => false,
+    ));
+
+    if (!empty($terms) && !is_wp_error($terms)) {
+        foreach ($terms as $term) {
+            echo '<label class="custom-checkbox">';
+            echo '<input type="checkbox" id="category' . $term->slug . '" name="category" value="' . $term->slug . '">';
+            echo '<span class="checkbox-label">' . $term->name . '</span>';
+            echo '</label><br>';
+        }
+    }
+    ?>
+</div>
+
 
 <div class="works__tabs">
 		<?php
