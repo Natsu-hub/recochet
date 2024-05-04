@@ -53,22 +53,47 @@ get_header();
 			<?php endif; ?>
   </article>
   <div class="contact-form">
-
+	<!-- カテゴリー別にフォームを出し分ける場合 -->
+    <?php
+    $terms = get_the_terms($post->ID, 'document_type');
+    if ($terms && !is_wp_error($terms)) {
+        foreach ($terms as $term) {
+            if ($term->slug == 'useful') {
+                echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ_useful"]');
+                break;
+            } elseif ($term->slug == 'service') {
+                echo do_shortcode('[contact-form-7 id="734" title="お問い合わせ_service"]');
+                break;
+            }
+        }
+    }
+    ?>
+	<!-- ACFにフォームダウンロードのURLを入れる場合 -->
+	<?php
+$terms = get_the_terms($post->ID, 'document_type');
+$download_link = get_post_meta($post->ID, 'download_link', true); // カスタムフィールドの値を取得
+if ($terms && !is_wp_error($terms)) {
+    foreach ($terms as $term) {
+        echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ" download_link="' . esc_url($download_link) . '"]');
+        break;
+    }
+}
+?>
 <!-- カテゴリーで分ける必要がない場合 -->
 <?php
 $download_link = get_post_meta($post->ID, 'download_link', true); // カスタムフィールドからダウンロードリンクを取得
 // ここに var_dump を記述して値を確認
 var_dump($download_link);
-echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_useful" download_link="' . esc_url($download_link) . '"]');
+echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ_useful" download_link="' . esc_url($download_link) . '"]');
 ?>
 
 <!-- 直接開く -->
 <a href="<?php echo esc_url(get_field('download_link')); ?>" download>
-直接開くダウンロード
+	ダウンロード
 </a>
 <!-- 別タブで開いてから自分でダウンロード zipファイルはそのままダウンロードになる -->
 <a href="<?php echo esc_url(get_field('download_link')); ?>" target="_blank" rel="noopener noreferrer">
-別タブでファイルを開く
+	ファイルを開く
 </a>
 
 </div>

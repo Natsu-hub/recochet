@@ -26,7 +26,7 @@ $page_slug = $post->post_name;
  <section class="p-contact l-section--below" id="contact">
       <div class="p-contact__inner l-inner--small">
           <div class="p-contact__form">
-  <?php echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ"]'); ?>
+  <?php echo do_shortcode('[contact-form-7 id="765" title="お問い合わせ"]'); ?>
   <div class="p-contact__grecaptcha">
               このサイトはreCAPTCHAによって保護されており、Googleの<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">利用規約</a>が適用されます。
             </div>

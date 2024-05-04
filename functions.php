@@ -18,8 +18,10 @@ function my_setup()
 }
 add_action('after_setup_theme', 'my_setup');
 
-// functions.php で const.php ファイルを読み込む
+// const.php ファイルを読み込む
 require_once(get_template_directory() . '/inc/const.php');
+// contact-form.php ファイルを読み込む
+require_once(get_template_directory() . '/inc/contact-form.php');
 
 /**
  * CSSとJavaScriptの読み込み
@@ -71,7 +73,6 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 	);
 	return $rewrite_rules + $rules;
   }
-
 
 //管理画面の投稿名を変更
 function Change_menulabel() {
@@ -136,7 +137,6 @@ jQuery(function($) {
 }
 
 
-
 // 検索条件が未入力時にsearch.phpにリダイレクトする
 function set_redirect_template(){
 	if (isset($_GET['s']) && empty($_GET['s'])) {
@@ -184,23 +184,6 @@ function SearchFilter( $query ) {
 	}
 	add_action('init', 'custom_rewrite_rules');
 
-  // Contact Form7の送信ボタンをクリックした後の遷移先設定
-  add_action( 'wp_footer', 'add_origin_thanks_page' );
-  function add_origin_thanks_page() {
-  $thanks = home_url('/contact-thanks/');
-  $usefulThanks = home_url('/useful-thanks/');
-  $serviceThanks = home_url('/service-thanks/');
-	echo <<< EOC
-	  <script>
-		var thanksPage = {
-		  281: '{$usefulThanks}',
-		  734: '{$serviceThanks}',
-		};
-	  document.addEventListener( 'wpcf7mailsent', function( event ) {
-		location = thanksPage[event.detail.contactFormId];
-	  }, false );
-	  </script>
-	EOC;
-  }
+
 
 

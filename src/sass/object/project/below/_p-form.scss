@@ -201,6 +201,78 @@ textarea {
     }
 }
 
+
+/* ラジオボタン */
+.p-form-radio__item span {
+    display: block;
+    vertical-align: top;
+}
+
+.p-form-radio label {
+    display: inline-block;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.p-form-radio label:not(:first-of-type) {
+    margin-top: 0;
+    margin-left: rem(30);
+
+    @include mq(md) {
+        margin-top: rem(10);
+    }
+}
+
+.p-form-radio input+span {
+    padding: 0 0 0 rem(25);
+    position: relative;
+    font-size: rem(15);
+    line-height: 1;
+    cursor: pointer;
+    display: inline-block;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.p-form-radio input+span::before {
+    content: "";
+    width: rem(15);
+    height: rem(15);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.p-form-radio input+span::after {
+    content: "";
+    padding: rem(2);
+    width: rem(7);
+    height: rem(7);
+    position: absolute;
+    top: 50%;
+    left: rem(4);
+    transform: translateY(-50%);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0;
+    transition: .3s;
+}
+
+.p-form-radio input:checked+span::after {
+    opacity: 1;
+}
+
+
 //contact-form7
 span.wpcf7-spinner {
     display: none;
@@ -211,7 +283,7 @@ span.wpcf7-spinner {
 }
 
 .wpcf7-form.sent .wpcf7-response-output {
-    // display: none;
+    display: none;
 }
 
 .grecaptcha-badge {
