@@ -74,6 +74,21 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 	return $rewrite_rules + $rules;
   }
 
+//   カスタム投稿タイプのパーマリンクを変更
+  register_taxonomy(
+	'document_type',
+	'download',
+	array(
+		'hierarchical' => true,
+		'label' => 'カテゴリー',
+		'show_ui' => true,
+		'query_var' => true,
+		'public' => true,
+		'rewrite' => array('slug'=>'download'),//document_typeを変更
+	)
+);
+
+
 //管理画面の投稿名を変更
 function Change_menulabel() {
 	global $menu;

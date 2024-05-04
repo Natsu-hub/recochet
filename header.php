@@ -53,7 +53,7 @@
                             <a class="js-textHover" href="<?php echo HOME_URL; ?>#company">Company</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="js-textHover" href="<?php echo WORKS_URL; ?>">Order</a>
+                            <a class="js-textHover" href="<?php echo DOWNLOAD_URL; ?>">Download</a>
                         </li>
                     </ul>
                 </nav>
