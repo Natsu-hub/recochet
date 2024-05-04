@@ -5,13 +5,13 @@
 	function add_origin_thanks_page() {
 	$thanks = home_url('/contact-thanks/');
 	$downloadThanks = home_url('/download-thanks/');
-	// $serviceThanks = home_url('/service-thanks/');
+	$meetingThanks = home_url('/meeting-thanks/');
 	echo <<<EOC
     <script>
     var thanksPage = {
         765: '{$thanks}',
         281: '{$downloadThanks}',
-        // 734: '{$serviceThanks}',
+        734: '{$meetingThanks}',
     };
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         location = thanksPage[event.detail.contactFormId];

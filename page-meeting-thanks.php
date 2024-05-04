@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: 資料ダウンロード（完了）
+* Template Name: zoom面談のお申し込み（完了）
 */
 get_header(); 
 $page_slug = $post->post_name;
@@ -22,6 +22,7 @@ $page_slug = $post->post_name;
       </div>
     </section>
 
+
 <!-- thanks -->
 <div class="p-thanks l-section">
   <div class="p-thanks__inner l-inner--small">
@@ -31,15 +32,6 @@ $page_slug = $post->post_name;
 <p>※お名前が実名でない場合（匿名や仮名など）は、ご返信致しかねます。あらかじめご了承ください。<br>
 ※お問い合わせメールを送信後１週間経過しても返信がこない場合については、セキュリティの関係で迷惑メールとされてしまっている可能性や、お問い合わせメールのアドレス登録したアドレスに間違いがある可能性があるため、大変お手数ですが直接電話でご連絡いただきますようお願い申し上げます。</p> 
     </div>
-<!-- ダウンロードリンク -->
-    <?php 
-if (isset($_SESSION['download_link']) && isset($_SESSION['download_name'])) {
-  echo '<a href="' . $_SESSION['download_link'] . '" download="' . $_SESSION['download_name'] . '">ダウンロード</a>';
-  unset($_SESSION['download_link']); // リンクを使用した後はセッションをクリア
-  unset($_SESSION['download_name']); // ファイル名もクリア
-}
-
-?>
     <div class="p-thanks__btn c-btn-below l-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
             <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
             <picture class="c-btn-black__img c-btn-black__img--prev">
