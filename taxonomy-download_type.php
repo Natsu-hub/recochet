@@ -30,7 +30,7 @@ get_header();
 <div class="works__tabs">
 		<?php
         $terms = get_terms( array(
-            'taxonomy' => 'document_type',
+            'taxonomy' => 'download_type',
             'hide_empty' => false,
         ));
 
@@ -56,13 +56,13 @@ $current_term = get_queried_object();
 			  }
 			  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 			  $args = [
-			    'post_type' => 'document', // カスタム投稿の投稿タイプスラッグ
+			    'post_type' => 'download', // カスタム投稿の投稿タイプスラッグ
 			    'paged' => $paged, // ページネーションがある場合に必要
 			    'posts_per_page' => $num, // 表示件数
           'paged' => get_query_var('paged') ? get_query_var('paged') : 1, // ページネーション用
           'tax_query' => array(
 			      array(
-			        'taxonomy' => 'document_type', // タクソノミーのスラッグ
+			        'taxonomy' => 'download_type', // タクソノミーのスラッグ
 			        'field' => 'slug', // ターム名をスラッグで指定する（変更不要）
 			        'terms' => $current_term->slug,
 			      ),
@@ -81,7 +81,7 @@ $current_term = get_queried_object();
               </figure>
               <div class="card__body">
               <?php
-                  $terms = get_the_terms(get_the_ID(), 'document_type');
+                  $terms = get_the_terms(get_the_ID(), 'download_type');
                   if ($terms && !is_wp_error($terms)) {
                       // ジャンルが存在し、エラーがない場合のみ、<span> タグを表示
                       echo '<span class="card__category">' . esc_html($terms[0]->name) . '</span>';

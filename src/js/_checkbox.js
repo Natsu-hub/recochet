@@ -15,10 +15,10 @@ export function checkbox() {
     //             if (checkbox.checked) {
     //                 switch (checkbox.value) {
     //                     case 'A':
-    //                         window.location.href = '/document_type/useful'; // カテゴリーAのページに遷移
+    //                         window.location.href = '/download_type/useful'; // カテゴリーAのページに遷移
     //                         break;
     //                     case 'B':
-    //                         window.location.href = '/document_type/service'; // カテゴリーBのページに遷移
+    //                         window.location.href = '/download_type/service'; // カテゴリーBのページに遷移
     //                         break;
     //                 }
     //             }
@@ -40,7 +40,7 @@ export function checkbox() {
 
                 // 選択されたチェックボックスに基づいて遷移
                 if (checkbox.checked) {
-                    window.location.href = '/document_type/' + checkbox.value;
+                    window.location.href = '/download_type/' + checkbox.value;
                 }
             });
         });

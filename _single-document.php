@@ -55,7 +55,7 @@ get_header();
   <div class="contact-form">
 	<!-- カテゴリー別にフォームを出し分ける場合 -->
     <?php
-    $terms = get_the_terms($post->ID, 'document_type');
+    $terms = get_the_terms($post->ID, 'download_type');
     if ($terms && !is_wp_error($terms)) {
         foreach ($terms as $term) {
             if ($term->slug == 'useful') {
@@ -70,7 +70,7 @@ get_header();
     ?>
 	<!-- ACFにフォームダウンロードのURLを入れる場合 -->
 	<?php
-$terms = get_the_terms($post->ID, 'document_type');
+$terms = get_the_terms($post->ID, 'download_type');
 $download_link = get_post_meta($post->ID, 'download_link', true); // カスタムフィールドの値を取得
 if ($terms && !is_wp_error($terms)) {
     foreach ($terms as $term) {

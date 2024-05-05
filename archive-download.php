@@ -35,7 +35,7 @@ get_header();
 <div class="works__tabs">
     <?php
     $terms = get_terms(array(
-        'taxonomy' => 'document_type',
+        'taxonomy' => 'download_type',
         'hide_empty' => false,
     ));
 
@@ -54,7 +54,7 @@ get_header();
 <div class="works__tabs">
 		<?php
         $terms = get_terms( array(
-            'taxonomy' => 'document_type',
+            'taxonomy' => 'download_type',
             'hide_empty' => false,
         ));
 
@@ -77,7 +77,7 @@ get_header();
 			  }
 			  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 			  $args = [
-			    'post_type' => 'document', // カスタム投稿の投稿タイプスラッグ
+			    'post_type' => 'download', // カスタム投稿の投稿タイプスラッグ
 			    'paged' => $paged, // ページネーションがある場合に必要
 			    'posts_per_page' => $num, // 表示件数
           'paged' => get_query_var('paged') ? get_query_var('paged') : 1 // ページネーション用
@@ -98,7 +98,7 @@ get_header();
                   <?php the_title(); ?>
                   </p>
               <?php
-                  $terms = get_the_terms(get_the_ID(), 'document_type');
+                  $terms = get_the_terms(get_the_ID(), 'download_type');
                   if ($terms && !is_wp_error($terms)) {
                       // ジャンルが存在し、エラーがない場合のみ、<span> タグを表示
                       echo '<span class="card__category">' . esc_html($terms[0]->name) . '</span>';
@@ -106,10 +106,10 @@ get_header();
                   // ジャンルがない場合は、何も表示しない
                   ?>
                   <p class="card__text">
-                    <?php echo nl2br(get_field('document_explain')); ?>
+                    <?php echo nl2br(get_field('download_explain')); ?>
                   </p>
                     <p class="card__text">
-                  <?php echo (get_field('document_list')); ?>
+                  <?php echo (get_field('download_list')); ?>
                   </p>
               </div>
           </a>

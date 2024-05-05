@@ -54,12 +54,26 @@ function my_script_init()
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+// カスタム投稿タイプのパーマリンクを変更
+// register_taxonomy(
+// 	'download_type',
+// 	'download',
+// 	array(
+// 		'hierarchical' => true,
+// 		'label' => 'カテゴリー',
+// 		'show_ui' => true,
+// 		'query_var' => true,
+// 		'public' => true,
+// 		'rewrite' => array('slug'=>'download'),//download_typeを変更
+// 	)
+// );
+
   //カスタム投稿のパーマリンク
   add_filter('post_type_link', 'custom_post_link', 1, 2);
   function custom_post_link($link, $post) {
-	if($post -> post_type === 'document') {
-	  // カスタム投稿名が"document"の投稿のパーマリンクを「/document/投稿ID/」の形に書き換え
-	  return home_url('/document/'.$post->ID);
+	if($post -> post_type === 'download') {
+	  // カスタム投稿名が"download"の投稿のパーマリンクを「/download/投稿ID/」の形に書き換え
+	  return home_url('/download/'.$post->ID);
 	} else {
 	  return $link;
 	}
@@ -69,24 +83,12 @@ add_action('wp_enqueue_scripts', 'my_script_init');
   add_filter('rewrite_rules_array', 'custom_post_link_rewrite');
   function custom_post_link_rewrite($rules) {
 	$rewrite_rules = array(
-	  'document/([0-9]+)/?$' => 'index.php?post_type=document&p=$matches[1]',
+	  'download/([0-9]+)/?$' => 'index.php?post_type=download&p=$matches[1]',
 	);
 	return $rewrite_rules + $rules;
   }
 
-//   カスタム投稿タイプのパーマリンクを変更
-  register_taxonomy(
-	'document_type',
-	'download',
-	array(
-		'hierarchical' => true,
-		'label' => 'カテゴリー',
-		'show_ui' => true,
-		'query_var' => true,
-		'public' => true,
-		'rewrite' => array('slug'=>'download'),//document_typeを変更
-	)
-);
+
 
 
 //管理画面の投稿名を変更
