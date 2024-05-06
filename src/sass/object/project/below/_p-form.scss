@@ -36,7 +36,7 @@ textarea::placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.form {
+.p-form {
     width: 60%;
     margin-inline: auto;
     font-weight: 500;
@@ -46,19 +46,19 @@ textarea::placeholder {
     }
 }
 
-.form__item:not(:first-child) {
+.p-form__item:not(:first-child) {
     margin-top: rem(24);
 }
 
-.form__items {
+.p-form__items {
     margin-top: rem(45);
 }
 
-.form__item dt {
+.p-form__item dt {
     padding: rem(8) rem(16);
 }
 
-.form__item dd {
+.p-form__item dd {
     font-size: rem(16);
     // flex: 0 1 100%;
     // display: flex;
@@ -69,7 +69,7 @@ textarea {
     height: rem(228);
 }
 
-.form__item-inline {
+.p-form__item-inline {
     display: inline-block;
     vertical-align: middle;
     color: red;
@@ -77,7 +77,7 @@ textarea {
     margin-left: rem(24);
 }
 
-.form__item-inline.form__item-inline--check {
+.p-form__item-inline.p-form__item-inline--check {
     @include mq('md') {
         margin-left: 0;
     }
@@ -85,7 +85,7 @@ textarea {
 
 //submit
 
-.form__submit {
+.p-form__submit {
     margin-top: rem(75);
     // width: rem(280);
     // max-width: 100%;
@@ -96,7 +96,7 @@ textarea {
     }
 }
 
-.form__submit p {
+.p-form__submit p {
     text-align: center;
     width: 100%;
     height: 100%;
@@ -108,30 +108,30 @@ textarea {
 }
 
 //checkbox
-.form__label {
+.p-form__label {
     position: relative;
 }
 
-.form__check {
+.p-form__check {
     margin-top: rem(25);
     text-align: center;
 }
 
-.form__check input {
+.p-form__check input {
     position: absolute;
     left: 0;
     top: 0;
     opacity: 0;
 }
 
-.form__check-text {
+.p-form__check-text {
     @include mq('md') {
         margin-top: rem(30);
         display: block;
     }
 }
 
-.form__item .form__check {
+.p-form__item .p-form__check {
     margin-top: 0;
 }
 
@@ -181,11 +181,11 @@ textarea {
     transform: translateY(-50%) rotate(-45deg);
 }
 
-.form__check a {
+.p-form__check a {
     border-bottom: 1px solid $black;
 }
 
-.form__item-inline--check {
+.p-form__item-inline--check {
     @include mq('sm') {
         text-align: left;
         margin-top: rem(10);
@@ -193,7 +193,7 @@ textarea {
     }
 }
 
-.form__check {
+.p-form__check {
     font-size: rem(14);
 
     @include mq('sm') {

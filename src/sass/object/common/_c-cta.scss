@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.c-cta {
+    position: fixed;
+    bottom: rem(60);
+    right: rem(40);
+    background-color: $blue;
+    color: $white;
+    z-index: 100;
+}
+
+.c-cta__body {
+    padding: rem(20);
+    position: relative;
+}
+
+.c-cta__btn {
+    position: absolute;
+    background-color: $white;
+    // background: url(../images/common/) no-repeat center center/contain;
+    width: rem(30);
+    height: rem(30);
+    top: rem(-15);
+    right: rem(-15);
+    border-radius: 50%;
+    border: 3px solid $blue;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.c-cta__btn:hover {
+    opacity: 0.8;
+}
+
+
+.c-cta__btn::before,
+.c-cta__btn::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.c-cta__btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.c-cta__item {}
+
+.c-cta__text {}
+
+.c-cta__link {}
+
+.c-cta__link a {
+    text-decoration: underline;
+}

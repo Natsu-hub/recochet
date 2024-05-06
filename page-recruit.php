@@ -37,3 +37,4 @@ $page_slug = $post->post_name;
 
   </main>
 <?php get_footer(); ?>
+

@@ -1,6 +1,23 @@
 <button class="c-to-top" id="js-scrollTop" title="トップへ戻る">
   <span class="c-to-top__arrow"></span>
 </button>
+<div class="c-cta">
+  <div class="c-cta__body">
+    <div class="c-cta__btn js-cta"></div>
+    <div class="c-cta__item">
+      <div class="c-cta__text">テキスト</div>
+      <div class="c-cta__link">
+        <a href="http://" target="_blank" rel="noopener noreferrer">メールマガジンのご登録</a>
+      </div>
+    </div>
+    <div class="c-cta__item">
+      <div class="c-cta__text">テキスト</div>
+      <div class="c-cta__link">
+        <a href="http://" target="_blank" rel="noopener noreferrer">メールマガジンのご登録</a>
+      </div>
+    </div>
+  </div>
+</div>
 <footer class="p-footer">
     <div class="p-footer__inner">
       <div class="p-footer__items">
