@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: 作業受託企業様の募集
+* Template Name: 飲食店ネット通販アカデミー
 */
 get_header(); 
 $page_slug = $post->post_name;

@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: 採用情報
+* Template Name: 事業コンサルティング
 */
 get_header(); 
 $page_slug = $post->post_name;

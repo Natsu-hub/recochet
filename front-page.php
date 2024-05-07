@@ -57,12 +57,12 @@ get_header(); ?>
      <div class="p-top-blog__right js-fadeInSlow">
         <?php
           if (wp_is_mobile()) {
-            $num = 2; // スマホの表示数(全件は-1)
+            $num = 6; // スマホの表示数(全件は-1)
           } else {
-            $num = 2; // PCの表示数(全件は-1)
+            $num = 6; // PCの表示数(全件は-1)
           }
           $args = [
-            'post_type' => 'blog',
+            'post_type' => 'case-study',
             // 投稿タイプのスラッグ(通常投稿は'post')
             'posts_per_page' => $num, // 表示件数
           ];
@@ -179,6 +179,8 @@ get_header(); ?>
       </div>
       </div>
     </section>
+
+
 
   <!-- p-order -->
     <section class="p-order">

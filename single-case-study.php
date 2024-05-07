@@ -52,26 +52,6 @@ get_header();
 			<?php endwhile; ?>
 			<?php endif; ?>
   </article>
-  <div class="contact-form">
-
-<!-- カテゴリーで分ける必要がない場合 -->
-<?php
-$download_link = get_post_meta($post->ID, 'download_link', true); // カスタムフィールドからダウンロードリンクを取得
-// ここに var_dump を記述して値を確認
-var_dump($download_link);
-echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_useful" download_link="' . esc_url($download_link) . '"]');
-?>
-
-<!-- 直接開く -->
-<a href="<?php echo esc_url(get_field('download_link')); ?>" download>
-直接開くダウンロード
-</a>
-<!-- 別タブで開いてから自分でダウンロード zipファイルはそのままダウンロードになる -->
-<a href="<?php echo esc_url(get_field('download_link')); ?>" target="_blank" rel="noopener noreferrer">
-別タブでファイルを開く
-</a>
-
-</div>
   <div class="p-single-blog__btns l-btn-below">
   		<div class="p-contact__btn c-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
             <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
@@ -89,73 +69,39 @@ echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_usef
         </div>
   </div>
 
-
-  <div class="p-top-blog__right js-fadeInSlow">
-        <?php
-          if (wp_is_mobile()) {
-            $num = 2; // スマホの表示数(全件は-1)
-          } else {
-            $num = 2; // PCの表示数(全件は-1)
-          }
-          $args = [
-            'post_type' => 'download',
-            // 投稿タイプのスラッグ(通常投稿は'post')
-            'posts_per_page' => $num, // 表示件数
-          ];
-          $the_query = new WP_Query($args);
-          if ($the_query->have_posts()):
-            while ($the_query->have_posts()):
-              $the_query->the_post();
-              ?>
-              <a class="p-top-blog__content" href="<?php the_permalink(); ?>">
-              <div class="p-top-blog__time">
-                <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.'); ?></time>
-                <time datetime="<?php the_time('c'); ?>"><?php the_time('n.j'); ?></time>
-              </div>
-                <p class="p-top-blog__content-title">
-                  <?php the_title(); ?>
-                </p>
-              </a>
-            <?php endwhile; else: ?>
-            <p>まだ記事がありません</p>
-          <?php endif; ?>
-          <?php wp_reset_postdata(); ?>
-          <!-- 記事のループ処理終了 -->
-      </div>
-
-
-      <!-- p-news-related -->
+<!-- p-news-related -->
 <div class="p-news-related">
 	<div class="p-news-related__inner l-inner">
-    <div class="p-news-related__head js-fadeIn">他にこんな記事が読まれています</div>
+    <div class="p-news-related__head">他にこんな記事が読まれています</div>
     <?php
-  $terms = get_the_terms($post->ID, 'download_type');
-  foreach($terms as $term) {
-    $term_slug = $term->slug;
-  }
-  $args = array(
-    'post__not_in' => array($post->ID),
-    'post_type' => 'download',
-    'posts_per_page' => 3,
-    'orderby' => 'rand',
-    'tax_query' => array(
-      array(
-        'taxonomy' => 'download_type',
-        'field' => 'slug',
-        'terms' => $term_slug
-      )
-    )
-  );
-  $the_query = new WP_Query($args);
-?>
-<?php if($the_query->have_posts()): ?>
-  <?php while($the_query->have_posts()): $the_query->the_post(); ?>
-
-    <!-- 繰り返し処理する内容 -->
-
-  <?php endwhile; ?>
-<?php endif; ?>
-<?php wp_reset_postdata(); ?>
+        $case_study_posts = get_posts(array(
+            'post_type' => 'case-study',  // カスタム投稿タイプ 'case-study'
+            'posts_per_page' => 3,        // 最新3件を取得
+            'post__not_in' => array(get_the_ID()), // 現在の投稿を除外
+            'orderby' => 'date',          // 日付で並び替え
+            'order' => 'DESC'             // 降順
+        ));
+        
+        if ($case_study_posts) : ?>
+            <ul class="p-news-related__lists">
+                <?php foreach ($case_study_posts as $post) : setup_postdata($post); ?>
+                    <li class="p-news-related__list">
+                        <a href="<?= esc_url(get_permalink()); ?>">
+                            <figure class="p-news-related__img">
+                                <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail();
+                                } else { ?>
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/images/common/no-img.jpg" alt="">
+                                <?php } ?>
+                            </figure>
+                            <time class="p-news-related__time" datetime="<?= get_the_time('c'); ?>"><?= get_the_time('Y/m/d'); ?></time>
+                            <div class="p-news-related__title"><?= esc_html(get_the_title()); ?></div>
+                            <span class="p-news-related__btn c-btn--news">記事を読む</span>
+                        </a>
+                    </li>
+                <?php endforeach; wp_reset_postdata(); ?>
+            </ul>
+        <?php endif; ?>
 	</div>
 </div>
 
@@ -163,8 +109,6 @@ echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_usef
 
 </div>
 </section>
-
-
 
   </main>
 <?php get_footer(); ?>

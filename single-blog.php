@@ -68,6 +68,51 @@ get_header();
           </a>
         </div>
   </div>
+
+<!-- p-news-related -->
+<div class="p-news-related">
+	<div class="p-news-related__inner l-inner">
+    <div class="p-news-related__head js-fadeIn">他にこんな記事が読まれています</div>
+    <?php if (has_category()) : 
+        $post_cats = get_the_category();
+        $cat_ids = array();
+        foreach ($post_cats as $cat) {
+            $cat_ids[] = $cat->term_id;
+        }
+
+        $myposts = get_posts(array(
+            'post_type' => 'blog',
+            'posts_per_page' => 3,
+            'post__not_in' => array(get_the_ID()),
+            'category__in' => $cat_ids,
+            'orderby' => 'rand'
+        ));
+
+        if ($myposts) : ?>
+            <ul class="p-news-related__lists">
+                <?php foreach ($myposts as $post) : setup_postdata($post); ?>
+                    <li class="p-news-related__list js-fadeIn">
+                        <a href="<?= esc_url(get_permalink()); ?>">
+                            <figure class="p-news-related__img">
+                                <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail();
+                                } else { ?>
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/images/common/no-img.jpg" alt="">
+                                <?php } ?>
+                            </figure>
+                            <time class="p-news-related__time" datetime="<?= get_the_time('c'); ?>"><?= get_the_time('Y/m/d'); ?></time>
+                            <div class="p-news-related__title"><?= esc_html(get_the_title()); ?></div>
+                            <span class="p-news-related__btn c-btn--news">記事を読む</span>
+                        </a>
+                    </li>
+                <?php endforeach; wp_reset_postdata(); ?>
+            </ul>
+        <?php endif; 
+    endif; ?>
+	</div>
+</div>
+
+
 </div>
 </section>
 

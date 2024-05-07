@@ -47,6 +47,11 @@ if (isset($_SESSION['download_link']) && isset($_SESSION['download_name'])) {
             </picture>
           </a>
         </div>
+
+<!-- download-interested.php -->
+<?php get_template_part('template/download-interested'); ?>
+
+
   </div>
 </div>
   </main>

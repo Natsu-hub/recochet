@@ -68,55 +68,40 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 // 	)
 // );
 
-  //カスタム投稿のパーマリンク
-  add_filter('post_type_link', 'custom_post_link', 1, 2);
-  function custom_post_link($link, $post) {
-	if($post -> post_type === 'download') {
-	  // カスタム投稿名が"download"の投稿のパーマリンクを「/download/投稿ID/」の形に書き換え
-	  return home_url('/download/'.$post->ID);
-	} else {
-	  return $link;
-	}
-  }
-  
-  //書き換えたパーマリンクに対応したリライトルールを追加
-  add_filter('rewrite_rules_array', 'custom_post_link_rewrite');
-  function custom_post_link_rewrite($rules) {
-	$rewrite_rules = array(
-	  'download/([0-9]+)/?$' => 'index.php?post_type=download&p=$matches[1]',
-	);
-	return $rewrite_rules + $rules;
-  }
+// カスタム投稿のパーマリンク
+add_filter('post_type_link', 'custom_post_link', 1, 2);
+function custom_post_link($link, $post) {
+    $post_types = array('download', 'case-study', 'news');
+    if (in_array($post->post_type, $post_types)) {
+        // カスタム投稿名が "download"、"case-study"、"news" の投稿のパーマリンクを "/{post_type}/{投稿ID}/" の形に書き換え
+        return home_url('/' . $post->post_type . '/' . $post->ID);
+    } else {
+        return $link;
+    }
+}
+
+// 書き換えたパーマリンクに対応したリライトルールを追加
+add_filter('rewrite_rules_array', 'custom_post_link_rewrite');
+function custom_post_link_rewrite($rules) {
+    $rewrite_rules = array();
+    $post_types = array('download', 'case-study', 'news');
+    foreach ($post_types as $post_type) {
+        $rewrite_rules[$post_type . '/([0-9]+)/?$'] = 'index.php?post_type=' . $post_type . '&p=$matches[1]';
+    }
+    return $rewrite_rules + $rules;
+}
 
 
 
 
-//管理画面の投稿名を変更
-function Change_menulabel() {
-	global $menu;
-	global $submenu;
-	$name = 'お知らせ';
-	$menu[5][0] = $name;
-	$submenu['edit.php'][5][0] = $name.'一覧';
-	$submenu['edit.php'][10][0] = '新しい'.$name;
-	}
-	function Change_objectlabel() {
-	global $wp_post_types;
-	$name = 'お知らせ';
-	$labels = &$wp_post_types['post']->labels;
-	$labels->name = $name;
-	$labels->singular_name = $name;
-	$labels->add_new = _x('追加', $name);
-	$labels->add_new_item = $name.'の新規追加';
-	$labels->edit_item = $name.'の編集';
-	$labels->new_item = '新規'.$name;
-	$labels->view_item = $name.'を表示';
-	$labels->search_items = $name.'を検索';
-	$labels->not_found = $name.'が見つかりませんでした';
-	$labels->not_found_in_trash = 'ゴミ箱に'.$name.'は見つかりませんでした';
-	}
-	add_action( 'init', 'Change_objectlabel' );
-	add_action( 'admin_menu', 'Change_menulabel' );
+//管理画面の投稿を非表示
+function Hide_Post_Type() {
+    remove_menu_page('edit.php');
+}
+
+add_action('admin_menu', 'Hide_Post_Type');
+
+
 
 //タクソノミーをラジオボタンにする
 add_action( 'admin_print_footer_scripts', 'select_to_radio_genre' );

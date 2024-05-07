@@ -41,5 +41,7 @@ $page_slug = $post->post_name;
         </div>
   </div>
 </div>
+<!-- download-interested.php -->
+<?php get_template_part('template/download-interested'); ?>
   </main>
 <?php get_footer(); ?>
