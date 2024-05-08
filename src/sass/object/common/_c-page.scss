@@ -36,9 +36,13 @@
     padding: .4em;
     display: inline-block;
     transition: all 0.3s ease 0s;
-    width: rem(60);
 }
 
 .page-numbers img {
     width: 100%;
+    max-width: rem(10);
+}
+
+.page-numbers.prev img {
+    transform: scaleX(-1);
 }

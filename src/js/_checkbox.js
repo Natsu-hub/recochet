@@ -1,3 +1,4 @@
+// import { jQuery };
 export function checkbox() {
     // document.addEventListener('DOMContentLoaded', function () {
     //     var checkboxes = document.querySelectorAll('input[type="checkbox"][name="category"]');

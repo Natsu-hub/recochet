@@ -93,7 +93,6 @@ function custom_post_link_rewrite($rules) {
 
 
 
-
 //管理画面の投稿を非表示
 function Hide_Post_Type() {
     remove_menu_page('edit.php');

@@ -257,6 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "checkbox": () => (/* binding */ checkbox)
 /* harmony export */ });
+// import { jQuery };
 function checkbox() {
   // document.addEventListener('DOMContentLoaded', function () {
   //     var checkboxes = document.querySelectorAll('input[type="checkbox"][name="category"]');
@@ -374,6 +375,52 @@ function common() {
     });
   });
 }
+
+/***/ }),
+
+/***/ "./js/_contactFrom.js":
+/*!****************************!*\
+  !*** ./js/_contactFrom.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "contactFrom": () => (/* binding */ contactFrom)
+/* harmony export */ });
+function contactFrom() {
+  window.addEventListener('DOMContentLoaded', function () {
+    //送信ボタンをdisabled
+    var required = document.querySelectorAll('.wpcf7-validates-as-required');
+    var requiredArray = {};
+    var submit = document.querySelector('.wpcf7-submit');
+    var attention = document.querySelector('.wpcf7-required-attention');
+    if (required.length > 0) {
+      submit.disabled = true;
+      attention.classList.add('active');
+      required.forEach(function (el) {
+        if (el.value === '') {
+          requiredArray[el.name] = false;
+        }
+        el.addEventListener('input', function () {
+          if (el.value === '') {
+            requiredArray[el.name] = false;
+          } else if (requiredArray[el.name] === false) {
+            delete requiredArray[el.name];
+          }
+          if (Object.keys(requiredArray).length === 0) {
+            submit.disabled = false;
+            attention.classList.remove('active');
+          } else {
+            submit.disabled = true;
+            attention.classList.add('active');
+          }
+        });
+      });
+    }
+  });
+}
+;
 
 /***/ }),
 
@@ -12506,6 +12553,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _textHover__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_textHover */ "./js/_textHover.js");
 /* harmony import */ var _img__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_img */ "./js/_img.js");
 /* harmony import */ var _checkbox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_checkbox */ "./js/_checkbox.js");
+/* harmony import */ var _contactFrom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_contactFrom */ "./js/_contactFrom.js");
 
 
 
@@ -12515,6 +12563,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+(0,_contactFrom__WEBPACK_IMPORTED_MODULE_9__.contactFrom)();
 (0,_checkbox__WEBPACK_IMPORTED_MODULE_8__.checkbox)();
 (0,_img__WEBPACK_IMPORTED_MODULE_7__.img)();
 (0,_textHover__WEBPACK_IMPORTED_MODULE_6__.textHover)();

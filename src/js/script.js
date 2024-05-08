@@ -7,7 +7,9 @@ import { textScroll } from "./_textScroll";
 import { textHover } from "./_textHover";
 import { img } from "./_img";
 import { checkbox } from "./_checkbox";
+import { contactFrom } from "./_contactFrom";
 
+contactFrom();
 checkbox();
 img();
 textHover();
