@@ -7,7 +7,7 @@
 			<div class="p-404__btn"><a class="c-btn-white" href="<?php echo HOME_URL; ?>">
             <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
             <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
             </picture>
           </a>
         </div>

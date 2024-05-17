@@ -20,5 +20,7 @@ define('CONTACT_URL', home_url('/contact/'));
 define('PRIVACY_URL', home_url('/privacy-policy/'));
 define('RECRUIT_URL', home_url('/recruit/'));
 define('DOWNLOAD_URL', home_url('/download/'));
+define('CONSULTING_URL', home_url('/service-consulting/'));
+define('ACADEMY_URL', home_url('/service-academy/'));
 
 

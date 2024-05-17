@@ -487,74 +487,6 @@ th {
 	clip-path: inset(0 100% 0 0);
 }
 
-.p-header__nav-item a {
-	display: block;
-	padding: 8px 12px;
-}
-
-.text-wrap {
-	overflow: hidden;
-}
-
-.p-header__nav-item a:hover,
-.p-header__nav-item a:hover span {
-	opacity: 1;
-}
-
-.p-header__nav-item a.is-active {
-	cursor: auto;
-	cursor: initial;
-}
-
-.text-wrap {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	position: relative;
-}
-
-.after {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	left: 0;
-	position: absolute;
-	top: 0;
-}
-
-.before {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.before span,
-.after span {
-	line-height: 1.5;
-	-webkit-transition: color 0.3s ease-out;
-	transition: color 0.3s ease-out;
-}
-
-.after span {
-	-webkit-transform: translateY(100%);
-	        transform: translateY(100%);
-}
-
 .js-text-effect {
 	line-height: 1;
 	overflow: hidden;
@@ -1233,11 +1165,16 @@ body {
 	padding: 0.4em;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
-	width: 3.75rem;
 }
 
 .page-numbers img {
+	max-width: 0.625rem;
 	width: 100%;
+}
+
+.page-numbers.prev img {
+	-webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
 }
 
 .c-to-top {
@@ -1404,7 +1341,7 @@ pre {
 }
 
 .p-below-contact {
-	background: url(../images/below/works_bg03.png) no-repeat center center/cover;
+	background: url(../images/below-old/works_bg03.png) no-repeat center center/cover;
 	height: 100%;
 	width: 100%;
 }
@@ -1458,7 +1395,7 @@ pre {
 }
 
 .p-below-contact__link::after {
-	background: url(../images/below/next-arrow.svg) no-repeat center center/contain;
+	background: url(../images/below-old/next-arrow.svg) no-repeat center center/contain;
 	content: "";
 	height: 1.25rem;
 	position: absolute;
@@ -1643,19 +1580,38 @@ textarea {
 }
 
 .p-form__submit {
-	margin-inline: auto;
 	margin-top: 4.6875rem;
-}
-
-.p-form__submit p {
-	height: 100%;
 	text-align: center;
-	width: 100%;
 }
 
 [type=submit] {
 	height: 100%;
+	height: 3.75rem;
+	margin-inline: auto;
+	max-width: 18.75rem;
+	text-align: center;
 	width: 100%;
+}
+
+.wpcf7-submit {
+	background-color: pink;
+}
+
+.wpcf7-submit:disabled {
+	opacity: 0.5;
+}
+
+.wpcf7 input[type=file] {
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	padding: 1.25rem;
+	width: 100%;
+}
+
+input[type=file i]::-webkit-file-upload-button {
+	background-color: #fff;
+	border-radius: 0.625rem;
+	margin-right: 1.875rem;
 }
 
 .p-form__label {
@@ -2206,7 +2162,7 @@ span.wpcf7-spinner {
 }
 
 .p-footer__btn::after {
-	background: url(../images/common/gray_arrow.svg) no-repeat center center/contain;
+	background: url(../images/common-old/gray_arrow.svg) no-repeat center center/contain;
 	content: "";
 	height: 0.4375rem;
 	max-width: 100%;
@@ -2248,6 +2204,7 @@ span.wpcf7-spinner {
 }
 
 .p-header {
+	background-color: white;
 	color: #F0EFEF;
 	font-size: 0.9375rem;
 	height: 80px;
@@ -2351,11 +2308,12 @@ span.wpcf7-spinner {
 	margin-left: 0.75rem;
 }
 
-.p-header__nav-item a {
+.p-header__nav-link {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	cursor: pointer;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -2398,43 +2356,6 @@ span.wpcf7-spinner {
 	width: -webkit-max-content;
 	width: max-content;
 	z-index: 1;
-}
-
-/* ヘッダー色変更 */
-
-.p-header.change-color {
-	background-color: #F0EFEF;
-	-webkit-transition: background-color 0.7s ease 0s;
-	transition: background-color 0.7s ease 0s;
-}
-
-.p-header.change-color .p-header__nav,
-.p-header.change-color .p-header__logo,
-.p-header.change-color .p-header__drop-menu-item {
-	color: #333;
-	-webkit-transition: color 0.7s ease 0s;
-	transition: color 0.7s ease 0s;
-}
-
-.p-header.change-color .p-header__drop-menu-item {
-	border-left: 1px solid #333;
-	-webkit-transition: border 0.7s ease 0s;
-	transition: border 0.7s ease 0s;
-}
-
-.p-header.change-color .p-header__drop-menu-list {
-	background-color: #F0EFEF;
-	left: 0;
-	padding-left: 1rem;
-	top: 100%;
-	-webkit-transition: all 0.7s;
-	transition: all 0.7s;
-}
-
-.p-header.change-color .p-header__hamburger span {
-	background-color: #000;
-	-webkit-transition: background-color 0.7s ease 0s;
-	transition: background-color 0.7s ease 0s;
 }
 
 /* ドロワーメニューが開いた時のスタイル */
@@ -2619,23 +2540,12 @@ span.wpcf7-spinner {
 	scrollbar-width: none;
 	text-align: right;
 	top: 0;
-	-webkit-transform: translateX(100%);
-	        transform: translateX(100%);
-	-webkit-transition: -webkit-transform 0.5s ease;
-	transition: -webkit-transform 0.5s ease;
-	transition: transform 0.5s ease;
-	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 	width: 100%;
 	z-index: 36;
 }
 
 .p-header__drawer-nav {
 	background-color: #151F37;
-}
-
-.p-header__drawer.is-open {
-	-webkit-transform: translateX(0);
-	        transform: translateX(0);
 }
 
 .p-header__drawer::-webkit-scrollbar {
@@ -2669,18 +2579,6 @@ span.wpcf7-spinner {
 
 .p-header__drawer-menu-item:not(:first-child) {
 	margin-top: 0.625rem;
-}
-
-.p-header__drawer-item.is-open {
-	opacity: 1;
-	-webkit-transform: translate(0px, 0px);
-	        transform: translate(0px, 0px);
-}
-
-.p-header__drawer-menu-list.is-open {
-	opacity: 1;
-	-webkit-transform: translateX(40px);
-	        transform: translateX(40px);
 }
 
 .p-header__drawer-link {
@@ -2738,7 +2636,7 @@ span.wpcf7-spinner {
 }
 
 .p-order {
-	background: url(../images/common/top-order_bg.jpg) no-repeat center center/cover;
+	background: url(../images/common-old/top-order_bg.jpg) no-repeat center center/cover;
 	color: #D8D4D1;
 	height: 100%;
 	padding-bottom: 5.75rem;
@@ -2755,7 +2653,7 @@ span.wpcf7-spinner {
 }
 
 .p-service {
-	background: url(../images/common/top-service_bg.png) no-repeat center center/cover;
+	background: url(../images/common-old/top-service_bg.png) no-repeat center center/cover;
 	color: #F0EFEF;
 	height: 100%;
 	width: 100%;
@@ -2917,7 +2815,7 @@ span.wpcf7-spinner {
 }
 
 .p-top-blog__content::after {
-	background: url(../images/common/next-btn.png) no-repeat center center/contain;
+	background: url(../images/common-old/next-btn.png) no-repeat center center/contain;
 	content: "";
 	height: 12px;
 	position: absolute;
@@ -2978,7 +2876,7 @@ span.wpcf7-spinner {
 }
 
 .p-top-mv__img::before {
-	background-image: url(../images/common/top-mv_img.webp);
+	background-image: url(../images/common-old/top-mv_img.webp);
 	background-position: center;
 	background-size: cover;
 	content: "";
@@ -3152,7 +3050,7 @@ span.wpcf7-spinner {
 }
 
 .p-works-example {
-	background: url(../images/below/works_bg01.png) no-repeat center center/cover;
+	background: url(../images/below-old/works_bg01.png) no-repeat center center/cover;
 	color: #F8F8F8;
 	height: 100%;
 	width: 100%;
@@ -3473,11 +3371,6 @@ span.wpcf7-spinner {
 	        transform: translateX(20px);
 }
 
-.p-header__drop-menu-list a:hover {
-	color: #9B9B9B;
-	opacity: 1;
-}
-
 .p-top-blog__content:hover .p-top-blog__content-title {
 	-webkit-transform: translate(20px);
 	        transform: translate(20px);
@@ -3717,7 +3610,7 @@ body {
 }
 
 .p-below-contact {
-	background: url(../images/below/works_bg03_sp.png) no-repeat center center/cover;
+	background: url(../images/below-old/works_bg03_sp.png) no-repeat center center/cover;
 }
 
 .p-below-contact__inner {
@@ -4155,7 +4048,7 @@ body {
 }
 
 .p-order {
-	background: url(../images/common/top-order_bg-sp.jpg) no-repeat center center/cover;
+	background: url(../images/common-old/top-order_bg-sp.jpg) no-repeat center center/cover;
 	padding-bottom: 2.5rem;
 	padding-top: 3rem;
 }
@@ -4315,7 +4208,7 @@ body {
 }
 
 .p-top-mv__img::before {
-	background-image: url(../images/common/top-mv_img_sp.webp);
+	background-image: url(../images/common-old/top-mv_img_sp.webp);
 	height: 100svh;
 }
 
