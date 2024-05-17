@@ -6,45 +6,11 @@ get_header(); ?>
     <section class="p-top-mv js-mv">
         <div class="p-top-mv__img">
             <div class="p-top-mv__inner">
-                <div class="p-top-mv__text">SUPPORT + PORT<br>
-                    = SAPORUTO</div>
-                <div class="p-top-mv__logo">
-                    <picture class="p-top-mv__logo-img">
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/logo.webp"
-                            type="image/webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/logo.png"
-                            alt="一般社団法人 サポルト" width="106" height="106" loading="lazy">
-                    </picture>
-                    <div class="p-top-mv__logo-text">
-                        <p class="p-top-mv__logo-text-en">SUPPORT + PORT </p>
-                        <p class="p-top-mv__logo-text-ja">サポート【支援】 + ポート【港】</p>
-                        <h2 class="p-top-mv__logo-text-name">SAPORUTO
-                            <span>サポルト</span>
-                        </h2>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
-    <!-- p-mv-lead -->
-    <div class="p-mv-lead">
-        <div class="p-mv-lead__content">
-            <h2 class="p-mv-lead__main-title">
-                <span class="p-mv-lead__title js-splitText js-text-effect">「誰もが自信をもって旅立ち、</span>
-                <span class="p-mv-lead__title02 js-splitText js-text-effect">安心して戻って来られる港を作りたい」</span>
-            </h2>
-            <div class="p-mv-lead__text">
-                <p class="js-fade-in">この思いが私たち、SAPORUTOの原点です。</p>
-                <p class="js-fade-in">
-                    いま、様々な原因で「働きたい」という想いを実現できない方が増えています。【働くことの意義】は人によって異なりますが共通項として、生活基盤の確保・維持、社会や仲間との連帯・社会参加、自己実現の手段などが挙げられます。
-                </p>
-                <p class="js-fade-in">
-                    働かないという選択肢もありますが、「働きたい」という意欲がある方が働くための意義を実感でき、自立やキャリアアップのために次のステージに進んだり、うまくいかなければ安心して戻ってきて再チャレンジできる場所を提供したいと考えました。
-                </p>
-                <p class="js-fade-in">私たちは児童福祉で培った支援や福祉の精神を基盤としつつも、「稼ぐ」という新たな就労継続支援の価値観をこの場で作っていきます。</p>
-            </div>
-        </div>
-    </div>
+
 
     <!-- p-top-blog -->
     <div class="p-top-blog l-section">
@@ -98,134 +64,8 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <!-- p-service -->
-    <section class="p-service l-section" id="service">
-        <div class="p-service__inner l-inner--service">
-            <h2 class="p-service__head c-common-title c-common-title--white js-text-effect js-splitText">Service</h2>
-            <ul class="p-service__list p-service-list">
-                <li class="p-service-list__item trigger-effect">
-                    <div class="p-service-list__img-item">
-                        <p class="p-service-list__img-text js-move-text">Job assistance</p>
-                        <picture class="p-service-list__img js-img">
-                            <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img01-sp.webp"
-                                type="image/webp" media="(max-width: 768px)">
-                            <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img01.webp"
-                                type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img01.png"
-                                alt="就労継続支援事業" width="560" height="541" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="p-service-list__item-wrap">
-                        <h3 class="p-service-list__item-title js-fadeInSlow">就労継続支援事業</h3>
-                        <p class="p-service-list__item-text js-fadeInSlow">
-                            【アドフューチャー】は、就労継続支援A型事業所・就労継続支援B型事業所という障がいのある方に就労の機会を提供する事業です。「脱福祉作業所」をコンセプトに、明るく開放的な環境で、様々な仕事を通じて適正を見つけ、より高い収入を目指してキャリアアップできる仕組みにより、就労意欲の高い集団で稼げる事業所を目指します。
-                        </p>
-                        <div class="p-service-list__btn js-fadeIn"><a class="c-btn-white"
-                                href="https://addfuture.saporuto.com" target="_blank" rel="noopener noreferrer">
-                                <p class="c-btn-white__text">アドフューチャー ホームページへ</p>
-                                <picture class="c-btn-white__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white_arrow.svg"
-                                        alt="アドフューチャー ホームページへ" width="202" height="10" loading="lazy">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-service-list__item">
-                    <div class="p-service-list__img-item trigger-effect">
-                        <p class="p-service-list__img-text js-move-text">Meals on Wheels</p>
-                        <picture class="p-service-list__img js-img">
-                            <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img02-sp.webp"
-                                type="image/webp" media="(max-width: 768px)">
-                            <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img02.webp"
-                                type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img02.png"
-                                alt="配食型飲食事業" width="560" height="541" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="p-service-list__item-wrap js-fadeIn">
-                        <h3 class="p-service-list__item-title">配食型飲食事業</h3>
-                        <p class="p-service-list__item-text">
-                            高齢者向け配食サービス【問屋町食堂】を運営しています。就労継続支援事業所で働く方々とともに、栄養バランスや味付けを尊重した「美味しい弁当」をご提供しています。ご利用者さま一人ひとりに満足してお召し上がりいただけるよう、いただいたご要望を取り入れながら季節に合わせた献立を作成します。
-                        </p>
-                        <div class="p-service-list__btn"><a class="c-btn-white" href="https://tonyashokudo.saporuto.com"
-                                target="_blank" rel="noopener noreferrer">
-                                <p class="c-btn-white__text">問屋町食堂 ホームページへ</p>
-                                <picture class="c-btn-white__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white_arrow.svg"
-                                        alt="問屋町食堂 ホームページへ" width="375" height="44" loading="lazy">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- p-company -->
-    <section class="p-company l-section" id="company">
-        <div class="p-company__inner l-inner--small">
-            <div class="p-company__items">
-                <div class="p-company__left">
-                    <h2 class="p-company__head c-common-title c-common-title--black js-text-effect js-splitText">Company
-                    </h2>
-                </div>
-                <div class="p-company__info js-fadeInSlower">
-                    <dl class="p-company__list">
-                        <dt class="p-company__title">会社名</dt>
-                        <dd class="p-company__detail">一般社団法人サポルト</dd>
-                    </dl>
-                    <dl class="p-company__list">
-                        <dt class="p-company__title">代表者</dt>
-                        <dd class="p-company__detail">井草　晃</dd>
-                    </dl>
-                    <dl class="p-company__list">
-                        <dt class="p-company__title">所在地</dt>
-                        <dd class="p-company__detail">〒370-0015 群馬県高崎市島野町1361-2</dd>
-                    </dl>
-                    <dl class="p-company__list">
-                        <dt class="p-company__title">設立</dt>
-                        <dd class="p-company__detail">2023年11月</dd>
-                    </dl>
-                    <dl class="p-company__list">
-                        <dt class="p-company__title">従業員数</dt>
-                        <dd class="p-company__detail">5名（2024年5月時点）</dd>
-                    </dl>
-                    <dl class="p-company__list">
-                        <dt class="p-company__title">事業内容</dt>
-                        <dd class="p-company__detail">就労継続支援A型事業所<br>
-                            就労継続支援B型事業所<br>
-                            配食型飲食事業</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-
-    <!-- p-order -->
-    <section class="p-order">
-        <div class="p-order__inner l-inner--small">
-            <h2 class="p-order__head c-common-title c-common-title--white04 js-text-effect js-splitText">Order</h2>
-            <p class="p-order__text js-fadeIn">お仕事をサポルトへご依頼いただける<br>
-                企業様を募集しています
-            </p>
-            <div class="p-order__btn js-fadeIn"><a class="c-btn-white" href="<?php echo RECRUIT_URL; ?>">
-                    <p class="c-btn-white__text">作業受託企業様の募集 ページへ</p>
-                    <picture class="c-btn-white__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white04_arrow.svg"
-                            alt="問屋町食堂 ホームページへ" width="375" height="44" loading="lazy">
-                    </picture>
-                </a>
-            </div>
-        </div>
-    </section>
 
 </main>
 <?php get_footer(); ?>

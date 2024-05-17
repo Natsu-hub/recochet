@@ -23,14 +23,14 @@
             <?php if ( is_front_page() ) : ?>
             <h1 class="p-header__logo">
                 <a href="#body"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg"
-                        alt="メールのアイコン" width="24" height="24" loading="lazy">
+                        alt="株式会社リコシェ" width="161" height="61" loading="lazy">
                 </a>
             </h1>
             <?php else : ?>
             <div class="p-header__logo">
                 <a href="<?php echo HOME_URL; ?>"> <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="メールのアイコン"
-                        width="24" height="24" loading="lazy">
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="株式会社リコシェ"
+                        width="161" height="61" loading="lazy">
                 </a>
             </div>
             <?php endif; ?>
@@ -38,7 +38,7 @@
                 <nav class="p-header__nav">
                     <ul class="p-header__nav-items">
                         <li class="p-header__nav-item">
-                            <a class="p-header__nav-link" href="<?php echo BLOG_URL; ?>">ホーム</a>
+                            <a class="p-header__nav-link" href="<?php echo HOME_URL; ?>">ホーム</a>
                         </li>
                         <li class="p-header__nav-item p-header__menu-item p-header__drop-menu">
                             <p class="p-header__nav-link">サービス概要</p>
@@ -82,29 +82,88 @@
                 <nav class="p-header__drawer-nav">
                     <ul class="p-header__drawer-items">
                         <li class="p-header__drawer-item">
-                            <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">Blog</a>
+                            <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>">ホーム</a>
                         </li>
-                        <li class="p-header__drawer-item p-header__drawer-drop">
-                            <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>#service">Service</a>
-                        </li>
-                        <ul class="p-header__drawer-menu-list">
-                            <li class="p-header__drawer-menu-item">
-                                <a href="">事業コンサルティング</a>
-                            </li>
-                            <li class="p-header__drawer-menu-item">
-                                <a href="">飲食店ネット通販アカデミー</a>
-                            </li>
-                        </ul>
-                        <li class="p-header__drawer-item p-header__drawer-item--mt24">
-                            <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>#company">Company</a>
+                        <li class="p-header__drawer-item p-header__menu-item p-header__drop-menu">
+                            <p>サービス概要</p>
+                            <ul class="p-header__drawer-menu-list">
+                                <li class="p-header__drawer-menu-item">
+                                    <a href="">
+                                        <picture class="p-header__drawer-menu-arrow">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-black.svg"
+                                                alt="" width="" height="" loading="lazy">
+                                        </picture>
+                                        <span>事業コンサルティング</span>
+                                    </a>
+                                </li>
+                                <li class="p-header__drawer-menu-item">
+                                    <a href="">
+                                        <picture class="p-header__drawer-menu-arrow">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-black.svg"
+                                                alt="" width="" height="" loading="lazy">
+                                        </picture>
+                                        <span>飲食店ネット通販アカデミー</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="p-header__drawer-item">
-                            <a class="p-header__drawer-link" href="<?php echo WORKS_URL; ?>">Order</a>
+                            <a class="p-header__drawer-link" href="<?php echo CASE_URL; ?>">コンサルの効果</a>
                         </li>
                         <li class="p-header__drawer-item">
-                            <a class="p-header__drawer-link" href="<?php echo CONTACT_URL; ?>">Contact</a>
+                            <a class="p-header__drawer-link" href="<?php echo WELL_URL; ?>">SDGsの取り組み</a>
+                        </li>
+                        <li class="p-header__drawer-item">
+                            <a class="p-header__drawer-link" href="<?php echo COMPANY_URL; ?>">会社概要</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="c-cta u-mobile">
+                    <div class="c-cta__body">
+                        <div class="c-cta__item">
+                            <div class="c-cta__text">経営に役立つクローズドな情報満載</div>
+                            <div class="c-cta__link">
+                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <picture class="c-cta__arrow">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                                            alt="" width="" height="" loading="lazy">
+                                    </picture>
+                                    <p>メールマガジンのご登録</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-cta__item">
+                            <div class="c-cta__text">LINEでご相談、お問い合わせ</div>
+                            <div class="c-cta__link">
+                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <picture class="c-cta__arrow">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                                            alt="" width="" height="" loading="lazy">
+                                    </picture>
+                                    <picture class="c-cta__icon">
+                                        <source
+                                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.webp"
+                                            type="image/webp">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.png"
+                                            alt="LINEのアイコン" width="15" height="15" loading="lazy">
+                                    </picture>
+                                    <p>リコシェ公式ライン</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-header__drawer-bg">
+                    <nav class="p-header__drawer-contact">
+                        <div class="p-header__nav-contact-items c-header__nav-contact-items">
+                            <div class="c-header__nav-contact-item c-header__nav-contact-item--blue">
+                                <a href="<?php echo DOWNLOAD_URL; ?>">資料ダウンロード</a>
+                            </div>
+                            <div class="c-header__nav-contact-item c-header__nav-contact-item--white">
+                                <a href="<?php echo CONTACT_URL; ?>">お問い合わせ</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
     </header>

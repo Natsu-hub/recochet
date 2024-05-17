@@ -1,23 +1,104 @@
 @use "global" as *;
 
 .c-cta {
-    position: fixed;
-    bottom: rem(60);
-    right: rem(40);
     background-color: $blue;
     color: $white;
     z-index: 100;
+
+    @include mq(md) {
+        position: relative;
+        background-color: $blue02;
+
+    }
+}
+
+.c-cta--pc {
+    position: fixed;
+    bottom: rem(60);
+    right: rem(40);
+
 }
 
 .c-cta__body {
     padding: rem(20);
     position: relative;
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
 }
 
+
+
+.c-cta__item {
+    @include mq(md) {
+        padding: rem(8) rem(13);
+        text-align: center;
+    }
+}
+
+.c-cta__item:last-child {
+    border-left: .5px solid $white;
+}
+
+.c-cta__text {
+    font-size: rem(8);
+}
+
+.c-cta__link {
+    margin-top: rem(3);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        background: $white;
+    }
+}
+
+.c-cta__link a {
+    display: flex;
+    align-items: center;
+}
+
+.c-cta__arrow {
+    max-width: rem(6);
+    width: 100%;
+    // height: 100%;
+}
+
+.c-cta__arrow img,
+.c-cta__icon img {
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-cta__icon {
+    max-width: rem(15);
+    // height: 100%;
+    width: 100%;
+    margin-left: rem(2);
+}
+
+.c-cta__link p {
+    font-size: rem(12);
+    font-weight: 600;
+    margin-left: rem(2);
+}
+
+/* closeボタン */
 .c-cta__btn {
     position: absolute;
     background-color: $white;
-    // background: url(../images/common-old/) no-repeat center center/contain;
     width: rem(30);
     height: rem(30);
     top: rem(-15);
@@ -48,14 +129,4 @@
 
 .c-cta__btn::after {
     transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.c-cta__item {}
-
-.c-cta__text {}
-
-.c-cta__link {}
-
-.c-cta__link a {
-    text-decoration: underline;
 }
