@@ -6,6 +6,7 @@
     width: 100%;
     color: $white02;
     letter-spacing: 0.3px;
+    background-color: white;
 
     @include mq("md") {
         height: 50px;
