@@ -22,7 +22,7 @@
         <div class="p-header__inner">
             <?php if ( is_front_page() ) : ?>
             <h1 class="p-header__logo">
-                <a href="#body"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg"
+                <a href="#body"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg"
                         alt="メールのアイコン" width="24" height="24" loading="lazy">
                 </a>
             </h1>
@@ -38,89 +38,73 @@
                 <nav class="p-header__nav">
                     <ul class="p-header__nav-items">
                         <li class="p-header__nav-item">
-                            <a class="js-textHover" href="<?php echo BLOG_URL; ?>">Blog</a>
+                            <a class="p-header__nav-link" href="<?php echo BLOG_URL; ?>">ホーム</a>
                         </li>
                         <li class="p-header__nav-item p-header__menu-item p-header__drop-menu">
-                            <a class="js-textHover" href="<?php echo HOME_URL; ?>#service">Service</a>
+                            <p class="p-header__nav-link">サービス概要</p>
                             <ul class="p-header__drop-menu-list">
                                 <li class="p-header__drop-menu-item">
-                                    <a href="https://addfuture.saporuto.com">就労継続支援事業</a>
+                                    <a href=""><span>事業コンサルティング</span></a>
                                 </li>
                                 <li class="p-header__drop-menu-item">
-                                    <a href="https://tonyashokudo.saporuto.com">配食型飲食事業</a>
+                                    <a href=""><span>飲食店ネット通販アカデミー</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="js-textHover" href="<?php echo HOME_URL; ?>#company">Company</a>
+                            <a class="p-header__nav-link" href="<?php echo CASE_URL; ?>">コンサルの効果</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="js-textHover" href="<?php echo DOWNLOAD_URL; ?>">Download</a>
+                            <a class="p-header__nav-link" href="<?php echo WELL_URL; ?>">SDGsの取り組み</a>
+                        </li>
+                        <li class="p-header__nav-item">
+                            <a class="p-header__nav-link" href="<?php echo COMPANY_URL; ?>">会社概要</a>
                         </li>
                     </ul>
                 </nav>
                 <nav class="p-header__nav-contact">
-                    <div class="p-header__nav-contact-head"><a href="<?php echo CONTACT_URL; ?>">Contact</a>
-                    </div>
-                    <div class="p-header__nav-contact-items">
-                        <div class="p-header__nav-contact-item">
-                            <a href="mailto:mail: info@saporuto.com">
-                                <picture class="p-header__nav-contact-img p-header__nav-contact-img--mail">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_mail.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_mail.png"
-                                        alt="メールのアイコン" width="24" height="24" loading="lazy">
-                                </picture>
-                            </a>
+                    <div class="p-header__nav-contact-items c-header__nav-contact-items">
+                        <div class="c-header__nav-contact-item c-header__nav-contact-item--blue">
+                            <a href="<?php echo DOWNLOAD_URL; ?>">資料ダウンロード</a>
                         </div>
-                        <div class="p-header__nav-contact-item">
-                            <a href="tel:+027-388-0811">
-                                <picture class="p-header__nav-contact-img p-header__nav-contact-img--tel">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_tel.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_tel.png"
-                                        alt="電話のアイコン" width="22" height="22" loading="lazy">
-                                </picture>
-                            </a>
+                        <div class="c-header__nav-contact-item c-header__nav-contact-item--white">
+                            <a href="<?php echo CONTACT_URL; ?>">お問い合わせ</a>
                         </div>
                     </div>
                 </nav>
+                <button class="p-header__hamburger js-hamburger is-open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="p-header__hamburger js-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <div class="p-header__drawer js-drawer">
-            <nav class="p-header__drawer-nav">
-                <ul class="p-header__drawer-items">
-                    <li class="p-header__drawer-item js-nav-list">
-                        <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">Blog</a>
-                    </li>
-                    <li class="p-header__drawer-item js-nav-list p-header__drawer-drop">
-                        <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>#service">Service</a>
-                    </li>
-                    <ul class="p-header__drawer-menu-list js-nav-list">
-                        <li class="p-header__drawer-menu-item">
-                            <a href="https://addfuture.saporuto.com">就労継続支援事業</a>
+            <div class="p-header__drawer js-drawer is-open">
+                <nav class="p-header__drawer-nav">
+                    <ul class="p-header__drawer-items">
+                        <li class="p-header__drawer-item">
+                            <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">Blog</a>
                         </li>
-                        <li class="p-header__drawer-menu-item">
-                            <a href="https://tonyashokudo.saporuto.com">配食型飲食事業</a>
+                        <li class="p-header__drawer-item p-header__drawer-drop">
+                            <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>#service">Service</a>
+                        </li>
+                        <ul class="p-header__drawer-menu-list">
+                            <li class="p-header__drawer-menu-item">
+                                <a href="">事業コンサルティング</a>
+                            </li>
+                            <li class="p-header__drawer-menu-item">
+                                <a href="">飲食店ネット通販アカデミー</a>
+                            </li>
+                        </ul>
+                        <li class="p-header__drawer-item p-header__drawer-item--mt24">
+                            <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>#company">Company</a>
+                        </li>
+                        <li class="p-header__drawer-item">
+                            <a class="p-header__drawer-link" href="<?php echo WORKS_URL; ?>">Order</a>
+                        </li>
+                        <li class="p-header__drawer-item">
+                            <a class="p-header__drawer-link" href="<?php echo CONTACT_URL; ?>">Contact</a>
                         </li>
                     </ul>
-                    <li class="p-header__drawer-item p-header__drawer-item--mt24 js-nav-list">
-                        <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>#company">Company</a>
-                    </li>
-                    <li class="p-header__drawer-item js-nav-list">
-                        <a class="p-header__drawer-link" href="<?php echo WORKS_URL; ?>">Order</a>
-                    </li>
-                    <li class="p-header__drawer-item js-nav-list">
-                        <a class="p-header__drawer-link" href="<?php echo CONTACT_URL; ?>">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                </nav>
+            </div>
     </header>

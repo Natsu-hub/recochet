@@ -1,11 +1,13 @@
 @use "global" as *;
 
 .p-header {
-    height: 80px;
-    font-size: rem(15);
+    height: rem(77);
+    font-size: rem(14);
     width: 100%;
-    color: $white02;
-    letter-spacing: 0.3px;
+    color: $black;
+    font-weight: 500;
+    letter-spacing: 0.21em;
+    background-color: $white;
 
     @include mq("md") {
         height: 50px;
@@ -15,27 +17,32 @@
 .p-header__inner {
     position: relative;
     z-index: $layer-header + 5;
-    padding-left: rem(60);
-    max-width: rem(1440);
-    max-width: rem(1800);
+    padding-inline: rem(50);
+    max-width: rem(1400);
     width: 100%;
     margin-inline: auto;
     height: inherit;
     display: flex;
     justify-content: space-between;
 
-    @include mq("md") {
+    @include mq("inner") {
+        padding-inline: rem(25);
+    }
+
+    @include mq(md) {
         padding-left: rem(10);
+        padding-right: rem(15);
     }
 }
 
 .p-header__logo {
     height: inherit;
-    font-size: rem(20);
-    color: $white;
+    max-width: rem(164);
+    width: 100%;
+    flex-shrink: 0;
 
     @include mq(md) {
-        font-size: rem(15);
+        max-width: rem(99);
     }
 }
 
@@ -46,15 +53,11 @@
 }
 
 .p-header__logo img {
-    max-width: 204px;
-    width: 100%;
     width: 100%;
     height: 100%;
     object-fit: contain;
 
-    @include mq("md") {
-        max-width: rem(162);
-    }
+    @include mq("md") {}
 }
 
 .p-header__nav-lists {
@@ -88,7 +91,8 @@
     margin-left: rem(12);
 }
 
-.p-header__nav-item a {
+.p-header__nav-link {
+    cursor: pointer;
     padding: rem(8) rem(14);
     display: flex;
     align-items: center;
@@ -113,59 +117,145 @@
 }
 
 .p-header__drop-menu-list {
-    padding-top: rem(10);
-    padding-bottom: rem(10);
-    color: $white02;
+    color: $black;
+    line-height: 1;
+    background-color: $white;
     border-left: 1px solid $white02;
-    left: rem(15);
+    left: rem(0);
     opacity: 0;
     /* 不透明度を最小に */
     position: absolute;
-    top: 60px;
-    transition: all .7s;
+    top: rem(60);
+    transition: all .3s;
     visibility: hidden;
     /* 下層メニューを非表示 */
     width: max-content;
     z-index: 1;
 }
 
-/* ヘッダー色変更 */
-.p-header.change-color {
-    background-color: $white02; //スクロールしたあとのヘッダー背景色
-    transition: background-color 0.7s ease 0s;
+.p-header__drop-menu-item a {
+    padding: 0 rem(15);
+    display: block;
+    transition: all 0.3s ease-out;
 }
 
-.p-header.change-color .p-header__nav,
-.p-header.change-color .p-header__logo,
-.p-header.change-color .p-header__drop-menu-item {
-    color: $black;
-    transition: color 0.7s ease 0s;
+.p-header__drop-menu-item span {
+    padding: rem(20) 0;
+    display: block;
+}
+
+.p-header__drop-menu-item:not(:first-child).p-header__drop-menu-item span {
+    border-top: 1px solid $gray;
+}
+
+// /* ヘッダー色変更 */
+// .p-header.change-color {
+//     background-color: $white02; //スクロールしたあとのヘッダー背景色
+//     transition: background-color 0.7s ease 0s;
+// }
+
+// .p-header.change-color .p-header__nav,
+// .p-header.change-color .p-header__logo,
+// .p-header.change-color .p-header__drop-menu-item {
+//     color: $black;
+//     transition: color 0.7s ease 0s;
+// }
+
+
+// .p-header.change-color .p-header__drop-menu-item {
+//     border-left: 1px solid $black;
+//     transition: border 0.7s ease 0s;
+// }
+
+// .p-header.change-color .p-header__drop-menu-list {
+//     background-color: $white02;
+//     transition: all .7s;
+//     top: 100%;
+//     left: 0;
+//     padding-left: rem(16);
+// }
+
+
+// .p-header.change-color .p-header__hamburger span {
+//     background-color: $black04;
+//     transition: background-color 0.7s ease 0s;
+// }
+
+@media (hover: hover) {
+    .p-header__nav-item a:hover {
+        color: $blue;
+    }
+
+    .p-header__drop-menu-list a:hover {
+        color: $blue;
+    }
 }
 
 
-.p-header.change-color .p-header__drop-menu-item {
-    border-left: 1px solid $black;
-    transition: border 0.7s ease 0s;
+
+.p-header__nav-contact {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(md) {
+        display: none;
+        // position: fixed;
+        // top: 0;
+        // right: 0;
+        // padding-left: rem(4);
+        // padding-right: rem(4);
+    }
 }
 
-.p-header.change-color .p-header__drop-menu-list {
-    background-color: $white02;
-    transition: all .7s;
-    top: 100%;
-    left: 0;
-    padding-left: rem(16);
+.c-header__nav-contact-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.c-header__nav-contact-item {}
 
-.p-header.change-color .p-header__hamburger span {
-    background-color: $black04;
-    transition: background-color 0.7s ease 0s;
+.c-header__nav-contact-item:last-child {
+    margin-left: rem(20);
+}
+
+.c-header__nav-contact-item a {
+    display: block;
+    line-height: 1;
+    width: rem(155);
+    max-width: 100%;
+    height: rem(50);
+    border-radius: 3.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $blue;
+    transition: all 0.3s ease-out;
+
+    @include mq(md) {}
+}
+
+.c-header__nav-contact-item--blue a {
+    color: $white;
+    background-color: $blue;
+}
+
+.c-header__nav-contact-item--white a {
+    color: $blue;
+    background-color: $white;
 }
 
 @media (hover: hover) {
-    .p-header__drop-menu-list a:hover {
-        color: #9B9B9B;
-        opacity: 1;
+    .p-header__nav-contact-item--blue a:hover {
+        color: $blue;
+        background-color: $white;
+    }
+
+    .p-header__nav-contact-item--white a:hover {
+        color: $white;
+        background-color: $blue;
     }
 }
 
@@ -178,100 +268,6 @@
     background-color: $white;
 }
 
-
-.p-header__nav-contact {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $black02;
-    padding-left: rem(23);
-
-    @include mq(md) {
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding-left: rem(4);
-        padding-right: rem(4);
-    }
-}
-
-.p-header__nav-contact-head {
-    font-size: rem(16);
-    font-weight: 600;
-
-    @include mq(md) {
-        display: none;
-    }
-}
-
-.p-header__nav-contact-head a {
-    padding: .4em;
-}
-
-.p-header__nav-contact-items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: inherit;
-}
-
-.p-header__nav-contact-item {
-    height: inherit;
-}
-
-.p-header__nav-contact-item a {
-    display: block;
-    padding: rem(24);
-    height: inherit;
-
-    @include mq(md) {
-        padding: rem(12);
-    }
-}
-
-.p-header__nav-contact-img {
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.p-header__nav-contact-img--mail {
-    width: rem(24);
-    height: 100%;
-
-    @include mq(md) {
-        width: rem(17);
-    }
-}
-
-.p-header__nav-contact-img--tel {
-    width: rem(22);
-    height: 100%;
-    position: relative;
-
-    @include mq(md) {
-        width: rem(15);
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: rem(1);
-        height: rem(22);
-        background-color: $white;
-        top: 50%;
-        transform: translateY(-50%);
-        left: rem(-24);
-
-        @include mq(md) {
-            left: rem(-12);
-            height: rem(14);
-        }
-    }
-}
-
 /* hamburger */
 .p-header__hamburger {
     display: none;
@@ -281,11 +277,11 @@
     border: none;
     position: relative;
     z-index: 999;
-    width: rem(52);
-    height: rem(50);
+    width: rem(20);
+    height: rem(16);
     cursor: pointer;
     transition: .3s;
-    right: rem(88);
+    right: 0;
 
     @include mq("md") {
         display: block;
@@ -302,8 +298,8 @@
     transform: translateX(-50%);
     display: block;
     width: rem(20);
-    height: 1px;
-    background-color: $white;
+    height: 2px;
+    background-color: $blue;
     transition: .5s;
 }
 
@@ -321,7 +317,7 @@
 
 .p-header__hamburger.is-open span:nth-of-type(1) {
     top: 0;
-    transform: translateX(-50%) rotate(30deg);
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .p-header__hamburger.is-open span:nth-of-type(2) {
@@ -329,8 +325,8 @@
 }
 
 .p-header__hamburger.is-open span:nth-of-type(3) {
-    top: -2px;
-    transform: translateX(-50%) rotate(-30deg);
+    top: -4px;
+    transform: translateX(-50%) rotate(-45deg);
 }
 
 
