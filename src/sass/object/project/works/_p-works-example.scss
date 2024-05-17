@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-works-example {
-    background: url(../images/below/works_bg01.png) no-repeat center center/cover;
+    background: url(../images/below-old/works_bg01.png) no-repeat center center/cover;
     width: 100%;
     height: 100%;
     color: $white03;
@@ -9,6 +9,7 @@
 
 .p-works-example__title-wrap {
     text-align: center;
+
     @include mq(md) {
         white-space: nowrap;
     }

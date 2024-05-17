@@ -13,8 +13,8 @@
           <a href="tel:+" class="p-below-contact__link">
             <div class="p-below-contact__tel">
               <picture class="p-below-contact__img">
-                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/icon_tel.webp" type="image/webp">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/icon_tel.png" alt="電話のアイコン" width="44" height="44">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/icon_tel.webp" type="image/webp">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/icon_tel.png" alt="電話のアイコン" width="44" height="44">
               </picture>
               <div class="p-below-contact__lead p-below-contact__lead--tel">
                 <p>027-388-0811</p>

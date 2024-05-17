@@ -10,8 +10,8 @@ get_header(); ?>
 = SAPORUTO</div>
             <div class="p-top-mv__logo">
                 <picture class="p-top-mv__logo-img">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.webp" type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.png" alt="一般社団法人 サポルト" width="106" height="106" loading="lazy">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/logo.webp" type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/logo.png" alt="一般社団法人 サポルト" width="106" height="106" loading="lazy">
                 </picture>
               <div class="p-top-mv__logo-text">
                 <p class="p-top-mv__logo-text-en">SUPPORT + PORT </p>
@@ -47,7 +47,7 @@ get_header(); ?>
         <div class="p-top-blog__btn js-fade-in"><a class="c-btn-black" href="<?php echo BLOG_URL; ?>">
             <p class="c-btn-black__text">記事一覧へ</p>
             <picture class="c-btn-black__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow02.svg" alt="記事一覧へ" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow02.svg" alt="記事一覧へ" width="202" height="10" loading="lazy">
             </picture>
           </a>
         </div>
@@ -97,9 +97,9 @@ get_header(); ?>
             <div class="p-service-list__img-item">
               <p class="p-service-list__img-text js-move-text">Job assistance</p>
               <picture class="p-service-list__img js-img">
-                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-service_img01-sp.webp" type="image/webp" media="(max-width: 768px)">
-                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-service_img01.webp" type="image/webp">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-service_img01.png" alt="就労継続支援事業" width="560" height="541" loading="lazy">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img01-sp.webp" type="image/webp" media="(max-width: 768px)">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img01.webp" type="image/webp">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img01.png" alt="就労継続支援事業" width="560" height="541" loading="lazy">
               </picture>
             </div>
             <div class="p-service-list__item-wrap">
@@ -108,7 +108,7 @@ get_header(); ?>
               <div class="p-service-list__btn js-fadeIn"><a class="c-btn-white" href="https://addfuture.saporuto.com" target="_blank" rel="noopener noreferrer">
                   <p class="c-btn-white__text">アドフューチャー ホームページへ</p>
                   <picture class="c-btn-white__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white_arrow.svg" alt="アドフューチャー ホームページへ" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white_arrow.svg" alt="アドフューチャー ホームページへ" width="202" height="10" loading="lazy">
                   </picture>
                 </a>
               </div>
@@ -118,9 +118,9 @@ get_header(); ?>
             <div class="p-service-list__img-item">
               <p class="p-service-list__img-text js-move-text">Meals on Wheels</p>
               <picture class="p-service-list__img js-img">
-                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-service_img02-sp.webp" type="image/webp" media="(max-width: 768px)">
-                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-service_img02.webp" type="image/webp">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-service_img02.png" alt="配食型飲食事業" width="560" height="541" loading="lazy">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img02-sp.webp" type="image/webp" media="(max-width: 768px)">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img02.webp" type="image/webp">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/top-service_img02.png" alt="配食型飲食事業" width="560" height="541" loading="lazy">
               </picture>
             </div>
             <div class="p-service-list__item-wrap">
@@ -129,8 +129,8 @@ get_header(); ?>
               <div class="p-service-list__btn js-fadeIn"><a class="c-btn-white" href="https://tonyashokudo.saporuto.com" target="_blank" rel="noopener noreferrer">
                   <p class="c-btn-white__text">問屋町食堂 ホームページへ</p>
                   <picture class="c-btn-white__img">
-                      <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/white_arrow.webp" type="image/webp"> -->
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white_arrow.svg" alt="問屋町食堂 ホームページへ" width="375" height="44" loading="lazy">
+                      <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white_arrow.webp" type="image/webp"> -->
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white_arrow.svg" alt="問屋町食堂 ホームページへ" width="375" height="44" loading="lazy">
                   </picture>
                 </a>
               </div>
@@ -191,7 +191,7 @@ get_header(); ?>
         <div class="p-order__btn js-fadeIn"><a class="c-btn-white" href="<?php echo RECRUIT_URL; ?>">
             <p class="c-btn-white__text">作業受託企業様の募集 ページへ</p>
             <picture class="c-btn-white__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white04_arrow.svg" alt="問屋町食堂 ホームページへ" width="375" height="44" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white04_arrow.svg" alt="問屋町食堂 ホームページへ" width="375" height="44" loading="lazy">
             </picture>
           </a>
         </div>

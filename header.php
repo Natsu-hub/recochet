@@ -21,15 +21,18 @@
     <header class="p-header l-header js-header">
         <div class="p-header__inner">
             <?php if ( is_front_page() ) : ?>
-                <h1 class="p-header__logo">
-                <a href="#body">一般社団法人 サポルト
+            <h1 class="p-header__logo">
+                <a href="#body"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg"
+                        alt="メールのアイコン" width="24" height="24" loading="lazy">
                 </a>
             </h1>
             <?php else : ?>
-                <div class="p-header__logo">
-                    <a href="<?php echo HOME_URL; ?>">一般社団法人 サポルト
-                    </a>
-                </div>
+            <div class="p-header__logo">
+                <a href="<?php echo HOME_URL; ?>"> <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="メールのアイコン"
+                        width="24" height="24" loading="lazy">
+                </a>
+            </div>
             <?php endif; ?>
             <div class="p-header__nav-lists">
                 <nav class="p-header__nav">
@@ -58,21 +61,27 @@
                 </nav>
                 <nav class="p-header__nav-contact">
                     <div class="p-header__nav-contact-head"><a href="<?php echo CONTACT_URL; ?>">Contact</a>
-                        </div>
+                    </div>
                     <div class="p-header__nav-contact-items">
                         <div class="p-header__nav-contact-item">
                             <a href="mailto:mail: info@saporuto.com">
                                 <picture class="p-header__nav-contact-img p-header__nav-contact-img--mail">
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_mail.webp" type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_mail.png" alt="メールのアイコン" width="24" height="24" loading="lazy">
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_mail.webp"
+                                        type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_mail.png"
+                                        alt="メールのアイコン" width="24" height="24" loading="lazy">
                                 </picture>
                             </a>
                         </div>
                         <div class="p-header__nav-contact-item">
                             <a href="tel:+027-388-0811">
                                 <picture class="p-header__nav-contact-img p-header__nav-contact-img--tel">
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_tel.webp" type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_tel.png" alt="電話のアイコン" width="22" height="22" loading="lazy">
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_tel.webp"
+                                        type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_tel.png"
+                                        alt="電話のアイコン" width="22" height="22" loading="lazy">
                                 </picture>
                             </a>
                         </div>
@@ -88,7 +97,7 @@
         <div class="p-header__drawer js-drawer">
             <nav class="p-header__drawer-nav">
                 <ul class="p-header__drawer-items">
-                <li class="p-header__drawer-item js-nav-list">
+                    <li class="p-header__drawer-item js-nav-list">
                         <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">Blog</a>
                     </li>
                     <li class="p-header__drawer-item js-nav-list p-header__drawer-drop">

@@ -15,9 +15,9 @@ $page_slug = $post->post_name;
           <span class="c-below-mv__main-title">作業受託企業様の募集</span>
         </h1>
         <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/works-mv-sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/works-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works-mv.png" alt="就労継続支援事業" width="1440" height="400">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works-mv-sp.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works-mv.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works-mv.png" alt="就労継続支援事業" width="1440" height="400">
         </picture>
       </div>
     </section>
@@ -32,7 +32,7 @@ $page_slug = $post->post_name;
   <li class="p-works-lead__list js-card">
   <div class="p-works-lead__img-box">
     <picture class="p-works-lead__img p-works-lead__img01">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/icon_works01.svg" alt="仕事内容のイメージアイコン" width="146" height="152" loading="lazy">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/icon_works01.svg" alt="仕事内容のイメージアイコン" width="146" height="152" loading="lazy">
     </picture>
   </div>
   <div class="p-works-lead__box">
@@ -42,7 +42,7 @@ $page_slug = $post->post_name;
       <a class="c-btn-black c-btn-black--large" href="#works">
         <p class="c-btn-black__text">仕事内容へ</p>
         <picture class="c-btn-black__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow02.svg" alt="仕事内容へ" width="202" height="10" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow02.svg" alt="仕事内容へ" width="202" height="10" loading="lazy">
         </picture>
       </a>
     </div>
@@ -51,7 +51,7 @@ $page_slug = $post->post_name;
   <li class="p-works-lead__list js-card">
   <div class="p-works-lead__img-box">
     <picture class="p-works-lead__img p-works-lead__img02">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/icon_works02.svg" alt="受託の流れのイメージアイコン" width="177" height="176" loading="lazy">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/icon_works02.svg" alt="受託の流れのイメージアイコン" width="177" height="176" loading="lazy">
     </picture>
   </div>
   <div class="p-works-lead__box">
@@ -61,7 +61,7 @@ $page_slug = $post->post_name;
       <a class="c-btn-black c-btn-black--large" href="#flow">
         <p class="c-btn-black__text">受託の流れへ</p>
         <picture class="c-btn-black__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow02.svg" alt="受託の流れへ" width="202" height="10" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow02.svg" alt="受託の流れへ" width="202" height="10" loading="lazy">
         </picture>
       </a>
     </div>
@@ -70,7 +70,7 @@ $page_slug = $post->post_name;
   <li class="p-works-lead__list js-card">
   <div class="p-works-lead__img-box">
     <picture class="p-works-lead__img p-works-lead__img03">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/icon_works03.svg" alt="お問い合わせのイメージアイコン" width="198" height="152" loading="lazy">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/icon_works03.svg" alt="お問い合わせのイメージアイコン" width="198" height="152" loading="lazy">
     </picture>
   </div>
   <div class="p-works-lead__box">
@@ -80,7 +80,7 @@ $page_slug = $post->post_name;
       <a class="c-btn-black c-btn-black--large" href="#contact">
         <p class="c-btn-black__text">お問い合わせへ</p>
         <picture class="c-btn-black__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow02.svg" alt="お問い合わせへ" width="202" height="10" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow02.svg" alt="お問い合わせへ" width="202" height="10" loading="lazy">
         </picture>
       </a>
     </div>
@@ -100,7 +100,7 @@ $page_slug = $post->post_name;
     <ul class="p-works-example__lists js-card-wrapper">
     <li class="p-works-example__item js-card">
               <div class="p-works-example__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_img01.jpg" alt="製造・飲食" width="420" height="240" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_img01.jpg" alt="製造・飲食" width="420" height="240" loading="lazy">
               </div>
               <p class="p-works-example__item-category">製造・飲食</p>
               <div class="p-works-example__item-content">
@@ -109,7 +109,7 @@ $page_slug = $post->post_name;
           </li>
           <li class="p-works-example__item js-card">
               <div class="p-works-example__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_img02.jpg" alt="IT・サービス" width="420" height="240" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_img02.jpg" alt="IT・サービス" width="420" height="240" loading="lazy">
               </div>
               <p class="p-works-example__item-category">IT・サービス</p>
               <div class="p-works-example__item-content">
@@ -118,7 +118,7 @@ $page_slug = $post->post_name;
           </li>
           <li class="p-works-example__item js-card">
               <div class="p-works-example__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_img03.jpg" alt="IT・サービス" width="420" height="240" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_img03.jpg" alt="IT・サービス" width="420" height="240" loading="lazy">
               </div>
               <p class="p-works-example__item-category">IT・サービス</p>
               <div class="p-works-example__item-content">
@@ -127,7 +127,7 @@ $page_slug = $post->post_name;
           </li>
           <li class="p-works-example__item js-card">
               <div class="p-works-example__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_img04.jpg" alt="屋外軽作業" width="420" height="240" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_img04.jpg" alt="屋外軽作業" width="420" height="240" loading="lazy">
               </div>
               <p class="p-works-example__item-category">屋外軽作業</p>
               <div class="p-works-example__item-content">
@@ -136,7 +136,7 @@ $page_slug = $post->post_name;
           </li>
           <li class="p-works-example__item js-card">
               <div class="p-works-example__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_img05.jpg" alt="屋外軽作業" width="420" height="240" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_img05.jpg" alt="屋外軽作業" width="420" height="240" loading="lazy">
               </div>
               <p class="p-works-example__item-category">屋外軽作業</p>
               <div class="p-works-example__item-content">
@@ -145,7 +145,7 @@ $page_slug = $post->post_name;
           </li>
           <li class="p-works-example__item js-card">
               <div class="p-works-example__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_img06.jpg" alt="屋内軽作業" width="420" height="240" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_img06.jpg" alt="屋内軽作業" width="420" height="240" loading="lazy">
               </div>
               <p class="p-works-example__item-category">屋内軽作業</p>
               <div class="p-works-example__item-content">
@@ -199,19 +199,19 @@ $page_slug = $post->post_name;
 <section class="p-works-banner js-mv">
       <div class="p-works-banner__inner">
           <picture class="p-works-banner__logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/logo-white.svg" alt="アドフューチャー/ADD FUTURE" width="456" height="456">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/logo-white.svg" alt="アドフューチャー/ADD FUTURE" width="456" height="456">
           </picture>
           <div class="p-works-banner__btn js-fade-in"><a class="c-btn-white" href="<?php echo RECRUIT_URL; ?>">
         <p class="c-btn-white__text">事業所について知る</p>
         <picture class="c-btn-white__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white04_arrow.svg" alt="問屋町食堂 ホームページへ" width="252" height="10" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/white04_arrow.svg" alt="問屋町食堂 ホームページへ" width="252" height="10" loading="lazy">
         </picture>
       </a>
     </div>
         <picture class="p-works-banner__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_bg02-sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_bg02.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/works_bg02.png" alt="就労継続支援事業" width="1440" height="400">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_bg02-sp.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_bg02.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/works_bg02.png" alt="就労継続支援事業" width="1440" height="400">
         </picture>
       </div>
     </section>

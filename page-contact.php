@@ -15,9 +15,9 @@ $page_slug = $post->post_name;
           <span class="c-below-mv__main-title">総合お問い合わせフォーム</span>
         </h1>
         <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/contact-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/contact-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/contact-mv.png" alt="総合お問い合わせフォーム" width="1440" height="400">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/contact-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/contact-mv.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/contact-mv.png" alt="総合お問い合わせフォーム" width="1440" height="400">
         </picture>
       </div>
     </section>
@@ -34,7 +34,7 @@ $page_slug = $post->post_name;
         <div class="p-contact__btn c-btn-below l-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
             <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
             <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
             </picture>
           </a>
         </div>

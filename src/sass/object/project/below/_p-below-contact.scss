@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .p-below-contact {
-    background: url(../images/below/works_bg03.png) no-repeat center center/cover;
+    background: url(../images/below-old/works_bg03.png) no-repeat center center/cover;
     width: 100%;
     height: 100%;
 
     @include mq(md) {
-        background: url(../images/below/works_bg03_sp.png) no-repeat center center/cover;
+        background: url(../images/below-old/works_bg03_sp.png) no-repeat center center/cover;
     }
 }
 
@@ -89,7 +89,7 @@
     &::after {
         content: "";
         position: absolute;
-        background: url(../images/below/next-arrow.svg) no-repeat center center/contain;
+        background: url(../images/below-old/next-arrow.svg) no-repeat center center/contain;
         width: rem(12);
         height: rem(20);
         top: 50%;

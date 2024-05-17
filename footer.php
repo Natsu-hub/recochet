@@ -49,20 +49,20 @@
             <div class="p-footer__sns">
               <a href="http://" target="_blank" rel="noopener noreferrer">
                 <picture class="p-footer__sns-img">
-                  <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_instagram.webp">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_instagram.png" alt="インスタグラム" width="29" height="29" loading="lazy">
+                  <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_instagram.webp">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_instagram.png" alt="インスタグラム" width="29" height="29" loading="lazy">
                 </picture>
               </a>
               <a href="http://" target="_blank" rel="noopener noreferrer">
               <picture class="p-footer__sns-img">
-                  <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_x.webp">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_x.png" alt="エックス" width="29" height="29" loading="lazy">
+                  <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_x.webp">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_x.png" alt="エックス" width="29" height="29" loading="lazy">
                 </picture>
               </a>
               <a href="http://" target="_blank" rel="noopener noreferrer">
               <picture class="p-footer__sns-img">
-                  <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_facebook.webp">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_facebook.png" alt="フェイスブック" width="29" height="29" loading="lazy">
+                  <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_facebook.webp">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_facebook.png" alt="フェイスブック" width="29" height="29" loading="lazy">
                 </picture>
               </a>
             </div>

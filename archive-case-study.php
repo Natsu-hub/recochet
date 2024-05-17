@@ -11,9 +11,9 @@ get_header();
           <span class="c-below-mv__main-title">コンサルの効果</span>
         </h1>
         <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.png" alt="ブログ" width="1440" height="400">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.png" alt="ブログ" width="1440" height="400">
         </picture>
       </div>
     </section>
@@ -53,7 +53,7 @@ get_header();
               <?php if (has_post_thumbnail()) {
                   the_post_thumbnail();
                 } else { ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-img.webp" alt="blog1">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp" alt="blog1">
                 <?php } ?>
               </figure>
           </a>
@@ -70,7 +70,7 @@ get_header();
   <div class="p-privacy-policy__btn c-btn-below l-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
             <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
             <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
             </picture>
           </a>
         </div>

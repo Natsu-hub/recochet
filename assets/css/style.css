@@ -1409,7 +1409,7 @@ pre {
 }
 
 .p-below-contact {
-	background: url(../images/below/works_bg03.png) no-repeat center center/cover;
+	background: url(../images/below-old/works_bg03.png) no-repeat center center/cover;
 	height: 100%;
 	width: 100%;
 }
@@ -1463,7 +1463,7 @@ pre {
 }
 
 .p-below-contact__link::after {
-	background: url(../images/below/next-arrow.svg) no-repeat center center/contain;
+	background: url(../images/below-old/next-arrow.svg) no-repeat center center/contain;
 	content: "";
 	height: 1.25rem;
 	position: absolute;
@@ -2230,7 +2230,7 @@ span.wpcf7-spinner {
 }
 
 .p-footer__btn::after {
-	background: url(../images/common/gray_arrow.svg) no-repeat center center/contain;
+	background: url(../images/common-old/gray_arrow.svg) no-repeat center center/contain;
 	content: "";
 	height: 0.4375rem;
 	max-width: 100%;
@@ -2762,7 +2762,7 @@ span.wpcf7-spinner {
 }
 
 .p-order {
-	background: url(../images/common/top-order_bg.jpg) no-repeat center center/cover;
+	background: url(../images/common-old/top-order_bg.jpg) no-repeat center center/cover;
 	color: #D8D4D1;
 	height: 100%;
 	padding-bottom: 5.75rem;
@@ -2779,7 +2779,7 @@ span.wpcf7-spinner {
 }
 
 .p-service {
-	background: url(../images/common/top-service_bg.png) no-repeat center center/cover;
+	background: url(../images/common-old/top-service_bg.png) no-repeat center center/cover;
 	color: #F0EFEF;
 	height: 100%;
 	width: 100%;
@@ -2941,7 +2941,7 @@ span.wpcf7-spinner {
 }
 
 .p-top-blog__content::after {
-	background: url(../images/common/next-btn.png) no-repeat center center/contain;
+	background: url(../images/common-old/next-btn.png) no-repeat center center/contain;
 	content: "";
 	height: 12px;
 	position: absolute;
@@ -3002,7 +3002,7 @@ span.wpcf7-spinner {
 }
 
 .p-top-mv__img::before {
-	background-image: url(../images/common/top-mv_img.webp);
+	background-image: url(../images/common-old/top-mv_img.webp);
 	background-position: center;
 	background-size: cover;
 	content: "";
@@ -3176,7 +3176,7 @@ span.wpcf7-spinner {
 }
 
 .p-works-example {
-	background: url(../images/below/works_bg01.png) no-repeat center center/cover;
+	background: url(../images/below-old/works_bg01.png) no-repeat center center/cover;
 	color: #F8F8F8;
 	height: 100%;
 	width: 100%;
@@ -3741,7 +3741,7 @@ body {
 }
 
 .p-below-contact {
-	background: url(../images/below/works_bg03_sp.png) no-repeat center center/cover;
+	background: url(../images/below-old/works_bg03_sp.png) no-repeat center center/cover;
 }
 
 .p-below-contact__inner {
@@ -4179,7 +4179,7 @@ body {
 }
 
 .p-order {
-	background: url(../images/common/top-order_bg-sp.jpg) no-repeat center center/cover;
+	background: url(../images/common-old/top-order_bg-sp.jpg) no-repeat center center/cover;
 	padding-bottom: 2.5rem;
 	padding-top: 3rem;
 }
@@ -4339,7 +4339,7 @@ body {
 }
 
 .p-top-mv__img::before {
-	background-image: url(../images/common/top-mv_img_sp.webp);
+	background-image: url(../images/common-old/top-mv_img_sp.webp);
 	height: 100svh;
 }
 

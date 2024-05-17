@@ -12,9 +12,9 @@ get_header();
           <span class="c-below-mv__main-title">ブログ</span>
         </h1>
         <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.png" alt="ブログ" width="1440" height="400">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.png" alt="ブログ" width="1440" height="400">
         </picture>
     </div>
 </section>
@@ -38,7 +38,7 @@ get_header();
 					<?php if (has_post_thumbnail()) {
 						the_post_thumbnail();
 						} else { ?>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-img.webp" alt="blog1">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp" alt="blog1">
 						<?php } ?>
 					</figure>
 				</div>
@@ -76,14 +76,14 @@ echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_usef
   		<div class="p-contact__btn c-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
             <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
             <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
             </picture>
           </a>
         </div>
   		<div class="p-contact__btn"><a class="c-btn-black" href="<?php echo $_SERVER['HTTP_REFERER'] ?? $works; ?>">
             <p class="c-btn-black__text">ブログ一覧へ</p>
             <picture class="c-btn-black__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/black_arrow.svg" alt="ブログ一覧へ" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="ブログ一覧へ" width="202" height="10" loading="lazy">
             </picture>
           </a>
         </div>
