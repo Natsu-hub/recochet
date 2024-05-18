@@ -1,32 +1,52 @@
 @use "global" as *;
 
 .c-cta {
-    background-color: $blue;
     color: $white;
-    z-index: 100;
 
-    @include mq(md) {
-        position: relative;
-        background-color: $blue02;
+    // background: rgba($blue03, 0.7);
+    // position: fixed;
+    // bottom: rem(50);
+    // right: rem(50);
+    // z-index: 100;
 
-    }
+    // @include mq(md) {
+    //     position: relative;
+    //     bottom: 0;
+    //     background-color: $blue02;
+    //     z-index: 100;
+    // }
 }
 
 .c-cta--pc {
+    background: rgba($blue03, 0.7);
     position: fixed;
-    bottom: rem(60);
-    right: rem(40);
+    bottom: rem(50);
+    right: rem(50);
+    z-index: 100;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.c-cta--sp {
+    @include mq(md) {
+        position: relative;
+        background-color: $blue02;
+        z-index: 100;
+    }
 
 }
 
 .c-cta__body {
-    padding: rem(20);
+    padding: rem(30) rem(35);
     position: relative;
 
     @include mq(md) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
+        background-color: $blue02;
     }
 }
 
@@ -34,44 +54,70 @@
 
 .c-cta__item {
     @include mq(md) {
-        padding: rem(8) rem(13);
+        padding: rem(5);
         text-align: center;
     }
 }
 
 .c-cta__item:last-child {
-    border-left: .5px solid $white;
+    margin-top: rem(20);
+
+    @include mq(md) {
+        border-left: .5px solid $white;
+    }
 }
 
 .c-cta__text {
-    font-size: rem(8);
+    font-size: rem(14);
+    text-align: right;
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include mq(md) {
+        font-weight: 500;
+        font-size: rem(8);
+        text-align: left;
+    }
 }
 
 .c-cta__link {
-    margin-top: rem(3);
     position: relative;
+    width: fit-content;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: rem(1);
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        background: $white;
+    @include mq(md) {
+        margin-top: rem(3);
+        margin-inline: auto;
     }
+
+    @include mq(md) {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: rem(1);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            background: $white;
+        }
+    }
+
 }
 
 .c-cta__link a {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .c-cta__arrow {
-    max-width: rem(6);
+    max-width: rem(8);
     width: 100%;
+
     // height: 100%;
+    @include mq(md) {
+        max-width: rem(6);
+    }
 }
 
 .c-cta__arrow img,
@@ -83,28 +129,55 @@
 }
 
 .c-cta__icon {
-    max-width: rem(15);
-    // height: 100%;
+    max-width: rem(26);
     width: 100%;
-    margin-left: rem(2);
+    margin-left: rem(17);
+
+    @include mq(md) {
+        max-width: rem(15);
+        margin-left: rem(2);
+    }
 }
 
 .c-cta__link p {
-    font-size: rem(12);
+    font-size: rem(20);
+    letter-spacing: -0.07em;
     font-weight: 600;
-    margin-left: rem(2);
+    margin-left: rem(9);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: rem(2);
+        background: $white;
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+
+    @include mq(md) {
+        margin-left: rem(2);
+        font-size: rem(12);
+    }
+
 }
 
 /* closeボタン */
 .c-cta__btn {
     position: absolute;
-    background-color: $white;
+    background-color: $black03;
     width: rem(30);
     height: rem(30);
     top: rem(-15);
     right: rem(-15);
     border-radius: 50%;
-    border: 3px solid $blue;
+    border: 2px solid $white;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease 0s;
@@ -120,8 +193,8 @@
     content: "";
     position: absolute;
     width: 2px;
-    height: 15px;
-    background-color: black;
+    height: rem(13);
+    background-color: $white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);

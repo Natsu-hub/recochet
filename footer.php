@@ -1,19 +1,37 @@
 <button class="c-to-top" id="js-scrollTop" title="トップへ戻る">
     <span class="c-to-top__arrow"></span>
 </button>
-<div class="c-cta c-cta--pc u-desktop">
+<div class="c-cta c-cta--pc">
     <div class="c-cta__body">
         <div class="c-cta__btn js-cta"></div>
         <div class="c-cta__item">
-            <div class="c-cta__text">テキスト</div>
+            <div class="c-cta__text">経営に役立つクローズドな情報満載</div>
             <div class="c-cta__link">
-                <a href="http://" target="_blank" rel="noopener noreferrer">メールマガジンのご登録</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <picture class="c-cta__arrow">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                            alt="" width="11" height="7" loading="lazy">
+                    </picture>
+                    <p>メールマガジンのご登録</p>
+                </a>
             </div>
         </div>
         <div class="c-cta__item">
-            <div class="c-cta__text">テキスト</div>
+            <div class="c-cta__text">LINEでご相談、お問い合わせ</div>
             <div class="c-cta__link">
-                <a href="http://" target="_blank" rel="noopener noreferrer">メールマガジンのご登録</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <picture class="c-cta__arrow">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                            alt="" width="11" height="7" loading="lazy">
+                    </picture>
+                    <picture class="c-cta__icon">
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.png"
+                            alt="LINEのアイコン" width="15" height="15" loading="lazy">
+                    </picture>
+                    <p>リコシェ公式ライン</p>
+                </a>
             </div>
         </div>
     </div>

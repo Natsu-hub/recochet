@@ -369,7 +369,7 @@ function common() {
 
     // ctaボタンをクリックしたら非表示
     document.querySelector(".js-cta").addEventListener("click", function () {
-      var ctaContainer = document.querySelector(".c-cta");
+      var ctaContainer = document.querySelector(".c-cta--pc");
       ctaContainer.style.opacity = "0";
       ctaContainer.style.visibility = "hidden";
     });

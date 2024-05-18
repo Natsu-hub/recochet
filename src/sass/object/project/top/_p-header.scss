@@ -101,6 +101,18 @@
     transition: color 0.3s ease 0s;
 }
 
+.p-header__nav-link-arrow {
+    width: rem(11);
+    height: rem(7);
+    margin-left: rem(5);
+}
+
+.p-header__nav-link-arrow img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* メニューアイテムのホバースタイル */
 .p-header__nav-item:hover .p-header__drop-menu-list {
     opacity: 1;
@@ -148,38 +160,6 @@
     border-top: 1px solid $gray;
 }
 
-// /* ヘッダー色変更 */
-// .p-header.change-color {
-//     background-color: $white02; //スクロールしたあとのヘッダー背景色
-//     transition: background-color 0.7s ease 0s;
-// }
-
-// .p-header.change-color .p-header__nav,
-// .p-header.change-color .p-header__logo,
-// .p-header.change-color .p-header__drop-menu-item {
-//     color: $black;
-//     transition: color 0.7s ease 0s;
-// }
-
-
-// .p-header.change-color .p-header__drop-menu-item {
-//     border-left: 1px solid $black;
-//     transition: border 0.7s ease 0s;
-// }
-
-// .p-header.change-color .p-header__drop-menu-list {
-//     background-color: $white02;
-//     transition: all .7s;
-//     top: 100%;
-//     left: 0;
-//     padding-left: rem(16);
-// }
-
-
-// .p-header.change-color .p-header__hamburger span {
-//     background-color: $black04;
-//     transition: background-color 0.7s ease 0s;
-// }
 
 @media (hover: hover) {
     .p-header__nav-item a:hover {
@@ -201,11 +181,6 @@
 
     @include mq(md) {
         display: none;
-        // position: fixed;
-        // top: 0;
-        // right: 0;
-        // padding-left: rem(4);
-        // padding-right: rem(4);
     }
 }
 
@@ -213,12 +188,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 rem(10);
+    }
 }
 
-.c-header__nav-contact-item {}
 
 .c-header__nav-contact-item:last-child {
     margin-left: rem(20);
+
+    @include mq(md) {
+        margin-left: 0;
+    }
 }
 
 .c-header__nav-contact-item a {
@@ -234,7 +218,9 @@
     border: 1px solid $blue;
     transition: all 0.3s ease-out;
 
-    @include mq(md) {}
+    @include mq(md) {
+        width: 100%;
+    }
 }
 
 .c-header__nav-contact-item--blue a {
@@ -339,8 +325,6 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    // background: $black02;
-    // opacity: 0.9;
     overflow-y: scroll;
     scrollbar-width: none;
     color: $black;
@@ -353,16 +337,16 @@
 }
 
 .p-header__drawer-bg {
-    background: $black02;
-    opacity: 0.9;
+    background: rgba($black02, 0.9);
     width: 100%;
     height: 100%;
-    // position: relative;
-    // z-index: $layer-header + 2;
+    position: relative;
+    z-index: $layer-header + 2;
 }
 
-
 .p-header__drawer-nav {
+    position: relative;
+    z-index: $layer-header + 3;
     background: $white;
     opacity: 0.9;
     padding-left: rem(15);
@@ -378,12 +362,6 @@
 
 .p-header__drawer-nav {
     margin: auto;
-}
-
-.p-header__drawer-item {
-    // transform: translate(20px, 0px);
-    // transition: 0.6s ease 0.6s;
-    // opacity: 0;
 }
 
 .p-header__drawer-item--mt24 {
@@ -403,48 +381,39 @@
     justify-content: center;
 }
 
-.p-header__drawer-menu-item {
-    // position: relative;
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     background: url(../images/common/arrow-black.svg) no-repeat center center/contain;
-    //     width: rem(11);
-    //     height: rem(6);
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    //     left: 0;
-    // }
-}
 
 .p-header__drawer-menu-item a {
-    // padding: rem(6) 0;
     display: flex;
     align-items: center;
 }
 
-.p-header__drawer-menu-item:not(:first-child) {
-    // margin-top: rem(10);
-}
-
-.p-header__drawer-item.is-open {
-    // transform: translate(0px, 0px);
-    // opacity: 1;
-}
-
-.p-header__drawer-menu-list.is-open {
-    // opacity: 1;
-    // transform: translateX(40px);
-}
 
 .p-header__drawer-link {
     padding: rem(18) 0;
     display: block;
 }
 
+/* spコンタクトボタン */
+.p-header__drawer-contact {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: rgba($blue03, 0.7);
+    padding: rem(5);
+    width: 100%;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+}
+
 /* ドロップダウンメニュー */
 .p-header__drawer-menu-list {
     padding-left: rem(15);
-    color: $black;
+}
+
+/* current */
+.p-header__drawer-menu-link.current,
+.p-header__drawer-link.current {
+    color: $blue;
 }
