@@ -16,14 +16,15 @@ body {
     position: relative;
     line-height: calc(29 / 16);
     font-size: rem(16);
+    letter-spacing: 0.03em;
     font-weight: 500;
     opacity: 0;
 
     @include mq(md) {
-        background: $black02;
-        font-size: rem(15);
-        letter-spacing: 0.15px;
+        font-size: rem(14);
+        letter-spacing: 0.06em;
         min-height: 100svh;
+        line-height: calc(28 / 14);
     }
 }
 

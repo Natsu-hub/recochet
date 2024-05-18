@@ -1,14 +1,14 @@
 @use "global" as *;
 
 .l-inner {
-  max-width: rem(1370);
+  max-width: rem(1040);
   width: 100%;
   margin-inline: auto;
   padding: 0 rem(25);
 
   @include mq('md') {
     max-width: rem(600);
-    padding: 0 rem(27);
+    padding: 0 rem(15);
   }
 }
 

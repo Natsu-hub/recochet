@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.p-top-message {
+    padding-top: rem(50);
+    overflow: hidden;
+    background-color: $white;
+
+    @include mq(md) {
+        margin-top: rem(11);
+    }
+}
+
+
+
+.p-top-message__title {}
+
+.c-title {}
+
+.p-top-message__title-en {
+    max-width: rem(160);
+
+    @include mq(md) {
+        max-width: rem(88);
+    }
+}
+
+.c-title__en {
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.c-title__en img {
+    object-fit: contain;
+}
+
+.c-title__ja {
+    font-weight: bold;
+    font-size: rem(30);
+    letter-spacing: 0.11em;
+    text-align: center;
+    color: $black04;
+    display: block;
+
+    @include mq(md) {
+        font-size: rem(20);
+        white-space: nowrap;
+    }
+}
+
+.top-message__box {
+    text-align: center;
+    padding-top: rem(50);
+    position: relative;
+
+    @include mq(md) {
+        padding-top: rem(30);
+        text-align: left;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../images/common/ricochet.svg) no-repeat center center/contain;
+        width: rem(957);
+        max-width: 100%;
+        height: rem(185);
+        top: rem(30);
+        left: rem(110);
+
+        @include mq(inner) {
+            left: rem(90);
+            width: rem(850);
+        }
+
+        @include mq(md) {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    @include mq(md) {}
+}
+
+.top-message__box span:not(:first-child) {
+    margin-top: rem(35);
+    display: block;
+
+    @include mq(md) {
+        margin-top: rem(5);
+        display: inline-block;
+    }
+}
