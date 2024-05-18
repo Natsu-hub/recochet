@@ -11,12 +11,12 @@ body {
     min-height: 100vh;
     font-family: $base-font-family;
     color: $black;
-    background: $black03;
+    background: $white;
     z-index: $layer-background;
     position: relative;
-    line-height: calc(32 / 16);
+    line-height: calc(29 / 16);
     font-size: rem(16);
-    font-weight: 400;
+    font-weight: 500;
     opacity: 0;
 
     @include mq(md) {

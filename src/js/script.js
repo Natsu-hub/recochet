@@ -8,7 +8,9 @@ import { textHover } from "./_textHover";
 import { img } from "./_img";
 import { checkbox } from "./_checkbox";
 import { contactFrom } from "./_contactFrom";
+import { slide } from "./_slide";
 
+slide();
 contactFrom();
 checkbox();
 img();

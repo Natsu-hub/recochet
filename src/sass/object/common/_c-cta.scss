@@ -39,7 +39,7 @@
 }
 
 .c-cta__body {
-    padding: rem(30) rem(35);
+    padding: rem(30) rem(30);
     position: relative;
 
     @include mq(md) {
@@ -145,6 +145,7 @@
     font-weight: 600;
     margin-left: rem(9);
     position: relative;
+    white-space: nowrap;
 
     &::after {
         content: "";

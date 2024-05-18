@@ -3,13 +3,87 @@ get_header(); ?>
 
 <main class="l-main">
     <!-- p-top-mv -->
-    <section class="p-top-mv js-mv">
-        <div class="p-top-mv__img">
-            <div class="p-top-mv__inner">
-
+    <section class="p-top-mv">
+        <div class="p-top-mv__inner">
+            <div class="p-top-mv__box">
+                <h2 class="p-top-mv__lead"><span>次世代につながる</span><span>“持続的な経営”で未来を創り</span><span>共に飲食業界を盛り上げる</span>
+                </h2>
+                <div class="p-top-mv__btn">
+                    <a href="">資料ダウンロードはこちら</a>
+                </div>
+                <div class="p-top-mv__link">
+                    <a href="">60分の無料Zoom面談に申し込む</a>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- p-splide-img -->
+    <div class="p-splide-img splide js-slide-img" aria-label="流れる写真のSplide">
+        <div class="splide__track">
+            <ul class="splide__list p-splide-img__list">
+                <li class="splide__slide p-splide-img__slide">
+                    <picture>
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img01.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img01.jpg"
+                            alt="飲食店で働く人のイメージ写真" width="519" height="127">
+                    </picture>
+                </li>
+                <li class="splide__slide p-splide-img__slide">
+                    <picture>
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img02.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img02.jpg"
+                            alt="飲食店で働く人のイメージ写真" width="225" height="127">
+                    </picture>
+                </li>
+                <li class="splide__slide p-splide-img__slide">
+                    <picture>
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img03.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img03.jpg"
+                            alt="飲食店で働く人のイメージ写真" width="519" height="127">
+                    </picture>
+                </li>
+                <li class="splide__slide p-splide-img__slide">
+                    <picture>
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img04.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img04.jpg"
+                            alt="飲食店で働く人のイメージ写真" width="519" height="127">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- p-top-message -->
+    <section class="p-top-message">
+        <div class="p-top-message__inner l-inner">
+            <h2 class="p-top-message__title c-title">
+                <picture class="p-top-message__title-en c-title__en">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/message.svg"
+                        alt="message" width="160" height="98" loading="lazy">
+                </picture>
+                <span class="c-title__ja">『日本の飲食店を元気にする!』</span>
+            </h2>
+            <div class="top-message__box">
+                <p>日本が世界に誇る食文化をより豊かにするために、</p>
+                <p>飲食店ならではの問題点や課題を、オーナーさんと一緒に解決していきます。</p>
+                <p>日本の飲食店が元気になって欲しい、</p>
+                <p>日本の飲食店で働く人が豊かであって欲しい、</p>
+                <p>お客様も心から喜ぶ商品やサービスを提供したい。</p>
+                <p>飲食業界に携わる全ての人が幸せであれるよう、</p>
+                <p>株式会社リコシェは皆様を応援しています。</p>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- p-top-blog -->

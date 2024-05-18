@@ -37,7 +37,7 @@
     </div>
 </div>
 <footer class="p-footer">
-    <div class="p-footer__inner">
+    <!-- <div class="p-footer__inner">
         <div class="p-footer__items">
             <div class="p-footer__info">
                 <div class="p-footer__company-info">
@@ -131,7 +131,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
     <small class="p-footer__copy-right">&copy; <?php echo date('Y'); ?>. saporuto</small>
 </footer>
 <?php wp_footer()?>

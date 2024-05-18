@@ -3,151 +3,82 @@
 .p-top-mv {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: rem(400);
+    height: rem(512);
+    background: url(../images/common/mv_img01.webp) center center / cover no-repeat;
 
-    @include mq(md) {
-        height: 100svh;
-    }
-}
-
-.p-top-mv__inner {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.p-top-mv__img {
-    position: relative;
-    height: inherit;
-
-    &::before {
-        content: "";
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background-image: url(../images/common-old/top-mv_img.webp);
-        background-size: cover;
-        background-position: center;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-
-        @include mq(md) {
-            background-image: url(../images/common-old/top-mv_img_sp.webp);
-            height: 100svh;
-        }
-    }
-}
-
-.p-top-mv__logo {
-    position: relative;
-    bottom: rem(53);
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: $white03;
-    padding-left: rem(37);
-
-    @include mq(md) {
-        padding-left: rem(14);
-        flex-direction: column;
-        align-items: flex-start;
-        bottom: rem(21);
-    }
-}
-
-.p-top-mv__text {
-    margin-top: 95px;
-    writing-mode: vertical-rl;
-    color: $white;
-    font-size: rem(16);
-    padding-right: rem(17);
-    margin-left: auto;
-    letter-spacing: 2.88px;
-    line-height: 1.3;
-
-    @include mq(md) {
-        font-size: rem(12);
-        padding-right: rem(6);
-        margin-top: 56px;
+    @include mq(sm) {
+        background: url(../images/common/mv_img01-sp.webp) top 40% center / cover no-repeat;
+        height: 365px;
     }
 
 }
 
 .p-top-mv__inner {
-    max-width: rem(1440);
-    max-width: rem(1800);
-    width: 100%;
-    margin-inline: auto;
-}
-
-.p-top-mv__logo-img {
-    width: rem(106);
-    max-width: 100%;
     height: 100%;
-    margin-right: rem(29);
-
-    @include mq(md) {
-        width: rem(88);
-        margin-right: 0;
-    }
-}
-
-.p-top-mv__logo-img img {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
-.p-top-mv__logo-text {
-    padding-left: rem(18);
-    font-size: rem(18);
-    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
+.p-top-mv__inner {
+    height: inherit;
+
+}
+
+.p-top-mv__lead {
+    font-weight: bold;
+    font-size: rem(30);
+    color: $white;
+    line-height: 1;
+    letter-spacing: 0.13em;
+    z-index: 5;
     position: relative;
 
     @include mq(md) {
-        padding-left: rem(14);
-        margin-top: rem(15);
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        background: $white03;
-        width: 1px;
-        height: rem(100);
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
+        font-size: rem(20);
+        letter-spacing: 0.13em;
     }
 }
 
-.p-top-mv__logo-text-en {
-    line-height: 1;
-    letter-spacing: 2.88px
+.p-top-mv__lead span:not(:first-child) {
+    margin-top: rem(25);
+    display: block;
 }
 
-.p-top-mv__logo-text-ja {
-    line-height: 1;
-    margin-top: 10px;
+.p-top-mv__btn {
+    margin-top: rem(53);
+
+    @include mq(md) {
+        margin-top: rem(46);
+    }
 }
 
-.p-top-mv__logo-text-name {
-    font-size: rem(32);
-    letter-spacing: 0.96px;
-    line-height: 1;
-    margin-top: 20px;
+.p-top-mv__btn a {
+    border: 2px solid $white;
+    background-color: $blue;
+    color: $white;
+    border-radius: rem(6);
+    padding: rem(21) rem(47);
+    font-weight: 600;
+    font-size: rem(16);
+    letter-spacing: 0.23em;
+    display: block;
+
+    @include mq(md) {
+        padding: rem(20) rem(33);
+    }
 }
 
-.p-top-mv__logo-text-name span {
-    letter-spacing: 0.36px;
-    font-size: rem(18);
-    padding-left: rem(10);
-    vertical-align: middle;
-    line-height: 1;
+.p-top-mv__link {
+    margin-top: rem(20);
+    font-size: rem(14);
+    letter-spacing: 0.11em;
+    text-decoration: underline;
+
+    @include mq(md) {
+        font-size: rem(12);
+    }
 }
+
+.p-top-mv__link a {}
