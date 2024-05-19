@@ -9,10 +9,10 @@ get_header(); ?>
                 <h2 class="p-top-mv__lead"><span>次世代につながる</span><span>“持続的な経営”で未来を創り</span><span>共に飲食業界を盛り上げる</span>
                 </h2>
                 <div class="p-top-mv__btn">
-                    <a href="">資料ダウンロードはこちら</a>
+                    <a href="<?php echo DOWNLOAD_URL; ?>">資料ダウンロードはこちら</a>
                 </div>
                 <div class="p-top-mv__link">
-                    <a href="">60分の無料Zoom面談に申し込む</a>
+                    <a href="<?php echo MEETING_URL; ?>">60分の無料Zoom面談に申し込む</a>
                 </div>
             </div>
         </div>
@@ -67,12 +67,14 @@ get_header(); ?>
         <div class="p-top-message__inner l-inner">
             <h2 class="p-top-message__title c-title">
                 <picture class="p-top-message__title-en c-title__en">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/message-sp.svg"
+                        type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/message.svg"
                         alt="message" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">『日本の飲食店を元気にする!』</span>
             </h2>
-            <div class="top-message__box">
+            <div class="p-top-message__box">
                 <span>日本が世界に誇る食文化をより豊かにするために、</span>
                 <span>飲食店ならではの問題点や課題を、オーナーさんと一緒に解決していきます。</span><br class="u-mobile">
                 <span>日本の飲食店が元気になって欲しい、</span>
@@ -83,6 +85,88 @@ get_header(); ?>
             </div>
         </div>
     </section>
+
+    <!-- p-top-service -->
+    <section class="p-top-service">
+        <div class="p-top-service__inner l-inner">
+            <h2 class="p-top-service__title c-title">
+                <picture class="p-top-service__title-en c-title__en">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service-sp.svg"
+                        type="image/webp" media="(max-width: 768px)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service.svg"
+                        alt="service" width="160" height="98" loading="lazy">
+                </picture>
+                <span class="c-title__ja">事業内容</span>
+            </h2>
+            <div class="p-top-service__box">
+                <picture class="p-top-service__img">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img04.webp"
+                        type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img04.png"
+                        alt="事業内容のイメージイラスト" width="496" height="279" loading="lazy">
+                </picture>
+                <div class="p-top-service__content">
+                    <span>かつて子供達が憧れた飲食店。しかし現実的に飲食店を開業しても、売り上げが悪ければすぐに廃業せざるをえなくなってしまいます。ブラック企業の代名詞である飲食業界を打開するため活動しており、支援することで業界全体を変革していきます。
+                    </span>
+                    <span>また、これまで経験した成功例から得たノウハウを、新規顧客開拓、通販事業立ち上げ、コピーライティング、マーケティング、売上アップ、事業改善、労働改善、経営戦略など様々な場面でご提供いたします。
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- p-common-service -->
+    <div class="p-common-service p-common-service--top">
+        <div class="p-common-service__inner l-inner">
+            <ul class="p-common-service__lists">
+                <li class="p-common-service__list">
+                    <picture class="p-common-service__list-img">
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img01.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img01.jpg"
+                            alt="事業コンサルティングのイメージ画像" width="310" height="174" loading="lazy">
+                    </picture>
+                    <div class="p-common-service__list-title">事業コンサルティング</div>
+                    <div class="p-common-service__list-text">通販のみで最高月商700万を達成し、累計約3000人以上の方に行なってきたノウハウを惜しみなく提供します。</div>
+                    <div class="p-common-service__list-btn">
+                        <a class="c-btn" href="<?php echo CONSULTING_URL; ?>">詳しく見る</a>
+                    </div>
+                </li>
+                <li class="p-common-service__list">
+                    <picture class="p-common-service__list-img">
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img02.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img02.jpg"
+                            alt="飲食店ネット通販アカデミーのイメージ画像" width="310" height="174" loading="lazy">
+                    </picture>
+                    <div class="p-common-service__list-title">飲食店ネット通販アカデミー</div>
+                    <div class="p-common-service__list-text">通販関係の有益情報や、マインドセットを発信しているオンラインサロンです。<br>
+                        サロン生に向けて、毎月の実践報告に対するフィードバックも行っています。</div>
+                    <div class="p-common-service__list-btn">
+                        <a class="c-btn" href="<?php echo ACADEMY_URL; ?>">詳しく見る</a>
+                    </div>
+                </li>
+                <li class="p-common-service__list">
+                    <picture class="p-common-service__list-img">
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img03.webp"
+                            type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img03.jpg"
+                            alt="発展途上国の教育支援のイメージ画像" width="310" height="174" loading="lazy">
+                    </picture>
+                    <div class="p-common-service__list-title">発展途上国の教育支援</div>
+                    <div class="p-common-service__list-text">リコシェが行っている社会貢献事業とSDGsの取り組みをご紹介いたします。</div>
+                    <div class="p-common-service__list-btn">
+                        <a class="c-btn" href="<?php echo WELL_URL; ?>">詳しく見る</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <?php get_template_part('template/common-download'); ?>
 
     <!-- p-top-blog -->
     <div class="p-top-blog l-section">

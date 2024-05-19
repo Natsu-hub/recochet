@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.p-common-service--top {
+    padding-bottom: rem(98);
+
+    @include mq(md) {
+        padding-bottom: rem(57);
+    }
+}
+
+.p-common-service--below {
+    padding-top: rem(41);
+    padding-bottom: rem(54);
+    background-color: $white02;
+
+    @include mq(md) {
+        padding-top: rem(41);
+        padding-bottom: rem(54);
+    }
+}
+
+.p-common-service__lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(57) rem(30);
+
+    @include mq(md) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.p-common-service__list {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    gap: 0;
+}
+
+.p-common-service__list-img {
+    max-width: rem(310);
+    width: 100%;
+
+    @include mq(md) {
+        max-width: 100%;
+    }
+}
+
+.p-common-service__list-img img {
+    aspect-ratio: 310/174;
+    object-fit: cover;
+    height: auto;
+
+    @include mq(md) {
+        aspect-ratio: 290/163;
+    }
+}
+
+.p-common-service__list-title {
+    margin-top: rem(24);
+    color: $blue;
+    font-weight: bold;
+    font-size: rem(18);
+    letter-spacing: 0.23em;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.p-common-service__list-text {
+    @include mq(md) {
+        font-size: rem(14);
+        letter-spacing: 0.02em;
+    }
+}
+
+.p-common-service__list-btn {
+    margin-top: rem(20);
+}
+
+.c-btn {
+    color: $blue04;
+    border: 1px solid $blue04;
+    border-radius: 3.5px;
+    text-align: center;
+    padding: rem(16);
+    width: 100%;
+    display: block;
+}

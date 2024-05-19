@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.p-top-service {
+    padding-top: rem(68);
+    padding-bottom: rem(77);
+
+    @include mq(md) {
+        padding-top: rem(24);
+        padding-bottom: rem(40);
+    }
+}
+
+.p-top-service__inner {}
+
+
+.p-top-service__title {
+    text-align: center;
+}
+
+.c-title {}
+
+.p-top-service__title-en {
+    max-width: rem(138);
+
+    @include mq(md) {
+        max-width: rem(77);
+    }
+}
+
+
+.p-top-service__box {
+    margin-top: rem(64);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(7) 0;
+
+    @include mq(md) {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: rem(11);
+    }
+}
+
+.p-top-service__img {}
+
+.p-top-service__content {
+    padding-left: rem(19);
+    letter-spacing: 0.14em;
+    line-height: calc(28 / 16);
+
+    @include mq(md) {
+        padding-left: 0;
+    }
+}
+
+.p-top-service__content span {
+    display: block;
+
+    @include mq(md) {
+        display: inline;
+    }
+}
+
+.p-top-service__content span:last-child {
+    margin-top: rem(40);
+}

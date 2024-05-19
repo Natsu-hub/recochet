@@ -38,8 +38,8 @@ function my_script_init()
 	wp_enqueue_script('gsap-scrollto', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', array('gsap'), null, true);
 
 	// Google Fonts(2つ以上ある場合は1つずつ書く)
-	wp_enqueue_style('NotoSerifJp', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;600&display=swap');
-	wp_enqueue_style('NotoSansJp', '//fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+	// wp_enqueue_style('NotoSerifJp', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap');
+	wp_enqueue_style('NotoSansJp', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
 	wp_enqueue_style('Prata', '//fonts.googleapis.com/css2?family=Prata&display=swap');
 
     // Font Awesome
@@ -108,16 +108,17 @@ function select_to_radio_genre() {
 ?>
 <script type="text/javascript">
 jQuery(function($) {
-	// 投稿画面
-	$('#taxonomy-genre input[type="checkbox"]').each(function() {
-	  $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(this).val() + '">').prop('checked', $(this).is(':checked')));
-	});
-	// 一覧画面
-	var genre_checklist = $('.genrechecklist input[type="checkbox"]');
-	genre_checklist.click(function() {
-	  genre_checklist.prop('checked', false);
-	  $(this).prop('checked', true);
-	});
+    // 投稿画面
+    $('#taxonomy-genre input[type="checkbox"]').each(function() {
+        $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(
+            this).val() + '">').prop('checked', $(this).is(':checked')));
+    });
+    // 一覧画面
+    var genre_checklist = $('.genrechecklist input[type="checkbox"]');
+    genre_checklist.click(function() {
+        genre_checklist.prop('checked', false);
+        $(this).prop('checked', true);
+    });
 });
 </script>
 <?php
@@ -128,10 +129,11 @@ function select_to_radio_category() {
 ?>
 <script type="text/javascript">
 jQuery(function($) {
-	// カテゴリーをラジオボタンにする
-	$('#category-all input[type="checkbox"]').each(function() {
-	  $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(this).val() + '">').prop('checked', $(this).is(':checked')));
-	});
+    // カテゴリーをラジオボタンにする
+    $('#category-all input[type="checkbox"]').each(function() {
+        $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(
+            this).val() + '">').prop('checked', $(this).is(':checked')));
+    });
 });
 </script>
 <?php
@@ -184,7 +186,3 @@ function SearchFilter( $query ) {
 		);
 	}
 	add_action('init', 'custom_rewrite_rules');
-
-
-
-

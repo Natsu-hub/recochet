@@ -1,0 +1,282 @@
+@use "global" as *;
+
+.c-common-download {
+    background: url(../images/common/download_bg.webp) center center / cover no-repeat;
+    padding-top: rem(75);
+
+    @include mq(md) {
+        padding-top: rem(38);
+    }
+}
+
+.c-common-download__inner {
+    z-index: 1;
+    position: relative;
+}
+
+.c-common-download__lead {
+    font-size: rem(28);
+    font-weight: bold;
+    line-height: 1;
+    color: $white;
+    text-align: center;
+    letter-spacing: -0.03em;
+    z-index: 5;
+    position: relative;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../images/common/download_text-bg01.webp) no-repeat center center/contain;
+        width: rem(611);
+        height: rem(191);
+        top: rem(-45);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+}
+
+.c-common-download__lead span {
+    display: block;
+}
+
+.c-common-download__lead span:last-child {
+    margin-top: rem(11);
+}
+
+.c-common-download__btn {
+    margin-top: rem(34);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+
+    @include mq(md) {
+        margin-top: rem(28);
+        padding-inline: rem(15);
+    }
+}
+
+.c-common-download__btn a {
+    display: block;
+    background-color: $blue;
+    color: $white;
+    font-weight: bold;
+    font-size: rem(23);
+    letter-spacing: 0.23em;
+    line-height: 1;
+    padding: rem(25) rem(45);
+    max-width: rem(449);
+    width: 100%;
+    border-radius: 8.64px;
+    border: rem(6) solid $white;
+    margin-inline: auto;
+    white-space: nowrap;
+
+    @include mq(md) {
+        padding: rem(22) rem(33);
+        font-size: rem(14);
+        border: rem(4) solid $white;
+    }
+}
+
+.c-common-download__link {
+    margin-top: rem(25);
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+    z-index: 5;
+
+    @include mq(md) {
+        margin-top: rem(18);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../images/common/download_text-bg02.webp) no-repeat center center/contain;
+        width: rem(418);
+        height: rem(115);
+        top: rem(-32);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+
+.c-common-download__link a {
+    display: block;
+    color: $white;
+    position: relative;
+    line-height: 1;
+    font-size: rem(20);
+    letter-spacing: 0.11em;
+    padding: .4em;
+    z-index: 5;
+
+    @include mq(md) {
+        font-size: rem(12);
+        letter-spacing: 0.11em;
+        color: $black;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        background: $white;
+
+        @include mq(md) {
+            background: $black;
+        }
+    }
+}
+
+.c-common-download__bg {
+    margin-top: rem(70);
+    background: rgba($white, .3);
+    width: 100vw;
+    padding-block: rem(25);
+    margin: 0 calc(50% - 50vw);
+
+    @include mq(md) {
+        margin-top: rem(19);
+    }
+
+}
+
+.c-common-download__box {
+    background-color: $black05;
+    padding: rem(20) rem(30) rem(20) rem(47);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(md) {
+        padding: rem(18) rem(15) rem(24) rem(15);
+        flex-direction: column;
+    }
+}
+
+.c-common-download__text {
+    font-size: rem(18);
+    color: $white;
+    line-height: 1;
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
+        width: rem(9);
+        height: rem(16);
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(20);
+    }
+
+    &::before {
+        right: rem(-29);
+
+        @include mq(md) {
+            right: auto;
+            top: auto;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+            bottom: rem(-23);
+
+        }
+
+    }
+
+    &::after {
+        right: rem(-38);
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+}
+
+.c-common-download__items {
+    margin-left: rem(95);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(15) rem(20);
+
+    @include mq(inner) {
+        margin-left: rem(80);
+    }
+
+    @include mq(md) {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: rem(30);
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.c-common-download__item {
+    font-size: rem(16);
+    text-align: center;
+
+    // letter-spacing: -0.08em;
+    // text-align: left;
+    @include mq(md) {
+        width: 100%;
+    }
+}
+
+.c-common-download__item a {
+    padding: rem(22) rem(46) rem(22) rem(44);
+    display: block;
+    border-radius: 3.5px;
+    white-space: nowrap;
+
+    @include mq(lg) {
+        padding: rem(20) rem(25);
+    }
+
+    @include mq(md) {
+        padding: rem(13) rem(45);
+        height: rem(60);
+        width: 100%;
+        max-width: rem(450);
+        margin-inline: auto;
+    }
+}
+
+.c-common-download__contact {}
+
+.c-common-download__contact--mail {
+    color: $blue05;
+    border: 1px solid $blue05;
+    background-color: $white;
+
+}
+
+.c-common-download__contact--line {
+    color: $white;
+    border: 1px solid $green;
+    background-color: $green;
+}

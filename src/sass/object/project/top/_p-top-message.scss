@@ -10,12 +10,6 @@
     }
 }
 
-
-
-.p-top-message__title {}
-
-.c-title {}
-
 .p-top-message__title-en {
     max-width: rem(160);
 
@@ -24,31 +18,8 @@
     }
 }
 
-.c-title__en {
-    display: block;
-    width: 100%;
-    margin-inline: auto;
-}
 
-.c-title__en img {
-    object-fit: contain;
-}
-
-.c-title__ja {
-    font-weight: bold;
-    font-size: rem(30);
-    letter-spacing: 0.11em;
-    text-align: center;
-    color: $black04;
-    display: block;
-
-    @include mq(md) {
-        font-size: rem(20);
-        white-space: nowrap;
-    }
-}
-
-.top-message__box {
+.p-top-message__box {
     text-align: center;
     padding-top: rem(50);
     position: relative;
@@ -84,7 +55,7 @@
     @include mq(md) {}
 }
 
-.top-message__box span:not(:first-child) {
+.p-top-message__box span:not(:first-child) {
     margin-top: rem(35);
     display: block;
 
