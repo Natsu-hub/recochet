@@ -33,6 +33,36 @@ export function slide() {
             });
             slideImgMv.mount({ AutoScroll });
         }
+
+
+        if (document.querySelector(".js-slide")) {
+            new Splide(".js-slide", {
+              type: "loop",
+              gap: "1rem",
+            //   perPage: 4,
+            fixedWidth:'19.375rem',
+            arrows: false,
+            breakpoints: {
+                768: {
+                    fixedWidth:'18.125rem',
+                },
+              },
+              perMove: 1,
+              autoplay: true,
+              interval: 4000,
+              pauseOnHover: false,
+              pauseOnFocus: false,
+              focus: 0,
+              speed: 3500,
+              focus: "center", // アクティブなスライドを中央にする
+              updateOnMove: true, // is-activeクラスを移動前に更新する
+              classes: {
+                pagination: 'splide__pagination p-top-case-study__pagination',
+                page      : 'splide__pagination__page p-top-case-study__page',
+          },
+          
+            }).mount();
+          }
         
 
 

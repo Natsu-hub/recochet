@@ -40,7 +40,20 @@
     }
 }
 
-.p-top-service__img {}
+.p-top-service__img {
+    width: 100%;
+    height: auto;
+}
+
+.p-top-service__img img {
+    aspect-ratio: 495/279;
+    object-fit: cover;
+    height: auto;
+
+    @include mq(md) {
+        aspect-ratio: 290/163;
+    }
+}
 
 .p-top-service__content {
     padding-left: rem(19);

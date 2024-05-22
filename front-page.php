@@ -168,58 +168,128 @@ get_header(); ?>
 
     <?php get_template_part('template/common-download'); ?>
 
-    <!-- p-top-blog -->
-    <div class="p-top-blog l-section">
-        <div class="p-top-blog__inner l-inner--small">
-            <div class="p-top-blog__box">
-                <div class="p-top-blog__left">
-                    <h2 class="p-top-blog__head c-common-title c-common-title--black js-text-effect js-splitText">Blog
-                    </h2>
-                    <div class="p-top-blog__btn js-fade-in"><a class="c-btn-black" href="<?php echo BLOG_URL; ?>">
-                            <p class="c-btn-black__text">記事一覧へ</p>
-                            <picture class="c-btn-black__img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow02.svg"
-                                    alt="記事一覧へ" width="202" height="10" loading="lazy">
-                            </picture>
-                        </a>
+
+
+    <!-- p-top-case-study -->
+    <section class="p-top-case-study">
+        <div class="p-top-case-study__inner">
+            <h2 class="p-top-case-study__title c-title">
+                <picture class="p-top-case-study__title-en c-title__en">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study-sp.svg"
+                        type="image/webp" media="(max-width: 768px)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study.svg"
+                        alt="case-study" width="160" height="98" loading="lazy">
+                </picture>
+                <span class="c-title__ja">リコシェのコンサル効果</span>
+            </h2>
+            <div class="p-top-case-study__wrapper">
+                <!-- js-slide-case-study -->
+                <div class="splide js-slide" aria-label="コンサル効果のSplide">
+                    <div class="splide__track">
+                        <ul class="splide__list p-top-case-study__items">
+                            <?php
+                        $args = [
+                            'post_type' => 'case-study',
+                            'posts_per_page' => 5,
+                        ];
+                        $the_query01 = new WP_Query($args);
+                        if ($the_query01->have_posts()) :
+                            while ($the_query01->have_posts()) : $the_query01->the_post();
+                                $case_client = get_field('case_client');
+                                $case_title = get_field('case_title');
+                        ?>
+                            <li class="splide__slide p-top-case-study__item">
+                                <a href="<?php the_permalink(); ?>">
+                                    <figure class="p-top-case-study__img">
+                                        <?php
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail();
+                                    } else {
+                                    ?>
+                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/common/no-img.png"
+                                            alt="">
+                                        <?php
+                                    } ?>
+                                    </figure>
+                                    <div class="p-top-case-study__body">
+                                        <div class="p-top-case-study__client">
+                                            <?php echo $case_client; ?>
+                                        </div>
+                                        <h3 class="p-top-case-study__card-title">
+                                            <?php echo $case_title; ?>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <?php endwhile; ?>
+                            <?php else : ?>
+                            <p>記事がありません</p>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </ul>
+                        <!-- ページネーション -->
+                        <ul class="splide__pagination p-top-case-study__pagination"></ul>
                     </div>
                 </div>
-                <div class="p-top-blog__right js-fadeInSlow">
-                    <?php
-          if (wp_is_mobile()) {
-            $num = 6; // スマホの表示数(全件は-1)
-          } else {
-            $num = 6; // PCの表示数(全件は-1)
-          }
-          $args = [
-            'post_type' => 'case-study',
-            // 投稿タイプのスラッグ(通常投稿は'post')
-            'posts_per_page' => $num, // 表示件数
-          ];
-          $the_query = new WP_Query($args);
-          if ($the_query->have_posts()):
-            while ($the_query->have_posts()):
-              $the_query->the_post();
-              ?>
-                    <a class="p-top-blog__content" href="<?php the_permalink(); ?>">
-                        <div class="p-top-blog__time">
-                            <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.'); ?></time>
-                            <time datetime="<?php the_time('c'); ?>"><?php the_time('n.j'); ?></time>
-                        </div>
-                        <p class="p-top-blog__content-title">
-                            <?php the_title(); ?>
-                        </p>
-                    </a>
-                    <?php endwhile; else: ?>
-                    <p>まだ記事がありません</p>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
-                    <!-- 記事のループ処理終了 -->
-                </div>
-
+            </div>
+            <div class="p-top-case-study__list-btn">
+                <a class="c-btn" href="<?php echo CASE_URL; ?>">コンサル事例一覧を見る</a>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- p-top-well -->
+    <section class="p-top-well">
+        <div class="p-top-well__inner l-inner">
+            <h2 class="p-top-well__title c-title">
+                <picture class="p-top-well__title-en c-title__en">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being-sp.svg"
+                        type="image/webp" media="(max-width: 768px)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being.svg"
+                        alt="well" width="160" height="98" loading="lazy">
+                </picture>
+                <span class="c-title__ja">SDGsの取り組み</span>
+            </h2>
+            <div class="p-top-well__box">
+                <picture class="p-top-well__img">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/well_img01.webp"
+                        type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/well_img01.jpg"
+                        alt="SDGsの取り組みのイメージ画像" width="701" height="497" loading="lazy">
+                </picture>
+                <div class="p-top-well__content">
+                    <div class="p-top-well__lead">例えば、発展途上国の教育支援。
+                    </div>
+                    <div class="p-top-well__text">リコシェでは貧困層の子供たちへの学校支援を行っています。ブータンのような発展途上国では、幸福度が高い一方で教育環境は不十分です。<br>
+                        リコシェは学校への寄付を通じて、校舎や設備の整備、安全な環境の提供を行い、子供たちの教育を支援しています。<br>
+                        その結果、学校へのアクセスが改善し子供たちの笑顔が増えています。<br>
+                        リコシェはこれからも教育支援をはじめ、well-beingなSDGsの取り組みに貢献してまいります。<br>
+                    </div>
+                    <div class="p-top-well__btn"><a class="c-btn" href="<?php echo CASE_URL; ?>">リコシェの取り組みはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- p-top-company -->
+    <section class="p-top-company">
+        <div class="p-top-company__inner l-inner">
+            <h2 class="p-top-company__title c-title">
+                <picture class="p-top-company__title-en c-title__en">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/company-sp.svg"
+                        type="image/webp" media="(max-width: 768px)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/company.svg"
+                        alt="company" width="160" height="98" loading="lazy">
+                </picture>
+                <span class="c-title__ja">会社概要</span>
+            </h2>
+            <div class="p-top-company__text">株式会社ricochetの会社概要をご紹介いたします。
+            </div>
+            <div class="p-top-company__btn"><a class="c-btn" href="<?php echo CASE_URL; ?>">リコシェの取り組みはこちら</a>
+            </div>
+        </div>
+    </section>
 
 
 

@@ -1,0 +1,126 @@
+@use "global" as *;
+
+
+.p-top-case-study {
+    padding-bottom: rem(101);
+    background-color: $white02;
+    padding-top: rem(60);
+
+    @include mq(md) {
+        padding-top: rem(42);
+        padding-bottom: rem(72);
+    }
+}
+
+.p-top-case-study__title {
+    text-align: center;
+}
+
+.p-top-case-study__title-en {
+    max-width: rem(217);
+
+    @include mq(md) {
+        max-width: rem(118);
+    }
+}
+
+.p-top-case-study__wrapper {
+    margin-top: rem(70);
+
+    @include mq(md) {
+        margin-top: rem(21);
+    }
+}
+
+
+.p-top-case-study__items {}
+
+.p-top-case-study__item {
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #2ca2dc;
+    padding: rem(20) rem(18);
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        padding: rem(19) rem(17);
+    }
+}
+
+.p-top-case-study__img {
+    height: auto;
+}
+
+.p-top-case-study__img img {
+    aspect-ratio: 273/154;
+    object-fit: cover;
+    height: auto;
+
+    @include mq(md) {
+        aspect-ratio: 257/145;
+    }
+}
+
+.p-top-case-study__body {
+    padding-top: rem(23);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-top-case-study__client {
+    font-weight: 700;
+}
+
+.p-top-case-study__card-title {
+    flex-grow: 1;
+    color: $blue06;
+    text-align: left;
+    font-weight: 500;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.p-top-case-study__list-btn {
+    margin-top: rem(37);
+    max-width: rem(310);
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq(md) {
+        margin-top: rem(22);
+        max-width: rem(290);
+    }
+}
+
+/* splide */
+.p-top-case-study__pagination {
+    margin-top: rem(18);
+}
+
+.p-top-case-study__page {
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 rem(8);
+    padding: 0;
+    position: relative;
+    transition: transform 0.2s linear;
+    background: $black;
+    width: rem(11);
+    height: rem(11);
+    border: 1px solid $black;
+}
+
+.p-top-case-study__page.is-active {
+    background: $white;
+    z-index: 1;
+}
+
+.p-top-case-study__page:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}

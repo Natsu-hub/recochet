@@ -3,29 +3,42 @@ get_header();
 ?>
 
 <main class="l-main">
-<!-- c-below-mv -->
-<section class="c-below-mv js-mv">
-      <div class="c-below-mv__inner">
-        <h1 class="c-below-mv__title">
-            <span class="c-below-mv__sub-title">CASE STUDY</span>
-          <span class="c-below-mv__main-title">コンサルの効果</span>
-        </h1>
-        <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.png" alt="ブログ" width="1440" height="400">
-        </picture>
-      </div>
+    <?php
+$case_company = get_field('case_company');
+$case_industry = get_field('case_industry');
+$case_number = get_field('case_number');
+$case_task = get_field('case_task');
+$case_client = get_field('case_client');
+$case_title = get_field('case_title');
+?>
+    <?php echo $case_client; ?>
+    <?php echo $case_title; ?>
+    <!-- c-below-mv -->
+    <section class="c-below-mv js-mv">
+        <div class="c-below-mv__inner">
+            <h1 class="c-below-mv__title">
+                <span class="c-below-mv__sub-title">CASE STUDY</span>
+                <span class="c-below-mv__main-title">コンサルの効果</span>
+            </h1>
+            <picture class="c-below-mv__img">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv_sp.webp"
+                    type="image/webp" media="(max-width: 768px)">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.webp"
+                    type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.png" alt="ブログ"
+                    width="1440" height="400">
+            </picture>
+        </div>
     </section>
 
-<!-- archive-info -->
-<section class="p-archive-blog l-section--below">
-<div class="p-archive-blog__inner l-inner--small">
-  <div class="p-archive-blog__body">
-    <article class="p-archive-blog__primary">
-      <div class="p-archive-blog__cards">
-            <!-- 記事のループ処理開始 -->
-            <?php
+    <!-- archive-info -->
+    <section class="p-archive-blog l-section--below">
+        <div class="p-archive-blog__inner l-inner--small">
+            <div class="p-archive-blog__body">
+                <article class="p-archive-blog__primary">
+                    <div class="p-archive-blog__cards">
+                        <!-- 記事のループ処理開始 -->
+                        <?php
       if (wp_is_mobile()) {
         $num = 6; // スマホの表示数(全件は-1)
       } else {
@@ -42,40 +55,44 @@ get_header();
         while ($the_query->have_posts()):
           $the_query->the_post();
           ?>
-          <a href="<?php the_permalink(); ?>" class="c-card js-fade-in">
-            <div class="c-card__body">
-              <time class="c-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
-              <p class="c-card__text">
-                  <?php the_title(); ?>
-              </p>
-            </div>
-            <figure class="c-card__img-wrapper">
-              <?php if (has_post_thumbnail()) {
+                        <a href="<?php the_permalink(); ?>" class="c-card js-fade-in">
+                            <div class="c-card__body">
+                                <time class="c-card__time"
+                                    datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
+                                <p class="c-card__text">
+                                    <?php the_title(); ?>
+                                </p>
+                            </div>
+                            <figure class="c-card__img-wrapper">
+                                <?php if (has_post_thumbnail()) {
                   the_post_thumbnail();
                 } else { ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp" alt="blog1">
-                <?php } ?>
-              </figure>
-          </a>
-          <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-          <!-- 記事のループ処理終了 -->
-          </div>
-        <div class="p-archive-blog__pages">
-        <?php get_template_part('template/pagination'); ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp"
+                                    alt="blog1">
+                                <?php } ?>
+                            </figure>
+                        </a>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <!-- 記事のループ処理終了 -->
+                    </div>
+                    <div class="p-archive-blog__pages">
+                        <?php get_template_part('template/pagination'); ?>
+                    </div>
+                </article>
+            </div>
+            <div class="p-privacy-policy__btn c-btn-below l-btn-below"><a class="c-btn-black"
+                    href="<?php echo HOME_URL; ?>">
+                    <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
+                    <picture class="c-btn-black__img c-btn-black__img--prev">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg"
+                            alt="TOPへ戻る" width="202" height="10" loading="lazy">
+                    </picture>
+                </a>
+            </div>
         </div>
-  </article>
-  </div>
-  <div class="p-privacy-policy__btn c-btn-below l-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
-            <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
-            <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
-            </picture>
-          </a>
-        </div>
-</div>
-</section>
+    </section>
 
-  </main>
+</main>
 <?php get_footer(); ?>
