@@ -800,7 +800,7 @@ body {
 	border-radius: 3.5px;
 	color: #1464b3;
 	display: block;
-	padding: 1rem;
+	padding: 0.625rem;
 	text-align: center;
 	-webkit-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
@@ -2356,50 +2356,6 @@ span.wpcf7-spinner {
 	margin-top: 2.5rem;
 }
 
-.p-company {
-	background: #F1F1F1;
-}
-
-.p-company__items {
-	grid-gap: 3rem 3.7037037037%;
-	display: -ms-grid;
-	display: grid;
-	gap: 3rem 3.7037037037%;
-	-ms-grid-columns: (1fr)[2];
-	grid-template-columns: repeat(2, 1fr);
-}
-
-.p-company__list {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	border-bottom: 1px solid #707070;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	padding-block: 1.25rem;
-}
-
-.p-company__list:first-of-type {
-	padding-top: 0;
-}
-
-.p-company__title {
-	-webkit-flex-shrink: 0;
-	    -ms-flex-negative: 0;
-	        flex-shrink: 0;
-	font-weight: 300;
-	max-width: 9.625rem;
-	width: 100%;
-}
-
-.p-company__detail {
-	line-height: 1.625;
-	margin-left: 0.75rem;
-}
-
 .p-footer {
 	background-color: #333333;
 	color: #707070;
@@ -3296,6 +3252,33 @@ span.wpcf7-spinner {
 .p-top-case-study__page:hover {
 	cursor: pointer;
 	opacity: 0.9;
+}
+
+.p-top-company {
+	padding-bottom: 6.375rem;
+	text-align: center;
+}
+
+.p-top-company__title {
+	text-align: center;
+}
+
+.p-top-company__title-en {
+	max-width: 11.9375rem;
+}
+
+.p-top-company__text {
+	font-size: 0.875rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	margin-top: 2.1875rem;
+}
+
+.p-top-company__btn {
+	margin-inline: auto;
+	margin-top: 2.75rem;
+	max-width: 19.375rem;
+	width: 100%;
 }
 
 .p-top-message {
@@ -4556,27 +4539,6 @@ body {
 	padding-inline: 1.875rem;
 }
 
-.p-company__head {
-	text-align: center;
-}
-
-.p-company__items {
-	-ms-grid-columns: (1fr)[1];
-	grid-template-columns: repeat(1, 1fr);
-}
-
-.p-company__info {
-	padding-inline: 1.0625rem;
-}
-
-.p-company__title {
-	max-width: 5rem;
-}
-
-.p-company__detail {
-	line-height: 1.7333;
-}
-
 .p-footer {
 	padding-top: 2.5rem;
 }
@@ -4836,6 +4798,23 @@ body {
 
 .p-top-case-study__list-btn {
 	margin-top: 1.375rem;
+	max-width: 18.125rem;
+}
+
+.p-top-company {
+	padding-bottom: 2.625rem;
+}
+
+.p-top-company__title-en {
+	max-width: 6.5rem;
+}
+
+.p-top-company__text {
+	margin-top: 1.3125rem;
+}
+
+.p-top-company__btn {
+	margin-top: 1.0625rem;
 	max-width: 18.125rem;
 }
 

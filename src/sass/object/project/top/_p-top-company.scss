@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.p-top-company {
+    padding-bottom: rem(102);
+    text-align: center;
+
+    @include mq(md) {
+        padding-bottom: rem(42);
+    }
+}
+
+.p-top-company__title {
+    text-align: center;
+}
+
+.c-title {}
+
+.p-top-company__title-en {
+    max-width: rem(191);
+
+    @include mq(md) {
+        max-width: rem(104);
+    }
+}
+
+.p-top-company__text {
+    font-weight: 500;
+    font-size: rem(14);
+    margin-top: rem(35);
+    letter-spacing: 0.02em;
+
+    @include mq(md) {
+        margin-top: rem(21);
+    }
+
+}
+
+.p-top-company__btn {
+    margin-top: rem(44);
+    max-width: rem(310);
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq(md) {
+        margin-top: rem(17);
+        max-width: rem(290);
+    }
+}

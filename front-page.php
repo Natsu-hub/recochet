@@ -166,9 +166,8 @@ get_header(); ?>
         </div>
     </div>
 
+    <!-- 資料ダウンロード -->
     <?php get_template_part('template/common-download'); ?>
-
-
 
     <!-- p-top-case-study -->
     <section class="p-top-case-study">
@@ -265,7 +264,7 @@ get_header(); ?>
                         その結果、学校へのアクセスが改善し子供たちの笑顔が増えています。<br>
                         リコシェはこれからも教育支援をはじめ、well-beingなSDGsの取り組みに貢献してまいります。<br>
                     </div>
-                    <div class="p-top-well__btn"><a class="c-btn" href="<?php echo CASE_URL; ?>">リコシェの取り組みはこちら</a>
+                    <div class="p-top-well__btn"><a class="c-btn" href="<?php echo WELL_URL; ?>">リコシェの取り組みはこちら</a>
                     </div>
                 </div>
             </div>
@@ -286,12 +285,13 @@ get_header(); ?>
             </h2>
             <div class="p-top-company__text">株式会社ricochetの会社概要をご紹介いたします。
             </div>
-            <div class="p-top-company__btn"><a class="c-btn" href="<?php echo CASE_URL; ?>">リコシェの取り組みはこちら</a>
+            <div class="p-top-company__btn"><a class="c-btn" href="<?php echo COMPANY_URL; ?>">会社概要はこちら</a>
             </div>
         </div>
     </section>
 
-
+    <!-- 資料ダウンロード -->
+    <?php get_template_part('template/common-download'); ?>
 
 </main>
 <?php get_footer(); ?>
