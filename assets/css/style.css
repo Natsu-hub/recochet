@@ -920,7 +920,7 @@ body {
 	font-size: 1.75rem;
 	font-weight: bold;
 	letter-spacing: -0.03em;
-	line-height: 1;
+	line-height: 1.5;
 	position: relative;
 	text-align: center;
 	z-index: 5;
@@ -1187,7 +1187,7 @@ body {
 }
 
 .p-common-service__list-btn {
-	margin-top: 1.25rem;
+	margin-top: 1.5625rem;
 }
 
 .c-common-title {
@@ -3230,6 +3230,7 @@ span.wpcf7-spinner {
 
 .p-top-mv {
 	height: 32rem;
+	overflow: hidden;
 	position: relative;
 	width: 100%;
 }
@@ -3273,29 +3274,28 @@ span.wpcf7-spinner {
 	z-index: 5;
 }
 
-.p-top-mv__lead::after {
-	background: url(../images/common/mv_lead-text.png) no-repeat center center/contain;
-	content: "";
-	height: 25.375rem;
+.p-top-mv__lead-en {
+	color: #0089D6;
+	height: auto;
 	left: 50%;
+	mix-blend-mode: screen; /* オーバーレイを指定 */
 	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%) translateX(-50%);
-	        transform: translateY(-50%) translateX(-50%);
-	width: 62.5rem;
+	top: 0;
 	z-index: -1;
 }
 
-.p-top-mv__lead::after::before {
-	background-color: #0089D6;
-	content: "";
-	height: 100%;
-	left: 0;
-	mix-blend-mode: screen;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 1;
+.p-top-mv__lead-en01 {
+	top: -0.3125rem;
+	-webkit-transform: translateX(-60%);
+	        transform: translateX(-60%);
+	width: 43.75rem;
+}
+
+.p-top-mv__lead-en02 {
+	top: 2.1875rem;
+	-webkit-transform: translateX(-45%);
+	        transform: translateX(-45%);
+	width: 45.6875rem;
 }
 
 .p-top-mv__lead span:not(:first-child) {
@@ -4072,6 +4072,11 @@ body {
 	letter-spacing: 0.48px;
 }
 
+.c-btn {
+	font-size: 1rem;
+	letter-spacing: 0.17em;
+}
+
 .cards {
 	-ms-grid-columns: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
@@ -4122,6 +4127,7 @@ body {
 	color: #000000;
 	font-size: 0.75rem;
 	letter-spacing: 0.11em;
+	padding-bottom: 2px;
 }
 
 .c-common-download__bg {
@@ -4186,6 +4192,11 @@ body {
 .p-common-service__lists {
 	-ms-grid-columns: (1fr)[1];
 	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-common-service__list {
+	-ms-grid-rows: initial;
+	grid-template-rows: initial;
 }
 
 .p-common-service__list-img {
@@ -4844,14 +4855,22 @@ body {
 	width: 100%;
 }
 
-.p-top-mv__lead::after {
+.p-top-mv__lead {
+	font-size: 1.25rem;
+	letter-spacing: 0.13em;
+}
+
+.p-top-mv__lead-en {
 	height: 11.9375rem;
 	width: 20rem;
 }
 
-.p-top-mv__lead {
-	font-size: 1.25rem;
-	letter-spacing: 0.13em;
+.p-top-mv__lead-en01 {
+	top: 0.625rem;
+}
+
+.p-top-mv__lead-en02 {
+	top: 3.5625rem;
 }
 
 .p-top-mv__btn {
@@ -4889,6 +4908,7 @@ body {
 }
 
 .p-top-service__content {
+	line-height: 2;
 	padding-left: 0;
 }
 

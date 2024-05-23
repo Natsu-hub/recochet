@@ -4,6 +4,7 @@
     width: 100%;
     height: rem(512);
     position: relative;
+    overflow: hidden;
 
     @include mq(md) {
         height: rem(365);
@@ -61,60 +62,63 @@
     text-shadow: 2px 3px 35px rgba(0, 137, 214, 0.6);
     position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: rem(1000);
-        height: rem(406);
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        background: url(../images/common/mv_lead-text.png) no-repeat center center/contain;
-
-        // オーバーレイの追加
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0089D6;
-            mix-blend-mode: screen; // ブレンドモードを指定
-            z-index: 1;
-        }
-
-        @include mq(md) {
-            width: rem(320);
-            height: rem(191);
-        }
-
-    }
-
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     background: url(../images/common/mv_lead-bg.png) no-repeat center center/contain;
-    //     width: rem(536);
-    //     max-width: 100%;
-    //     height: rem(271);
-    //     z-index: -1;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translateY(-50%) translateX(-50%);
-
-    //     @include mq(md) {
-    //         display: none;
-    //     }
-    // }
-
     @include mq(md) {
         font-size: rem(20);
         letter-spacing: 0.13em;
     }
 }
 
+
+.p-top-mv__lead-en {
+    position: absolute;
+    mix-blend-mode: screen;
+    /* オーバーレイを指定 */
+    color: #0089D6;
+    top: 0;
+    left: 50%;
+    height: auto;
+    z-index: -1;
+
+    @include mq(md) {
+        width: rem(320);
+        height: rem(191);
+    }
+}
+
+.p-top-mv__lead-en01 {
+    width: rem(700);
+    top: rem(-5);
+    transform: translateX(-60%);
+
+    @include mq(md) {
+        top: rem(10);
+    }
+
+
+}
+
+.p-top-mv__lead-en02 {
+    width: rem(731);
+    top: rem(35);
+    transform: translateX(-45%);
+
+    @include mq(md) {
+        top: rem(57);
+    }
+
+}
+
+
+// .text {
+//     position: absolute;
+//     mix-blend-mode: screen;
+//     /* オーバーレイを指定 */
+//     color: #0089D6;
+//     font-size: 150px;
+//     font-weight: bold;
+//     top: 200px;
+//     left: 30px;
+// }
 
 .p-top-mv__lead span:not(:first-child) {
     margin-top: rem(25);

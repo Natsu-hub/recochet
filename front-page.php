@@ -17,6 +17,14 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+        <div class="p-top-mv__lead-en p-top-mv__lead-en01">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead01.png" alt="" width=""
+                height="" loading="lazy">
+        </div>
+        <div class="p-top-mv__lead-en p-top-mv__lead-en02">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead02.png" alt="" width=""
+                height="" loading="lazy">
+        </div>
     </section>
 
     <!-- p-splide-img -->

@@ -10,6 +10,11 @@
   width: 100%;
   display: block;
   transition: all 0.3s ease-out 0s;
+
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: 0.17em;
+  }
 }
 
 @media (hover: hover) {

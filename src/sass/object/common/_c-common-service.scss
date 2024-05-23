@@ -36,6 +36,10 @@
     gap: 0;
     position: relative;
     overflow: hidden;
+
+    @include mq(md) {
+        grid-template-rows: initial;
+    }
 }
 
 
@@ -102,5 +106,5 @@
 }
 
 .p-common-service__list-btn {
-    margin-top: rem(20);
+    margin-top: rem(25);
 }
