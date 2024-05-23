@@ -69,11 +69,11 @@
                     </ul>
                 </nav>
                 <nav class="p-header__nav-contact">
-                    <div class="p-header__nav-contact-items c-header__nav-contact-items">
-                        <div class="c-header__nav-contact-item c-header__nav-contact-item--blue">
+                    <div class="p-header__nav-contact-items">
+                        <div class="p-header__nav-contact-item p-header__nav-contact-item--blue">
                             <a href="<?php echo DOWNLOAD_URL; ?>">資料ダウンロード</a>
                         </div>
-                        <div class="c-header__nav-contact-item c-header__nav-contact-item--white">
+                        <div class="p-header__nav-contact-item p-header__nav-contact-item--white">
                             <a href="<?php echo CONTACT_URL; ?>">お問い合わせ</a>
                         </div>
                     </div>
@@ -171,11 +171,11 @@
             </div>
     </header>
     <nav class="p-header__drawer-contact u-mobile">
-        <div class="p-header__drawer-contact-items c-header__nav-contact-items">
-            <div class="c-header__nav-contact-item c-header__nav-contact-item--blue">
+        <div class="p-header__drawer-contact-items p-header__nav-contact-items">
+            <div class="p-header__nav-contact-item p-header__nav-contact-item--blue">
                 <a href="<?php echo DOWNLOAD_URL; ?>">資料ダウンロード</a>
             </div>
-            <div class="c-header__nav-contact-item c-header__nav-contact-item--white">
+            <div class="p-header__nav-contact-item p-header__nav-contact-item--white">
                 <a href="<?php echo CONTACT_URL; ?>">お問い合わせ</a>
             </div>
         </div>

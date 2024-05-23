@@ -71,22 +71,35 @@
     display: block;
     background-color: $blue;
     color: $white;
+    border: rem(6) solid $white;
     font-weight: bold;
     font-size: rem(23);
     letter-spacing: 0.23em;
     line-height: 1;
     padding: rem(25) rem(45);
-    max-width: rem(449);
+    max-width: rem(454);
     width: 100%;
     border-radius: 8.64px;
-    border: rem(6) solid $white;
     margin-inline: auto;
     white-space: nowrap;
+    transition: all 0.3s ease-out 0s;
 
     @include mq(md) {
         padding: rem(22) rem(33);
         font-size: rem(14);
         border: rem(4) solid $white;
+    }
+}
+
+@media (hover: hover) {
+    .c-common-download__btn a:hover {
+        background-color: $white;
+        color: $blue;
+        border: rem(6) solid $blue;
+    }
+
+    .c-common-download__link a:hover {
+        opacity: .7;
     }
 }
 
@@ -124,26 +137,15 @@
     letter-spacing: 0.11em;
     padding: .4em;
     z-index: 5;
+    border-bottom: 1px solid $white;
+    padding-bottom: 1px;
+    transition: all 0.3s ease-out 0s;
 
     @include mq(md) {
         font-size: rem(12);
         letter-spacing: 0.11em;
         color: $black;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: rem(1);
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        background: $white;
-
-        @include mq(md) {
-            background: $black;
-        }
+        border-bottom: 1px solid $black;
     }
 }
 
@@ -254,6 +256,7 @@
     display: block;
     border-radius: 3.5px;
     white-space: nowrap;
+    transition: all 0.3s ease-out 0s;
 
     @include mq(lg) {
         padding: rem(20) rem(25);
@@ -281,4 +284,18 @@
     color: $white;
     border: 1px solid $green;
     background-color: $green;
+}
+
+@media (hover: hover) {
+    .c-common-download__contact--mail:hover {
+        color: $white;
+        border: 1px solid $white;
+        background-color: $blue05;
+
+    }
+
+    .c-common-download__contact--line:hover {
+        color: $green;
+        background-color: $white;
+    }
 }

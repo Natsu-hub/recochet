@@ -50,12 +50,17 @@
 
 .p-top-case-study__img {
     height: auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
 }
 
 .p-top-case-study__img img {
     aspect-ratio: 273/154;
     object-fit: cover;
     height: auto;
+    overflow: hidden;
+    transition: transform .8s;
 
     @include mq(md) {
         aspect-ratio: 257/145;
@@ -123,4 +128,17 @@
 .p-top-case-study__page:hover {
     cursor: pointer;
     opacity: 0.9;
+}
+
+.p-top-case-study__item {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (hover: hover) {
+
+    .p-top-case-study__item:hover .p-top-case-study__img img {
+        transform: scale(1.2);
+        transition: transform .8s;
+    }
 }

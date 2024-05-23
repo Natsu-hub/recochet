@@ -34,9 +34,16 @@
     grid-template-rows: subgrid;
     grid-row: span 4;
     gap: 0;
+    position: relative;
+    overflow: hidden;
 }
 
+
 .p-common-service__list-img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: auto;
     max-width: rem(310);
     width: 100%;
 
@@ -46,14 +53,34 @@
 }
 
 .p-common-service__list-img img {
-    aspect-ratio: 310/174;
+    overflow: hidden;
     object-fit: cover;
+    transition: transform .8s;
+    aspect-ratio: 309/174;
     height: auto;
 
     @include mq(md) {
-        aspect-ratio: 290/163;
+        aspect-ratio: 289/162;
+
     }
 }
+
+@media (hover: hover) {
+
+    .p-common-service__list-btn:hover .p-common-service__list-img img,
+    .p-common-service__list:hover .p-common-service__list-img img {
+        transform: scale(1.2);
+        transition: transform .8s;
+    }
+
+    .p-common-service__list:hover .c-btn {
+        background-color: $blue04;
+        color: $white;
+        border: 1px solid $white;
+    }
+}
+
+
 
 .p-common-service__list-title {
     margin-top: rem(24);
