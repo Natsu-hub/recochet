@@ -386,13 +386,23 @@
 }
 
 .p-header__drawer-items {
-    padding-left: rem(15);
+    @include mq(md) {
+        padding-left: rem(15);
+    }
 }
 
 .p-header__drawer-item--mt24 {
     margin-top: rem(24);
 }
 
+.p-header__drawer-menu-link {
+    padding: .4em;
+}
+
+.p-header__drawer-menu-link span {
+    display: block;
+    width: 100%;
+}
 
 .p-header__drawer-menu-arrow {
     width: rem(11);

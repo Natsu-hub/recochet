@@ -3,6 +3,7 @@
 .c-common-download {
     background: url(../images/common/download_bg.webp) center center / cover no-repeat;
     padding-top: rem(75);
+    overflow: hidden;
 
     @include mq(md) {
         padding-top: rem(38);
