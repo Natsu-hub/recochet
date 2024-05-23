@@ -88,6 +88,9 @@
         padding: rem(22) rem(33);
         font-size: rem(14);
         border: rem(4) solid $white;
+        max-width: rem(290);
+        width: 100%;
+        margin-inline: auto;
     }
 }
 
@@ -196,7 +199,7 @@
         width: rem(9);
         height: rem(16);
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-35%);
         right: rem(20);
     }
 
@@ -267,7 +270,7 @@
         padding: rem(13) rem(45);
         height: rem(60);
         width: 100%;
-        max-width: rem(450);
+        max-width: rem(290);
         margin-inline: auto;
     }
 }

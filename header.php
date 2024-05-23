@@ -21,13 +21,13 @@
     <header class="p-header l-header js-header">
         <div class="p-header__inner">
             <?php if ( is_front_page() ) : ?>
-            <h1 class="p-header__logo">
+            <h1 class="p-header__logo">株式会社リコシェ
                 <a href="#body"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg"
                         alt="株式会社リコシェ" width="161" height="61" loading="lazy">
                 </a>
             </h1>
             <?php else : ?>
-            <div class="p-header__logo">
+            <div class="p-header__logo">株式会社リコシェ
                 <a href="<?php echo HOME_URL; ?>"> <img
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="株式会社リコシェ"
                         width="161" height="61" loading="lazy">

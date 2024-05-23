@@ -18,12 +18,12 @@ get_header(); ?>
             </div>
         </div>
         <div class="p-top-mv__lead-en p-top-mv__lead-en01">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead01.png" alt="" width=""
-                height="" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead01.png" alt="growing up"
+                width="660" height="222" loading="lazy">
         </div>
         <div class="p-top-mv__lead-en p-top-mv__lead-en02">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead02.png" alt="" width=""
-                height="" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead02.png" alt="everyday"
+                width="731" height="222" loading="lazy">
         </div>
     </section>
 
@@ -193,7 +193,7 @@ get_header(); ?>
                     <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study-sp.svg"
                         type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study.svg"
-                        alt="case-study" width="160" height="98" loading="lazy">
+                        alt="case study" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">リコシェのコンサル効果</span>
             </h2>
@@ -261,7 +261,7 @@ get_header(); ?>
                     <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being-sp.svg"
                         type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being.svg"
-                        alt="well" width="160" height="98" loading="lazy">
+                        alt="well-being" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">SDGsの取り組み</span>
             </h2>

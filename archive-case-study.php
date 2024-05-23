@@ -16,27 +16,34 @@ $case_title = get_field('case_title');
     <!-- c-below-mv -->
     <section class="c-below-mv js-mv">
         <div class="c-below-mv__inner">
+            <div class="c-below-mv__sub-title">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case-study-white.svg"
+                    alt="case study" width="152" height="71" loading="lazy">
+            </div>
             <h1 class="c-below-mv__title">
-                <span class="c-below-mv__sub-title">CASE STUDY</span>
-                <span class="c-below-mv__main-title">コンサルの効果</span>
+                <?php
+                        // カスタム投稿タイプ名を取得して表示
+                        $post_type = get_post_type_object(get_post_type());
+                        echo esc_html($post_type->label); 
+                        ?>
             </h1>
             <picture class="c-below-mv__img">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv_sp.webp"
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv_sp.webp"
                     type="image/webp" media="(max-width: 768px)">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.webp"
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.webp"
                     type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/blog-mv.png" alt="ブログ"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.png" alt="ブログ"
                     width="1440" height="400">
             </picture>
         </div>
     </section>
 
     <!-- archive-info -->
-    <section class="p-archive-blog l-section--below">
-        <div class="p-archive-blog__inner l-inner--small">
-            <div class="p-archive-blog__body">
-                <article class="p-archive-blog__primary">
-                    <div class="p-archive-blog__cards">
+    <section class="p-case-study l-section--below">
+        <div class="p-case-study__inner l-inner--small">
+            <div class="p-case-study__body">
+                <article class="p-case-study__primary">
+                    <div class="p-case-study__cards p-top-case-study__items">
                         <!-- 記事のループ処理開始 -->
                         <?php
       if (wp_is_mobile()) {
@@ -55,44 +62,44 @@ $case_title = get_field('case_title');
         while ($the_query->have_posts()):
           $the_query->the_post();
           ?>
-                        <a href="<?php the_permalink(); ?>" class="c-card js-fade-in">
-                            <div class="c-card__body">
-                                <time class="c-card__time"
-                                    datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
-                                <p class="c-card__text">
-                                    <?php the_title(); ?>
-                                </p>
-                            </div>
-                            <figure class="c-card__img-wrapper">
-                                <?php if (has_post_thumbnail()) {
-                  the_post_thumbnail();
-                } else { ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp"
-                                    alt="blog1">
-                                <?php } ?>
-                            </figure>
-                        </a>
+                        <li class="p-top-case-study__item">
+                            <a href="<?php the_permalink(); ?>">
+                                <figure class="p-top-case-study__img">
+                                    <?php
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail();
+                                    } else {
+                                    ?>
+                                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/common/no-img.png"
+                                        alt="">
+                                    <?php
+                                    } ?>
+                                </figure>
+                                <div class="p-top-case-study__body">
+                                    <h3 class="p-top-case-study__card-title">
+                                        <?php echo $case_title; ?>
+                                    </h3>
+                                    <div class="p-top-case-study__client">
+                                        <?php echo $case_client; ?>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                         <?php endwhile; ?>
                         <?php endif; ?>
                         <?php wp_reset_postdata(); ?>
                         <!-- 記事のループ処理終了 -->
                     </div>
-                    <div class="p-archive-blog__pages">
+                    <div class="p-case-study__pages">
                         <?php get_template_part('template/pagination'); ?>
                     </div>
                 </article>
             </div>
-            <div class="p-privacy-policy__btn c-btn-below l-btn-below"><a class="c-btn-black"
-                    href="<?php echo HOME_URL; ?>">
-                    <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
-                    <picture class="c-btn-black__img c-btn-black__img--prev">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg"
-                            alt="TOPへ戻る" width="202" height="10" loading="lazy">
-                    </picture>
-                </a>
-            </div>
         </div>
     </section>
+
+    <!-- 資料ダウンロード -->
+    <?php get_template_part('template/common-download'); ?>
 
 </main>
 <?php get_footer(); ?>

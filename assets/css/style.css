@@ -1056,8 +1056,8 @@ body {
 	position: absolute;
 	right: 1.25rem;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	        transform: translateY(-50%);
+	-webkit-transform: translateY(-35%);
+	        transform: translateY(-35%);
 	width: 0.5625rem;
 }
 
@@ -1149,8 +1149,8 @@ body {
 	display: -ms-grid;
 	display: grid;
 	gap: 0;
-	-ms-grid-row-span: 4;
-	grid-row: span 4;
+	-ms-grid-row-span: 2;
+	grid-row: span 2;
 	-ms-grid-rows: subgrid;
 	grid-template-rows: subgrid;
 	overflow: hidden;
@@ -2472,19 +2472,25 @@ span.wpcf7-spinner {
 	-ms-grid-columns: (1fr)[3];
 	grid-template-columns: repeat(3, 1fr);
 	margin-top: 1.5rem;
+	max-width: 12.25rem;
+	width: 100%;
 }
 
 .p-footer__sns a {
 	display: block;
-	padding: 0.4em;
+	max-width: 3.25rem;
+	width: 100%;
+}
+
+.p-footer__sns-img {
+	display: block;
+	height: auto;
 }
 
 .p-footer__sns-img {
 	aspect-ratio: 1/1;
 	display: block;
-	height: auto;
-	max-width: 100%;
-	width: 3.25rem;
+	width: 100%;
 }
 
 .p-footer__sns-img img {
@@ -2524,6 +2530,7 @@ span.wpcf7-spinner {
 	-webkit-flex-shrink: 0;
 	    -ms-flex-negative: 0;
 	        flex-shrink: 0;
+	font-size: 0;
 	height: inherit;
 	max-width: 10.25rem;
 	width: 100%;
@@ -3134,7 +3141,7 @@ span.wpcf7-spinner {
 /* splide */
 
 .p-top-case-study__pagination {
-	margin-top: 1.125rem;
+	display: none;
 }
 
 .p-top-case-study__page {
@@ -3216,7 +3223,7 @@ span.wpcf7-spinner {
 	background: url(../images/common/ricochet.svg) no-repeat center center/contain;
 	content: "";
 	height: 11.5625rem;
-	left: 6.875rem;
+	left: 6.25rem;
 	max-width: 100%;
 	position: absolute;
 	top: 1.875rem;
@@ -3270,7 +3277,7 @@ span.wpcf7-spinner {
 	letter-spacing: 0.13em;
 	line-height: 1;
 	position: relative;
-	text-shadow: 2px 3px 35px rgba(0, 137, 214, 0.6);
+	text-shadow: 2px 3px 35px rgb(0, 137, 214);
 	z-index: 5;
 }
 
@@ -3478,12 +3485,12 @@ span.wpcf7-spinner {
 	letter-spacing: 0.02em;
 	line-height: 2;
 	margin-top: 1.8125rem;
-	padding-right: 1.875rem;
+	padding-right: 1.25rem;
 }
 
 .p-top-well__btn {
 	margin-left: auto;
-	margin-right: 1.875rem;
+	margin-right: 1.25rem;
 	margin-top: 2rem;
 	max-width: 19.375rem;
 	width: 100%;
@@ -4115,7 +4122,10 @@ body {
 .c-common-download__btn a {
 	border: 0.25rem solid #fff;
 	font-size: 0.875rem;
+	margin-inline: auto;
+	max-width: 18.125rem;
 	padding: 1.375rem 2.0625rem;
+	width: 100%;
 }
 
 .c-common-download__link {
@@ -4175,7 +4185,7 @@ body {
 .c-common-download__item a {
 	height: 3.75rem;
 	margin-inline: auto;
-	max-width: 28.125rem;
+	max-width: 18.125rem;
 	padding: 0.8125rem 2.8125rem;
 	width: 100%;
 }
@@ -4214,6 +4224,12 @@ body {
 .p-common-service__list-text {
 	font-size: 0.875rem;
 	letter-spacing: 0.02em;
+}
+
+.p-common-service__list-btn {
+	margin-inline: auto;
+	max-width: 18.125rem;
+	width: 100%;
 }
 
 .c-common-title {
@@ -4569,7 +4585,7 @@ body {
 
 .p-footer {
 	font-size: 0.6875rem;
-	padding-bottom: 1.0625rem;
+	padding-bottom: 4.8125rem;
 	padding-top: 2.0625rem;
 }
 
@@ -4647,13 +4663,11 @@ body {
 
 .p-footer__sns {
 	margin-inline: auto;
-	margin-top: 1rem;
-	max-width: 12.5rem;
+	margin-top: 1.25rem;
 	-webkit-box-ordinal-group: 21;
 	-webkit-order: 20;
 	    -ms-flex-order: 20;
 	        order: 20;
-	width: 100%;
 }
 
 .p-header {
@@ -4801,6 +4815,14 @@ body {
 	max-width: 18.125rem;
 }
 
+.p-top-case-study__pagination {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 1.125rem;
+}
+
 .p-top-company {
 	padding-bottom: 2.625rem;
 }
@@ -4839,7 +4861,7 @@ body {
 }
 
 .p-top-message__box span:not(:first-child) {
-	display: inline-block;
+	display: inline;
 	margin-top: 0.3125rem;
 }
 
@@ -4927,10 +4949,11 @@ body {
 
 .p-top-well__box {
 	display: block;
+	margin-top: 1.4375rem;
 }
 
 .p-top-well__img {
-	margin: calc(50% - 50vw);
+	margin: 0 calc(50% - 50vw);
 	width: 100vw;
 }
 
@@ -4939,7 +4962,7 @@ body {
 }
 
 .p-top-well__content {
-	margin-top: 3.75rem;
+	margin-top: 1.9375rem;
 	padding-inline: 0;
 	width: 100%;
 }

@@ -103,7 +103,12 @@
 
 /* splide */
 .p-top-case-study__pagination {
-    margin-top: rem(18);
+    display: none;
+
+    @include mq(md) {
+        display: flex;
+        margin-top: rem(18);
+    }
 }
 
 .p-top-case-study__page {
