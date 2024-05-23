@@ -29,6 +29,11 @@ export function header() {
             });
         });
 
+          // js-drawer-overlayをクリックしたときにドロワーを閉じる
+          document.querySelector('.js-drawer-overlay').addEventListener('click', function () {
+            closeDrawer();
+        });
+
         window.addEventListener('resize', function () {
             if (window.matchMedia('(min-width: 768px)').matches) {
                 closeDrawer();

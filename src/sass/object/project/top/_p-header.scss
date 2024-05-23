@@ -364,7 +364,8 @@
     background: rgba($black02, 0.9);
     width: 100%;
     height: 100%;
-    position: relative;
+    // position: relative;
+    position: absolute;
     z-index: $layer-header + 2;
 }
 
@@ -373,7 +374,7 @@
     z-index: $layer-header + 3;
     background: $white;
     opacity: 0.9;
-    padding-left: rem(15);
+    margin: auto;
 }
 
 .p-header__drawer.is-open {
@@ -384,8 +385,8 @@
     display: none;
 }
 
-.p-header__drawer-nav {
-    margin: auto;
+.p-header__drawer-items {
+    padding-left: rem(15);
 }
 
 .p-header__drawer-item--mt24 {
@@ -425,6 +426,7 @@
     background: rgba($blue03, 0.7);
     padding: rem(5);
     width: 100%;
+    z-index: 100;
 
     @include mq(md) {
         font-size: rem(14);

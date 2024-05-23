@@ -4647,28 +4647,6 @@ function common() {
       nullTargetWarn: false
     });
 
-    // フッター TOPスクロールボタン
-    window.addEventListener("scroll", function () {
-      var scrollTopButton = document.getElementById("js-scrollTop");
-      var isScrollingDown = window.scrollY > 400;
-      if (isScrollingDown && gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.getProperty(scrollTopButton, "opacity") === 0 || !isScrollingDown && gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.getProperty(scrollTopButton, "opacity") === 1) {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(scrollTopButton, {
-          duration: 1,
-          autoAlpha: isScrollingDown ? 1 : 0,
-          ease: isScrollingDown ? "power3.out" : "power3.in"
-        });
-      }
-    });
-    document.getElementById("js-scrollTop").addEventListener("click", function () {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
-        duration: 1,
-        scrollTo: {
-          y: 0,
-          autoKill: false
-        }
-      });
-    });
-
     // 電話PC時は無効
     var ua = navigator.userAgent.toLowerCase();
     var isMobile = /iphone/.test(ua) || /android(.+)?mobile/.test(ua);
@@ -4683,11 +4661,11 @@ function common() {
     }
 
     // ctaボタンをクリックしたら非表示
-    document.querySelector(".js-cta").addEventListener("click", function () {
-      var ctaContainer = document.querySelector(".c-cta--pc");
-      ctaContainer.style.opacity = "0";
-      ctaContainer.style.visibility = "hidden";
-    });
+    // document.querySelector(".js-cta").addEventListener("click", function () {
+    //     var ctaContainer = document.querySelector(".c-cta--pc");
+    //     ctaContainer.style.opacity = "0";
+    //     ctaContainer.style.visibility = "hidden";
+    // });
   });
 }
 
@@ -4776,6 +4754,11 @@ function header() {
       link.addEventListener('click', function () {
         closeDrawer();
       });
+    });
+
+    // js-drawer-overlayをクリックしたときにドロワーを閉じる
+    document.querySelector('.js-drawer-overlay').addEventListener('click', function () {
+      closeDrawer();
     });
     window.addEventListener('resize', function () {
       if (window.matchMedia('(min-width: 768px)').matches) {

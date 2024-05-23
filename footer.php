@@ -1,7 +1,4 @@
-<button class="c-to-top" id="js-scrollTop" title="トップへ戻る">
-    <span class="c-to-top__arrow"></span>
-</button>
-<div class="c-cta c-cta--pc">
+<!-- <div class="c-cta c-cta--pc">
     <div class="c-cta__body">
         <div class="c-cta__btn js-cta"></div>
         <div class="c-cta__item">
@@ -35,104 +32,153 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <footer class="p-footer">
-    <!-- <div class="p-footer__inner">
+    <div class="p-footer__inner">
         <div class="p-footer__items">
             <div class="p-footer__info">
                 <div class="p-footer__company-info">
                     <?php if ( is_front_page() ) : ?>
                     <div class="p-footer__company">
-                        <a href="#body">一般社団法人 サポルト
+                        <a href="#body">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.svg"
+                                alt="リコシェ" width="156" height="40" loading="lazy">
                         </a>
                     </div>
                     <?php else : ?>
                     <div class="p-footer__company">
-                        <a href="<?php echo HOME_URL; ?>">一般社団法人 サポルト
+                        <a href="<?php echo HOME_URL; ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.svg"
+                                alt="リコシェ" width="156" height="40" loading="lazy">
                         </a>
                     </div>
                     <?php endif; ?>
-                    <div class="p-footer__company-text">
-                        <address class="p-footer__address">〒370-0006 群馬県高崎市問屋町４－７－１</address>
-                        <p class="p-footer__tel">
-                            <a href="tel:+027-388-0811">tel: 027-388-0811</a>/
-                            <a href="tel:+027-388-0812">fax: 027-388-0812</a>
-                        </p>
-                        <p class="p-footer__mail">
-                            <a href="mailto:mail: info@saporuto.com">mail: info@saporuto.com</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-footer__links">
-                    <div class="p-footer__sns">
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <picture class="p-footer__sns-img">
-                                <source type="image/webp"
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_instagram.webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_instagram.png"
-                                    alt="インスタグラム" width="29" height="29" loading="lazy">
-                            </picture>
-                        </a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <picture class="p-footer__sns-img">
-                                <source type="image/webp"
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_x.webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_x.png"
-                                    alt="エックス" width="29" height="29" loading="lazy">
-                            </picture>
-                        </a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <picture class="p-footer__sns-img">
-                                <source type="image/webp"
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_facebook.webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/icon_facebook.png"
-                                    alt="フェイスブック" width="29" height="29" loading="lazy">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="p-footer__page-links">
-                        <a href="<?php echo RECRUIT_URL; ?>">採用情報</a>
-                        <a href="<?php echo PRIVACY_URL; ?>">プライバシーポリシー</a>
+                    <div class="p-footer__company-detail">
+                        <div class="p-footer__company-name">株式会社recochet</div>
+                        <address class="p-footer__company-address">〒320-0838　栃木県宇都宮市吉野2-5-8</address>
+                        <small class="p-footer__copy-right">&copy; <?php echo date('Y'); ?> ricochet All Rights
+                            Reserved.</small>
                     </div>
                 </div>
             </div>
-            <nav class="p-footer__nav">
-                <ul class="p-footer__nav-items">
+            <nav class="p-footer__nav u-desktop">
+                <ul class="p-footer__nav-items-left">
                     <li class="p-footer__nav-item">
-                        <a href="<?php echo BLOG_URL; ?>">Blog</a>
+                        <a href="<?php echo HOME_URL; ?>">ホーム</a>
                     </li>
                     <li class="p-footer__nav-item">
-                        <a href="<?php echo HOME_URL; ?>#service">Service</a>
+                        <a href="<?php echo CONSULTING_URL; ?>">事業コンサルティング</a>
                     </li>
                     <li class="p-footer__nav-item">
-                        <a href="<?php echo HOME_URL; ?>#company">Company</a>
+                        <a href="<?php echo ACADEMY_URL; ?>">飲食店ネット通販アカデミー</a>
                     </li>
                     <li class="p-footer__nav-item">
-                        <a href="<?php echo WORKS_URL; ?>">Order</a>
+                        <a href="<?php echo WELL_URL; ?>">発展途上国の教育支援</a>
+                    </li>
+                </ul>
+                <ul class="p-footer__nav-items-right">
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo CASE_URL; ?>">コンサル事例</a>
                     </li>
                     <li class="p-footer__nav-item">
-                        <a href="<?php echo CONTACT_URL; ?>">Contact</a>
+                        <a href="<?php echo COMPANY_URL; ?>">会社概要</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo MEETING_URL; ?>">Zoom面談のお申し込み</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo DOWNLOAD_URL; ?>">資料一覧</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="p-footer__nav u-mobile--grid">
+                <ul class="p-footer__nav-items-left">
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo HOME_URL; ?>">ホーム</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo CONSULTING_URL; ?>">事業コンサルティング</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo ACADEMY_URL; ?>">飲食店ネット通販アカデミー</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo WELL_URL; ?>">発展途上国の教育支援</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo CASE_URL; ?>">コンサル事例</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo COMPANY_URL; ?>">会社概要</a>
+                    </li>
+                </ul>
+                <ul class="p-footer__nav-items-right">
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo MEETING_URL; ?>">Zoom面談のお申し込み</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo DOWNLOAD_URL; ?>">資料一覧</a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="<?php echo PRIVACY_URL; ?>">プライバシーポリシー
+                        </a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">公式ライン
+                        </a>
+                    </li>
+                    <li class="p-footer__nav-item">
+                        <a href="https://m.larosebistro.com/p/r/jZrKvZ19" target="_blank"
+                            rel="noopener noreferrer">メールマガジン
+                        </a>
                     </li>
                 </ul>
             </nav>
             <div class="p-footer__btns">
-                <a class="p-footer__btn" href="https://addfuture.saporuto.com" target="_blank"
-                    rel="noopener noreferrer">
-                    <p class="p-footer__btn-text">
-                        <span>就労継続支援事業所</span>アドフューチャー
-                    </p>
-                </a>
-                <a class="p-footer__btn" href="https://tonyashokudo.saporuto.com" target="_blank"
-                    rel="noopener noreferrer">
-                    <p class="p-footer__btn-text">問屋町食堂</p>
-                </a>
-                <a class="p-footer__btn" href="<?php echo WORKS_URL; ?>">
-                    <p class="p-footer__btn-text">作業受託企業様の募集</p>
-                </a>
+                <ul class="p-footer__links u-desktop">
+                    <li class="p-footer__link">
+                        <a href="<?php echo PRIVACY_URL; ?>">プライバシーポリシー
+                        </a>
+                    </li>
+                    <li class="p-footer__link">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">公式ライン
+                        </a>
+                    </li>
+                    <li class="p-footer__link">
+                        <a href="https://m.larosebistro.com/p/r/jZrKvZ19" target="_blank"
+                            rel="noopener noreferrer">メールマガジン
+                        </a>
+                    </li>
+                </ul>
+                <div class="p-footer__sns">
+                    <a href="https://www.facebook.com/kameituhan/ " target="_blank" rel="noopener noreferrer">
+                        <picture class="p-footer__sns-img">
+                            <source type="image/webp"
+                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/facebook_icon.webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/facebook_icon.png"
+                                alt="フェイスブック" width="29" height="29" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://x.com/kameimind " target="_blank" rel="noopener noreferrer">
+                        <picture class="p-footer__sns-img">
+                            <source type="image/webp"
+                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/x_icon.webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/x_icon.png"
+                                alt="エックス" width="29" height="29" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.instagram.com/kamechan_d/ " target="_blank" rel="noopener noreferrer">
+                        <picture class="p-footer__sns-img">
+                            <source type="image/webp"
+                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/insta_icon.webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/insta_icon.png"
+                                alt="インスタグラム" width="29" height="29" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
             </div>
         </div>
-    </div> -->
-    <small class="p-footer__copy-right">&copy; <?php echo date('Y'); ?>. saporuto</small>
+    </div>
 </footer>
 <?php wp_footer()?>
 </body>

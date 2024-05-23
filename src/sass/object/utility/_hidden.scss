@@ -43,6 +43,13 @@
     display: block;
   }
 }
+.u-mobile--grid {
+  display: none;
+
+  @include mq("md") {
+    display: grid;
+  }
+}
 
 //smのみ表示
 .u-sm {

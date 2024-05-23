@@ -3,6 +3,7 @@
 .p-top-well {
     padding-top: rem(68);
     padding-bottom: rem(84);
+    overflow: hidden;
 
     @include mq(md) {
         padding-top: rem(24);
@@ -31,8 +32,7 @@
     align-items: center;
 
     @include mq(md) {
-        margin-top: rem(23);
-        flex-direction: column;
+        display: block;
     }
 }
 
@@ -65,7 +65,7 @@
     padding-right: rem(60);
 
     @include mq(md) {
-        margin-top: rem(32);
+        margin-top: rem(60);
         padding-inline: 0;
         width: 100%;
     }

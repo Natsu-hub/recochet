@@ -63,6 +63,7 @@
     margin-top: rem(20);
 
     @include mq(md) {
+        margin-top: 0;
         border-left: .5px solid $white;
     }
 }
@@ -77,6 +78,12 @@
         font-weight: 500;
         font-size: rem(8);
         text-align: left;
+    }
+}
+
+.c-cta__text--mobile {
+    @include mq(md) {
+        text-align: center;
     }
 }
 
