@@ -8,7 +8,7 @@ $page_slug = $post->post_name;
 
 <main class="l-main">
 <!-- c-below-mv -->
-<section class="c-below-mv js-mv">
+<section class="c-below-mv">
       <div class="c-below-mv__inner">
         <h1 class="c-below-mv__title">
             <span class="c-below-mv__sub-title">採用情報</span>

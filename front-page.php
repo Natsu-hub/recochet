@@ -211,7 +211,6 @@ get_header(); ?>
                         if ($the_query01->have_posts()) :
                             while ($the_query01->have_posts()) : $the_query01->the_post();
                                 $case_client = get_field('case_client');
-                                $case_title = get_field('case_title');
                         ?>
                             <li class="splide__slide p-top-case-study__item">
                                 <a href="<?php the_permalink(); ?>">
@@ -231,7 +230,7 @@ get_header(); ?>
                                             <?php echo $case_client; ?>
                                         </div>
                                         <h3 class="p-top-case-study__card-title">
-                                            <?php echo $case_title; ?>
+                                            <?php the_title(); ?>
                                         </h3>
                                     </div>
                                 </a>

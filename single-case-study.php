@@ -4,111 +4,214 @@ get_header();
 
 <main class="l-main">
 
-<!-- c-below-mv -->
-<section class="c-below-mv js-mv">
-    <div class="c-below-mv__inner">
-        <h1 class="c-below-mv__title">
-            <span class="c-below-mv__sub-title">Blog</span>
-          <span class="c-below-mv__main-title">ブログ</span>
-        </h1>
-        <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.png" alt="ブログ" width="1440" height="400">
-        </picture>
-    </div>
-</section>
-
-
-<!-- p-single-blog -->
-<section class="p-single-blog l-section--below">
-<div class="p-single-blog__inner l-inner--small">
-    <article class="p-single-blog__box">
-			<?php if (have_posts()): ?>
-			<?php while (have_posts()): ?>
-				<?php the_post(); ?>
-				<div class="p-single-blog__card">
-					<div class="p-single-blog__item">
-					<time class="p-single-blog__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
-					<p class="p-single-blog__text">
-						<?php the_title(); ?>
-					</p>
-					</div>
-					<figure class="p-single-blog__img-wrapper">
-					<?php if (has_post_thumbnail()) {
-						the_post_thumbnail();
-						} else { ?>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp" alt="blog1">
-						<?php } ?>
-					</figure>
-				</div>
-				<div class="p-single-blog__body-wrapper">
-					<div class="p-single-blog__body">
-						<div class="p-single-blog__content c-entry-content">
-							<?php the_content(); ?>
-						</div>
-					</div>
-				</div>
-			<?php endwhile; ?>
-			<?php endif; ?>
-  </article>
-  <div class="p-single-blog__btns l-btn-below">
-  		<div class="p-contact__btn c-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
-            <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
-            <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
-            </picture>
-          </a>
-        </div>
-  		<div class="p-contact__btn"><a class="c-btn-black" href="<?php echo $_SERVER['HTTP_REFERER'] ?? $works; ?>">
-            <p class="c-btn-black__text">ブログ一覧へ</p>
-            <picture class="c-btn-black__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="ブログ一覧へ" width="202" height="10" loading="lazy">
-            </picture>
-          </a>
-        </div>
-  </div>
-
-<!-- p-news-related -->
-<div class="p-news-related">
-	<div class="p-news-related__inner l-inner">
-    <div class="p-news-related__head">他にこんな記事が読まれています</div>
     <?php
+$case_company = get_field('case_company');
+$case_industry = get_field('case_industry');
+$case_number = get_field('case_number');
+$case_task = get_field('case_task');
+$case_client = get_field('case_client');
+?>
+
+    <!-- c-below-mv -->
+    <section class="c-below-mv">
+        <div class="c-below-mv__inner">
+            <div class="c-below-mv__sub-title c-below-mv__sub-title--case">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case-study-white.svg"
+                    alt="case study" width="152" height="71" loading="lazy">
+            </div>
+            <h1 class="c-below-mv__title">
+                <?php
+                        // カスタム投稿タイプ名を取得して表示
+                        $post_type = get_post_type_object(get_post_type());
+                        echo esc_html($post_type->label); 
+                        ?>
+            </h1>
+            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
+                企業さまの成果をご紹介いたします。
+            </div>
+        </div>
+    </section>
+
+    <div class="p-single-case">
+        <div class="p-single-case__inner l-inner">
+            <span class="p-single-case__company"><?php echo $case_company; ?></span>
+            <h2 class="p-single-case__title"><?php the_title(); ?></h2>
+            <?php
+function get_the_day_of_week() {
+    $week = array('日', '月', '火', '水', '木', '金', '土');
+    return $week[date('w')];
+}
+?>
+            <time class="p-single-case__time" datetime="<?php the_time('c'); ?>">
+                <?php echo get_the_time('Y年m月d日') . ' (' . get_the_day_of_week() . ')'; ?>
+            </time>
+            <div class="p-single-case__body">
+                <div class="p-single-case__main-content">
+                    <figure class="p-single-case__main-img">
+                        <?php
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail();
+                                    } else {
+                                    ?>
+                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/common/no-img.png"
+                            alt="">
+                        <?php
+                                    } ?>
+                    </figure>
+                    <div class="p-single-case__link-box">
+                        <span class="p-single-case__link-label">無料</span>
+                        <div class="p-single-case__link-text">関連資料を無料で<br>
+                            ご利用いただけます</div>
+                        <div class="p-single-case__link-btn">
+                            <a href="">お役立ち資料をダウンロード</a>
+                        </div>
+                    </div>
+                    <div class="p-single-case__content c-entry-content">
+                        <?php the_content(); ?>
+                    </div>
+                    <div class="p-single-case__btn">
+                        <a class="c-btn" href="<?php echo $_SERVER['HTTP_REFERER'] ?? $works; ?>">コンサル事例一覧に戻る
+                        </a>
+                    </div>
+                </div>
+                <aside class="p-single-case__sidebar">
+                    <div class="p-single-case__author-box">
+                        <div class="p-single-case__author-title">著者情報
+                        </div>
+                        <div class="p-single-case__author-info">
+                            <picture class="p-single-case__author-img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/case_img01.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case_img01.jpg"
+                                    alt="亀井 良真氏の写真" width="117" height="117" loading="lazy">
+                            </picture>
+                            <div class="p-single-case__author-item">
+                                <div class="p-single-case__author-name"></div>
+                                <ul class="p-single-case__author-sns">
+                                    <li class="p-single-case__author-list">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/x-blue.svg"
+                                            alt="X" width="20" height="20" loading="lazy">
+                                        <a href="https://x.com/kameimind " class="p-single-case__author-link"
+                                            target="_blank" rel="noopener noreferrer">X</a>
+                                    </li>
+                                    <li class="p-single-case__author-list">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/facebook-blue.svg"
+                                            alt="Facebook" width="20" height="20" loading="lazy">
+                                        <a href="https://www.facebook.com/kameituhan/ "
+                                            class="p-single-case__author-link" target="_blank"
+                                            rel="noopener noreferrer">Facebook</a>
+                                    </li>
+                                    <li class="p-single-case__author-list">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/insta-blue.svg"
+                                            alt="Instagram" width="20" height="20" loading="lazy">
+                                        <a href="https://www.instagram.com/kamechan_d/"
+                                            class="p-single-case__author-link" target="_blank"
+                                            rel="noopener noreferrer">Instagram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- p-case-related -->
+                    <div class="p-case-related">
+                        <div class="p-case-related__head">関連記事</div>
+                        <?php
         $case_study_posts = get_posts(array(
             'post_type' => 'case-study',  // カスタム投稿タイプ 'case-study'
-            'posts_per_page' => 3,        // 最新3件を取得
+            'posts_per_page' => 4,        // 最新3件を取得
             'post__not_in' => array(get_the_ID()), // 現在の投稿を除外
             'orderby' => 'date',          // 日付で並び替え
             'order' => 'DESC'             // 降順
         ));
         
         if ($case_study_posts) : ?>
-            <ul class="p-news-related__lists">
-                <?php foreach ($case_study_posts as $post) : setup_postdata($post); ?>
-                    <li class="p-news-related__list">
-                        <a href="<?= esc_url(get_permalink()); ?>">
-                            <figure class="p-news-related__img">
-                                <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail();
-                                } else { ?>
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/images/common-old/no-img.jpg" alt="">
-                                <?php } ?>
-                            </figure>
-                            <time class="p-news-related__time" datetime="<?= get_the_time('c'); ?>"><?= get_the_time('Y/m/d'); ?></time>
-                            <div class="p-news-related__title"><?= esc_html(get_the_title()); ?></div>
-                            <span class="p-news-related__btn c-btn--news">記事を読む</span>
-                        </a>
-                    </li>
-                <?php endforeach; wp_reset_postdata(); ?>
-            </ul>
-        <?php endif; ?>
-	</div>
-</div>
+                        <ul class="p-case-related__lists">
+                            <?php foreach ($case_study_posts as $post) : setup_postdata($post); ?>
+                            <li class="p-case-related__list">
+                                <a href="<?= esc_url(get_permalink()); ?>">
+                                    <time class="p-single-case__time" datetime="<?php the_time('c'); ?>">
+                                        <?php echo get_the_time('Y年m月d日') . ' (' . get_the_day_of_week() . ')'; ?>
+                                    </time>
+                                    <div class="p-case-related__box">
+                                        <div class="p-case-related__title"><?= esc_html(get_the_title()); ?>
+                                        </div>
+                                        <figure class="p-case-related__img">
+                                            <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail();
+                                    } else { ?>
+                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/common-old/no-img.jpg"
+                                                alt="">
+                                            <?php } ?>
+                                        </figure>
+                                    </div>
+                                </a>
+                            </li>
+                            <?php endforeach; wp_reset_postdata(); ?>
+                        </ul>
+                        <?php endif; ?>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- 事業内容 -->
+    <?php get_template_part('template/common-service'); ?>
+
+    <!-- p-single-blog -->
+    <section class="p-single-blog l-section--below">
+        <div class="p-single-blog__inner l-inner--small">
+            <article class="p-single-blog__box">
+                <?php if (have_posts()): ?>
+                <?php while (have_posts()): ?>
+                <?php the_post(); ?>
+                <div class="p-single-blog__card">
+                    <div class="p-single-blog__item">
+                        <time class="p-single-blog__time"
+                            datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
+                        <p class="p-single-blog__text">
+                            <?php the_title(); ?>
+                        </p>
+                    </div>
+                    <figure class="p-single-blog__img-wrapper">
+                        <?php if (has_post_thumbnail()) {
+						the_post_thumbnail();
+						} else { ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp"
+                            alt="blog1">
+                        <?php } ?>
+                    </figure>
+                </div>
+                <div class="p-single-blog__body-wrapper">
+                    <div class="p-single-blog__body">
+                        <div class="p-single-blog__content c-entry-content">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
+            </article>
+            <div class="p-single-blog__btns l-btn-below">
+                <div class="p-contact__btn c-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
+                        <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
+                        <picture class="c-btn-black__img c-btn-black__img--prev">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg"
+                                alt="TOPへ戻る" width="202" height="10" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+
+            </div>
 
 
 
-</div>
-</section>
 
-  </main>
+
+        </div>
+    </section>
+
+</main>
 <?php get_footer(); ?>

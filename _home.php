@@ -3,7 +3,7 @@ get_header(); ?>
 
 <main class="l-main">
   <!-- p-top-mv -->
-      <section class="p-top-mv js-mv">
+      <section class="p-top-mv">
         <div class="p-top-mv__img">
           <div class="p-top-mv__inner">
             <div class="p-top-mv__text">SUPPORT + PORT<br>

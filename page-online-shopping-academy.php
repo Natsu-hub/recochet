@@ -8,7 +8,7 @@ $page_slug = $post->post_name;
 
 <main class="l-main">
 <!-- c-below-mv -->
-<section class="c-below-mv js-mv">
+<section class="c-below-mv">
       <div class="c-below-mv__inner">
         <h1 class="c-below-mv__title">
             <span class="c-below-mv__sub-title">Works</span>
@@ -196,7 +196,7 @@ $page_slug = $post->post_name;
 </section>
 
 <!-- p-works-banner -->
-<section class="p-works-banner js-mv">
+<section class="p-works-banner">
       <div class="p-works-banner__inner">
           <picture class="p-works-banner__logo">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/logo-white.svg" alt="アドフューチャー/ADD FUTURE" width="456" height="456">

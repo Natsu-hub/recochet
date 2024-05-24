@@ -83,6 +83,10 @@
     color: $blue06;
     text-align: left;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
     @include mq(md) {
         font-size: rem(16);

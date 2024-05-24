@@ -11,12 +11,10 @@ $case_task = get_field('case_task');
 $case_client = get_field('case_client');
 $case_title = get_field('case_title');
 ?>
-    <?php echo $case_client; ?>
-    <?php echo $case_title; ?>
     <!-- c-below-mv -->
-    <section class="c-below-mv js-mv">
+    <section class="c-below-mv">
         <div class="c-below-mv__inner">
-            <div class="c-below-mv__sub-title">
+            <div class="c-below-mv__sub-title c-below-mv__sub-title--case">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case-study-white.svg"
                     alt="case study" width="152" height="71" loading="lazy">
             </div>
@@ -27,23 +25,18 @@ $case_title = get_field('case_title');
                         echo esc_html($post_type->label); 
                         ?>
             </h1>
-            <picture class="c-below-mv__img">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv_sp.webp"
-                    type="image/webp" media="(max-width: 768px)">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.webp"
-                    type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.png" alt="ブログ"
-                    width="1440" height="400">
-            </picture>
+            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
+                企業さまの成果をご紹介いたします。
+            </div>
         </div>
     </section>
 
     <!-- archive-info -->
-    <section class="p-case-study l-section--below">
-        <div class="p-case-study__inner l-inner--small">
+    <section class="p-case-study">
+        <div class="p-case-study__inner l-inner">
             <div class="p-case-study__body">
                 <article class="p-case-study__primary">
-                    <div class="p-case-study__cards p-top-case-study__items">
+                    <ul class="p-case-study__cards p-case-study__items">
                         <!-- 記事のループ処理開始 -->
                         <?php
       if (wp_is_mobile()) {
@@ -62,9 +55,9 @@ $case_title = get_field('case_title');
         while ($the_query->have_posts()):
           $the_query->the_post();
           ?>
-                        <li class="p-top-case-study__item">
+                        <li class="p-case-study__item c-card">
                             <a href="<?php the_permalink(); ?>">
-                                <figure class="p-top-case-study__img">
+                                <figure class="c-card__img">
                                     <?php
                                     if (has_post_thumbnail()) {
                                         the_post_thumbnail();
@@ -75,21 +68,36 @@ $case_title = get_field('case_title');
                                     <?php
                                     } ?>
                                 </figure>
-                                <div class="p-top-case-study__body">
-                                    <h3 class="p-top-case-study__card-title">
-                                        <?php echo $case_title; ?>
-                                    </h3>
-                                    <div class="p-top-case-study__client">
-                                        <?php echo $case_client; ?>
+                                <div class="c-card__body">
+                                    <h2 class="c-card__card-title">
+                                        <?php the_title(); ?>
+                                    </h2>
+                                    <div class="c-card__content">
+                                        <div class="c-card__company"><?php echo $case_company; ?></div>
+                                        <div class="c-card__detail">
+                                            <dl class="c-card__industry">
+                                                <dt>業種</dt>
+                                                <dd><?php echo $case_industry; ?></dd>
+                                            </dl>
+                                            <dl class="c-card__number">
+                                                <dt>従業員数</dt>
+                                                <dd><?php echo $case_number; ?></dd>
+                                            </dl>
+                                            <dl class="c-card__task">
+                                                <dt>課題</dt>
+                                                <dd><?php echo $case_task; ?></dd>
+                                            </dl>
+                                        </div>
                                     </div>
                                 </div>
+
                             </a>
                         </li>
                         <?php endwhile; ?>
                         <?php endif; ?>
                         <?php wp_reset_postdata(); ?>
                         <!-- 記事のループ処理終了 -->
-                    </div>
+                    </ul>
                     <div class="p-case-study__pages">
                         <?php get_template_part('template/pagination'); ?>
                     </div>
