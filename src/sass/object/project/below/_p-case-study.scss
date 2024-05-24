@@ -12,12 +12,6 @@
 }
 
 
-.p-case-study__body {}
-
-.p-case-study__primary {}
-
-.p-case-study__cards {}
-
 .p-case-study__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -29,7 +23,6 @@
   }
 }
 
-.p-case-study__item {}
 
 .p-case-study__pages {
   text-align: center;
@@ -38,116 +31,6 @@
   @include mq(md) {
     margin-top: rem(50);
   }
-}
-
-.c-card {
-  display: flex;
-  flex-direction: column;
-  background: $white03;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
-}
-
-.c-card a {
-  height: 100%;
-}
-
-.c-card__img {
-  height: auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.c-card__img img {
-  aspect-ratio: 309/174;
-  object-fit: cover;
-  height: auto;
-  transition: transform .8s;
-
-  @include mq(md) {
-    aspect-ratio: 290/163;
-  }
-}
-
-@media (hover: hover) {
-  .c-card:hover .c-card__img img {
-    transform: scale(1.2);
-    transition: transform .8s;
-  }
-
-  .c-card:hover .c-card__body {
-    opacity: .7;
-  }
-}
-
-
-
-.c-card__body {
-  padding: rem(17) rem(14) rem(28);
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  transition: all 0.3s ease-out 0s;
-
-  @include mq(md) {
-    padding: rem(19) rem(14) rem(24);
-  }
-}
-
-.c-card__card-title {
-  font-size: rem(18);
-  letter-spacing: 0.18em;
-  line-height: calc(28 / 18);
-  color: $blue06;
-  flex-grow: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  @include mq(md) {
-    letter-spacing: 0.07em;
-    font-size: rem(16);
-  }
-}
-
-.c-card__content {
-  margin-top: rem(33);
-
-  @include mq(md) {
-    margin-top: rem(28);
-  }
-}
-
-.c-card__company {
-  letter-spacing: 0.23em;
-
-  @include mq(md) {}
-}
-
-.c-card__detail {
-  font-size: rem(12);
-  letter-spacing: 0.18em;
-  margin-top: rem(20);
-
-  @include mq(md) {
-    margin-top: rem(17);
-    letter-spacing: 0.23em;
-  }
-}
-
-.c-card__detail dl {
-  display: flex;
-  align-items: center;
-}
-
-.c-card__detail dt {
-  max-width: rem(60);
-  width: 100%;
-}
-
-.c-card__detail dd {
-  margin-left: rem(30);
 }
 
 .c-card__industry {}

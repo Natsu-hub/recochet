@@ -1,95 +1,111 @@
 @use "global" as *;
 
-/* カード型レイアウト */
-.cards {
-    text-align: left;
-    width: 100%;
-    max-width: 1120px;
-    margin-inline: auto;
-    display: grid;
-    gap: rem(40) 3.333%;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    @include mq('md') {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @include mq('sm') {
-        grid-template-columns: 1fr;
-    }
-}
-
-.card {
-    background-color: $white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+.c-card {
     display: flex;
     flex-direction: column;
-    padding-left: 9.06%;
-    padding-right: 9.06%;
-
-    @include mq('md') {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
+    background: $white03;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
 }
 
-.card__img-wrapper {
-    width: 100%;
-    height: auto;
-    padding-top: rem(15);
-    overflow: hidden;
-
-}
-
-.card__img-wrapper img {
-    aspect-ratio: 360/240;
-    width: 100%;
+.c-card a {
     height: 100%;
+}
+
+.c-card__img {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.c-card__img img {
+    aspect-ratio: 309/174;
     object-fit: cover;
-    transition: transform 0.3s ease 0s;
-}
+    height: auto;
+    transition: transform .8s;
 
-.card:hover .card__img-wrapper img {
-    transform: scale(1.2);
-}
-
-.card__body {
-    padding-top: rem(16);
-    padding-bottom: rem(27);
-
-    @include mq('md') {
-        padding-bottom: rem(20);
+    @include mq(md) {
+        aspect-ratio: 290/163;
     }
 }
 
-.card__category {
-    color: $white;
-    background-color: black;
-    border-radius: rem(20);
-    padding: rem(7) rem(20);
+@media (hover: hover) {
+    .c-card:hover .c-card__img img {
+        transform: scale(1.2);
+        transition: transform .8s;
+    }
 
-    @include mq('md') {
-        padding: rem(5) rem(20);
+    .c-card:hover .c-card__body {
+        opacity: .7;
     }
 }
 
-.card__text {
-    font-weight: 700;
-    font-size: rem(14);
-    font-weight: bold;
+
+
+.c-card__body {
+    padding: rem(17) rem(14) rem(28);
+    flex: 1 1 auto;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: auto;
-    margin-top: rem(5);
+    flex-direction: column;
+    height: auto;
+    transition: all 0.3s ease-out 0s;
+
+    @include mq(md) {
+        padding: rem(19) rem(14) rem(24);
+    }
+}
+
+.c-card__card-title {
+    font-size: rem(18);
+    letter-spacing: 0.18em;
+    line-height: calc(28 / 18);
+    color: $blue06;
+    flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @include mq(md) {
+        letter-spacing: 0.07em;
+        font-size: rem(16);
+    }
 }
 
-.card__time {
-    display: block;
-    font-size: rem(16);
+.c-card__content {
+    margin-top: rem(33);
+
+    @include mq(md) {
+        margin-top: rem(28);
+    }
+}
+
+.c-card__company {
+    letter-spacing: 0.23em;
+
+    @include mq(md) {}
+}
+
+.c-card__detail {
+    font-size: rem(12);
+    letter-spacing: 0.18em;
     margin-top: rem(20);
+
+    @include mq(md) {
+        margin-top: rem(17);
+        letter-spacing: 0.23em;
+    }
+}
+
+.c-card__detail dl {
+    display: flex;
+    align-items: center;
+}
+
+.c-card__detail dt {
+    max-width: rem(60);
+    width: 100%;
+}
+
+.c-card__detail dd {
+    margin-left: rem(30);
 }
