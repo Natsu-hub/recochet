@@ -42,7 +42,7 @@
 
 
 .c-card__body {
-    padding: rem(17) rem(14) rem(28);
+    padding: rem(17) rem(14) rem(28) rem(14);
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -108,4 +108,19 @@
 
 .c-card__detail dd {
     margin-left: rem(30);
+}
+
+.c-card__category{
+    color: $white;
+    background: $blue;
+    display: inline-block;
+    padding: rem(4) rem(17);
+    font-size: rem(15);
+    letter-spacing: .21em;
+    border-radius: rem(30);
+}
+
+.c-card__text{
+    font-size: rem(12);
+    line-height: calc(21 / 12);
 }

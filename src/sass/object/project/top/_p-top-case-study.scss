@@ -42,6 +42,7 @@
     padding: rem(20) rem(18);
     display: flex;
     flex-direction: column;
+    background-color: $white;
 
     @include mq(md) {
         padding: rem(19) rem(17);
@@ -95,13 +96,20 @@
 
 .p-top-case-study__list-btn {
     margin-top: rem(37);
+
+    @include mq(md) {
+        margin-top: rem(22);
+        margin-inline: rem(30);
+    }
+}
+
+.p-top-case-study__list-btn a {
     max-width: rem(310);
     width: 100%;
     margin-inline: auto;
 
     @include mq(md) {
-        margin-top: rem(22);
-        max-width: rem(290);
+        max-width: 22rem;
     }
 }
 

@@ -5029,8 +5029,6 @@ function slide() {
     for (var i = 0; i < splideElements.length; i++) {
       new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__.Splide(splideElements[i]).mount();
     }
-
-    //FVの流れる人物画像
     if (document.querySelector(".js-slide-img")) {
       var slideImgMv = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__.Splide(".js-slide-img", {
         fixedWidth: '14.125rem',
@@ -5065,7 +5063,7 @@ function slide() {
         arrows: false,
         breakpoints: {
           768: {
-            fixedWidth: '18.125rem'
+            fixedWidth: '22rem'
           }
         },
         perMove: 1,

@@ -3,32 +3,70 @@ get_header();
 ?>
 
 <main class="l-main">
-<!-- c-below-mv -->
-<section class="c-below-mv">
-      <div class="c-below-mv__inner">
-        <h1 class="c-below-mv__title">
-            <span class="c-below-mv__sub-title">Blog</span>
-          <span class="c-below-mv__main-title">ブログ</span>
-        </h1>
-        <picture class="c-below-mv__img">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv_sp.webp" type="image/webp" media="(max-width: 768px)">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/blog-mv.png" alt="ブログ" width="1440" height="400">
-        </picture>
-      </div>
+    <?php
+$document_explain = get_field('document_explain');
+$document_list = get_field('document_list');
+$download_link = get_field('download_link');
+$pickup = get_field('pickup');
+?>
+
+    <!-- c-below-mv -->
+    <section class="c-below-mv">
+        <div class="c-below-mv__inner">
+            <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
+                    alt="case study" width="152" height="71" loading="lazy">
+            </div>
+            <h1 class="c-below-mv__title">
+                <?php
+                        // カスタム投稿タイプ名を取得して表示
+                        $post_type = get_post_type_object(get_post_type());
+                        echo esc_html($post_type->label); 
+                        ?>
+            </h1>
+            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
+                企業さまの成果をご紹介いたします。
+            </div>
+        </div>
     </section>
 
-<!-- archive-info -->
-<section class="p-archive-blog l-section--below">
-<div class="p-archive-blog__inner l-inner--small">
-<!-- <div class="p-form__check">
-                  <label class="p-form__label form__label--check"
-                    ><input type="checkbox" value="同意する" />
-                    <span>個人情報の取り扱いに同意する</span>
-                      </label>
-                </div> -->
-<div class="works__tabs">
-		<?php
+    <!-- p-download -->
+    <section class="p-download">
+        <div class="p-download__inner l-inner">
+            <div class="p-download__tabs">
+                <span class="p-download__tab-title">種類</span>
+                <span class="p-download__tab-list">
+                    <?php 
+$terms = get_terms(array(
+    'taxonomy' => 'download_type',
+    'hide_empty' => false,
+));
+
+// お役立ち資料を先頭にするための処理
+$priority_term_name = 'お役立ち資料';
+$current_term = get_queried_object();
+$current_term_slug = $current_term ? $current_term->slug : '';
+
+usort($terms, function ($a, $b) use ($priority_term_name) {
+    if ($a->name == $priority_term_name) return -1;
+    if ($b->name == $priority_term_name) return 1;
+    return 0;
+});
+
+if (!empty($terms) && !is_wp_error($terms)) {
+    foreach ($terms as $term) {
+        $checked = ($term->slug === $current_term_slug) ? 'checked' : '';
+        echo '<label class="custom-checkbox">';
+        echo '<input type="checkbox" id="category' . $term->slug . '" name="category" value="' . $term->slug . '" ' . $checked . '>';
+        echo '<span class="checkbox-label">' . $term->name . '</span>';
+        echo '</label><br>';
+    }
+}
+?>
+                </span>
+            </div>
+            <div class="works__tabs">
+                <?php
         $terms = get_terms( array(
             'taxonomy' => 'download_type',
             'hide_empty' => false,
@@ -40,81 +78,45 @@ get_header();
             }
         }
     ?>
-	</div>
-  <div class="p-archive-blog__body">
-    <article class="p-archive-blog__primary">
-      <div class="p-archive-blog__cards">
-      	<!-- 記事のループ処理開始 -->
-			<?php
-      // 現在のタームを取得
-$current_term = get_queried_object();
-
-			  if( wp_is_mobile() ){
-			    $num = 4; // スマホの表示数(全件は-1)
-			  } else {
-			    $num = 6; // PCの表示数(全件は-1)
-			  }
-			  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-			  $args = [
-			    'post_type' => 'download', // カスタム投稿の投稿タイプスラッグ
-			    'paged' => $paged, // ページネーションがある場合に必要
-			    'posts_per_page' => $num, // 表示件数
-          'paged' => get_query_var('paged') ? get_query_var('paged') : 1, // ページネーション用
-          'tax_query' => array(
-			      array(
-			        'taxonomy' => 'download_type', // タクソノミーのスラッグ
-			        'field' => 'slug', // ターム名をスラッグで指定する（変更不要）
-			        'terms' => $current_term->slug,
-			      ),
-			    )
-			  ];
-			  $wp_query = new WP_Query($args);
-			  if ($wp_query->have_posts()): while ($wp_query->have_posts()): $wp_query->the_post();
-			?>
-           <a href="<?php the_permalink(); ?>" class="card">
-              <figure class="card__img-wrapper">
-              <?php if (has_post_thumbnail()) {
-                  the_post_thumbnail();
-                } else { ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp" alt="blog1">
-                <?php } ?>
-              </figure>
-              <div class="card__body">
-              <?php
-                  $terms = get_the_terms(get_the_ID(), 'download_type');
-                  if ($terms && !is_wp_error($terms)) {
-                      // ジャンルが存在し、エラーがない場合のみ、<span> タグを表示
-                      echo '<span class="card__category">' . esc_html($terms[0]->name) . '</span>';
-                  }
-                  // ジャンルがない場合は、何も表示しない
-                  ?>
-                <time class="card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
-                  <p class="card__text">
-                  <?php the_title(); ?>
-                  </p>
-              </div>
-          </a>
-          <?php endwhile; ?>
-<?php else: ?>
-  <p>まだ記事がありません。</p>
-<?php endif; ?>
-<?php wp_reset_postdata(); ?>
-          <!-- 記事のループ処理終了 -->
-          </div>
-        <div class="p-archive-blog__pages">
-        <?php get_template_part('template/pagination'); ?>
+            </div>
+            <div class="p-download__items">
+                <!-- 記事のループ処理開始 -->
+                <?php if (have_posts()): while (have_posts()): the_post(); ?>
+                <article class="p-download__item c-card">
+                    <a href="<?php the_permalink(); ?>">
+                        <figure class="c-card__img">
+                            <?php if (has_post_thumbnail()) {
+                                the_post_thumbnail();
+                            } else { ?>
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/common/no-img.png"
+                                alt="">
+                            <?php } ?>
+                        </figure>
+                        <div class="c-card__body">
+                            <h2 class="c-card__card-title"><?php the_title(); ?></h2>
+                            <div class="c-card__content">
+                                <?php
+                                $terms = get_the_terms(get_the_ID(), 'download_type');
+                                if ($terms && !is_wp_error($terms)) {
+                                    echo '<span class="c-card__category">' . esc_html($terms[0]->name) . '</span>';
+                                }
+                                ?>
+                                <p class="c-card__text"><?php echo get_field('document_explain'); ?></p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <?php endwhile; else: ?>
+                <p>まだ記事がありません。</p>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
+                <!-- 記事のループ処理終了 -->
+            </div>
+            <div class="p-download__pages">
+                <?php get_template_part('template/pagination'); ?>
+            </div>
         </div>
-  </article>
-  </div>
-  <div class="p-privacy-policy__btn c-btn-below l-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
-            <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
-            <picture class="c-btn-black__img c-btn-black__img--prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg" alt="TOPへ戻る" width="202" height="10" loading="lazy">
-            </picture>
-          </a>
-        </div>
-</div>
-</section>
+    </section>
 
-  </main>
+</main>
 <?php get_footer(); ?>

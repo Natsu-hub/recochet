@@ -170,29 +170,34 @@ input[type="file" i]::-webkit-file-upload-button {
     vertical-align: middle;
     transition: all 0.3s ease 0s;
 
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: $white;
-        width: rem(24);
-        height: rem(24);
-        border: 1px solid $black;
-
-        @include mq('md') {
-            top: 40%;
-        }
-
-        @include mq('sm') {
-            top: 20%;
-        }
-    }
-
     &:hover {
         cursor: pointer;
     }
+}
+
+[type="checkbox"]+span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $white;
+    width: rem(24);
+    height: rem(24);
+    border: 2px solid #CCCCCC;
+
+    @include mq('md') {
+        top: 40%;
+    }
+
+    @include mq('sm') {
+        top: 20%;
+    }
+}
+
+[type="checkbox"]:checked+span::before {
+    background: $blue;
+    border: 2px solid $blue07;
 }
 
 [type="checkbox"]:checked+span::after {
@@ -200,8 +205,8 @@ input[type="file" i]::-webkit-file-upload-button {
     display: block;
     height: rem(14);
     width: rem(24);
-    border-bottom: rem(4) solid $black;
-    border-left: rem(4) solid $black;
+    border-bottom: rem(4) solid $white;
+    border-left: rem(4) solid $white;
     left: 0;
     opacity: 1;
     position: absolute;

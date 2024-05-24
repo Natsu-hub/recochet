@@ -10,7 +10,6 @@ export function slide() {
             new Splide(splideElements[i]).mount();
         }
 
-        //FVの流れる人物画像
         if (document.querySelector(".js-slide-img")) {
             const slideImgMv = new Splide(".js-slide-img", {
                 fixedWidth: '14.125rem',
@@ -44,7 +43,7 @@ export function slide() {
             arrows: false,
             breakpoints: {
                 768: {
-                    fixedWidth:'18.125rem',
+                    fixedWidth:'22rem',
                 },
               },
               perMove: 1,

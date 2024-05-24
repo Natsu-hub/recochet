@@ -35,6 +35,14 @@
     }
 }
 
+.c-below-mv__sub-title--download {
+    max-width: rem(143);
+
+    @include mq(md) {
+        max-width: rem(110);
+    }
+}
+
 .c-below-mv__sub-title img {}
 
 .c-below-mv__title {
