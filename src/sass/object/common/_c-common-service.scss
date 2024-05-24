@@ -77,6 +77,11 @@
         transition: transform .8s;
     }
 
+    .p-common-service__list:hover .p-common-service__list-title,
+    .p-common-service__list:hover .p-common-service__list-text {
+        opacity: .6;
+    }
+
     .p-common-service__list:hover .c-btn {
         background-color: $blue04;
         color: $white;
@@ -92,6 +97,7 @@
     font-weight: bold;
     font-size: rem(18);
     letter-spacing: 0.23em;
+    transition: all 0.3s ease-out 0s;
 
     @include mq(md) {
         font-size: rem(16);
@@ -99,6 +105,8 @@
 }
 
 .p-common-service__list-text {
+    transition: all 0.3s ease-out 0s;
+
     @include mq(md) {
         font-size: rem(14);
         letter-spacing: 0.02em;

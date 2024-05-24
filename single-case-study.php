@@ -34,17 +34,19 @@ $case_client = get_field('case_client');
 
     <div class="p-single-case">
         <div class="p-single-case__inner l-inner">
-            <span class="p-single-case__company"><?php echo $case_company; ?></span>
-            <h2 class="p-single-case__title"><?php the_title(); ?></h2>
-            <?php
-function get_the_day_of_week() {
-    $week = array('日', '月', '火', '水', '木', '金', '土');
-    return $week[date('w')];
-}
-?>
-            <time class="p-single-case__time" datetime="<?php the_time('c'); ?>">
-                <?php echo get_the_time('Y年m月d日') . ' (' . get_the_day_of_week() . ')'; ?>
-            </time>
+            <div class="p-single-case__title-box">
+                <span class="p-single-case__company"><?php echo $case_company; ?></span>
+                <h2 class="p-single-case__title"><?php the_title(); ?></h2>
+                <?php
+    function get_the_day_of_week() {
+        $week = array('日', '月', '火', '水', '木', '金', '土');
+        return $week[date('w')];
+    }
+    ?>
+                <time class="p-single-case__time" datetime="<?php the_time('c'); ?>">
+                    <?php echo get_the_time('Y年m月d日') . ' (' . get_the_day_of_week() . ')'; ?>
+                </time>
+            </div>
             <div class="p-single-case__body">
                 <div class="p-single-case__main-content">
                     <figure class="p-single-case__main-img">
@@ -63,7 +65,7 @@ function get_the_day_of_week() {
                         <div class="p-single-case__link-text">関連資料を無料で<br>
                             ご利用いただけます</div>
                         <div class="p-single-case__link-btn">
-                            <a href="">お役立ち資料をダウンロード</a>
+                            <a href="<?php echo DOWNLOAD_URL; ?>">お役立ち資料をダウンロード</a>
                         </div>
                     </div>
                     <div class="p-single-case__content c-entry-content">
@@ -87,7 +89,7 @@ function get_the_day_of_week() {
                                     alt="亀井 良真氏の写真" width="117" height="117" loading="lazy">
                             </picture>
                             <div class="p-single-case__author-item">
-                                <div class="p-single-case__author-name"></div>
+                                <div class="p-single-case__author-name">亀井 良真</div>
                                 <ul class="p-single-case__author-sns">
                                     <li class="p-single-case__author-list">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/x-blue.svg"
@@ -131,9 +133,8 @@ function get_the_day_of_week() {
                             <?php foreach ($case_study_posts as $post) : setup_postdata($post); ?>
                             <li class="p-case-related__list">
                                 <a href="<?= esc_url(get_permalink()); ?>">
-                                    <time class="p-single-case__time" datetime="<?php the_time('c'); ?>">
-                                        <?php echo get_the_time('Y年m月d日') . ' (' . get_the_day_of_week() . ')'; ?>
-                                    </time>
+                                    <time class="p-case-related__time"
+                                        datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
                                     <div class="p-case-related__box">
                                         <div class="p-case-related__title"><?= esc_html(get_the_title()); ?>
                                         </div>
@@ -160,58 +161,6 @@ function get_the_day_of_week() {
     <!-- 事業内容 -->
     <?php get_template_part('template/common-service'); ?>
 
-    <!-- p-single-blog -->
-    <section class="p-single-blog l-section--below">
-        <div class="p-single-blog__inner l-inner--small">
-            <article class="p-single-blog__box">
-                <?php if (have_posts()): ?>
-                <?php while (have_posts()): ?>
-                <?php the_post(); ?>
-                <div class="p-single-blog__card">
-                    <div class="p-single-blog__item">
-                        <time class="p-single-blog__time"
-                            datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
-                        <p class="p-single-blog__text">
-                            <?php the_title(); ?>
-                        </p>
-                    </div>
-                    <figure class="p-single-blog__img-wrapper">
-                        <?php if (has_post_thumbnail()) {
-						the_post_thumbnail();
-						} else { ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/no-img.webp"
-                            alt="blog1">
-                        <?php } ?>
-                    </figure>
-                </div>
-                <div class="p-single-blog__body-wrapper">
-                    <div class="p-single-blog__body">
-                        <div class="p-single-blog__content c-entry-content">
-                            <?php the_content(); ?>
-                        </div>
-                    </div>
-                </div>
-                <?php endwhile; ?>
-                <?php endif; ?>
-            </article>
-            <div class="p-single-blog__btns l-btn-below">
-                <div class="p-contact__btn c-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
-                        <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
-                        <picture class="c-btn-black__img c-btn-black__img--prev">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg"
-                                alt="TOPへ戻る" width="202" height="10" loading="lazy">
-                        </picture>
-                    </a>
-                </div>
-
-            </div>
-
-
-
-
-
-        </div>
-    </section>
 
 </main>
 <?php get_footer(); ?>
