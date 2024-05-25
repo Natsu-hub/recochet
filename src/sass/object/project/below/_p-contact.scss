@@ -21,10 +21,10 @@
 .p-contact__form {
     background: rgba(248, 248, 248, 0.80);
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
-    padding: rem(64) rem(80) rem(150);
+    padding: rem(53) rem(47);
 
     @include mq(md) {
-        padding: rem(36) rem(17) rem(40);
+        padding: rem(24) rem(15);
     }
 
 }
@@ -41,4 +41,3 @@
 .p-contact__grecaptcha a {
     text-decoration: underline;
 }
-

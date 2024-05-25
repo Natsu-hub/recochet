@@ -5,6 +5,7 @@
 ================================================================== */
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
     margin: 0;
     padding: 0;
@@ -37,13 +38,10 @@ textarea::placeholder {
 }
 
 .p-form {
-    width: 60%;
     margin-inline: auto;
     font-weight: 500;
 
-    @include mq('md') {
-        width: 100%;
-    }
+    @include mq('md') {}
 }
 
 .p-form__item:not(:first-child) {
@@ -135,56 +133,30 @@ input[type="file" i]::-webkit-file-upload-button {
     margin-right: rem(30);
 }
 
-//checkbox
-.p-form__label {
+.p-form__plivacy {
+    margin-top: rem(56);
+    letter-spacing: -0.03em;
+}
+
+.p-form__plivacy a {
+    color: $blue08;
+    text-decoration: underline;
+    padding-right: rem(23);
     position: relative;
-}
 
-.p-form__check {
-    margin-top: rem(25);
-    text-align: center;
-}
-
-.p-form__check input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
-
-.p-form__check-text {
-    @include mq('md') {
-        margin-top: rem(30);
-        display: block;
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/below/contact_icon01.svg) no-repeat center center/contain;
+        width: rem(12);
+        height: rem(12);
+        top: 55%;
+        transform: translateY(-50%);
+        right: rem(5);
     }
 }
 
-.p-form__item .p-form__check {
-    margin-top: 0;
-}
-
-
-
-.p-form__check a {
-    border-bottom: 1px solid $black;
-}
-
-.p-form__item-inline--check {
-    @include mq('sm') {
-        text-align: left;
-        margin-top: rem(10);
-        display: block;
-    }
-}
-
-.p-form__check {
-    font-size: rem(14);
-
-    @include mq('sm') {
-        width: fit-content;
-    }
-}
-
+.p-form__plivacy span {}
 
 /* ラジオボタン */
 .p-form-radio__item span {

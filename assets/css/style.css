@@ -697,6 +697,11 @@ th {
 	margin-top: 4.8125rem;
 }
 
+.l-page110 {
+	padding-bottom: 7.375rem;
+	padding-top: 6.875rem;
+}
+
 /********************************
 * 共通設定
 ********************************/
@@ -1839,7 +1844,7 @@ pre {
 	background: rgba(248, 248, 248, 0.8);
 	-webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
 	        box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
-	padding: 4rem 5rem 9.375rem;
+	padding: 3.3125rem 2.9375rem;
 }
 
 .p-contact__grecaptcha {
@@ -1959,6 +1964,7 @@ pre {
 
 input[type=text],
 input[type=email],
+input[type=tel],
 textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -1982,6 +1988,7 @@ textarea {
 
 input[type=text]:focus,
 input[type=email]:focus,
+input[type=tel]:focus,
 textarea:focus {
 	border: 2px solid #000000;
 }
@@ -2010,7 +2017,6 @@ textarea::placeholder {
 .p-form {
 	font-weight: 500;
 	margin-inline: auto;
-	width: 60%;
 }
 
 .p-form__item:not(:first-child) {
@@ -2076,32 +2082,28 @@ input[type=file i]::-webkit-file-upload-button {
 	margin-right: 1.875rem;
 }
 
-.p-form__label {
+.p-form__plivacy {
+	letter-spacing: -0.03em;
+	margin-top: 3.5rem;
+}
+
+.p-form__plivacy a {
+	color: #0070c5;
+	padding-right: 1.4375rem;
 	position: relative;
+	text-decoration: underline;
 }
 
-.p-form__check {
-	margin-top: 1.5625rem;
-	text-align: center;
-}
-
-.p-form__check input {
-	left: 0;
-	opacity: 0;
+.p-form__plivacy a::after {
+	background: url(../images/below/contact_icon01.svg) no-repeat center center/contain;
+	content: "";
+	height: 0.75rem;
 	position: absolute;
-	top: 0;
-}
-
-.p-form__item .p-form__check {
-	margin-top: 0;
-}
-
-.p-form__check a {
-	border-bottom: 1px solid #000000;
-}
-
-.p-form__check {
-	font-size: 0.875rem;
+	right: 0.3125rem;
+	top: 55%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 0.75rem;
 }
 
 /* ラジオボタン */
@@ -2437,6 +2439,76 @@ span.wpcf7-spinner {
 	text-decoration: underline;
 	-webkit-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
+}
+
+.p-single-download__body {
+	grid-gap: 0;
+	display: -ms-grid;
+	display: grid;
+	gap: 0;
+	-ms-grid-columns: (1fr)[2];
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.p-single-download__box {
+	padding-right: 2.6875rem;
+}
+
+.p-single-download__img-wrapper {
+	height: 100%;
+	max-width: 28.125rem;
+}
+
+.p-single-download__img-wrapper img {
+	-o-object-fit: cover;
+	aspect-ratio: 450/254;
+	height: auto;
+	object-fit: cover;
+}
+
+.p-single-download__item {
+	margin-top: 4.1875rem;
+}
+
+.p-single-download__lead {
+	font-size: 1.875rem;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.p-single-download__text {
+	margin-top: 0.9375rem;
+}
+
+.p-single-download__content {
+	margin-top: 2.8125rem;
+}
+
+.p-single-download__item ul {
+	font-size: 1rem;
+	letter-spacing: 0.23em;
+	line-height: 1.75;
+	padding-left: 2.8125rem;
+}
+
+.p-single-download__item li {
+	list-style: none;
+	padding-left: 1em;
+	position: relative;
+}
+
+.p-single-download__item li::before {
+	aspect-ratio: 1/1;
+	background-color: #ccc;
+	border-radius: 50%;
+	content: "";
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 0.5rem;
 }
 
 .p-thanks {
@@ -3783,7 +3855,7 @@ span.wpcf7-spinner {
 }
 
 .p-works__detail {
-	color: #5E5E5E;
+	color: #ccc;
 	margin-left: 3rem;
 }
 
@@ -4177,6 +4249,11 @@ a {
 	margin-top: 3.125rem;
 }
 
+.l-page110 {
+	padding-bottom: 2.9375rem;
+	padding-top: 1.875rem;
+}
+
 body {
 	font-size: 0.875rem;
 	letter-spacing: 0.06em;
@@ -4565,7 +4642,7 @@ body {
 }
 
 .p-contact__form {
-	padding: 2.25rem 1.0625rem 2.5rem;
+	padding: 1.5rem 0.9375rem;
 }
 
 .p-contact__grecaptcha {
@@ -4609,21 +4686,12 @@ body {
 	margin-top: 1.75rem;
 }
 
-.p-form {
-	width: 100%;
-}
-
 .p-form__item-inline.p-form__item-inline--check {
 	margin-left: 0;
 }
 
 .p-form__submit {
 	margin-top: 2.625rem;
-}
-
-.p-form__check-text {
-	display: block;
-	margin-top: 1.875rem;
 }
 
 .p-form-radio label {
@@ -4755,6 +4823,12 @@ body {
 .p-single-case__author-link {
 	font-size: 0.9375rem;
 	line-height: 1.2;
+}
+
+.p-single-download__body {
+	gap: 2.5rem;
+	-ms-grid-columns: (1fr)[1];
+	grid-template-columns: repeat(1, 1fr);
 }
 
 .p-thanks__inner {
@@ -5370,18 +5444,6 @@ body {
 
 .p-contact__inner {
 	padding-inline: 0.625rem;
-}
-
-.p-form__item-inline--check {
-	display: block;
-	margin-top: 0.625rem;
-	text-align: left;
-}
-
-.p-form__check {
-	width: -moz-fit-content;
-	width: -webkit-fit-content;
-	width: fit-content;
 }
 
 .p-privacy-policy__box {

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-page110 {
+    padding-top: rem(110);
+    padding-bottom: rem(118);
+
+    @include mq(md) {
+        padding-top: rem(30);
+        padding-bottom: rem(47);
+    }
+}
