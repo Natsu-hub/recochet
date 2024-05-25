@@ -200,7 +200,6 @@ export function animation() {
           autoAlpha: 0,
         },
         {
-          delay: .2,
           autoAlpha: 1,
           duration: 1.5,
           scrollTrigger: {

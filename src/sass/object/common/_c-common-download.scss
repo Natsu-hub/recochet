@@ -166,6 +166,15 @@
 
 }
 
+.c-common-download__bg02 {
+    width: 100%;
+    padding-block: rem(25);
+    background: url(../images/below/download_bg02.webp) center center / cover no-repeat;
+    @include mq(md) {
+    background: url(../images/below/download_bg02-sp.webp) center center / cover no-repeat;
+}
+}
+
 .c-common-download__box {
     background-color: $black05;
     padding: rem(20) rem(30) rem(20) rem(47);

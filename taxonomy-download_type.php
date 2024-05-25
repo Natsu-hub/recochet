@@ -19,10 +19,25 @@ $pickup = get_field('pickup');
             </div>
             <h1 class="c-below-mv__title">
                 <?php
-                        // カスタム投稿タイプ名を取得して表示
-                        $post_type = get_post_type_object(get_post_type());
-                        echo esc_html($post_type->label); 
-                        ?>
+        // 現在の投稿IDを取得
+        $post_id = get_the_ID();
+        
+        // 投稿に関連する 'download_type' タクソノミーの情報を取得
+        $terms = get_the_terms($post_id, 'download_type');
+        
+        // タクソノミーのタームに基づいてタイトルを表示
+        if (!empty($terms) && !is_wp_error($terms)) {
+            foreach ($terms as $term) {
+                if ($term->slug == 'useful') {
+                    echo 'お役立ち資料';
+                } elseif ($term->slug == 'service') {
+                    echo 'サービス資料';
+                }
+            }
+        } else {
+            echo 'カテゴリーがありません';
+        }
+    ?>
             </h1>
             <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
                 企業さまの成果をご紹介いたします。
@@ -65,20 +80,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
 ?>
                 </span>
             </div>
-            <div class="works__tabs">
-                <?php
-        $terms = get_terms( array(
-            'taxonomy' => 'download_type',
-            'hide_empty' => false,
-        ));
 
-        if ( !empty($terms) && !is_wp_error($terms) ){
-            foreach ( $terms as $term ) {
-                echo '<a class="works__tab" href="'. get_term_link($term) .'">'. $term->name .'</a>';
-            }
-        }
-    ?>
-            </div>
             <div class="p-download__items">
                 <!-- 記事のループ処理開始 -->
                 <?php if (have_posts()): while (have_posts()): the_post(); ?>
@@ -117,6 +119,23 @@ if (!empty($terms) && !is_wp_error($terms)) {
             </div>
         </div>
     </section>
+    <div class="c-common-download__bg02">
+        <div class="l-inner">
+            <div class="c-common-download__box">
+                <p class="c-common-download__text">ご相談や各種お問い合わせはこちら</p>
+                <ul class="c-common-download__items">
+                    <li class="c-common-download__item">
+                        <a href="<?php echo CONTACT_URL; ?>"
+                            class="c-common-download__contact c-common-download__contact--mail">メールでお問い合わせ</a>
+                    </li>
+                    <li class="c-common-download__item">
+                        <a href="<?php echo DOWNLOAD_URL; ?>"
+                            class="c-common-download__contact c-common-download__contact--line">LINEでお問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </main>
 <?php get_footer(); ?>

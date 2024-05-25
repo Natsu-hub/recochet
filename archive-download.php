@@ -60,20 +60,6 @@ if (!empty($terms) && !is_wp_error($terms)) {
 ?>
                 </span>
             </div>
-            <div class="works__tabs">
-                <?php
-        $terms = get_terms( array(
-            'taxonomy' => 'download_type',
-            'hide_empty' => false,
-        ));
-
-        if ( !empty($terms) && !is_wp_error($terms) ){
-            foreach ( $terms as $term ) {
-                echo '<a class="works__tab" href="'. get_term_link($term) .'">'. $term->name .'</a>';
-            }
-        }
-    ?>
-            </div>
             <div class="p-download__items">
                 <!-- 記事のループ処理開始 -->
                 <?php
@@ -137,6 +123,23 @@ if (!empty($terms) && !is_wp_error($terms)) {
             </div>
         </div>
     </section>
+    <div class="c-common-download__bg02">
+        <div class="l-inner">
+            <div class="c-common-download__box">
+                <p class="c-common-download__text">ご相談や各種お問い合わせはこちら</p>
+                <ul class="c-common-download__items">
+                    <li class="c-common-download__item">
+                        <a href="<?php echo CONTACT_URL; ?>"
+                            class="c-common-download__contact c-common-download__contact--mail">メールでお問い合わせ</a>
+                    </li>
+                    <li class="c-common-download__item">
+                        <a href="<?php echo DOWNLOAD_URL; ?>"
+                            class="c-common-download__contact c-common-download__contact--line">LINEでお問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </main>
 <?php get_footer(); ?>

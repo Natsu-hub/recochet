@@ -704,22 +704,9 @@ th {
 body {
 	background: #fff;
 	color: #000000;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
-	-webkit-box-pack: end;
-	-webkit-justify-content: flex-end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
 	letter-spacing: 0.03em;
 	line-height: 1.8125;
 	min-height: 100vh;
@@ -808,6 +795,7 @@ body {
 }
 
 .c-card a {
+	display: block;
 	height: 100%;
 }
 
@@ -910,6 +898,7 @@ body {
 .c-card__text {
 	font-size: 0.75rem;
 	line-height: 1.75;
+	margin-top: 0.625rem;
 }
 
 .c-common-download {
@@ -1026,6 +1015,12 @@ body {
 	margin-top: 4.375rem;
 	padding-block: 1.5625rem;
 	width: 100vw;
+}
+
+.c-common-download__bg02 {
+	background: url(../images/below/download_bg02.webp) center center/cover no-repeat;
+	padding-block: 1.5625rem;
+	width: 100%;
 }
 
 .c-common-download__box {
@@ -1909,6 +1904,55 @@ pre {
 	text-align: center;
 }
 
+[type=checkbox] + span {
+	display: inline-block;
+	padding-left: 2rem;
+	position: relative;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+}
+
+[type=checkbox] + span:hover {
+	cursor: pointer;
+}
+
+/* checkbox */
+
+[type=checkbox] + span::before {
+	background: #fff;
+	border: 2px solid #CCCCCC;
+	border-radius: 3px;
+	content: "";
+	height: 1.5rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 1.5rem;
+}
+
+[type=checkbox]:checked + span::before {
+	background: #1571da;
+	border: 2px solid #1571da;
+}
+
+[type=checkbox]:checked + span::after {
+	border-bottom: 0.1875rem solid #fff;
+	border-left: 0.1875rem solid #fff;
+	content: "";
+	display: block;
+	height: 0.5rem;
+	left: 0.3125rem;
+	opacity: 1;
+	position: absolute;
+	top: 45%;
+	-webkit-transform: translateY(-50%) rotate(-45deg);
+	        transform: translateY(-50%) rotate(-45deg);
+	width: 0.875rem;
+}
+
 /*==================================================================
 # 共通
 ================================================================== */
@@ -2050,52 +2094,6 @@ input[type=file i]::-webkit-file-upload-button {
 
 .p-form__item .p-form__check {
 	margin-top: 0;
-}
-
-[type=checkbox] + span {
-	display: inline-block;
-	padding-left: 2rem;
-	position: relative;
-	-webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-	vertical-align: middle;
-}
-
-[type=checkbox] + span:hover {
-	cursor: pointer;
-}
-
-[type=checkbox] + span::before {
-	background: #fff;
-	border: 2px solid #CCCCCC;
-	content: "";
-	height: 1.5rem;
-	left: 0;
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	        transform: translateY(-50%);
-	width: 1.5rem;
-}
-
-[type=checkbox]:checked + span::before {
-	background: #2CA2DC;
-	border: 2px solid #1571da;
-}
-
-[type=checkbox]:checked + span::after {
-	border-bottom: 0.25rem solid #fff;
-	border-left: 0.25rem solid #fff;
-	content: "";
-	display: block;
-	height: 0.875rem;
-	left: 0;
-	opacity: 1;
-	position: absolute;
-	top: 40%;
-	-webkit-transform: translateY(-50%) rotate(-45deg);
-	        transform: translateY(-50%) rotate(-45deg);
-	width: 1.5rem;
 }
 
 .p-form__check a {
@@ -4283,6 +4281,10 @@ body {
 	margin-top: 1.1875rem;
 }
 
+.c-common-download__bg02 {
+	background: url(../images/below/download_bg02-sp.webp) center center/cover no-repeat;
+}
+
 .c-common-download__box {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -4575,10 +4577,32 @@ body {
 	padding-top: 1.6875rem;
 }
 
+.p-download__tabs {
+	padding-bottom: 0;
+}
+
+.p-download__tab-title {
+	max-width: 4.375rem;
+}
+
+.p-download__tab-list {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-left: 4.375rem;
+}
+
+.custom-checkbox {
+	padding-right: 0;
+}
+
 .p-download__items {
 	gap: 1.6875rem;
 	-ms-grid-columns: (1fr)[1];
 	grid-template-columns: repeat(1, 1fr);
+	margin-top: 1.875rem;
 }
 
 .p-download__pages {
@@ -4600,10 +4624,6 @@ body {
 .p-form__check-text {
 	display: block;
 	margin-top: 1.875rem;
-}
-
-[type=checkbox] + span::before {
-	top: 40%;
 }
 
 .p-form-radio label {
@@ -5350,10 +5370,6 @@ body {
 
 .p-contact__inner {
 	padding-inline: 0.625rem;
-}
-
-[type=checkbox] + span::before {
-	top: 20%;
 }
 
 .p-form__item-inline--check {

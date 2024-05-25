@@ -4504,7 +4504,6 @@ function animation() {
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(element, {
         autoAlpha: 0
       }, {
-        delay: .2,
         autoAlpha: 1,
         duration: 1.5,
         scrollTrigger: {

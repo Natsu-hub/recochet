@@ -7,36 +7,25 @@ $page_slug = $post->post_name;
 ?>
 
 <main class="l-main">
-    <!-- c-below-mv -->
-    <section class="c-below-mv">
+     <!-- c-below-mv -->
+     <section class="c-below-mv">
         <div class="c-below-mv__inner">
+            <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
+                    alt="case study" width="152" height="71" loading="lazy">
+            </div>
             <h1 class="c-below-mv__title">
-                <span class="c-below-mv__sub-title">採用情報</span>
-                <span class="c-below-mv__main-title">Recruit</span>
+                <?php the_title(); ?>
             </h1>
-            <picture class="c-below-mv__img">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/recruit-mv_sp.webp"
-                    type="image/webp" media="(max-width: 768px)">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/recruit-mv.webp"
-                    type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below-old/recruit-mv.png" alt="採用情報"
-                    width="1440" height="400">
-            </picture>
-        </div>
-    </section>
-
-    <!-- p-recruit -->
-    <section class="p-recruit">
-        <div class="p-recruit__inner l-inner--small">
-            <div class="p-recruit__box js-fade-in">
-                <h2 class="p-recruit__head">サポルトでは一緒に働く仲間を<br class="u-mobile">募集しています</h2>
-                <div class="p-recruit__text">現在当法人運営の事業所にて、一緒に働いていただける方を募集しています。<br>
-                    ご興味のある方は一度下記連絡先までお問い合わせください。</div>
+            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
+                企業さまの成果をご紹介いたします。
             </div>
         </div>
     </section>
-    <!-- p-below-contact -->
-    <?php get_template_part('template/below-contact'); ?>
+
+
+    <!-- p-below-download -->
+    <?php get_template_part('template/below-download'); ?>
 
 </main>
 <?php get_footer(); ?>

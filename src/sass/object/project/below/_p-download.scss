@@ -4,8 +4,9 @@
 .p-download {
     padding-top: rem(120);
     padding-bottom: rem(112);
+
     @include mq(md) {
-    padding-bottom: rem(48);
+        padding-bottom: rem(48);
         padding-top: rem(27);
     }
 }
@@ -19,6 +20,10 @@
     padding-block: rem(20);
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
+
+    @include mq(md) {
+        padding-bottom: 0;
+    }
 }
 
 .p-download__tab-title {
@@ -26,16 +31,29 @@
     max-width: rem(309);
     width: 100%;
     text-align: center;
+
+    @include mq(md) {
+        max-width: rem(70);
+    }
 }
 
 .p-download__tab-list {
     margin-left: rem(33);
     display: flex;
     align-items: center;
+
+    @include mq(md) {
+        flex-direction: column;
+        margin-left: rem(70);
+    }
 }
 
 .custom-checkbox {
     padding-right: rem(95);
+
+    @include mq(md) {
+        padding-right: 0;
+    }
 }
 
 .checkbox-label {}
@@ -49,6 +67,7 @@
     @include mq(md) {
         grid-template-columns: repeat(1, 1fr);
         gap: rem(27);
+        margin-top: rem(30);
     }
 }
 
@@ -73,7 +92,54 @@
 .p-download__pages {
     margin-top: rem(67);
     text-align: center;
+
     @include mq(md) {
         margin-top: rem(28);
     }
+}
+
+[type="checkbox"]+span {
+    padding-left: rem(32);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* checkbox */
+
+[type="checkbox"]+span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $white;
+    width: rem(24);
+    height: rem(24);
+    border: 2px solid #CCCCCC;
+    border-radius: 3px;
+}
+
+[type="checkbox"]:checked+span::before {
+    background: $blue07;
+    border: 2px solid $blue07;
+}
+
+[type="checkbox"]:checked+span::after {
+    content: "";
+    display: block;
+    height: rem(8);
+    width: rem(14);
+    border-bottom: rem(3) solid $white;
+    border-left: rem(3) solid $white;
+    left: rem(5);
+    opacity: 1;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%) rotate(-45deg);
 }
