@@ -141,9 +141,25 @@
 }
 
 /* サンクスページ・興味はありませんか？ */
+.l-download-interested {
+    margin-top: rem(148);
+
+    @include mq(md) {
+        margin-top: rem(50);
+    }
+}
+
+.l-download-interested--contact {
+    margin-top: rem(97);
+    padding-bottom: rem(82);
+
+    @include mq(md) {
+        margin-top: rem(35);
+        padding-bottom: rem(38);
+    }
+}
 
 .p-download__interested-lead {
-    margin-top: rem(148);
     text-align: center;
     font-size: rem(28);
     font-weight: 700;
@@ -151,7 +167,6 @@
 
     @include mq(md) {
         text-align: left;
-        margin-top: rem(50);
         font-size: rem(20);
     }
 }

@@ -903,7 +903,7 @@ body {
 
 .c-card__text {
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 5;
+	-webkit-line-clamp: 4;
 	display: -webkit-box;
 	font-size: 0.75rem;
 	line-height: 1.75;
@@ -1963,11 +1963,19 @@ pre {
 
 /* サンクスページ・興味はありませんか？ */
 
+.l-download-interested {
+	margin-top: 9.25rem;
+}
+
+.l-download-interested--contact {
+	margin-top: 6.0625rem;
+	padding-bottom: 5.125rem;
+}
+
 .p-download__interested-lead {
 	color: #222;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-top: 9.25rem;
 	text-align: center;
 }
 
@@ -2059,7 +2067,11 @@ textarea::placeholder {
 	font-weight: 700;
 }
 
-.p-form__item dd {
+.p-form__input {
+	margin-top: 0.9375rem;
+}
+
+.p-form__input-radio {
 	margin-top: 0.9375rem;
 }
 
@@ -2128,9 +2140,13 @@ textarea {
 	height: 100%;
 	height: 5rem;
 	margin-inline: auto;
-	max-width: 25rem;
+	max-width: 27.5rem;
 	text-align: center;
 	width: 100%;
+}
+
+.p-form__submit--download [type=submit] {
+	max-width: 25rem;
 }
 
 .wpcf7-submit {
@@ -2252,6 +2268,7 @@ span.wpcf7-spinner {
 }
 
 .p-form__grecaptcha {
+	font-size: 0.75rem;
 	margin-top: 3.5rem;
 }
 
@@ -4387,6 +4404,9 @@ body {
 	line-height: 2;
 	margin-inline: auto;
 	margin-top: 1.6875rem;
+}
+
+.c-below-mv__message--290 {
 	max-width: 18.125rem;
 	text-align: left;
 	width: 100%;
@@ -4741,11 +4761,11 @@ body {
 }
 
 .l-page--form {
-	padding-bottom: 2.9375rem;
+	padding-block: 2.9375rem;
 }
 
 .p-contact__inner {
-	padding-inline: 1.6875rem;
+	padding-inline: 0.9375rem;
 }
 
 .p-download__form {
@@ -4789,9 +4809,17 @@ body {
 	margin-top: 1.75rem;
 }
 
+.l-download-interested {
+	margin-top: 3.125rem;
+}
+
+.l-download-interested--contact {
+	margin-top: 2.1875rem;
+	padding-bottom: 2.375rem;
+}
+
 .p-download__interested-lead {
 	font-size: 1.25rem;
-	margin-top: 3.125rem;
 	text-align: left;
 }
 
@@ -4814,6 +4842,10 @@ textarea {
 
 .p-form__item dt {
 	font-size: 1rem;
+}
+
+.p-form__input-radio {
+	margin-top: 0;
 }
 
 .p-form__privacy {
@@ -4842,7 +4874,11 @@ textarea {
 	font-size: 1.125rem;
 	font-weight: 700;
 	letter-spacing: 0.02em;
-	max-width: 16.25rem;
+	max-width: 20rem;
+}
+
+.p-form__submit--download [type=submit] {
+	max-width: 20rem;
 }
 
 .p-form__file-text {
@@ -5640,10 +5676,6 @@ textarea {
 	width: 2.5rem;
 }
 
-.p-contact__inner {
-	padding-inline: 0.625rem;
-}
-
 .p-privacy-policy__box {
 	letter-spacing: 0.15px;
 	line-height: 1.8;
@@ -5663,6 +5695,15 @@ textarea {
 
 .u-sm {
 	display: block;
+}
+
+}
+
+@media (max-width: 450px) {
+
+.c-below-mv__message {
+	text-align: left;
+	width: 100%;
 }
 
 }

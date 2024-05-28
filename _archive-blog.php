@@ -47,9 +47,9 @@ get_header();
                             <div class="c-card__body">
                                 <time class="c-card__time"
                                     datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d.'); ?></time>
-                                <p class="c-card__text">
+                                <div class="c-card__text">
                                     <?php the_title(); ?>
-                                </p>
+                                </div>
                             </div>
                             <figure class="c-card__img-wrapper">
                                 <?php if (has_post_thumbnail()) {

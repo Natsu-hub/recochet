@@ -67,9 +67,23 @@
         margin-top: rem(27);
         letter-spacing: 0.02em;
         line-height: 2;
-        text-align: left;
-        max-width: rem(290);
-        width: 100%;
         margin-inline: auto;
+    }
+
+    @include mq('sm') {
+        // max-width: rem(290);
+    }
+
+    @media (max-width: 450px) {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.c-below-mv__message--290 {
+    @include mq(md) {
+        max-width: rem(290);
+        text-align: left;
+        width: 100%;
     }
 }

@@ -6,18 +6,14 @@
     padding-bottom: rem(163);
 
     @include mq(md) {
-        padding-bottom: rem(47);
+        padding-block: rem(47);
     }
 
 }
 
 .p-contact__inner {
     @include mq(md) {
-        padding-inline: rem(27);
-    }
-
-    @include mq('sm') {
-        padding-inline: rem(10);
+        padding-inline: rem(15);
     }
 }
 

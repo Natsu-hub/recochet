@@ -39,7 +39,7 @@ $pickup = get_field('pickup');
         }
     ?>
             </h1>
-            <div class="c-below-mv__message">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
+            <div class="c-below-mv__message c-below-mv__message--290">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
                     class="u-desktop">無料でダウンロードいただけます
             </div>
         </div>
@@ -103,9 +103,9 @@ if (!empty($terms) && !is_wp_error($terms)) {
                                     echo '<span class="c-card__category">' . esc_html($terms[0]->name) . '</span>';
                                 }
                                 ?>
-                                <p class="c-card__text">
-                                    <?php echo get_the_excerpt(); ?>
-                                </p>
+                                <div class="c-card__text">
+                                    <?php echo get_the_content(); ?>
+                                </div>
                             </div>
                         </div>
                     </a>

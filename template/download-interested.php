@@ -47,9 +47,9 @@ $pickup = get_field('pickup');
         echo '<span class="c-card__category">' . esc_html($terms[0]->name) . '</span>';
     }
     ?>
-                    <p class="c-card__text">
-                        <?php echo get_the_excerpt(); ?>
-                    </p>
+                    <div class="c-card__text">
+                        <?php echo get_the_content(); ?>
+                    </div>
                 </div>
             </div>
         </a>
