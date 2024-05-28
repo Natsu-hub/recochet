@@ -1,4 +1,3 @@
-    <!-- p-common-service -->
     <div class="p-common-service p-common-service--below">
         <div class="p-common-service__inner l-inner">
             <ul class="p-common-service__lists">

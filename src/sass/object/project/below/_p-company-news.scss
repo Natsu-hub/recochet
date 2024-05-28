@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.p-company-news {
+    padding-top: rem(110);
+    padding-bottom: rem(39);
+
+    @include mq(md) {
+        padding-top: rem(75);
+        padding-bottom: rem(56);
+    }
+}
+
+.p-company-news__inner {}
+
+.l-inner {}
+
+.p-company-news__title {
+    color: $black06;
+    font-size: rem(28);
+    font-weight: 700;
+
+    @include mq(md) {}
+}
+
+.p-company-news__box {
+    margin-top: rem(15);
+    height: rem(608);
+    overflow-y: scroll;
+    border: 2px solid $gray02;
+    padding: rem(25) rem(15);
+    font-weight: 700;
+
+    @include mq(md) {
+        height: rem(365);
+        padding: rem(15);
+        margin-top: rem(25);
+    }
+}
+
+.p-company-news__content {
+    display: flex;
+    align-items: center;
+    padding: rem(14);
+    border-top: 1px solid $gray02;
+
+    @include mq(md) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: rem(14) 0;
+    }
+}
+
+.p-company-news__content:last-child {
+    border-bottom: 1px solid $gray02;
+}
+
+.p-company-news__label {
+    max-width: rem(175);
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    font-size: rem(18);
+    color: $black08;
+    flex-shrink: 0;
+
+    @include mq(md) {}
+}
+
+.p-company-news__content-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @include mq(md) {
+        margin-top: rem(10);
+    }
+
+}
+
+.p-company-news__content-wrapper span {
+    display: block;
+    background-color: $black;
+    color: $white;
+    font-size: rem(12);
+    max-width: rem(120);
+    width: 100%;
+    height: rem(27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(md) {
+        max-width: rem(38);
+        height: rem(27);
+    }
+
+}
+
+
+.p-company-news__content-title {
+    margin-left: rem(30);
+    color: $blue07;
+    font-size: rem(16);
+
+    @include mq(md) {
+        margin-left: rem(13);
+        font-size: rem(14);
+        letter-spacing: 0.02em;
+    }
+}
+
+.p-company-news__content:nth-child(n+4) .p-company-news__content-title {
+    margin-left: rem(150);
+
+    @include mq(md) {
+        margin-left: 0;
+    }
+
+    /* ここに適用したいスタイルを記述します */
+}

@@ -102,16 +102,14 @@
 .c-below-mv__sub-title img {}
 
 .c-below-mv__title {
-    margin-top: rem(12);
     font-weight: 700;
     font-size: rem(30);
     letter-spacing: 0.13em;
-    line-height: calc(28 /16);
+    line-height: calc(36 /30);
 
     @include mq(md) {
         font-size: rem(20);
         line-height: calc(35 / 20);
-        margin-top: rem(5);
     }
 }
 

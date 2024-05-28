@@ -37,14 +37,13 @@ $case_client = get_field('case_client');
             <div class="p-single-case__title-box">
                 <span class="p-single-case__company"><?php echo $case_company; ?></span>
                 <h2 class="p-single-case__title"><?php the_title(); ?></h2>
-                <?php
-    function get_the_day_of_week() {
-        $week = array('日', '月', '火', '水', '木', '金', '土');
-        return $week[date('w')];
-    }
-    ?>
-                <time class="p-single-case__time" datetime="<?php the_time('c'); ?>">
-                    <?php echo get_the_time('Y年m月d日') . ' (' . get_the_day_of_week() . ')'; ?>
+                <time class="p-single-case__time" datetime="<?php echo get_the_date('c'); ?>">
+                    <?php 
+                                echo get_the_date('Y年m月d日'); 
+                                $days = array('日' => '日', '月' => '月', '火' => '火', '水' => '水', '木' => '木', '金' => '金', '土' => '土');
+                                $day = get_the_date('D');
+                                echo ' (' . $days[$day] . ')';
+                                ?>
                 </time>
             </div>
             <div class="p-single-case__body">

@@ -28,10 +28,10 @@ $page_slug = $post->post_name;
             <h2 class="p-company__title">会社概要</h2>
             <div class="p-company__box">
                 <picture class="p-company__img">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/.webp"
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/company_img01.webp"
                         type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/.png" alt="" width="1440"
-                        height="400" loading="lazy">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/company_img01.jpg"
+                        alt="亀井 良真氏" width="310" height="310" loading="lazy">
                 </picture>
                 <div class="p-company__message">僕は飲食店を経営する両親の元で育てられ、小さい規模ながらも飲食店経営をしてきました。<br>
                     日本の人口減少に伴い、飲食店経営はますます厳しい状況になってきています。<br>
@@ -74,26 +74,37 @@ $page_slug = $post->post_name;
             <h2 class="p-company-news__title">お知らせ</h2>
             <div class="p-company-news__box">
                 <?php
-      $args = [
-        'post_type' => 'news', // カスタム投稿タイプ 'news'
-        'posts_per_page' => 8,    // 表示件数
-        'orderby' => 'date',      // 日付で並び替え
-        'order' => 'DESC'         // 降順
-      ];
-      $news_query = new WP_Query($args);
-      if ($news_query->have_posts()):
-        while ($news_query->have_posts()):
-          $news_query->the_post();
-          ?>
+            $args = [
+                'post_type' => 'news', // カスタム投稿タイプ 'news'
+                'posts_per_page' => -1,    // 全ての投稿を表示
+                'orderby' => 'date',      // 日付で並び替え
+                'order' => 'DESC'         // 降順
+            ];
+            $news_query = new WP_Query($args);
+            if ($news_query->have_posts()):
+                $counter = 0; // カウンター変数を初期化
+                while ($news_query->have_posts()):
+                    $news_query->the_post();
+                    $counter++;
+                    ?>
                 <div class="p-company-news__content">
                     <div class="p-company-news__label">
-                        <div class="p-company-news__time">
-                            <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
-                        </div>
-                        <span>NEW</span>
+                        <time datetime="<?php echo get_the_date('c'); ?>">
+                            <?php 
+                                echo get_the_date('Y.m.d'); 
+                                $days = array('日' => '日', '月' => '月', '火' => '火', '水' => '水', '木' => '木', '金' => '金', '土' => '土');
+                                $day = get_the_date('D');
+                                echo ' (' . $days[$day] . ')';
+                                ?>
+                        </time>
                     </div>
-                    <div class="p-company-news__content-title">
-                        <?php the_title(); ?>
+                    <div class="p-company-news__content-wrapper">
+                        <?php if ($counter <= 3): ?>
+                        <span>NEW</span>
+                        <?php endif; ?>
+                        <div class="p-company-news__content-title">
+                            <?php the_title(); ?>
+                        </div>
                     </div>
                 </div>
                 <?php endwhile; else: ?>
@@ -104,7 +115,8 @@ $page_slug = $post->post_name;
             </div>
         </div>
     </section>
-
+    <!-- p-common-service -->
+    <?php get_template_part('template/common-service'); ?>
 
 
 

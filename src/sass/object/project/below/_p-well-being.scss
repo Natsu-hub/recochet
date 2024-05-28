@@ -1,0 +1,83 @@
+@use "global" as *;
+
+
+.p-well-being {}
+
+.p-well-being__inner {}
+
+.l-inner {}
+
+.p-well-being__items-box {}
+
+.p-well-being__items {}
+
+.p-well-being__item {}
+
+.p-well-being__body {}
+
+.p-well-being__item-img {}
+
+.p-well-being__item-content {}
+
+.p-well-being__item-title {}
+
+.p-well-being__item-text {}
+
+.works-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(md) {}
+}
+
+.works-list__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+
+    @include mq(md) {}
+}
+
+.works-list__item+.works-list__item {
+    margin-top: rem(30);
+}
+
+.works-list__item-img {
+    width: 100%;
+    max-width: rem(600);
+
+    @include mq(md) {}
+}
+
+.works-list__item:nth-of-type(even) .works-list__item-img {
+    margin-left: rem(100);
+
+    @include mq(md) {}
+}
+
+.works-list__item-img img {
+    width: 100%;
+    aspect-ratio: 550/420;
+    object-fit: cover;
+}
+
+.works-list__item-text {
+    font-size: rem(16);
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+    margin-left: rem(100);
+    max-width: rem(550);
+    width: 100%;
+
+    @include mq(md) {
+
+        margin-top: rem(20);
+
+    }
+}
+
+.works-list__item:nth-of-type(even) .works-list__item-text {
+    margin-left: 0;
+
+    @include mq(md) {}
+}
