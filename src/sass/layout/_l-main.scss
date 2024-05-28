@@ -2,6 +2,7 @@
 
 .l-main {
     margin-top: rem(77);
+    min-height: 100vh;
 
     @include mq(md) {
         margin-top: rem(50);

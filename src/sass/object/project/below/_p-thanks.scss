@@ -1,16 +1,40 @@
 @use "global" as *;
 
 .p-thanks {
-    background-color: $white02;
     color: $black;
-}
+    padding-top: rem(101);
+    padding-bottom: rem(95);
 
-.p-thanks__inner {
     @include mq(md) {
-        padding-inline: rem(30);
+        padding-top: rem(37);
+        padding-bottom: rem(50);
     }
 }
 
-.p-thanks__lead p:not(:first-child) {
-    margin-top: rem(40);
+.p-thanks__btn a {
+    max-width: rem(440);
+    width: 100%;
+    height: rem(80);
+    background: $blue;
+    color: $white;
+    border: 2px solid $blue;
+    margin-inline: auto;
+    font-size: rem(22);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out 0s;
+
+    @include mq(md) {
+        font-size: rem(18);
+        letter-spacing: 0.02em;
+    }
+}
+
+@media (hover: hover) {
+    .p-thanks__btn a:hover {
+        background: $white;
+        color: $blue;
+    }
 }

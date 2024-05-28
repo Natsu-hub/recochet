@@ -40,8 +40,8 @@ $pickup = get_field('pickup');
         }
     ?>
             </h1>
-            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
-                企業さまの成果をご紹介いたします。
+            <div class="c-below-mv__message">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
+                    class="u-desktop">無料でダウンロードいただけます
             </div>
         </div>
     </section>
@@ -68,40 +68,31 @@ $pickup = get_field('pickup');
                             <h2 class="p-single-download__lead">
                                 <?php the_title(); ?>
                             </h2>
-                            <p class="p-single-download__text">
-                                <?php echo $document_explain; ?>
-                            </p>
-                            <p class="p-single-download__content">
+                            <div class="p-single-download__text">
+                                <?php echo get_the_content(); ?>
+                            </div>
+                            <div class="p-single-download__content">
                                 <?php echo $document_list; ?>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>
                 </article>
-                <div class="contact-form">
 
-                    <!-- カテゴリーで分ける必要がない場合 -->
-                    <?php
+                <!-- コンタクトフォーム -->
+                <?php
 $download_link = get_post_meta($post->ID, 'download_link', true); // カスタムフィールドからダウンロードリンクを取得
 // ここに var_dump を記述して値を確認
 // var_dump($download_link);
 echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_useful" download_link="' . esc_url($download_link) . '"]');
 ?>
 
-                    <!-- 直接開く -->
-                    <a href="<?php echo esc_url(get_field('download_link')); ?>" download>
-                        直接開くダウンロード
-                    </a>
-                    <!-- 別タブで開いてから自分でダウンロード zipファイルはそのままダウンロードになる -->
-                    <a href="<?php echo esc_url(get_field('download_link')); ?>" target="_blank"
-                        rel="noopener noreferrer">
-                        別タブでファイルを開く
-                    </a>
-
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- 資料ダウンロード -->
+    <?php get_template_part('template/common-download'); ?>
 </main>
 <?php get_footer(); ?>

@@ -11,40 +11,35 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/contact-white.svg"
                     alt="case study" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title">
                 <?php the_title(); ?>
             </h1>
-            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
-                企業さまの成果をご紹介いたします。
+            <div class="c-below-mv__message">以下のフォームに必要事項をご入力の上、ご登録ください。<br>
+                LINEからのご相談も承っておりますのでお気軽にご連絡ください。
             </div>
         </div>
     </section>
 
 
     <!-- p-contact -->
-    <section class="p-contact l-section--below" id="contact">
-        <div class="p-contact__inner l-inner--small">
-            <div class="p-contact__form">
+    <section class="p-contact l-page--form">
+        <div class="p-contact__inner l-inner">
+            <div class="p-contact__box">
                 <?php echo do_shortcode('[contact-form-7 id="765" title="お問い合わせ"]'); ?>
-                <div class="p-contact__grecaptcha">
+                <div class="p-form__grecaptcha">
                     このサイトはreCAPTCHAによって保護されており、Googleの<a href="https://policies.google.com/privacy" target="_blank"
                         rel="noopener noreferrer">プライバシーポリシー</a>と<a href="https://policies.google.com/terms"
                         target="_blank" rel="noopener noreferrer">利用規約</a>が適用されます。
                 </div>
             </div>
-            <div class="p-contact__btn c-btn-below l-btn-below"><a class="c-btn-black" href="<?php echo HOME_URL; ?>">
-                    <p class="c-btn-black__text c-btn-black__text--prev">TOPへ戻る</p>
-                    <picture class="c-btn-black__img c-btn-black__img--prev">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common-old/black_arrow.svg"
-                            alt="TOPへ戻る" width="202" height="10" loading="lazy">
-                    </picture>
-                </a>
-            </div>
         </div>
     </section>
+
+    <!-- 資料ダウンロード -->
+    <?php get_template_part('template/common-download'); ?>
 
 </main>
 <?php get_footer(); ?>

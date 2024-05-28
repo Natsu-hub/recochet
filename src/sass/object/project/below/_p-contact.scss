@@ -1,8 +1,14 @@
 @use "global" as *;
 
 
-.p-contact {
-    background-color: $white02;
+.l-page--form {
+    padding-top: rem(88);
+    padding-bottom: rem(163);
+
+    @include mq(md) {
+        padding-bottom: rem(47);
+    }
+
 }
 
 .p-contact__inner {
@@ -15,29 +21,18 @@
     }
 }
 
-.l-inner--small {}
+.p-contact__box {
+    max-width: rem(679);
+    width: 100%;
+    margin-inline: auto;
+}
 
-
-.p-contact__form {
-    background: rgba(248, 248, 248, 0.80);
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+.p-download__form {
+    background: $white03;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.16);
     padding: rem(53) rem(47);
 
     @include mq(md) {
         padding: rem(24) rem(15);
     }
-
-}
-
-.p-contact__grecaptcha {
-    margin-top: rem(56);
-    text-align: center;
-
-    @include mq(md) {
-        margin-top: rem(40);
-    }
-}
-
-.p-contact__grecaptcha a {
-    text-decoration: underline;
 }

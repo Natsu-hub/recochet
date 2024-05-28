@@ -1,6 +1,5 @@
 export function contactFrom() {
     window.addEventListener('DOMContentLoaded', function () {
-        //送信ボタンをdisabled
         const required = document.querySelectorAll('.wpcf7-validates-as-required');
         let requiredArray = {};
         const submit = document.querySelector('.wpcf7-submit');
@@ -8,7 +7,9 @@ export function contactFrom() {
 
         if (required.length > 0) {
             submit.disabled = true;
-            attention.classList.add('active');
+            if (attention) {
+                attention.classList.add('active');
+            }
             required.forEach((el) => {
                 if (el.value === '') {
                     requiredArray[el.name] = false;
@@ -21,16 +22,17 @@ export function contactFrom() {
                     }
                     if (Object.keys(requiredArray).length === 0) {
                         submit.disabled = false;
-                        attention.classList.remove('active');
+                        if (attention) {
+                            attention.classList.remove('active');
+                        }
                     } else {
                         submit.disabled = true;
-                        attention.classList.add('active');
+                        if (attention) {
+                            attention.classList.add('active');
+                        }
                     }
                 });
             });
         }
-
-
-    })
-
+    });
 };

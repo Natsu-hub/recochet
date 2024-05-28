@@ -125,4 +125,8 @@
     font-size: rem(12);
     line-height: calc(21 / 12);
     margin-top: rem(10);
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

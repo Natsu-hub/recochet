@@ -43,7 +43,7 @@
     position: absolute;
     z-index: 2;
     bottom: rem(35);
-    color: $white04;
+    color: $white03;
     width: rem(252);
     max-width: 100%;
     height: rem(45);
@@ -55,6 +55,7 @@
         margin-right: auto;
     }
 }
+
 .p-works-banner__img,
 .p-works-banner__img img {
     height: inherit;

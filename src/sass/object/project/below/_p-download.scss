@@ -139,3 +139,44 @@
     top: 45%;
     transform: translateY(-50%) rotate(-45deg);
 }
+
+/* サンクスページ・興味はありませんか？ */
+
+.p-download__interested-lead {
+    margin-top: rem(148);
+    text-align: center;
+    font-size: rem(28);
+    font-weight: 700;
+    color: $black06;
+
+    @include mq(md) {
+        text-align: left;
+        margin-top: rem(50);
+        font-size: rem(20);
+    }
+}
+
+.p-download__interested-items {
+    margin-top: rem(90);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(27) rem(30);
+
+    @include mq(md) {
+        margin-top: rem(27);
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.p-download__interested-btn a {
+    margin-inline: auto;
+    max-width: rem(310);
+    width: 100%;
+    margin-top: rem(62);
+
+    @include mq(md) {
+        margin-top: rem(31);
+    }
+
+}

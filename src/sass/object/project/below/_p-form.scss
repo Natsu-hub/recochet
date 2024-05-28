@@ -17,50 +17,55 @@ textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: inherit;
+    color: $black06;
     font-family: inherit;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+    background: $white;
+    border-radius: 4.5px;
     font-size: rem(16);
-    padding: rem(10) rem(16);
+    padding: rem(12) rem(15);
     line-height: 1;
     width: 100%;
-    // outline: 1px solid black;
+    outline: 1px solid $gray03;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
 
     &:focus {
-        border: 2px solid $black;
+        border: 2px solid $blue;
     }
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: rgba(0, 0, 0, 0.3);
+    color: $gray02;
+
 }
 
 .p-form {
     margin-inline: auto;
-    font-weight: 500;
+    color: $black06;
 
     @include mq('md') {}
 }
 
 .p-form__item:not(:first-child) {
-    margin-top: rem(24);
+    margin-top: rem(29);
 }
 
-.p-form__items {
-    margin-top: rem(45);
-}
+.p-form__items {}
 
 .p-form__item dt {
-    padding: rem(8) rem(16);
+    font-weight: 700;
+    font-size: rem(18);
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
 }
 
 .p-form__item dd {
-    font-size: rem(16);
-    // flex: 0 1 100%;
-    // display: flex;
-    // align-items: center;
+    margin-top: rem(15);
 }
 
 textarea {
@@ -70,79 +75,49 @@ textarea {
 .p-form__item-inline {
     display: inline-block;
     vertical-align: middle;
-    color: red;
-    font-size: rem(14);
-    margin-left: rem(24);
+    color: $white;
+    background-color: $orange;
+    font-size: rem(12);
+    margin-left: rem(15);
+    padding: rem(1) rem(8);
 }
 
-.p-form__item-inline.p-form__item-inline--check {
-    @include mq('md') {
-        margin-left: 0;
-    }
-}
-
-//submit
-.p-form__submit {
-    margin-top: rem(75);
-    text-align: center;
-
-    @include mq("md") {
-        margin-top: rem(42);
-    }
+.p-form__item-inline--gray {
+    background-color: $gray05;
 }
 
 
-[type=submit] {
-    height: 100%;
-    width: 100%;
-    max-width: rem(300);
-    height: rem(60);
-    margin-inline: auto;
-    text-align: center;
-
-}
-
-.wpcf7-submit {
-    background-color: pink;
-}
-
-.wpcf7-submit:disabled {
-    opacity: .5;
-}
-
-.wpcf7-required-attention {
-    // opacity: 0;
-}
-
-.wpcf7-required-attention.active {
-    // opacity: 1;
-}
-
-//ファイル添付
-
-.wpcf7 input[type="file"] {
-    width: 100%;
-    padding: rem(20);
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-}
-
-input[type="file" i]::-webkit-file-upload-button {
-    background-color: $white;
-    border-radius: rem(10);
-    margin-right: rem(30);
-}
-
-.p-form__plivacy {
-    margin-top: rem(56);
+.p-form__privacy {
+    margin-top: rem(40);
     letter-spacing: -0.03em;
+    color: $black03;
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(34);
+        letter-spacing: -0.05em;
+    }
 }
 
-.p-form__plivacy a {
+.p-form__privacy--download {
+    margin-top: rem(56);
+    text-align: left;
+
+    @include mq(md) {
+        margin-top: rem(22);
+        text-align: center;
+    }
+}
+
+.p-form__privacy a {
     color: $blue08;
     text-decoration: underline;
     padding-right: rem(23);
     position: relative;
+
+    @include mq(md) {
+        letter-spacing: -0.08em;
+    }
 
     &::after {
         content: "";
@@ -156,9 +131,111 @@ input[type="file" i]::-webkit-file-upload-button {
     }
 }
 
-.p-form__plivacy span {}
+.p-form__privacy span {}
+
+/* submit */
+.p-form__submit {
+    margin-top: rem(40);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(28);
+    }
+}
+
+.p-form__submit--download {
+    margin-top: rem(21);
+
+    @include mq("md") {
+        margin-top: rem(13);
+    }
+}
+
+
+[type=submit] {
+    height: 100%;
+    width: 100%;
+    max-width: rem(400);
+    height: rem(80);
+    margin-inline: auto;
+    text-align: center;
+    font-size: rem(22);
+
+    @include mq(md) {
+        font-weight: 700;
+        max-width: rem(260);
+        font-size: rem(18);
+        letter-spacing: 0.02em;
+    }
+
+}
+
+.wpcf7-submit {
+    background-color: $blue;
+    color: $white;
+    border: 2px solid $blue;
+    transition: all 0.3s ease-out 0s;
+}
+
+@media (hover: hover) {
+    .wpcf7-submit:hover {
+        background-color: $white;
+        color: $blue;
+    }
+}
+
+.wpcf7-submit:disabled {
+    background-color: $gray04;
+    opacity: .5;
+    color: $gray02;
+    border: none;
+}
+
+.wpcf7-required-attention {
+    // opacity: 0;
+}
+
+.wpcf7-required-attention.active {
+    // opacity: 1;
+}
+
+//ファイル添付
+
+.p-form__file-text {
+    margin-top: rem(26);
+    line-height: 2;
+    font-size: rem(14);
+    color: $black;
+
+    @include mq(md) {
+        margin-top: rem(12);
+        font-size: rem(12);
+    }
+}
+
+.wpcf7 input[type="file"] {
+    width: 100%;
+    padding: rem(20);
+    border-top: 1px solid $gray03;
+    border-bottom: 1px solid $gray03;
+    font-size: rem(14);
+    color: $black07;
+}
+
+input[type="file" i]::-webkit-file-upload-button {
+    background-color: $white;
+    border-radius: rem(5);
+    margin-right: rem(30);
+    border-color: $gray03;
+    border-width: 1px;
+}
+
 
 /* ラジオボタン */
+.wpcf7-list-item {
+    margin: 0;
+}
+
 .p-form-radio__item span {
     display: block;
     vertical-align: top;
@@ -184,13 +261,15 @@ input[type="file" i]::-webkit-file-upload-button {
 .p-form-radio input+span {
     padding: 0 0 0 rem(25);
     position: relative;
-    font-size: rem(15);
+    font-size: rem(16);
     line-height: 1;
     cursor: pointer;
     display: inline-block;
+    color: $black06;
 
     @include mq(md) {
         display: block;
+        font-size: rem(14);
     }
 }
 
@@ -203,8 +282,8 @@ input[type="file" i]::-webkit-file-upload-button {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background: #fff;
-    border: 1px solid #ccc;
+    background: $white;
+    border: 2px solid $gray03;
     border-radius: 50%;
 }
 
@@ -246,17 +325,15 @@ span.wpcf7-spinner {
     visibility: hidden;
 }
 
-.contact__grecaptcha {
-    margin-top: rem(60);
-    width: 60%;
-    margin-inline: auto;
 
-    @include mq('md') {
+.p-form__grecaptcha {
+    margin-top: rem(56);
+
+    @include mq(md) {
         margin-top: rem(40);
-        width: 100%;
     }
 }
 
-.contact__grecaptcha a {
-    border-bottom: 1px solid $black;
+.p-form__grecaptcha a {
+    text-decoration: underline;
 }

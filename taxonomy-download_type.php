@@ -39,8 +39,8 @@ $pickup = get_field('pickup');
         }
     ?>
             </h1>
-            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
-                企業さまの成果をご紹介いたします。
+            <div class="c-below-mv__message">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
+                    class="u-desktop">無料でダウンロードいただけます
             </div>
         </div>
     </section>
@@ -103,7 +103,9 @@ if (!empty($terms) && !is_wp_error($terms)) {
                                     echo '<span class="c-card__category">' . esc_html($terms[0]->name) . '</span>';
                                 }
                                 ?>
-                                <p class="c-card__text"><?php echo get_field('document_explain'); ?></p>
+                                <p class="c-card__text">
+                                    <?php echo get_the_excerpt(); ?>
+                                </p>
                             </div>
                         </div>
                     </a>

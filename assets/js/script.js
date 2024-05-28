@@ -4682,14 +4682,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function contactFrom() {
   window.addEventListener('DOMContentLoaded', function () {
-    //送信ボタンをdisabled
     var required = document.querySelectorAll('.wpcf7-validates-as-required');
     var requiredArray = {};
     var submit = document.querySelector('.wpcf7-submit');
     var attention = document.querySelector('.wpcf7-required-attention');
     if (required.length > 0) {
       submit.disabled = true;
-      attention.classList.add('active');
+      if (attention) {
+        attention.classList.add('active');
+      }
       required.forEach(function (el) {
         if (el.value === '') {
           requiredArray[el.name] = false;
@@ -4702,10 +4703,14 @@ function contactFrom() {
           }
           if (Object.keys(requiredArray).length === 0) {
             submit.disabled = false;
-            attention.classList.remove('active');
+            if (attention) {
+              attention.classList.remove('active');
+            }
           } else {
             submit.disabled = true;
-            attention.classList.add('active');
+            if (attention) {
+              attention.classList.add('active');
+            }
           }
         });
       });
