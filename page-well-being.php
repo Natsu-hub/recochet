@@ -10,9 +10,9 @@ $page_slug = $post->post_name;
     <!-- c-below-mv -->
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
-            <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
-                    alt="case study" width="152" height="71" loading="lazy">
+            <div class="c-below-mv__sub-title c-below-mv__sub-title--well">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well-being-white.svg"
+                    alt="well being" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title">
                 <?php the_title(); ?>

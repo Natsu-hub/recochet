@@ -16,7 +16,7 @@ $pickup = get_field('pickup');
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
-                    alt="case study" width="152" height="71" loading="lazy">
+                    alt="download" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title">
                 <?php
@@ -40,7 +40,7 @@ $pickup = get_field('pickup');
         }
     ?>
             </h1>
-            <div class="c-below-mv__message c-below-mv__message--290">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
+            <div class="c-below-mv__message">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
                     class="u-desktop">無料でダウンロードいただけます
             </div>
         </div>

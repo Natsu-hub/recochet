@@ -23,7 +23,7 @@ $pickup = get_field('pickup');
                         echo esc_html($post_type->label); 
                         ?>
             </h1>
-            <div class="c-below-mv__message c-below-mv__message--290">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
+            <div class="c-below-mv__message">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
                     class="u-desktop">無料でダウンロードいただけます
             </div>
         </div>

@@ -25,7 +25,7 @@ $case_title = get_field('case_title');
                         echo esc_html($post_type->label); 
                         ?>
             </h1>
-            <div class="c-below-mv__message c-below-mv__message--290">リコシェのコンサルティングを受けた店舗、<br>
+            <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>
                 企業さまの成果をご紹介いたします。
             </div>
         </div>

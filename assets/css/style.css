@@ -759,6 +759,34 @@ body {
 	max-width: 8.9375rem;
 }
 
+.c-below-mv__sub-title--company {
+	max-width: 8.4375rem;
+}
+
+.c-below-mv__sub-title--service {
+	max-width: 6.25rem;
+}
+
+.c-below-mv__sub-title--contact {
+	max-width: 7.9375rem;
+}
+
+.c-below-mv__sub-title--meeting {
+	max-width: 7.5625rem;
+}
+
+.c-below-mv__sub-title--policy {
+	max-width: 6.25rem;
+}
+
+.c-below-mv__sub-title--404 {
+	max-width: 16.25rem;
+}
+
+.c-below-mv__sub-title--well {
+	max-width: 10.375rem;
+}
+
 .c-below-mv__title {
 	font-size: 1.875rem;
 	font-weight: 700;
@@ -4393,6 +4421,34 @@ body {
 	max-width: 6.875rem;
 }
 
+.c-below-mv__sub-title--company {
+	max-width: 8rem;
+}
+
+.c-below-mv__sub-title--service {
+	max-width: 4.8125rem;
+}
+
+.c-below-mv__sub-title--contact {
+	max-width: 6.125rem;
+}
+
+.c-below-mv__sub-title--meeting {
+	max-width: 5.8125rem;
+}
+
+.c-below-mv__sub-title--policy {
+	max-width: 5.8125rem;
+}
+
+.c-below-mv__sub-title--404 {
+	max-width: 9.375rem;
+}
+
+.c-below-mv__sub-title--well {
+	max-width: 8rem;
+}
+
 .c-below-mv__title {
 	font-size: 1.25rem;
 	line-height: 1.75;
@@ -4404,12 +4460,11 @@ body {
 	line-height: 2;
 	margin-inline: auto;
 	margin-top: 1.6875rem;
-}
-
-.c-below-mv__message--290 {
-	max-width: 18.125rem;
+	max-width: 100%;
 	text-align: left;
-	width: 100%;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: fit-content;
 }
 
 .c-btn {
@@ -5695,15 +5750,6 @@ textarea {
 
 .u-sm {
 	display: block;
-}
-
-}
-
-@media (max-width: 450px) {
-
-.c-below-mv__message {
-	text-align: left;
-	width: 100%;
 }
 
 }

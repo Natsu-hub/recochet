@@ -12,7 +12,7 @@ $page_slug = $post->post_name;
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
-                    alt="case study" width="152" height="71" loading="lazy">
+                    alt="download" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title">お申し込みありがとうございました
             </h1>
