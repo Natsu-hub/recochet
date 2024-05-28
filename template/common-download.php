@@ -1,4 +1,3 @@
-   <!-- c-common-download -->
    <div class="c-common-download">
        <div class="c-common-download__inner l-inner">
            <h2 class="c-common-download__lead"><span>サービス資料や経営に役立つTips資料を</span><span>無料でご活用いただけます</span></h2>

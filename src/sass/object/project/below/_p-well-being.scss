@@ -1,83 +1,193 @@
 @use "global" as *;
 
 
-.p-well-being {}
-
-.p-well-being__inner {}
-
-.l-inner {}
-
-.p-well-being__items-box {}
-
-.p-well-being__items {}
-
-.p-well-being__item {}
-
-.p-well-being__body {}
-
-.p-well-being__item-img {}
-
-.p-well-being__item-content {}
-
-.p-well-being__item-title {}
-
-.p-well-being__item-text {}
-
-.works-list__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include mq(md) {}
-}
-
-.works-list__item:nth-of-type(even) {
-    flex-direction: row-reverse;
-
-    @include mq(md) {}
-}
-
-.works-list__item+.works-list__item {
-    margin-top: rem(30);
-}
-
-.works-list__item-img {
-    width: 100%;
-    max-width: rem(600);
-
-    @include mq(md) {}
-}
-
-.works-list__item:nth-of-type(even) .works-list__item-img {
-    margin-left: rem(100);
-
-    @include mq(md) {}
-}
-
-.works-list__item-img img {
-    width: 100%;
-    aspect-ratio: 550/420;
-    object-fit: cover;
-}
-
-.works-list__item-text {
-    font-size: rem(16);
-    line-height: 1.6;
-    letter-spacing: 0.05em;
-    margin-top: 0;
-    margin-left: rem(100);
-    max-width: rem(550);
-    width: 100%;
+.p-well-being {
+    padding-top: rem(78);
+    padding-bottom: rem(117);
 
     @include mq(md) {
-
-        margin-top: rem(20);
-
+        padding-top: rem(25);
+        padding-bottom: rem(30);
     }
 }
 
-.works-list__item:nth-of-type(even) .works-list__item-text {
-    margin-left: 0;
+.p-well-being__lists-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(15);
+    max-width: rem(856);
+    width: 100%;
+    margin-inline: auto;
 
-    @include mq(md) {}
+    @include mq(md) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.p-well-being__lists {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(11);
+
+    @include mq(md) {
+        gap: rem(15);
+    }
+}
+
+.p-well-being__list {}
+
+.p-well-being__list a {
+    max-width: rem(420);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid $black04;
+
+    @include mq(md) {
+        max-width: 100%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/common/arrow-black.svg) no-repeat center center/contain;
+        width: rem(16);
+        height: rem(9);
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(17);
+
+        @include mq(md) {
+            width: rem(11);
+            height: rem(6);
+            right: rem(10);
+        }
+    }
+}
+
+.p-well-being__body {
+    margin-top: rem(160);
+
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+
+}
+
+.p-well-being__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(68);
+
+    @include mq(md) {
+        gap: rem(25);
+    }
+}
+
+.p-well-being__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(md) {
+        flex-direction: column;
+    }
+}
+
+.p-well-being__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+
+    @include mq(md) {
+        flex-direction: column;
+    }
+}
+
+.p-well-being__item-img {
+    display: block;
+    width: 50vw;
+    height: 100%;
+
+    @include mq(md) {
+        width: 100vw;
+    }
+}
+
+
+.p-well-being__item:nth-of-type(odd) .p-well-being__item-img {
+    margin-left: calc(50% - 50vw);
+
+    @include mq(md) {
+        margin: 0 calc(50% - 50vw);
+    }
+}
+
+.p-well-being__item:nth-of-type(even) .p-well-being__item-img {
+    margin-right: calc(50% - 50vw);
+
+    @include mq(md) {
+        margin: 0 calc(50% - 50vw);
+    }
+}
+
+.p-well-being__item-img img {
+    aspect-ratio: 700/394;
+    object-fit: cover;
+    height: auto;
+
+    @include mq(md) {
+        aspect-ratio: 320/180;
+    }
+}
+
+.p-well-being__item-content {
+    width: 50%;
+
+    @include mq(md) {
+        width: 100%;
+        margin-top: rem(21);
+    }
+}
+
+.p-well-being__item:nth-of-type(odd) .p-well-being__item-content {
+    padding-left: rem(50);
+    padding-right: rem(39);
+
+    @include mq(md) {
+        padding-inline: 0;
+    }
+}
+
+.p-well-being__item:nth-of-type(even) .p-well-being__item-content {
+    padding-right: rem(64);
+    padding-left: rem(25);
+
+    @include mq(md) {
+        padding-inline: 0;
+    }
+}
+
+.p-well-being__item-title {
+    font-size: rem(26);
+    font-weight: 700;
+    line-height: 1;
+
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.p-well-being__item-text {
+    margin-top: rem(20);
+    font-size: rem(16);
+    line-height: calc(28 / 16);
+
+    @include mq(md) {
+
+        font-size: rem(14);
+        line-height: 2;
+        letter-spacing: .02em;
+        margin-top: rem(16);
+    }
 }
