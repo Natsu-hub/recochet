@@ -62,63 +62,65 @@ $page_slug = $post->post_name;
 
     <!-- p-service-merit -->
     <section class="p-service-merit">
-        <div class="p-service-merit__inner l-inner">
-            <span class="p-service-merit__sub-title">リコシェの1on1事業コンサルティングなら…</span>
-            <h2 class="p-service-merit__title">
-                <span class="p-service-merit__left-title">
-                    <span class="p-service-merit__left-title01">通販のみで</span>
-                    <span class="p-service-merit__left-title02">最高月商</span>
-                </span>
-                <span class="p-service-merit__center-title">700</span>
-                <span class="p-service-merit__right-title">万円達成!</span>
-            </h2>
-            <div class="p-service-merit__body">
-                <div class="p-service-merit__box">
-                    <div class="p-service__label">
-                        <span>経営面の<br>メリット</span>
+        <div class="p-service-merit__bg">
+            <div class="p-service-merit__inner l-inner">
+                <span class="p-service-merit__sub-title">リコシェの1on1事業コンサルティングなら…</span>
+                <h2 class="p-service-merit__title">
+                    <span class="p-service-merit__left-title">
+                        <span class="p-service-merit__left-title01">通販のみで</span>
+                        <span class="p-service-merit__left-title02">最高月商</span>
+                    </span>
+                    <span class="p-service-merit__center-title">700</span>
+                    <span class="p-service-merit__right-title">万円達成!</span>
+                </h2>
+                <div class="p-service-merit__body">
+                    <div class="p-service-merit__box">
+                        <div class="p-service-merit__label">
+                            <span>経営面の<br>メリット</span>
+                        </div>
+                        <ul class="p-service-merit__lists">
+                            <li class="p-service-merit__list">
+                                <span>顧客視点が身につき「売れる」感度が上がった</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>スタッフを雇用できるようになり業務の負担が軽減された</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>店舗の売上に頼らずに経営ができるようになった</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>通販からメディアに紹介されるようになり認知度が上がった</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>完全予約制に切り替え、予約がない日はお店を休めるようになった</span>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="p-service-merit__lists">
-                        <li class="p-service-merit__list">
-                            <span>顧客視点が身につき「売れる」感度が上がった</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>スタッフを雇用できるようになり業務の負担が軽減された</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>店舗の売上に頼らずに経営ができるようになった</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>通販からメディアに紹介されるようになり認知度が上がった</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>完全予約制に切り替え、予約がない日はお店を休めるようになった</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-service-merit__box">
-                    <div class="p-service-merit__label">
-                        <span>マインド面の<br>メリット</span>
+                    <div class="p-service-merit__box">
+                        <div class="p-service-merit__label">
+                            <span>マインド面の<br>メリット</span>
+                        </div>
+                        <ul class="p-service-merit__lists">
+                            <li class="p-service-merit__list">
+                                <span>暇な時でも不安感が消えた</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>従業員にイライラしなくなった</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>時間の余裕が生まれて、家族との関係が改善された</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>今まで我慢していた趣味ができるようになった</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>自分のマインドセットが変わり、周りの環境もガラッと変わった</span>
+                            </li>
+                            <li class="p-service-merit__list">
+                                <span>好きな場所で、自由なライフスタイルを築けるようになった</span>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="p-service-merit__lists">
-                        <li class="p-service-merit__list">
-                            <span>暇な時でも不安感が消えた</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>従業員にイライラしなくなった</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>時間の余裕が生まれて、家族との関係が改善された</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>今まで我慢していた趣味ができるようになった</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>自分のマインドセットが変わり、周りの環境もガラッと変わった</span>
-                        </li>
-                        <li class="p-service-merit__list">
-                            <span>好きな場所で、自由なライフスタイルを築けるようになった</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
