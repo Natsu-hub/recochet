@@ -23,6 +23,18 @@
     }
 }
 
+.c-service-sub18 {
+    font-size: rem(18);
+    color: $blue;
+    letter-spacing: 0.18em;
+    text-align: center;
+    display: block;
+
+    @include mq(md) {
+        font-size: rem(12);
+    }
+}
+
 .c-service-title {
     font-size: rem(30);
     font-weight: 700;
