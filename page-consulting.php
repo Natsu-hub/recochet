@@ -305,7 +305,7 @@ $page_slug = $post->post_name;
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow-white.svg" alt="flow"
                     width="483" height="424" loading="lazy">
             </div>
-            <h2 class="p-service-flow__title c-service-title">ヒアリングから役務提供の流れ
+            <h2 class="p-service-flow__title">ヒアリングから役務提供の流れ
             </h2>
             <div class="p-service-flow__body">
                 <ul class="p-service-flow__items">
@@ -351,9 +351,134 @@ $page_slug = $post->post_name;
                             </div>
                         </div>
                     </li>
+                    <li class="p-service-flow__item">
+                        <div class="p-service-flow__number">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number03.svg"
+                                alt="3" width="71" height="71" loading="lazy">
+                        </div>
+                        <div class="p-service-flow__box">
+                            <picture class="p-service-flow__img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img03.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img03.png"
+                                    alt="Zoomにて初回ヒアリング" width="273" height="154" loading="lazy">
+                            </picture>
+                            <div class="p-service-flow__content">
+                                <div class="p-service-flow__lead">本気度の確認</div>
+                                <div class="p-service-flow__text">
+                                    成功にはお互いの本気度が不可欠です。お客様とのパートナーシップを築くために、お互いの期待値や努力について明確に共有します。お客様が本気で事業を成功に導きたいという意欲が感じられれば、それに見合うサポートを提供することができます。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="p-service-flow__item">
+                        <div class="p-service-flow__number">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number04.svg"
+                                alt="4" width="71" height="71" loading="lazy">
+                        </div>
+                        <div class="p-service-flow__box">
+                            <picture class="p-service-flow__img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img04.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img04.png"
+                                    alt="コンサルティングを実施できるかの確認" width="273" height="154" loading="lazy">
+                            </picture>
+                            <div class="p-service-flow__content">
+                                <div class="p-service-flow__lead">ご契約・決済</div>
+                                <div class="p-service-flow__text">
+                                    最終的に、お互いの合意が得られれば、正式な契約手続きに移ります。契約書や取り決め事項についての詳細を説明し、お客様のご納得をいただいた上で契約が成立します。契約が完了すると、コンサルティングサービスの実施がスタートし、お客様の事業の発展を共に目指していきます。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="p-service-flow__item">
+                        <div class="p-service-flow__number">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number05.svg"
+                                alt="5" width="71" height="71" loading="lazy">
+                        </div>
+                        <div class="p-service-flow__box">
+                            <picture class="p-service-flow__img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img05.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img05.png"
+                                    alt="Zoomにて初回ヒアリング" width="273" height="154" loading="lazy">
+                            </picture>
+                            <div class="p-service-flow__content">
+                                <div class="p-service-flow__lead">現状分析</div>
+                                <div class="p-service-flow__text">
+                                    現状抱えていらっしゃる課題や事業の特徴などをヒアリングさせていただいた上で、どんな商品を販売できそうか、またどんなチャネルにおいて販売していくのが良さそうか、お客様に合ったご提案をさせていただきます。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="p-service-flow__item">
+                        <div class="p-service-flow__number">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number06.svg"
+                                alt="6" width="71" height="71" loading="lazy">
+                        </div>
+                        <div class="p-service-flow__box">
+                            <picture class="p-service-flow__img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img06.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img06.png"
+                                    alt="コンサルティングを実施できるかの確認" width="273" height="154" loading="lazy">
+                            </picture>
+                            <div class="p-service-flow__content">
+                                <div class="p-service-flow__lead">ゴールの設定</div>
+                                <div class="p-service-flow__text">
+                                    売上だけでなく、この先の経営の仕方やライフスタイルなど色々な視点からゴールを設定することで、理想の生活を実現することに近づけます。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="p-service-flow__item">
+                        <div class="p-service-flow__number">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number07.svg"
+                                alt="7" width="77" height="77" loading="lazy">
+                        </div>
+                        <div class="p-service-flow__box">
+                            <picture class="p-service-flow__img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img07.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img07.png"
+                                    alt="Zoomにて初回ヒアリング" width="273" height="154" loading="lazy">
+                            </picture>
+                            <div class="p-service-flow__content">
+                                <div class="p-service-flow__lead">ゴールまでのロードマップを作成</div>
+                                <div class="p-service-flow__text">
+                                    「なにから始めればいいのかわからない…」という課題を解決するために、ゴールを達成するまでにやるべきことをロードマップにして明確に理解できるようにします。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="p-service-flow__item">
+                        <div class="p-service-flow__number">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number08.svg"
+                                alt="8" width="71" height="71" loading="lazy">
+                        </div>
+                        <div class="p-service-flow__box">
+                            <picture class="p-service-flow__img">
+                                <source
+                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img08.webp"
+                                    type="image/webp">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img08.png"
+                                    alt="コンサルティングを実施できるかの確認" width="873" height="154" loading="lazy">
+                            </picture>
+                            <div class="p-service-flow__content">
+                                <div class="p-service-flow__lead">PDCAを回してゴールを達成！</div>
+                                <div class="p-service-flow__text">
+                                    出店後はゴール達成に向けPDCAを繰り返し回していきます。<br>
+                                    データやノウハウを元に、二人三脚で売上アップを目指しましょう！
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-
-
             </div>
         </div>
     </section>
@@ -362,62 +487,62 @@ $page_slug = $post->post_name;
     <section class="p-service-voice">
         <div class="p-service-voice__inner l-inner">
             <div class="p-service__en-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice-white.svg" alt="voice"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice-white.svg" alt="case"
                     width="369" height="396" loading="lazy">
             </div>
             <h2 class="p-service-voice__title">
-                <span class="p-service-voice__sub-title c-service-sub16">お客様の声</span>
+                <span class="p-service-voice__sub-title c-service-sub18">お客様の声</span>
                 <span class="p-service-voice__main-title c-service-title">「効率が上がった」「楽になった」<br>
                     等の声が寄せられています</span>
             </h2>
             <div class="p-service-voice__body">
                 <ul class="p-service-voice__items">
-                    <li class="p-service__item">
-                        <picture class="p-service__img">
+                    <li class="p-service-voice__item">
+                        <picture class="p-service-voice__img">
                             <source
                                 srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img01.webp"
                                 type="image/webp">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img01.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
-                        <div class="p-service__message">
-                            <div class="p-service__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
-                            <div class="p-service__text">
+                        <div class="p-service-voice__message">
+                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__text">
                                 説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
                             </div>
-                            <div class="p-service__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">〇〇業界　K様</div>
                         </div>
                     </li>
-                    <li class="p-service__item">
-                        <picture class="p-service__img">
+                    <li class="p-service-voice__item">
+                        <picture class="p-service-voice__img">
                             <source
                                 srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img02.webp"
                                 type="image/webp">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img02.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
-                        <div class="p-service__message">
-                            <div class="p-service__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
-                            <div class="p-service__text">
-                                説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                        <div class="p-service-voice__message">
+                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__text">
+                                説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
                             </div>
-                            <div class="p-service__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">〇〇業界　K様</div>
                         </div>
                     </li>
-                    <li class="p-service__item">
-                        <picture class="p-service__img">
+                    <li class="p-service-voice__item">
+                        <picture class="p-service-voice__img">
                             <source
                                 srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img03.webp"
                                 type="image/webp">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img03.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
-                        <div class="p-service__message">
-                            <div class="p-service__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
-                            <div class="p-service__text">
+                        <div class="p-service-voice__message">
+                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__text">
                                 説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
                             </div>
-                            <div class="p-service__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">〇〇業界　K様</div>
                         </div>
                     </li>
                 </ul>
@@ -437,12 +562,11 @@ $page_slug = $post->post_name;
             <div class="p-service-price__body">
                 <div class="p-service-price__label">
                     <p class="p-service-price__label30">初期費用</p>
-                    <p class="p-service-price__label36">30,000円</p>
-                    <small class="p-service-price__label18">（税抜）</small>
+                    <p class="p-service-price__label36">30,000円<span class="p-service-price__label18">（税抜）</span></p>
+
                 </div>
                 <div class="p-service-price__box">
-                    <p class="p-service-price__label30">月額費用</p>
-                    <small class="p-service-price__label18">（半年更新）</small>
+                    <p class="p-service-price__label30">月額費用<span class="p-service-price__label18">（半年更新）</span></p>
                     <p class="p-service-price__label36">ご希望のプランごとの金額</p>
                     <p class="p-service-price__label16">※詳しくはZoomにてご説明いたします</p>
                 </div>

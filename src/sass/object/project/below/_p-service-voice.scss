@@ -1,0 +1,119 @@
+@use "global" as *;
+
+
+.p-service-voice {}
+
+.p-service-voice__inner {}
+
+.l-inner {}
+
+.p-service__en-title {
+    max-width: rem(379);
+    width: 100%;
+
+    @include mq(md) {
+        max-width: rem(260);
+    }
+
+}
+
+.p-service-voice__title {
+    margin-top: rem(-320);
+
+    @include mq(md) {
+        margin-top: rem(-220);
+    }
+}
+
+.p-service-voice__sub-title {}
+
+.c-service-sub16 {}
+
+.p-service-voice__main-title {}
+
+.c-service-title {}
+
+.p-service-voice__body {
+    margin-top: rem(47);
+
+    @include mq(md) {
+        margin-top: rem(25);
+    }
+}
+
+.p-service-voice__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+
+    @include mq(md) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(39);
+    }
+}
+
+.p-service-voice__item {}
+
+.p-service-voice__img {
+    max-width: rem(220);
+    width: 100%;
+    margin-inline: auto;
+    display: block;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.p-service-voice__img img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: auto;
+}
+
+.p-service-voice__message {
+    margin-top: rem(20);
+    background-color: $white02;
+    border-radius: rem(15);
+    padding: rem(20) rem(14);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/below/voice_triangle.png) no-repeat center center/contain;
+        width: rem(58);
+        height: rem(26);
+        top: rem(-25);
+        left: rem(55);
+    }
+}
+
+.p-service-voice__lead {
+    color: $blue;
+    font-size: rem(18);
+    letter-spacing: 0.13em;
+    line-height: calc(32 / 18);
+    color: $blue;
+
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(28 / 16);
+    }
+}
+
+.p-service-voice__text {
+    font-size: rem(16);
+    margin-top: rem(15);
+    line-height: calc(28 / 16);
+    letter-spacing: 0.23em;
+
+    @include mq(md) {
+        font-size: rem(14);
+        letter-spacing: 0.02em;
+    }
+}
+
+.p-service-voice__name {
+    margin-top: rem(20);
+    text-align: right;
+}

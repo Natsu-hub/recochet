@@ -1,0 +1,164 @@
+@use "global" as *;
+
+
+.p-service-price {
+    padding-top: rem(42);
+
+    @include mq(md) {
+        padding-top: 0;
+    }
+}
+
+.p-service-price__inner {}
+
+.l-inner {}
+
+.p-service__en-title {
+    max-width: rem(415);
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq(md) {
+        max-width: rem(250);
+    }
+}
+
+.p-service-price__title {
+    margin-top: rem(-270);
+
+    @include mq(md) {
+        margin-top: rem(-160);
+    }
+}
+
+.c-service-title {}
+
+.p-service-price__body {
+    margin-top: rem(83);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(md) {
+        flex-direction: column;
+        margin-top: rem(44);
+    }
+}
+
+.p-service-price__label {
+    max-width: rem(309);
+    width: 100%;
+    height: auto;
+    background-color: $blue;
+    color: $white;
+    border-radius: 50%;
+    font-weight: 700;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include mq(md) {
+        max-width: calc(190 / 290)*100%;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: $black;
+        width: rem(27);
+        height: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(-44);
+
+        @include mq(md) {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+            top: auto;
+            bottom: rem(-22);
+        }
+
+    }
+
+    &::after {
+        transform: translateY(-50%) rotate(90deg);
+
+        @include mq(md) {
+            transform: translateX(-50%) rotate(90deg);
+        }
+    }
+
+}
+
+.p-service-price__label30 {
+    letter-spacing: 0.13em;
+    line-height: calc(36 /30);
+    font-size: rem(30);
+
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.p-service-price__label36 {
+    font-size: rem(36);
+    letter-spacing: 0.03em;
+    line-height: calc(43 /36);
+    margin-top: rem(10);
+
+    @include mq(md) {
+        font-size: rem(20);
+
+    }
+
+}
+
+.p-service-price__label18 {
+    font-size: rem(18);
+    letter-spacing: -0.02em;
+    line-height: calc(22 / 18);
+
+    @include mq(md) {
+        font-size: rem(12);
+    }
+}
+
+.p-service-price__box {
+    max-width: rem(619);
+    width: 100%;
+    background-color: $white02;
+    color: $black;
+    padding: rem(90) rem(60) rem(74);
+    margin-left: rem(61);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+
+    @include mq(md) {
+        margin-top: rem(40);
+        margin-left: 0;
+        max-width: calc(260 / 290)*100%;
+        padding: rem(40) rem(14);
+
+    }
+}
+
+.p-service-price__label16 {
+    font-weight: 500;
+    letter-spacing: 0.23em;
+    line-height: calc(28 / 16);
+    font-size: rem(16);
+    margin-top: rem(30);
+
+    @include mq(md) {
+        font-size: rem(12);
+        margin-top: rem(10);
+    }
+}
