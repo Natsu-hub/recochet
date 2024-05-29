@@ -2661,6 +2661,54 @@ span.wpcf7-spinner {
 	margin-top: 1.625rem;
 }
 
+.p-service-faq {
+	padding-bottom: 7.25rem;
+	padding-top: 7.875rem;
+}
+
+.p-service-faq__body {
+	margin-top: 5.3125rem;
+}
+
+.p-service-faq__items {
+	grid-gap: 4.75rem;
+	display: -ms-grid;
+	display: grid;
+	gap: 4.75rem;
+	-ms-grid-columns: (1fr)[1];
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-service-faq__lead {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	color: #2CA2DC;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 1.375rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1.1818181818;
+}
+
+.p-service-faq__lead span {
+	-webkit-flex-shrink: 0;
+	    -ms-flex-negative: 0;
+	        flex-shrink: 0;
+	max-width: 3.75rem;
+	width: 100%;
+}
+
+.p-service-faq__text {
+	letter-spacing: 0.1em;
+	margin-top: 1.25rem;
+	padding-left: 3.75rem;
+}
+
 .p-service__en-title {
 	max-width: 30.1875rem;
 	width: 100%;
@@ -6348,6 +6396,42 @@ textarea {
 .p-service-case__item-text {
 	line-height: 2;
 	margin-top: 0.625rem;
+}
+
+.p-service-faq {
+	padding-bottom: 2.5rem;
+	padding-top: 5.75rem;
+}
+
+.p-service-faq__main-title {
+	text-align: left;
+}
+
+.p-service-faq__body {
+	margin-top: 1.875rem;
+}
+
+.p-service-faq__items {
+	gap: 2.375rem;
+}
+
+.p-service-faq__lead {
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	font-size: 1rem;
+	line-height: 1.625;
+}
+
+.p-service-faq__text {
+	margin-top: 0.625rem;
+	padding-left: 0;
 }
 
 .p-service__en-title {

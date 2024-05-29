@@ -11,7 +11,7 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--service">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service-white.svg"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service-mv-white.svg"
                     alt="service" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title">
@@ -578,34 +578,34 @@ $page_slug = $post->post_name;
     <section class="p-service-faq">
         <div class="p-service-faq__inner l-inner">
             <h2 class="p-service-faq__title">
-                <span class="p-service-faq__sub-title">よくあるご質問</span>
-                <span class="p-service-faq__main-title">よくご質問いただく内容をご紹介します</span>
+                <span class="p-service-faq__sub-title c-service-sub18">よくあるご質問</span>
+                <span class="p-service-faq__main-title c-service-title">よくご質問いただく内容をご紹介します</span>
             </h2>
             <div class="p-service-faq__body">
                 <ul class="p-service-faq__items">
-                    <li class="p-service__item">
-                        <div class="p-service__lead">
+                    <li class="p-service-faq__item">
+                        <div class="p-service-faq__lead">
                             <span>Q1.</span>
                             <p>店舗事業だけでなく通販のコンサルティングも相談可能ですか？</p>
                         </div>
-                        <div class="p-service__text">はい。お客様がご希望の場合は、通販事業に関してもコンサルティング提供可能です。
+                        <div class="p-service-faq__text">はい。お客様がご希望の場合は、通販事業に関してもコンサルティング提供可能です。
                         </div>
                     </li>
-                    <li class="p-service__item">
-                        <div class="p-service__lead">
+                    <li class="p-service-faq__item">
+                        <div class="p-service-faq__lead">
                             <span>Q2.</span>
                             <p>料金や決済についてご相談可能でしょうか？</p>
                         </div>
-                        <div class="p-service__text">
+                        <div class="p-service-faq__text">
                             Zoomでの面談の際に、お客様のご要望に合わせて料金体系をご提示可能ですのでご安心ください。また決済についても、分割決済などに対応しております。
                         </div>
                     </li>
-                    <li class="p-service__item">
-                        <div class="p-service__lead">
+                    <li class="p-service-faq__item">
+                        <div class="p-service-faq__lead">
                             <span>Q3.</span>
                             <p>コンサル内容が自分にあっているか心配です</p>
                         </div>
-                        <div class="p-service__text">
+                        <div class="p-service-faq__text">
                             具体的なコンサル内容については、Zoomヒアリングを通してお客様一人ひとりに合った最適なプランをご説明しております。さらに返金保証もお付けしておりますのでご安心ください。
                         </div>
                     </li>
@@ -615,8 +615,8 @@ $page_slug = $post->post_name;
     </section>
 
 
-    <!-- p-below-download -->
-    <?php get_template_part('template/below-download'); ?>
+    <!-- p-common-download -->
+    <?php get_template_part('template/common-download'); ?>
 
 </main>
 <?php get_footer(); ?>

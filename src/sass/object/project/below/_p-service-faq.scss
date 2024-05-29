@@ -1,0 +1,82 @@
+@use "global" as *;
+
+
+.p-service-faq {
+    padding-top: rem(126);
+    padding-bottom: rem(116);
+
+    @include mq(md) {
+        padding-top: rem(92);
+        padding-bottom: rem(40);
+    }
+}
+
+.p-service-faq__inner {}
+
+.l-inner {}
+
+.p-service-faq__title {}
+
+.p-service-faq__sub-title {}
+
+.p-service-faq__main-title {
+    @include mq(md) {
+        text-align: left;
+    }
+}
+
+.p-service-faq__body {
+    margin-top: rem(85);
+
+    @include mq(md) {
+        margin-top: rem(30);
+    }
+}
+
+.p-service-faq__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(76);
+
+    @include mq(md) {
+        gap: rem(38);
+    }
+}
+
+.p-service-faq__item {}
+
+.p-service-faq__lead {
+    font-size: rem(22);
+    letter-spacing: 0.1em;
+    color: $blue;
+    font-weight: 700;
+    line-height: calc(26 / 22);
+    display: flex;
+    align-items: center;
+
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(26 / 16);
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+}
+
+.p-service-faq__lead span {
+    flex-shrink: 0;
+    max-width: rem(60);
+    width: 100%;
+}
+
+.p-service-faq__text {
+    margin-top: rem(20);
+    letter-spacing: 0.1em;
+    padding-left: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(10);
+        padding-left: 0;
+    }
+
+}
