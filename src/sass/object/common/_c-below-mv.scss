@@ -8,7 +8,7 @@
     background: url(../images/below/below-mv.webp) center center / cover no-repeat;
 
     @include mq(md) {
-        height: rem(358);
+        height: rem(400);
     }
 }
 
@@ -55,7 +55,7 @@
     max-width: rem(100);
 
     @include mq(md) {
-        max-width: rem(77);
+        max-width: rem(120);
     }
 }
 

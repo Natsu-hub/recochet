@@ -4,11 +4,11 @@ get_header();
 
 <main class="l-main">
     <?php
-$document_explain = get_field('document_explain');
-$document_list = get_field('document_list');
-$download_link = get_field('download_link');
-$pickup = get_field('pickup');
-?>
+    $document_explain = get_field('document_explain');
+    $document_list = get_field('document_list');
+    $download_link = get_field('download_link');
+    $pickup = get_field('pickup');
+    ?>
 
     <!-- c-below-mv -->
     <section class="c-below-mv">
@@ -19,25 +19,20 @@ $pickup = get_field('pickup');
             </div>
             <h1 class="c-below-mv__title">
                 <?php
-        // 現在の投稿IDを取得
-        $post_id = get_the_ID();
-        
-        // 投稿に関連する 'download_type' タクソノミーの情報を取得
-        $terms = get_the_terms($post_id, 'download_type');
-        
-        // タクソノミーのタームに基づいてタイトルを表示
-        if (!empty($terms) && !is_wp_error($terms)) {
-            foreach ($terms as $term) {
-                if ($term->slug == 'useful') {
+                // 現在のタクソノミータームを取得
+                $current_term = get_queried_object();
+                if ($current_term && !is_wp_error($current_term)) {
+                    if ($current_term->slug == 'useful') {
+                        echo 'お役立ち資料';
+                    } elseif ($current_term->slug == 'service') {
+                        echo 'サービス資料';
+                    } else {
+                        echo esc_html($current_term->name);
+                    }
+                } else {
                     echo 'お役立ち資料';
-                } elseif ($term->slug == 'service') {
-                    echo 'サービス資料';
                 }
-            }
-        } else {
-            echo 'カテゴリーがありません';
-        }
-    ?>
+                ?>
             </h1>
             <div class="c-below-mv__message">弊社のサービス資料や経営に役立つTips資料<br class="u-mobile">を<br
                     class="u-desktop">無料でダウンロードいただけます
@@ -52,38 +47,38 @@ $pickup = get_field('pickup');
                 <span class="p-download__tab-title">種類</span>
                 <span class="p-download__tab-list">
                     <?php 
-$terms = get_terms(array(
-    'taxonomy' => 'download_type',
-    'hide_empty' => false,
-));
+                    $terms = get_terms(array(
+                        'taxonomy' => 'download_type',
+                        'hide_empty' => false,
+                    ));
 
-// お役立ち資料を先頭にするための処理
-$priority_term_name = 'お役立ち資料';
-$current_term = get_queried_object();
-$current_term_slug = $current_term ? $current_term->slug : '';
+                    // お役立ち資料を先頭にするための処理
+                    $priority_term_name = 'お役立ち資料';
+                    usort($terms, function ($a, $b) use ($priority_term_name) {
+                        if ($a->name == $priority_term_name) return -1;
+                        if ($b->name == $priority_term_name) return 1;
+                        return 0;
+                    });
 
-usort($terms, function ($a, $b) use ($priority_term_name) {
-    if ($a->name == $priority_term_name) return -1;
-    if ($b->name == $priority_term_name) return 1;
-    return 0;
-});
-
-if (!empty($terms) && !is_wp_error($terms)) {
-    foreach ($terms as $term) {
-        $checked = ($term->slug === $current_term_slug) ? 'checked' : '';
-        echo '<label class="custom-checkbox">';
-        echo '<input type="checkbox" id="category' . $term->slug . '" name="category" value="' . $term->slug . '" ' . $checked . '>';
-        echo '<span class="checkbox-label">' . $term->name . '</span>';
-        echo '</label><br>';
-    }
-}
-?>
+                    if (!empty($terms) && !is_wp_error($terms)) {
+                        foreach ($terms as $term) {
+                            $checked = ($term->slug === $current_term->slug) ? 'checked' : '';
+                            echo '<label class="custom-checkbox">';
+                            echo '<input type="checkbox" id="category' . $term->slug . '" name="category" value="' . $term->slug . '" ' . $checked . '>';
+                            echo '<span class="checkbox-label">' . $term->name . '</span>';
+                            echo '</label><br>';
+                        }
+                    }
+                    ?>
                 </span>
             </div>
 
             <div class="p-download__items">
                 <!-- 記事のループ処理開始 -->
-                <?php if (have_posts()): while (have_posts()): the_post(); ?>
+                <?php if (have_posts()): while (have_posts()): the_post(); 
+                $post_id = get_the_ID(); // 投稿IDを取得
+                $document_explain = get_field('document_explain', $post_id); // ACFフィールドを取得
+                ?>
                 <article class="p-download__item c-card">
                     <a href="<?php the_permalink(); ?>">
                         <figure class="c-card__img">
@@ -94,18 +89,16 @@ if (!empty($terms) && !is_wp_error($terms)) {
                                 alt="">
                             <?php } ?>
                         </figure>
-                        <div class="c-card__body">
-                            <h2 class="c-card__card-title"><?php the_title(); ?></h2>
-                            <div class="c-card__content">
-                                <?php
-                                $terms = get_the_terms(get_the_ID(), 'download_type');
-                                if ($terms && !is_wp_error($terms)) {
-                                    echo '<span class="c-card__category">' . esc_html($terms[0]->name) . '</span>';
-                                }
-                                ?>
-                                <div class="c-card__text">
-                                    <?php echo get_the_content(); ?>
-                                </div>
+                        <h2 class="c-card__card-title"><?php the_title(); ?></h2>
+                        <div class="c-card__content">
+                            <?php
+                            $terms = get_the_terms(get_the_ID(), 'download_type');
+                            if ($terms && !is_wp_error($terms)) {
+                                echo '<span class="c-card__category">' . esc_html($terms[0]->name) . '</span>';
+                            }
+                            ?>
+                            <div class="c-card__text">
+                                <?php echo esc_html($document_explain); // ACFフィールドを表示 ?>
                             </div>
                         </div>
                     </a>
@@ -138,6 +131,5 @@ if (!empty($terms) && !is_wp_error($terms)) {
             </div>
         </div>
     </div>
-
 </main>
 <?php get_footer(); ?>

@@ -68,29 +68,26 @@ $case_title = get_field('case_title');
                                     <?php
                                     } ?>
                                 </figure>
-                                <div class="c-card__body">
-                                    <h2 class="c-card__card-title">
-                                        <?php the_title(); ?>
-                                    </h2>
-                                    <div class="c-card__content">
-                                        <div class="c-card__company"><?php echo $case_company; ?></div>
-                                        <div class="c-card__detail">
-                                            <dl class="c-card__industry">
-                                                <dt>業種</dt>
-                                                <dd><?php echo $case_industry; ?></dd>
-                                            </dl>
-                                            <dl class="c-card__number">
-                                                <dt>従業員数</dt>
-                                                <dd><?php echo $case_number; ?></dd>
-                                            </dl>
-                                            <dl class="c-card__task">
-                                                <dt>課題</dt>
-                                                <dd><?php echo $case_task; ?></dd>
-                                            </dl>
-                                        </div>
+                                <h2 class="c-card__card-title">
+                                    <?php the_title(); ?>
+                                </h2>
+                                <div class="c-card__content">
+                                    <div class="c-card__company"><?php echo $case_company; ?></div>
+                                    <div class="c-card__detail">
+                                        <dl class="c-card__industry">
+                                            <dt>業種</dt>
+                                            <dd><?php echo $case_industry; ?></dd>
+                                        </dl>
+                                        <dl class="c-card__number">
+                                            <dt>従業員数</dt>
+                                            <dd><?php echo $case_number; ?></dd>
+                                        </dl>
+                                        <dl class="c-card__task">
+                                            <dt>課題</dt>
+                                            <dd><?php echo $case_task; ?></dd>
+                                        </dl>
                                     </div>
                                 </div>
-
                             </a>
                         </li>
                         <?php endwhile; ?>

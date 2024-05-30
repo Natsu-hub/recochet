@@ -191,8 +191,6 @@
     }
 }
 
-.c-entry-content {}
-
 .p-single-case__btn {
     margin-top: rem(10);
 }
@@ -207,13 +205,13 @@
     }
 }
 
-.c-btn {}
-
 .p-single-case__sidebar {
     margin-left: rem(30);
+    padding-bottom: rem(30);
 
     @include mq(md) {
         margin-left: 0;
+        padding-bottom: 0;
     }
 }
 
