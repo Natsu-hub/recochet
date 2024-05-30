@@ -14,8 +14,8 @@ $page_slug = $post->post_name;
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/meeting-white.svg"
                     alt="meeting" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
-                <?php the_title(); ?>
+            <h1 class="c-below-mv__title l-title10">
+                60分無料<br class="u-mobile">zoom面談のお申し込み
             </h1>
             <div class="c-below-mv__message">無料zoom面談をご希望の方は、こちらから必要事項をご入力の上、お申し込みください。<br>
                 後日弊社より日程調整のご連絡をいたします。

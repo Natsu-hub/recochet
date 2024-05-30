@@ -11,10 +11,10 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--service">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service-white.svg"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service-mv-white.svg"
                     alt="service" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title30">
                 <?php the_title(); ?>
             </h1>
             <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>

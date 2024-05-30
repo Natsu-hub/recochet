@@ -14,7 +14,7 @@ $page_slug = $post->post_name;
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/company-white.svg"
                     alt="company" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title10">
                 <?php the_title(); ?>
             </h1>
             <div class="c-below-mv__message">株式会社ricochetの会社情報を<br class="u-mobile">ご紹介いたします。

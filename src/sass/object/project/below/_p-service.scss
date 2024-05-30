@@ -1,7 +1,11 @@
 @use "global" as *;
 
 
-.p-service {}
+.p-service {
+    padding-top: rem(30);
+
+    @include mq(md) {}
+}
 
 .p-service__inner {}
 
@@ -20,12 +24,8 @@
 }
 
 .p-service__title {
-    margin-top: rem(-220);
+    margin-top: rem(-110);
     text-align: center;
-
-    @include mq(md) {
-        margin-top: rem(-180);
-    }
 }
 
 .p-service__sub-title-wrapper {}

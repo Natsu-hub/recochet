@@ -148,6 +148,10 @@
     }
 }
 
+.p-service-case__item-number img {
+    vertical-align: middle;
+}
+
 .p-service-case__item-number::after {
     display: block;
     content: "";

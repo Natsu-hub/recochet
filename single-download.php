@@ -18,7 +18,7 @@ $pickup = get_field('pickup');
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
                     alt="download" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title30">
                 <?php
         // 現在の投稿IDを取得
         $post_id = get_the_ID();

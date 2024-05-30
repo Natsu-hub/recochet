@@ -14,7 +14,7 @@ $page_slug = $post->post_name;
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/policy-white.svg" alt="policy"
                     width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title10">
                 <?php the_title(); ?>
             </h1>
             <div class="c-below-mv__message">リコシェのコンサルティングを受けた店舗、<br>

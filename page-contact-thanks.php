@@ -14,7 +14,7 @@ $page_slug = $post->post_name;
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/contact-white.svg"
                     alt="contact" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">お問い合わせ<br class="u-mobile">ありがとうございました
+            <h1 class="c-below-mv__title l-title30">お問い合わせ<br class="u-mobile">ありがとうございました
             </h1>
             <div class="c-below-mv__message">通常5営業日以内にこちらからご連絡差し上げます。<br>
                 メールが届かない場合は、迷惑メールフォルダをご確認ください。

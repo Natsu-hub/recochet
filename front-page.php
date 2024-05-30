@@ -76,8 +76,6 @@ get_header(); ?>
         <div class="p-top-message__inner l-inner">
             <h2 class="p-top-message__title c-title">
                 <picture class="p-top-message__title-en c-title__en">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/message-sp.svg"
-                        type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/message.svg"
                         alt="message" width="160" height="98" loading="lazy">
                 </picture>
@@ -100,8 +98,6 @@ get_header(); ?>
         <div class="p-top-service__inner l-inner">
             <h2 class="p-top-service__title c-title">
                 <picture class="p-top-service__title-en c-title__en">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service-sp.svg"
-                        type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service.svg"
                         alt="service" width="160" height="98" loading="lazy">
                 </picture>
@@ -190,8 +186,6 @@ get_header(); ?>
         <div class="p-top-case-study__inner">
             <h2 class="p-top-case-study__title c-title">
                 <picture class="p-top-case-study__title-en c-title__en">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study-sp.svg"
-                        type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study.svg"
                         alt="case study" width="160" height="98" loading="lazy">
                 </picture>
@@ -257,8 +251,6 @@ get_header(); ?>
         <div class="p-top-well__inner l-inner">
             <h2 class="p-top-well__title c-title">
                 <picture class="p-top-well__title-en c-title__en">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being-sp.svg"
-                        type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being.svg"
                         alt="well-being" width="160" height="98" loading="lazy">
                 </picture>

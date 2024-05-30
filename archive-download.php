@@ -16,7 +16,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
                     alt="case study" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title30">
                 <?php
                 // カスタム投稿タイプ名を取得して表示
                 $post_type = get_post_type_object(get_post_type());

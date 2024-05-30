@@ -18,7 +18,7 @@ $case_title = get_field('case_title');
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case-study-white.svg"
                     alt="case study" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title10">
                 <?php
                         // カスタム投稿タイプ名を取得して表示
                         $post_type = get_post_type_object(get_post_type());
@@ -40,7 +40,7 @@ $case_title = get_field('case_title');
                         <!-- 記事のループ処理開始 -->
                         <?php
       if (wp_is_mobile()) {
-        $num = 6; // スマホの表示数(全件は-1)
+        $num = 9; // スマホの表示数(全件は-1)
       } else {
         $num = 9; // PCの表示数(全件は-1)
       }

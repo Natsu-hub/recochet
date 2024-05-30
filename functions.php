@@ -101,54 +101,6 @@ function Hide_Post_Type() {
 add_action('admin_menu', 'Hide_Post_Type');
 
 
-
-//タクソノミーをラジオボタンにする
-add_action( 'admin_print_footer_scripts', 'select_to_radio_genre' );
-function select_to_radio_genre() {
-?>
-<script type="text/javascript">
-jQuery(function($) {
-    // 投稿画面
-    $('#taxonomy-genre input[type="checkbox"]').each(function() {
-        $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(
-            this).val() + '">').prop('checked', $(this).is(':checked')));
-    });
-    // 一覧画面
-    var genre_checklist = $('.genrechecklist input[type="checkbox"]');
-    genre_checklist.click(function() {
-        genre_checklist.prop('checked', false);
-        $(this).prop('checked', true);
-    });
-});
-</script>
-<?php
-}
-//投稿のカテゴリーもラジオボタンにする
-add_action( 'admin_print_footer_scripts', 'select_to_radio_category' );
-function select_to_radio_category() {
-?>
-<script type="text/javascript">
-jQuery(function($) {
-    // カテゴリーをラジオボタンにする
-    $('#category-all input[type="checkbox"]').each(function() {
-        $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(
-            this).val() + '">').prop('checked', $(this).is(':checked')));
-    });
-});
-</script>
-<?php
-}
-
-
-// 検索条件が未入力時にsearch.phpにリダイレクトする
-function set_redirect_template(){
-	if (isset($_GET['s']) && empty($_GET['s'])) {
-	  include(TEMPLATEPATH . '/search.php');
-	  exit;
-	}
-  }
-  add_action('template_redirect', 'set_redirect_template');
-
   //1ページに表示する最大投稿数
   function my_pre_get_posts( $query ) {
 	if ( is_admin() || !$query->is_main_query() ) {
@@ -160,29 +112,18 @@ function set_redirect_template(){
   }
   add_action('pre_get_posts','my_pre_get_posts');
 
-  // 検索条件のページタイプを指定する(通常投稿とカスタム投稿)
-function SearchFilter( $query ) {
-	if ( $query -> is_search ) {
-	  $query -> set( 'post_type', array('post','blog') );
-	}
-	return $query;
-  }
-  add_filter( 'pre_get_posts', 'SearchFilter' );
 
-    //date-blg.phpを機能させる
-	function custom_template_redirect() {
-		if (is_post_type_archive('blog') && is_date()) {
-			include(get_template_directory() . '/date-blog.php');
-			exit;
-		}
-	}
-	add_action('template_redirect', 'custom_template_redirect');
-	
-	function custom_rewrite_rules() {
-		add_rewrite_rule(
-			'blog/([0-9]{4})/([0-9]{2})/?$', 
-			'index.php?post_type=blog&year=$matches[1]&monthnum=$matches[2]', 
-			'top'
+	// マイグレーションでnode_modulesなどを除外
+$my_theme = wp_get_theme();
+$_theme_name = $my_theme->stylesheet;
+
+add_filter(
+	'ai1wm_exclude_themes_from_export',
+	function ($exclude_filters) {
+		global $_theme_name;
+		$exclude_filters = array(
+			"{$_theme_name}/src/node_modules",
 		);
+		return $exclude_filters;
 	}
-	add_action('init', 'custom_rewrite_rules');
+);

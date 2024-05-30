@@ -17,7 +17,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
                     alt="download" width="152" height="71" loading="lazy">
             </div>
-            <h1 class="c-below-mv__title">
+            <h1 class="c-below-mv__title l-title30">
                 <?php
                 // 現在のタクソノミータームを取得
                 $current_term = get_queried_object();
