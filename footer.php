@@ -4,7 +4,7 @@
         <div class="c-cta__item">
             <div class="c-cta__text">経営に役立つクローズドな情報満載</div>
             <div class="c-cta__link">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://m.larosebistro.com/p/r/jZrKvZ19" target="_blank" rel="noopener noreferrer">
                     <picture class="c-cta__arrow">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
                             alt="" width="11" height="7" loading="lazy">
@@ -16,7 +16,7 @@
         <div class="c-cta__item">
             <div class="c-cta__text">LINEでご相談、お問い合わせ</div>
             <div class="c-cta__link">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://line.me/R/ti/p/kame8823" target="_blank" rel="noopener noreferrer">
                     <picture class="c-cta__arrow">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
                             alt="" width="11" height="7" loading="lazy">

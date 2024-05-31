@@ -46,7 +46,9 @@ textarea::placeholder {
     margin-inline: auto;
     color: $black06;
 
-    @include mq('md') {}
+    @include mq('md') {
+        width: 100%;
+    }
 }
 
 .p-form__item:not(:first-child) {
@@ -354,4 +356,15 @@ span.wpcf7-spinner {
 
 .p-form__grecaptcha a {
     text-decoration: underline;
+}
+
+/* 横スクロール解消 */
+.wpcf7-form-control-wrap {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.wpcf7-form-control {
+    width: 100%;
+    box-sizing: border-box;
 }

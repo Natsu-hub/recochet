@@ -123,10 +123,9 @@ $page_slug = $post->post_name;
                 </ul>
                 <div class="p-privacy-policy__head">第十条（お問い合わせ窓口）</div>
                 <p class="p-privacy-policy__text">本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。
-                <p class="p-privacy-policy__text l-pt10">住所：〒370-0006 群馬県高崎市問屋町４－７－１<br>
-                    法人名：一般社団法人サポルト<br>
-                    代表者：井草　晃<br>
-                    <a href="mailto:info@saporuto.com">Eメールアドレス： info@saporuto.com</a>
+                <p class="p-privacy-policy__text l-pt10"><br>
+                    
+                    <a href="mailto:info@ricochet.co.jp">Eメールアドレス： info@ricochet.co.jp</a>
                 </p>
                 </p>
             </div>

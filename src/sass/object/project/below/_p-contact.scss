@@ -27,6 +27,7 @@
     background: $white03;
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.16);
     padding: rem(53) rem(47);
+    width: 100%;
 
     @include mq(md) {
         padding: rem(24) rem(15);

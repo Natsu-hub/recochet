@@ -166,13 +166,14 @@
 
 }
 
-.c-common-download__bg02 {
+.c-common-download-bg02 {
     width: 100%;
     padding-block: rem(25);
     background: url(../images/below/download_bg02.webp) center center / cover no-repeat;
+
     @include mq(md) {
-    background: url(../images/below/download_bg02-sp.webp) center center / cover no-repeat;
-}
+        background: url(../images/below/download_bg02-sp.webp) center center / cover no-repeat;
+    }
 }
 
 .c-common-download__box {

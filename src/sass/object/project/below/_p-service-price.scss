@@ -2,10 +2,10 @@
 
 
 .p-service-price {
-    padding-top: rem(42);
+    padding-top: rem(154);
 
     @include mq(md) {
-        padding-top: 0;
+        padding-top: rem(80);
     }
 }
 
@@ -24,10 +24,10 @@
 }
 
 .p-service-price__title {
-    margin-top: rem(-270);
+    margin-top: rem(-170);
 
     @include mq(md) {
-        margin-top: rem(-160);
+        margin-top: rem(-120);
     }
 }
 
@@ -41,7 +41,7 @@
 
     @include mq(md) {
         flex-direction: column;
-        margin-top: rem(44);
+        margin-top: rem(48);
     }
 }
 

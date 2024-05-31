@@ -114,22 +114,7 @@ get_header();
             </div>
         </div>
     </section>
-    <div class="c-common-download__bg02">
-        <div class="l-inner">
-            <div class="c-common-download__box">
-                <p class="c-common-download__text">ご相談や各種お問い合わせはこちら</p>
-                <ul class="c-common-download__items">
-                    <li class="c-common-download__item">
-                        <a href="<?php echo CONTACT_URL; ?>"
-                            class="c-common-download__contact c-common-download__contact--mail">メールでお問い合わせ</a>
-                    </li>
-                    <li class="c-common-download__item">
-                        <a href="<?php echo DOWNLOAD_URL; ?>"
-                            class="c-common-download__contact c-common-download__contact--line">LINEでお問い合わせ</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!-- c-common-download-bg02 -->
+    <?php get_template_part('template/common-download-bg02'); ?>
 </main>
 <?php get_footer(); ?>

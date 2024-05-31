@@ -23,6 +23,7 @@ $page_slug = $post->post_name;
         </div>
     </section>
 
+    <!-- p-well-being -->
     <div class="p-well-being">
         <div class="p-well-being__inner l-inner">
             <div class="p-well-being__lists-box">

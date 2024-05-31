@@ -118,6 +118,20 @@
     }
 }
 
+/* current */
+.p-header__nav-link.current {
+    color: $blue;
+}
+
+.p-header__drop-menu-item a.current {
+    color: $blue;
+}
+
+.p-header__nav-link.current,
+.p-header__drop-menu-item a.current {
+    color: $blue;
+}
+
 .p-header__nav-link-arrow {
     width: rem(11);
     height: rem(7);

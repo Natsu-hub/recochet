@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width,initiascale=1.0" />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex">
 
     <!-- icon -->
     <!-- <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
@@ -38,7 +39,8 @@
                 <nav class="p-header__nav">
                     <ul class="p-header__nav-items">
                         <li class="p-header__nav-item">
-                            <a class="p-header__nav-link" href="<?php echo HOME_URL; ?>">ホーム</a>
+                            <a class="p-header__nav-link <?php if (is_front_page()): ?>current<?php endif; ?>"
+                                href="<?php echo HOME_URL; ?>">ホーム</a>
                         </li>
                         <li class="p-header__nav-item p-header__menu-item p-header__drop-menu">
                             <p class="p-header__nav-link">
@@ -50,21 +52,26 @@
                             </p>
                             <ul class="p-header__drop-menu-list">
                                 <li class="p-header__drop-menu-item">
-                                    <a href="<?php echo CONSULTING_URL; ?>"><span>事業コンサルティング</span></a>
+                                    <a href="<?php echo CONSULTING_URL; ?>"
+                                        class="<?php if (is_page("consulting")): ?>current<?php endif; ?>"><span>事業コンサルティング</span></a>
                                 </li>
                                 <li class="p-header__drop-menu-item">
-                                    <a href="<?php echo ACADEMY_URL; ?>"><span>飲食店ネット通販アカデミー</span></a>
+                                    <a href="<?php echo ACADEMY_URL; ?>"
+                                        class="<?php if (is_page("online-shopping-academy")): ?>current<?php endif; ?>"><span>飲食店ネット通販アカデミー</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="p-header__nav-link" href="<?php echo CASE_URL; ?>">コンサルの効果</a>
+                            <a class="p-header__nav-link <?php if (is_archive("case-study")): ?>current<?php endif; ?>"
+                                href="<?php echo CASE_URL; ?>">コンサルの効果</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="p-header__nav-link" href="<?php echo WELL_URL; ?>">SDGsの取り組み</a>
+                            <a class="p-header__nav-link <?php if (is_page("well-being")): ?>current<?php endif; ?>"
+                                href="<?php echo WELL_URL; ?>">SDGsの取り組み</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="p-header__nav-link" href="<?php echo COMPANY_URL; ?>">会社概要</a>
+                            <a class="p-header__nav-link <?php if (is_page("company")): ?>current<?php endif; ?>"
+                                href="<?php echo COMPANY_URL; ?>">会社概要</a>
                         </li>
                     </ul>
                 </nav>
@@ -136,7 +143,8 @@
                             <div class="c-cta__item">
                                 <div class="c-cta__text c-cta__text--mobile">経営に役立つクローズドな情報満載</div>
                                 <div class="c-cta__link">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://m.larosebistro.com/p/r/jZrKvZ19" target="_blank"
+                                        rel="noopener noreferrer">
                                         <picture class="c-cta__arrow">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
                                                 alt="" width="11" height="7" loading="lazy">
@@ -148,7 +156,7 @@
                             <div class="c-cta__item">
                                 <div class="c-cta__text c-cta__text--mobile">LINEでご相談、お問い合わせ</div>
                                 <div class="c-cta__link">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://line.me/R/ti/p/kame8823" target="_blank" rel="noopener noreferrer">
                                         <picture class="c-cta__arrow">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
                                                 alt="" width="11" height="7" loading="lazy">

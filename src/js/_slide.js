@@ -49,7 +49,7 @@ export function slide() {
               perMove: 1,
               autoplay: true,
               interval: 4000,
-              pauseOnHover: false,
+              pauseOnHover: true,
               pauseOnFocus: false,
               focus: 0,
               speed: 3500,

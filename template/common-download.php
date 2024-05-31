@@ -9,7 +9,7 @@
                        <p class="c-common-download__text">ご相談や各種お問い合わせはこちら</p>
                        <ul class="c-common-download__items">
                            <li class="c-common-download__item">
-                               <a href="<?php echo CONTACT_URL; ?>"
+                               <a href="mailto:info@ricochet.co.jp"
                                    class="c-common-download__contact c-common-download__contact--mail">メールでお問い合わせ</a>
                            </li>
                            <li class="c-common-download__item">

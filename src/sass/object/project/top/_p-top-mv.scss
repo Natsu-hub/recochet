@@ -18,7 +18,7 @@
     background: url(../images/common/mv_img-bg.webp) center center / cover no-repeat;
 
     @include mq(md) {
-        background: url(../images/common/mv_img-sp.webp) center center / cover no-repeat;
+        background: url(../images/common/mv_img-sp.webp) center bottom / cover no-repeat;
     }
 
     // オーバーレイの追加

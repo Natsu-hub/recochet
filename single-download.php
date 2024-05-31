@@ -87,7 +87,6 @@ $download_link = get_post_meta($post->ID, 'download_link', true); // カスタ�
 // var_dump($download_link);
 echo do_shortcode('[contact-form-7 id="281" title="資料ダウンロード_useful" download_link="' . esc_url($download_link) . '"]');
 ?>
-
             </div>
         </div>
     </section>

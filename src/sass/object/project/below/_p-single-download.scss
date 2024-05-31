@@ -1,7 +1,9 @@
 @use "global" as *;
 
 
-.p-single-download {}
+.p-single-download {
+    width: 100%;
+}
 
 .p-single-download__inner {}
 

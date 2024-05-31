@@ -283,8 +283,6 @@ get_header(); ?>
         <div class="p-top-company__inner l-inner">
             <h2 class="p-top-company__title c-title">
                 <picture class="p-top-company__title-en c-title__en">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/company-sp.svg"
-                        type="image/webp" media="(max-width: 768px)">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/company.svg"
                         alt="company" width="160" height="98" loading="lazy">
                 </picture>
