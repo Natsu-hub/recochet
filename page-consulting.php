@@ -362,7 +362,7 @@ $page_slug = $post->post_name;
                                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img03.webp"
                                     type="image/webp">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img03.png"
-                                    alt="Zoomにて初回ヒアリング" width="273" height="154" loading="lazy">
+                                    alt="本気度の確認" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
                                 <div class="p-service-flow__lead">本気度の確認</div>
@@ -383,7 +383,7 @@ $page_slug = $post->post_name;
                                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img04.webp"
                                     type="image/webp">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img04.png"
-                                    alt="コンサルティングを実施できるかの確認" width="273" height="154" loading="lazy">
+                                    alt="ご契約・決済" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
                                 <div class="p-service-flow__lead">ご契約・決済</div>
@@ -404,7 +404,7 @@ $page_slug = $post->post_name;
                                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img05.webp"
                                     type="image/webp">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img05.png"
-                                    alt="Zoomにて初回ヒアリング" width="273" height="154" loading="lazy">
+                                    alt="現状分析" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
                                 <div class="p-service-flow__lead">現状分析</div>
@@ -425,7 +425,7 @@ $page_slug = $post->post_name;
                                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img06.webp"
                                     type="image/webp">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img06.png"
-                                    alt="コンサルティングを実施できるかの確認" width="273" height="154" loading="lazy">
+                                    alt="ゴールの設定" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
                                 <div class="p-service-flow__lead">ゴールの設定</div>
@@ -446,7 +446,7 @@ $page_slug = $post->post_name;
                                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img07.webp"
                                     type="image/webp">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img07.png"
-                                    alt="Zoomにて初回ヒアリング" width="273" height="154" loading="lazy">
+                                    alt="ゴールまでのロードマップを作成" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
                                 <div class="p-service-flow__lead">ゴールまでのロードマップを作成</div>
@@ -467,7 +467,7 @@ $page_slug = $post->post_name;
                                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img08.webp"
                                     type="image/webp">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img08.png"
-                                    alt="コンサルティングを実施できるかの確認" width="873" height="154" loading="lazy">
+                                    alt="PDCAを回してゴールを達成！" width="873" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
                                 <div class="p-service-flow__lead">PDCAを回してゴールを達成！</div>

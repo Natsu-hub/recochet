@@ -1,0 +1,213 @@
+@use "global" as *;
+
+
+.p-service-price--online {
+    padding-top: rem(120);
+
+    @include mq(md) {
+        padding-top: rem(80);
+    }
+}
+
+.p-service-price--online__inner {
+    max-width: rem(1040);
+    width: 100%;
+    margin-inline: auto;
+    padding: 0 rem(25);
+
+    @include mq('md') {
+        max-width: rem(600);
+        padding: 0 rem(15);
+    }
+
+    @include mq('sm') {
+        padding: 0 0;
+    }
+}
+
+.l-inner {}
+
+.p-service__en-title {
+    max-width: rem(415);
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq(md) {
+        max-width: rem(250);
+    }
+
+    @include mq('sm') {
+        padding-inline: rem(15);
+    }
+}
+
+.p-service-price--online__title {
+    margin-top: rem(-170);
+
+    @include mq(md) {
+        margin-top: rem(-120);
+    }
+
+    @include mq('sm') {
+        padding-inline: rem(15);
+    }
+}
+
+.c-service-title {}
+
+.p-service-price--online__body {
+    margin-top: rem(83);
+    display: flex;
+    align-items: center;
+    background-color: $white02;
+    padding: rem(25) rem(85);
+
+    @include mq(md) {
+        flex-direction: column;
+        margin-top: rem(20);
+        padding: rem(24) rem(15);
+    }
+}
+
+.p-service-price--online__label {
+    max-width: rem(250);
+    width: 100%;
+    height: auto;
+    background-color: $blue;
+    color: $white;
+    border-radius: 50%;
+    font-weight: 700;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include mq(md) {
+        max-width: rem(190);
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: $black;
+        width: rem(27);
+        height: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(-44);
+        opacity: 0;
+
+        @include mq(md) {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+            top: auto;
+            bottom: rem(-25);
+            opacity: 1;
+        }
+
+    }
+
+    &::after {
+        transform: translateY(-50%) rotate(90deg);
+
+        @include mq(md) {
+            transform: translateX(-50%) rotate(90deg);
+        }
+    }
+
+}
+
+
+.p-service-price--online__label36 {
+    font-size: rem(36);
+    letter-spacing: 0.03em;
+    line-height: calc(43 /36);
+    margin-top: rem(10);
+
+    @include mq(md) {
+        font-size: rem(20);
+
+    }
+
+}
+
+.p-service-price--online__label18 {
+    font-size: rem(18);
+    letter-spacing: -0.02em;
+    line-height: calc(22 / 18);
+
+    @include mq(md) {
+        font-size: rem(12);
+    }
+}
+
+.p-service-price--online__box {
+    margin-left: rem(50);
+    max-width: rem(309);
+    width: 100%;
+    color: $black;
+    margin-left: rem(61);
+    font-weight: 700;
+
+    @include mq(md) {
+        margin-left: 0;
+        margin-top: rem(54);
+        max-width: 100%;
+    }
+}
+
+.p-service-price--online__list {
+    padding: rem(10);
+    border-top: 1px solid $blue04;
+    padding-left: rem(18);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: rem(-2);
+        background: $white;
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+}
+
+.p-service-merit__list span {}
+
+.p-service-price--online__list:after {
+    content: "";
+    display: block;
+    height: rem(8);
+    width: rem(16);
+    border-bottom: rem(2) solid $blue;
+    border-left: rem(2) solid $blue;
+    right: rem(20);
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+
+    @include mq(md) {
+        height: rem(6);
+        width: rem(12);
+        right: rem(18);
+    }
+}
+
+
+.p-service-price--online__list:last-child {
+    border-bottom: 1px solid $blue04;
+}
+
+.p-service-price--online__box-btn {
+    margin-top: rem(60);
+}

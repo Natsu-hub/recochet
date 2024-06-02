@@ -1639,23 +1639,13 @@ body {
 	text-align: center;
 }
 
-.p-404 {
-	background-color: #000000;
-	color: #F1F1F1;
-	text-align: center;
-}
-
-.p-404__title {
-	font-size: 4.25rem;
-}
-
-.p-404__text {
-	font-size: 1.125rem;
-}
-
 .p-404__btn {
-	margin-top: 7.5rem;
+	margin-inline: auto;
+	max-width: 19.375rem;
+	padding-bottom: 5.25rem;
+	padding-top: 5.75rem;
 	text-align: center;
+	width: 100%;
 }
 
 .p-case-related {
@@ -2409,36 +2399,43 @@ span.wpcf7-spinner {
 }
 
 .p-privacy-policy {
-	background-color: #F1F1F1;
-	color: #1a1a1a;
-}
-
-.p-privacy-policy__box {
-	background: rgba(248, 248, 248, 0.8);
-	-webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
-	        box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
-	letter-spacing: 1.28px;
-	line-height: 1.6875;
-	padding: 5rem 7.5rem 7.5rem;
-}
-
-.l-pt10 {
-	margin-top: 0.625rem;
+	color: #222;
+	font-size: 1.125rem;
+	padding-bottom: 6.1875rem;
+	padding-top: 2.625rem;
 }
 
 .p-privacy-policy__head {
-	font-size: 1.5rem;
-	font-weight: 600;
-	letter-spacing: 1.92px;
-	line-height: 1.12;
-	margin-top: 3rem;
-	padding-bottom: 1.5rem;
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 1;
+	margin-top: 3.125rem;
 }
 
-.p-privacy-policy__numbers {
-	list-style-type: decimal;
-	margin-left: 1.25rem;
-	padding-left: 0.3125rem;
+.p-privacy-policy__text {
+	margin-top: 1.875rem;
+}
+
+.p-privacy-policy__text p,
+.p-privacy-policy__text li {
+	margin-top: 1.25rem;
+}
+
+.p-privacy-policy__deco {
+	padding-left: 0.625rem;
+	position: relative;
+}
+
+.p-privacy-policy__deco::before {
+	background-color: #222;
+	content: "";
+	height: 0.375rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 0.375rem;
 }
 
 .p-service-case {
@@ -2732,6 +2729,15 @@ span.wpcf7-spinner {
 	line-height: 1.75;
 }
 
+.p-service-flow__btn {
+	margin-top: 1.25rem;
+}
+
+.p-service-flow__btn a {
+	max-width: 19.375rem;
+	width: 100%;
+}
+
 .p-service-merit {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #F1F1F1));
 	background: linear-gradient(to bottom, #fff 50%, #F1F1F1 50%);
@@ -2897,6 +2903,7 @@ span.wpcf7-spinner {
 	-webkit-justify-content: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	line-height: 1.4;
 	position: relative;
 	text-align: center;
 	width: 13.75rem;
@@ -2957,6 +2964,151 @@ span.wpcf7-spinner {
 	width: 1.25rem;
 }
 
+.p-service-price--online {
+	padding-top: 7.5rem;
+}
+
+.p-service-price--online__inner {
+	margin-inline: auto;
+	max-width: 65rem;
+	padding: 0 1.5625rem;
+	width: 100%;
+}
+
+.p-service__en-title {
+	margin-inline: auto;
+	max-width: 25.9375rem;
+	width: 100%;
+}
+
+.p-service-price--online__title {
+	margin-top: -10.625rem;
+}
+
+.p-service-price--online__body {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: #F1F1F1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 5.1875rem;
+	padding: 1.5625rem 5.3125rem;
+}
+
+.p-service-price--online__label {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	aspect-ratio: 1/1;
+	background-color: #2CA2DC;
+	border-radius: 50%;
+	color: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	font-weight: 700;
+	height: auto;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	max-width: 15.625rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-service-price--online__label::before,
+.p-service-price--online__label::after {
+	background-color: #000000;
+	content: "";
+	height: 1px;
+	opacity: 0;
+	position: absolute;
+	right: -2.75rem;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 1.6875rem;
+}
+
+.p-service-price--online__label::after {
+	-webkit-transform: translateY(-50%) rotate(90deg);
+	        transform: translateY(-50%) rotate(90deg);
+}
+
+.p-service-price--online__label36 {
+	font-size: 2.25rem;
+	letter-spacing: 0.03em;
+	line-height: 1.1944444444;
+	margin-top: 0.625rem;
+}
+
+.p-service-price--online__label18 {
+	font-size: 1.125rem;
+	letter-spacing: -0.02em;
+	line-height: 1.2222222222;
+}
+
+.p-service-price--online__box {
+	color: #000000;
+	font-weight: 700;
+	margin-left: 3.125rem;
+	margin-left: 3.8125rem;
+	max-width: 19.3125rem;
+	width: 100%;
+}
+
+.p-service-price--online__list {
+	border-top: 1px solid #1464b3;
+	padding: 0.625rem;
+	padding-left: 1.125rem;
+	position: relative;
+}
+
+.p-service-price--online__list::before {
+	background: #fff;
+	bottom: -0.125rem;
+	content: "";
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.p-service-price--online__list:after {
+	border-bottom: 0.125rem solid #2CA2DC;
+	border-left: 0.125rem solid #2CA2DC;
+	content: "";
+	display: block;
+	height: 0.5rem;
+	opacity: 1;
+	position: absolute;
+	right: 1.25rem;
+	top: 50%;
+	-webkit-transform: translateY(-50%) rotate(-45deg);
+	        transform: translateY(-50%) rotate(-45deg);
+	width: 1rem;
+}
+
+.p-service-price--online__list:last-child {
+	border-bottom: 1px solid #1464b3;
+}
+
+.p-service-price--online__box-btn {
+	margin-top: 3.75rem;
+}
+
 .p-service-price {
 	padding-top: 9.625rem;
 }
@@ -2980,10 +3132,6 @@ span.wpcf7-spinner {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
 	margin-top: 5.1875rem;
 }
 
@@ -3195,8 +3343,6 @@ span.wpcf7-spinner {
 	-ms-grid-columns: (1fr)[1];
 	grid-template-columns: repeat(1, 1fr);
 	margin-left: 5.8125rem;
-	max-width: 35rem;
-	width: 100%;
 }
 
 .p-service-top__list span {
@@ -5567,16 +5713,10 @@ body {
 	white-space: nowrap;
 }
 
-.p-404__title {
-	font-size: 2.5rem;
-}
-
-.p-404__text {
-	font-size: 1rem;
-}
-
 .p-404__btn {
-	margin-top: 3.75rem;
+	max-width: 25rem;
+	padding-bottom: 3rem;
+	padding-top: 2.625rem;
 }
 
 .p-case-related {
@@ -5851,16 +5991,26 @@ textarea {
 	margin-top: 2.5rem;
 }
 
-.p-privacy-policy__box {
-	padding: 3.75rem 2.5rem;
+.p-privacy-policy {
+	font-size: 0.875rem;
+	padding-bottom: 4.375rem;
+	padding-top: 1.8125rem;
 }
 
 .p-privacy-policy__head {
-	font-size: 1.125rem;
-	letter-spacing: 1.44px;
-	line-height: 1.5;
-	margin-top: 2rem;
-	padding-bottom: 1rem;
+	font-size: 1.25rem;
+	line-height: 1.7;
+	margin-top: 2.1875rem;
+}
+
+.p-privacy-policy__text {
+	line-height: 2;
+	margin-top: 0.625rem;
+}
+
+.p-privacy-policy__text p,
+.p-privacy-policy__text li {
+	margin-top: 0;
 }
 
 .p-service-case {
@@ -5926,12 +6076,12 @@ textarea {
 }
 
 .p-service-case__item-number {
-	max-width: 2.1875rem;
+	max-width: 2.5rem;
 }
 
 .p-service-case__item-number::after {
-	height: 2.5rem;
-	width: 2.5rem;
+	height: 3.125rem;
+	width: 3.125rem;
 }
 
 .p-service-case__item-lead {
@@ -6050,6 +6200,15 @@ textarea {
 	line-height: 2;
 }
 
+.p-service-flow__btn {
+	margin-top: 0.9375rem;
+}
+
+.p-service-flow__btn a {
+	margin-inline: auto;
+	max-width: 25rem;
+}
+
 .p-service-merit__bg {
 	background: url(../images/below/service_bg01-sp.png) center center/cover no-repeat;
 	padding-bottom: 4.375rem;
@@ -6162,6 +6321,77 @@ textarea {
 	width: 0.875rem;
 }
 
+.p-service-price--online {
+	padding-top: 5rem;
+}
+
+.p-service-price--online__inner {
+	max-width: 37.5rem;
+	padding: 0 0.9375rem;
+}
+
+.p-service__en-title {
+	max-width: 15.625rem;
+}
+
+.p-service-price--online__title {
+	margin-top: -7.5rem;
+}
+
+.p-service-price--online__body {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-top: 1.25rem;
+	padding: 1.5rem 0.9375rem;
+}
+
+.p-service-price--online__label {
+	max-width: 11.875rem;
+}
+
+.p-service-price--online__label::before,
+.p-service-price--online__label::after {
+	bottom: -1.5625rem;
+	left: 50%;
+	opacity: 1;
+	right: auto;
+	top: auto;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+.p-service-price--online__label::after {
+	-webkit-transform: translateX(-50%) rotate(90deg);
+	        transform: translateX(-50%) rotate(90deg);
+}
+
+.p-service-price--online__label36 {
+	font-size: 1.25rem;
+}
+
+.p-service-price--online__label18 {
+	font-size: 0.75rem;
+}
+
+.p-service-price--online__box {
+	margin-left: 0;
+	margin-top: 3.375rem;
+	max-width: 100%;
+}
+
+.p-service-price--online__list::before {
+	display: none;
+}
+
+.p-service-price--online__list:after {
+	height: 0.375rem;
+	right: 1.125rem;
+	width: 0.75rem;
+}
+
 .p-service-price {
 	padding-top: 5rem;
 }
@@ -6265,7 +6495,6 @@ textarea {
 	gap: 1rem;
 	margin-left: 0;
 	margin-top: 0.9375rem;
-	max-width: 100%;
 }
 
 .p-service-top__list span:before {
@@ -6951,14 +7180,20 @@ textarea {
 
 @media screen and (max-width: 600px) {
 
-.p-privacy-policy__box {
-	letter-spacing: 0.15px;
-	line-height: 1.8;
-	padding: 2rem 1.0625rem 2.5rem;
-}
-
 .p-service-flow__items {
 	gap: 1.6875rem;
+}
+
+.p-service-price--online__inner {
+	padding: 0 0;
+}
+
+.p-service__en-title {
+	padding-inline: 0.9375rem;
+}
+
+.p-service-price--online__title {
+	padding-inline: 0.9375rem;
 }
 
 .p-service-top__list span:after {

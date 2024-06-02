@@ -42,14 +42,14 @@
                     <div class="p-footer__company">
                         <a href="#body">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.svg"
-                                alt="リコシェ" width="156" height="40" loading="lazy">
+                                alt="株式会社リコシェ" width="156" height="40" loading="lazy">
                         </a>
                     </div>
                     <?php else : ?>
                     <div class="p-footer__company">
                         <a href="<?php echo HOME_URL; ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.svg"
-                                alt="リコシェ" width="156" height="40" loading="lazy">
+                                alt="株式会社リコシェ" width="156" height="40" loading="lazy">
                         </a>
                     </div>
                     <?php endif; ?>

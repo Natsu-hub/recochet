@@ -142,3 +142,21 @@
     }
 
 }
+
+.p-service-flow__btn {
+    margin-top: rem(20);
+
+    @include mq(md) {
+        margin-top: rem(15);
+    }
+}
+
+.p-service-flow__btn a {
+    max-width: rem(310);
+    width: 100%;
+
+    @include mq(md) {
+        max-width: rem(400);
+        margin-inline: auto;
+    }
+}
