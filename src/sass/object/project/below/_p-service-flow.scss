@@ -1,12 +1,5 @@
 @use "global" as *;
 
-
-.p-service-flow {}
-
-.p-service-flow__inner {}
-
-.l-inner {}
-
 .p-service__en-title {
     max-width: rem(483);
     width: 100%;
@@ -28,8 +21,6 @@
         font-size: rem(18);
     }
 }
-
-.c-service-title {}
 
 .p-service-flow__body {
     margin-top: rem(60);

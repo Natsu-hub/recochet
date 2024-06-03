@@ -10,10 +10,6 @@
     }
 }
 
-.c-entry-content a {
-    // text-decoration: underline;
-}
-
 .c-entry-content h1 {
     font-size: rem(24);
     letter-spacing: 0.08em;
@@ -120,11 +116,6 @@
 
 .c-entry-content li:not(:first-child) {
     margin-top: rem(7);
-}
-
-
-.c-entry-content>*+* {
-    // margin-top: rem(24);
 }
 
 .c-entry-content h5 {

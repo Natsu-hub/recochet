@@ -5,10 +5,6 @@
     width: 100%;
 }
 
-.p-single-download__inner {}
-
-.l-inner {}
-
 .p-single-download__body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -27,10 +23,6 @@
         padding-right: 0;
     }
 }
-
-.p-single-download__card {}
-
-.p-single-download__item {}
 
 .p-single-download__img-wrapper {
     max-width: rem(450);
@@ -121,8 +113,3 @@
     background-color: $gray02;
     border-radius: 50%;
 }
-
-
-.c-entry-content {}
-
-.contact-form {}

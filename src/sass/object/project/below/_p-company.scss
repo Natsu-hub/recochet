@@ -83,7 +83,7 @@
     display: flex;
     align-items: center;
     padding: rem(14) 0;
-    border-top: 1px solid gray;
+    border-top: 1px solid $gray06;
     color: $black06;
     font-size: rem(18);
 
@@ -94,7 +94,7 @@
 }
 
 .p-company__list:last-child {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $gray06;
 }
 
 .p-company__list-title {
@@ -103,5 +103,3 @@
     flex-shrink: 0;
     font-weight: 700;
 }
-
-.p-company__list-description {}

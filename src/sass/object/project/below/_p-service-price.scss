@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .p-service-price {
     padding-top: rem(154);
 
@@ -8,6 +7,7 @@
         padding-top: rem(80);
     }
 }
+
 .p-service__en-title {
     max-width: rem(415);
     width: 100%;
@@ -25,8 +25,6 @@
         margin-top: rem(-120);
     }
 }
-
-.c-service-title {}
 
 .p-service-price__body {
     margin-top: rem(83);
@@ -53,11 +51,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    
+
     @include mq(md) {
         max-width: calc(190 / 290)*100%;
     }
-    
+
     &::before,
     &::after {
         content: "";
@@ -68,7 +66,7 @@
         top: 50%;
         transform: translateY(-50%);
         right: rem(-44);
-    
+
         @include mq(md) {
             left: 50%;
             transform: translateX(-50%);
@@ -76,12 +74,11 @@
             top: auto;
             bottom: rem(-22);
         }
-    
     }
-    
+
     &::after {
         transform: translateY(-50%) rotate(90deg);
-    
+
         @include mq(md) {
             transform: translateX(-50%) rotate(90deg);
         }
@@ -108,9 +105,7 @@
 
     @include mq(md) {
         font-size: rem(20);
-
     }
-
 }
 
 .p-service-price__label18 {
@@ -141,7 +136,6 @@
         margin-left: 0;
         max-width: calc(260 / 290)*100%;
         padding: rem(40) rem(14);
-
     }
 }
 

@@ -474,15 +474,6 @@ th {
 	text-align: left;
 }
 
-/* テキスト設定 */
-
-/* ============================================ */
-
-.js-wipeAnimation {
-	-webkit-clip-path: inset(0 100% 0 0);
-	clip-path: inset(0 100% 0 0);
-}
-
 .splide__container {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -649,19 +640,6 @@ th {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #D8E6E6));
 	background: linear-gradient(to bottom, #ffffff 50%, #D8E6E6 50%);
 	padding-block: 0.9375rem;
-}
-
-.js-text-effect {
-	line-height: 1;
-	overflow: hidden;
-}
-
-.js-text-effect span {
-	display: inline-block;
-	opacity: 0;
-	-webkit-transform: translateY(100%);
-	        transform: translateY(100%);
-	visibility: hidden;
 }
 
 .l-header {
@@ -1867,7 +1845,7 @@ pre {
 }
 
 .p-company-news__content:nth-child(n+4) .p-company-news__content-title {
-	margin-left: 9.375rem; /* ここに適用したいスタイルを記述します */
+	margin-left: 9.375rem;
 }
 
 .p-company {
@@ -1926,7 +1904,7 @@ pre {
 	-webkit-align-items: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	border-top: 1px solid gray;
+	border-top: 1px solid #d5d5d5;
 	color: #222;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1937,7 +1915,7 @@ pre {
 }
 
 .p-company__list:last-child {
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #d5d5d5;
 }
 
 .p-company__list-title {
@@ -4631,7 +4609,7 @@ span.wpcf7-spinner {
 .p-top-case-study__item {
 	background: transparent;
 	background-color: #fff;
-	border: 1px solid #2ca2dc;
+	border: 1px solid #2CA2DC;
 	border-radius: 5px;
 	display: -webkit-box;
 	display: -webkit-flex;

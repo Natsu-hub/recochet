@@ -15,8 +15,6 @@
     text-align: center;
 }
 
-.c-title {}
-
 .p-top-well__title-en {
     max-width: rem(325);
 
@@ -24,7 +22,6 @@
         max-width: rem(150);
     }
 }
-
 
 .p-top-well__box {
     margin-top: rem(40);
@@ -72,8 +69,6 @@
     }
 }
 
-
-
 .p-top-well__lead {
     color: $blue06;
     font-size: rem(24);
@@ -115,7 +110,6 @@
         padding-right: 0;
         font-size: rem(14);
     }
-
 }
 
 .p-top-well__btn {
@@ -133,5 +127,3 @@
         margin-inline: auto;
     }
 }
-
-.c-btn {}

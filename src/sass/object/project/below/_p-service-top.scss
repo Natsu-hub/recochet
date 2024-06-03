@@ -75,8 +75,6 @@
     transform: rotate(30deg);
 }
 
-
-
 .p-service-top__body {
     display: flex;
     align-items: center;
@@ -97,7 +95,6 @@
 
     @include mq(md) {
         max-width: rem(66);
-
     }
 }
 
@@ -126,8 +123,6 @@
         font-size: rem(14);
     }
 }
-
-.p-service-top__list {}
 
 .p-service-top__list span {
     padding-left: rem(32);

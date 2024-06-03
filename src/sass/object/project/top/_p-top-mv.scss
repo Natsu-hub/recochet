@@ -37,9 +37,6 @@
 }
 
 .p-top-mv__inner {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -107,18 +104,6 @@
     }
 
 }
-
-
-// .text {
-//     position: absolute;
-//     mix-blend-mode: screen;
-//     /* オーバーレイを指定 */
-//     color: #0089D6;
-//     font-size: 150px;
-//     font-weight: bold;
-//     top: 200px;
-//     left: 30px;
-// }
 
 .p-top-mv__lead span:not(:first-child) {
     margin-top: rem(25);

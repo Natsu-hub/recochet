@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .p-service-faq {
     padding-top: rem(126);
     padding-bottom: rem(116);
@@ -10,14 +9,6 @@
         padding-bottom: rem(40);
     }
 }
-
-.p-service-faq__inner {}
-
-.l-inner {}
-
-.p-service-faq__title {}
-
-.p-service-faq__sub-title {}
 
 .p-service-faq__main-title {
     @include mq(md) {
@@ -42,8 +33,6 @@
         gap: rem(38);
     }
 }
-
-.p-service-faq__item {}
 
 .p-service-faq__lead {
     font-size: rem(22);

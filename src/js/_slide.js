@@ -10,6 +10,7 @@ export function slide() {
             new Splide(splideElements[i]).mount();
         }
 
+        // js-slide-img
         if (document.querySelector(".js-slide-img")) {
             const slideImgMv = new Splide(".js-slide-img", {
                 fixedWidth: '14.125rem',
@@ -33,7 +34,7 @@ export function slide() {
             slideImgMv.mount({ AutoScroll });
         }
 
-
+        // js-slide
         if (document.querySelector(".js-slide")) {
             new Splide(".js-slide", {
               type: "loop",
@@ -59,14 +60,7 @@ export function slide() {
                 pagination: 'splide__pagination p-top-case-study__pagination',
                 page      : 'splide__pagination__page p-top-case-study__page',
           },
-          
             }).mount();
           }
-        
-
-
-       
-
-
     });
 }

@@ -2,9 +2,7 @@
 
 .p-service-merit {
     background: linear-gradient(to bottom, $white 50%, $white02 50%);
-
 }
-
 
 .p-service-merit__bg {
     position: relative;
@@ -44,10 +42,6 @@
     background-color: $white02;
     clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
-
-
-.p-service-merit__inner {}
-
 
 .p-service-merit__sub-title {
     font-size: rem(30);
@@ -134,8 +128,6 @@
     }
 }
 
-.p-service-merit__left-title {}
-
 .p-service-merit__left-title01 {
     font-size: rem(39);
     display: block;
@@ -143,8 +135,6 @@
     @include mq(md) {
         font-size: rem(15);
     }
-
-
 }
 
 .p-service-merit__left-title02 {
@@ -251,8 +241,6 @@
     }
 }
 
-.p-service-merit__label span {}
-
 .p-service-merit__lists {
     color: $white;
     margin-left: rem(86);
@@ -310,5 +298,3 @@
         left: rem(-22);
     }
 }
-
-.p-service-merit__label {}

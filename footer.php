@@ -1,4 +1,5 @@
-<!-- <div class="c-cta c-cta--pc">
+<!-- c-cta -->
+<div class="c-cta c-cta--pc">
     <div class="c-cta__body">
         <div class="c-cta__btn js-cta"></div>
         <div class="c-cta__item">
@@ -32,7 +33,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <footer class="p-footer">
     <div class="p-footer__inner">
         <div class="p-footer__items">

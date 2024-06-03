@@ -32,13 +32,10 @@
     }
 }
 
-
-.p-top-case-study__items {}
-
 .p-top-case-study__item {
     border-radius: 5px;
     background: transparent;
-    border: 1px solid #2ca2dc;
+    border: 1px solid $blue;
     padding: rem(20) rem(18);
     display: flex;
     flex-direction: column;

@@ -35,7 +35,6 @@
     grid-row: span 2;
     gap: 0;
     position: relative;
-    // overflow: hidden;
 
     @include mq(md) {
         grid-template-rows: initial;

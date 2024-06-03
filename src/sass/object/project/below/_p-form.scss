@@ -55,8 +55,6 @@ textarea::placeholder {
     margin-top: rem(29);
 }
 
-.p-form__items {}
-
 .p-form__item dt {
     font-weight: 700;
     font-size: rem(18);
@@ -161,7 +159,6 @@ textarea {
     }
 }
 
-
 [type=submit] {
     height: 100%;
     width: 100%;
@@ -210,16 +207,8 @@ textarea {
     border: none;
 }
 
-.wpcf7-required-attention {
-    // opacity: 0;
-}
-
-.wpcf7-required-attention.active {
-    // opacity: 1;
-}
 
 //ファイル添付
-
 .p-form__file-text {
     margin-top: rem(26);
     line-height: 2;
@@ -330,10 +319,6 @@ input[type="file" i]::-webkit-file-upload-button {
 //contact-form7
 span.wpcf7-spinner {
     display: none;
-}
-
-.wpcf7-form.invalid .wpcf7-response-output {
-    // display: none;
 }
 
 .wpcf7-form.sent .wpcf7-response-output {

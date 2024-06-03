@@ -2,7 +2,6 @@ export function header() {
     document.addEventListener('DOMContentLoaded', function () {
         gsap.config({ nullTargetWarn: false })
 
-
         document.querySelectorAll('.js-hamburger').forEach(function (hamburger) {
             hamburger.addEventListener('click', function () {
                 this.classList.toggle('is-open');
@@ -29,8 +28,8 @@ export function header() {
             });
         });
 
-          // js-drawer-overlayをクリックしたときにドロワーを閉じる
-          document.querySelector('.js-drawer-overlay').addEventListener('click', function () {
+        // js-drawer-overlayをクリックしたときにドロワーを閉じる
+        document.querySelector('.js-drawer-overlay').addEventListener('click', function () {
             closeDrawer();
         });
 
@@ -43,40 +42,16 @@ export function header() {
 
     function openDrawer() {
         const drawer = document.querySelector('.js-drawer');
-        // const header = document.querySelector('.js-header');
         drawer.classList.add('is-open');
-        // header.classList.add('is-drawer-open'); // ヘッダーにクラスを追加
         document.body.classList.add('body-no-scroll');
-        // ナビゲーションリストの各項目を選択
-        // const items = document.querySelectorAll('.js-nav-list');
-
-        // 各項目に遅延を設定してアニメーションを適用
-        // items.forEach((item, index) => {
-        //     if (index === 0) {
-        //         // 最初の項目は遅延なしでアニメーションを適用
-        //         item.classList.add('is-open');
-        //     } else {
-        //         // 2番目以降の項目には150ms * (index - 1) の遅延を設定
-        //         setTimeout(() => {
-        //             item.classList.add('is-open');
-        //         }, 150 * (index - 1));
-        //     }
-        // });
     }
 
     function closeDrawer() {
-        setTimeout(() => {
-            const drawer = document.querySelector('.js-drawer');
-            const header = document.querySelector('.js-header');
-            const hamburger = document.querySelector('.js-hamburger');
-            drawer.classList.remove('is-open');
-            // header.classList.remove('is-drawer-open'); // ヘッダーからクラスを削除
-            hamburger.classList.remove('is-open');
-            document.body.classList.remove('body-no-scroll');
-
-            // アニメーションを削除
-            const items = document.querySelectorAll('.js-nav-list');
-            items.forEach(item => item.classList.remove('is-open'));
-        }, 100); // 0.1秒遅延後に実行
+        const drawer = document.querySelector('.js-drawer');
+        const header = document.querySelector('.js-header');
+        const hamburger = document.querySelector('.js-hamburger');
+        drawer.classList.remove('is-open');
+        hamburger.classList.remove('is-open');
+        document.body.classList.remove('body-no-scroll');
     }
 }
