@@ -642,6 +642,23 @@ th {
 	padding-block: 0.9375rem;
 }
 
+.p-splide-img__slide {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.p-splide-img__slide picture {
+	display: block;
+	height: auto;
+}
+
+.p-splide-img__slide img {
+	-o-object-fit: contain;
+	height: auto;
+	object-fit: contain;
+}
+
 .l-header {
 	left: 0;
 	position: fixed;
@@ -859,10 +876,6 @@ body {
 }
 
 .c-card__detail dl {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -4042,6 +4055,8 @@ span.wpcf7-spinner {
 	gap: 1.25rem;
 	-ms-grid-columns: (1fr)[1];
 	grid-template-columns: repeat(1, 1fr);
+	-ms-grid-rows: (1fr)[6];
+	grid-template-rows: repeat(6, 1fr);
 }
 
 .p-footer__nav-item a {
@@ -4055,6 +4070,8 @@ span.wpcf7-spinner {
 	gap: 1.25rem;
 	-ms-grid-columns: (1fr)[1];
 	grid-template-columns: repeat(1, 1fr);
+	-ms-grid-rows: (1fr)[6];
+	grid-template-rows: repeat(6, 1fr);
 }
 
 .p-footer__btns {
@@ -4694,12 +4711,24 @@ span.wpcf7-spinner {
 }
 
 .p-top-case-study__page {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background: #000000;
 	border: 0;
 	border: 1px solid #000000;
 	border-radius: 50%;
 	display: inline-block;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 	height: 0.6875rem;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin: 0 0.5rem;
 	padding: 0;
 	position: relative;
@@ -6970,6 +6999,10 @@ textarea {
 }
 
 .p-top-case-study__pagination {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;

@@ -7,7 +7,7 @@
             <div class="c-cta__link">
                 <a href="https://m.larosebistro.com/p/r/jZrKvZ19" target="_blank" rel="noopener noreferrer">
                     <picture class="c-cta__arrow">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"
                             alt="" width="11" height="7" loading="lazy">
                     </picture>
                     <p>メールマガジンのご登録</p>
@@ -17,15 +17,16 @@
         <div class="c-cta__item">
             <div class="c-cta__text">LINEでご相談、お問い合わせ</div>
             <div class="c-cta__link">
-                <a href="https://line.me/R/ti/p/kame8823" target="_blank" rel="noopener noreferrer">
+                <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">
                     <picture class="c-cta__arrow">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"
                             alt="" width="11" height="7" loading="lazy">
                     </picture>
                     <picture class="c-cta__icon">
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.webp"
+                        <source
+                            srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/line_icon.webp"
                             type="image/webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.png"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/line_icon.png"
                             alt="LINEのアイコン" width="15" height="15" loading="lazy">
                     </picture>
                     <p>リコシェ公式ライン</p>
@@ -42,20 +43,20 @@
                     <?php if ( is_front_page() ) : ?>
                     <div class="p-footer__company">
                         <a href="#body">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.svg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-white.svg"
                                 alt="株式会社リコシェ" width="156" height="40" loading="lazy">
                         </a>
                     </div>
                     <?php else : ?>
                     <div class="p-footer__company">
                         <a href="<?php echo HOME_URL; ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.svg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-white.svg"
                                 alt="株式会社リコシェ" width="156" height="40" loading="lazy">
                         </a>
                     </div>
                     <?php endif; ?>
                     <div class="p-footer__company-detail">
-                        <div class="p-footer__company-name">株式会社recochet</div>
+                        <div class="p-footer__company-name">株式会社ricochet</div>
                         <address class="p-footer__company-address">〒320-0838　栃木県宇都宮市吉野2-5-8</address>
                         <small class="p-footer__copy-right">&copy; <?php echo date('Y'); ?> ricochet All Rights
                             Reserved.</small>
@@ -125,7 +126,7 @@
                         </a>
                     </li>
                     <li class="p-footer__nav-item">
-                        <a href="http://" target="_blank" rel="noopener noreferrer">公式ライン
+                        <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">公式ライン
                         </a>
                     </li>
                     <li class="p-footer__nav-item">
@@ -142,7 +143,7 @@
                         </a>
                     </li>
                     <li class="p-footer__link">
-                        <a href="http://" target="_blank" rel="noopener noreferrer">公式ライン
+                        <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">公式ライン
                         </a>
                     </li>
                     <li class="p-footer__link">
@@ -155,24 +156,24 @@
                     <a href="https://www.facebook.com/kameituhan/ " target="_blank" rel="noopener noreferrer">
                         <picture class="p-footer__sns-img">
                             <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/facebook_icon.webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/facebook_icon.png"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/facebook_icon.webp">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/facebook_icon.png"
                                 alt="フェイスブック" width="29" height="29" loading="lazy">
                         </picture>
                     </a>
                     <a href="https://x.com/kameimind " target="_blank" rel="noopener noreferrer">
                         <picture class="p-footer__sns-img">
                             <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/x_icon.webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/x_icon.png"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/x_icon.webp">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/x_icon.png"
                                 alt="エックス" width="29" height="29" loading="lazy">
                         </picture>
                     </a>
                     <a href="https://www.instagram.com/kamechan_d/ " target="_blank" rel="noopener noreferrer">
                         <picture class="p-footer__sns-img">
                             <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/insta_icon.webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/insta_icon.png"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/insta_icon.webp">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/insta_icon.png"
                                 alt="インスタグラム" width="29" height="29" loading="lazy">
                         </picture>
                     </a>

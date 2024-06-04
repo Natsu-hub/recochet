@@ -13,8 +13,9 @@
                                    class="c-common-download__contact c-common-download__contact--mail">メールでお問い合わせ</a>
                            </li>
                            <li class="c-common-download__item">
-                               <a href="<?php echo DOWNLOAD_URL; ?>"
-                                   class="c-common-download__contact c-common-download__contact--line">LINEでお問い合わせ</a>
+                               <a href="https://line.me/R/ti/p/~kame8823"
+                                   class="c-common-download__contact c-common-download__contact--line" target="_blank"
+                                   rel="noopener noreferrer">LINEでお問い合わせ</a>
                            </li>
                        </ul>
                    </div>

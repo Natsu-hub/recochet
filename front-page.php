@@ -18,12 +18,12 @@ get_header(); ?>
             </div>
         </div>
         <div class="p-top-mv__lead-en p-top-mv__lead-en01">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead01.png" alt="growing up"
-                width="660" height="222" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/mv_lead01.png"
+                alt="growing up" width="660" height="222" loading="lazy">
         </div>
         <div class="p-top-mv__lead-en p-top-mv__lead-en02">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv_lead02.png" alt="everyday"
-                width="731" height="222" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/mv_lead02.png"
+                alt="everyday" width="731" height="222" loading="lazy">
         </div>
     </section>
 
@@ -34,36 +34,36 @@ get_header(); ?>
                 <li class="splide__slide p-splide-img__slide">
                     <picture>
                         <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img01.webp"
+                            srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img01.webp"
                             type="image/webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img01.jpg"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img01.jpg"
                             alt="飲食店で働く人のイメージ写真" width="519" height="127">
                     </picture>
                 </li>
                 <li class="splide__slide p-splide-img__slide">
                     <picture>
                         <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img02.webp"
+                            srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img02.webp"
                             type="image/webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img02.jpg"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img02.jpg"
                             alt="飲食店で働く人のイメージ写真" width="225" height="127">
                     </picture>
                 </li>
                 <li class="splide__slide p-splide-img__slide">
                     <picture>
                         <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img03.webp"
+                            srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img03.webp"
                             type="image/webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img03.jpg"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img03.jpg"
                             alt="飲食店で働く人のイメージ写真" width="519" height="127">
                     </picture>
                 </li>
                 <li class="splide__slide p-splide-img__slide">
                     <picture>
                         <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img04.webp"
+                            srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img04.webp"
                             type="image/webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-slide/mv-slide_img04.jpg"
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/top-slide/mv-slide_img04.jpg"
                             alt="飲食店で働く人のイメージ写真" width="519" height="127">
                     </picture>
                 </li>
@@ -76,7 +76,7 @@ get_header(); ?>
         <div class="p-top-message__inner l-inner">
             <h2 class="p-top-message__title c-title">
                 <picture class="p-top-message__title-en c-title__en">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/message.svg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/message.svg"
                         alt="message" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">『日本の飲食店を元気にする!』</span>
@@ -98,16 +98,17 @@ get_header(); ?>
         <div class="p-top-service__inner l-inner">
             <h2 class="p-top-service__title c-title">
                 <picture class="p-top-service__title-en c-title__en">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service.svg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service.svg"
                         alt="service" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">事業内容</span>
             </h2>
             <div class="p-top-service__box">
                 <picture class="p-top-service__img">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img04.webp"
+                    <source
+                        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img04.webp"
                         type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img04.png"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img04.png"
                         alt="事業内容のイメージイラスト" width="496" height="279" loading="lazy">
                 </picture>
                 <div class="p-top-service__content">
@@ -128,9 +129,9 @@ get_header(); ?>
                     <a href="<?php echo CONSULTING_URL; ?>">
                         <picture class="p-common-service__list-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img01.jpg"
                                 alt="事業コンサルティングのイメージ画像" width="310" height="174" loading="lazy">
                         </picture>
                         <div class="p-common-service__list-title">事業コンサルティング</div>
@@ -145,9 +146,9 @@ get_header(); ?>
                     <a href="<?php echo ACADEMY_URL; ?>">
                         <picture class="p-common-service__list-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img02.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img02.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img02.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img02.jpg"
                                 alt="飲食店ネット通販アカデミーのイメージ画像" width="310" height="174" loading="lazy">
                         </picture>
                         <div class="p-common-service__list-title">飲食店ネット通販アカデミー</div>
@@ -162,9 +163,9 @@ get_header(); ?>
                     <a href="<?php echo WELL_URL; ?>">
                         <picture class="p-common-service__list-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img03.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img03.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img03.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img03.jpg"
                                 alt="発展途上国の教育支援のイメージ画像" width="310" height="174" loading="lazy">
                         </picture>
                         <div class="p-common-service__list-title">発展途上国の教育支援</div>
@@ -186,7 +187,7 @@ get_header(); ?>
         <div class="p-top-case-study__inner">
             <h2 class="p-top-case-study__title c-title">
                 <picture class="p-top-case-study__title-en c-title__en">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/case-study.svg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/case-study.svg"
                         alt="case study" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">リコシェのコンサル効果</span>
@@ -200,6 +201,8 @@ get_header(); ?>
                         $args = [
                             'post_type' => 'case-study',
                             'posts_per_page' => 5,
+                            'orderby' => 'date',  // 追加
+                            'order' => 'DESC',    // 追加
                         ];
                         $the_query01 = new WP_Query($args);
                         if ($the_query01->have_posts()) :
@@ -251,16 +254,17 @@ get_header(); ?>
         <div class="p-top-well__inner l-inner">
             <h2 class="p-top-well__title c-title">
                 <picture class="p-top-well__title-en c-title__en">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/well-being.svg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/well-being.svg"
                         alt="well-being" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">SDGsの取り組み</span>
             </h2>
             <div class="p-top-well__box">
                 <picture class="p-top-well__img">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/well_img01.webp"
+                    <source
+                        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/well_img01.webp"
                         type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/well_img01.jpg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/well_img01.jpg"
                         alt="SDGsの取り組みのイメージ画像" width="701" height="497" loading="lazy">
                 </picture>
                 <div class="p-top-well__content">
@@ -283,7 +287,7 @@ get_header(); ?>
         <div class="p-top-company__inner l-inner">
             <h2 class="p-top-company__title c-title">
                 <picture class="p-top-company__title-en c-title__en">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/company.svg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/company.svg"
                         alt="company" width="160" height="98" loading="lazy">
                 </picture>
                 <span class="c-title__ja">会社概要</span>

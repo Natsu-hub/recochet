@@ -162,20 +162,18 @@
 
 .p-splide-img__list {}
 
-// .p-splide-img__slide {
-//     max-width: 100%;
-//     height: auto;
-//     display: block;
-// }
+.p-splide-img__slide {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-// .p-splide-img__slide picture {
-//     display: block;
-//     height: auto;
-// }
+.p-splide-img__slide picture {
+    display: block;
+    height: auto;
+}
 
-// .p-splide-img__slide img {
-//     object-fit: contain;
-//     height: auto;
-// }
-
-
+.p-splide-img__slide img {
+    object-fit: contain;
+    height: auto;
+}

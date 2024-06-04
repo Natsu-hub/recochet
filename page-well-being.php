@@ -11,7 +11,7 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--well">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well-being-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well-being-white.svg"
                     alt="well being" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title10">
@@ -55,9 +55,9 @@ $page_slug = $post->post_name;
                     <li class="p-well-being__item" id="well-being01">
                         <picture class="p-well-being__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.jpg"
                                 alt="発展途上国の教育支援のイメージ画像" width="700" height="395" loading="lazy">
                         </picture>
                         <div class="p-well-being__item-content">
@@ -71,9 +71,9 @@ $page_slug = $post->post_name;
                     <li class="p-well-being__item" id="well-being02">
                         <picture class="p-well-being__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.jpg"
                                 alt="食糧廃棄率の削減のイメージ画像" width="700" height="395" loading="lazy">
                         </picture>
                         <div class="p-well-being__item-content">
@@ -87,9 +87,9 @@ $page_slug = $post->post_name;
                     <li class="p-well-being__item" id="well-being03">
                         <picture class="p-well-being__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.jpg"
                                 alt="アフリカのコーヒー農業の支援のイメージ画像" width="700" height="395" loading="lazy">
                         </picture>
                         <div class="p-well-being__item-content">
@@ -103,9 +103,9 @@ $page_slug = $post->post_name;
                     <li class="p-well-being__item" id="well-being04">
                         <picture class="p-well-being__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.jpg"
                                 alt="被災地への支援のイメージ画像" width="700" height="395" loading="lazy">
                         </picture>
                         <div class="p-well-being__item-content">
@@ -119,9 +119,9 @@ $page_slug = $post->post_name;
                     <li class="p-well-being__item" id="well-being05">
                         <picture class="p-well-being__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.jpg"
                                 alt="フードリボンのイメージ画像" width="700" height="395" loading="lazy">
                         </picture>
                         <div class="p-well-being__item-content">
@@ -135,9 +135,9 @@ $page_slug = $post->post_name;
                     <li class="p-well-being__item" id="well-being06">
                         <picture class="p-well-being__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/well_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/well_img01.jpg"
                                 alt="SPAのイメージ画像" width="700" height="395" loading="lazy">
                         </picture>
                         <div class="p-well-being__item-content">

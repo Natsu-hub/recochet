@@ -23,11 +23,3 @@ define('CONTACT_URL', home_url('/contact/'));
 define('DOWNLOAD_URL', home_url('/download/'));
 define('MEETING_URL', home_url('/meeting/'));
 define('PRIVACY_URL', home_url('/privacy-policy/'));
-
-
-
-define('BLOG_URL', home_url('/blog/'));
-define('WORKS_URL', home_url('/works/'));
-define('RECRUIT_URL', home_url('/recruit/'));
-// define('CONSULTING_URL', home_url('/service-consulting/'));
-// define('ACADEMY_URL', home_url('/service-academy/'));

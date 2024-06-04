@@ -116,6 +116,7 @@
 
     @include mq(md) {
         display: flex;
+        align-items: center;
         margin-top: rem(18);
     }
 }
@@ -132,6 +133,9 @@
     width: rem(11);
     height: rem(11);
     border: 1px solid $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p-top-case-study__page.is-active {

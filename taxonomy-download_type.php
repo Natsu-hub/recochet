@@ -3,18 +3,19 @@ get_header();
 ?>
 
 <main class="l-main">
+
     <?php
     $document_explain = get_field('document_explain');
     $document_list = get_field('document_list');
     $download_link = get_field('download_link');
-    $pickup = get_field('pickup');
     ?>
+
 
     <!-- c-below-mv -->
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--download">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/download-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/download-white.svg"
                     alt="download" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title30">

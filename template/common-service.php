@@ -5,9 +5,9 @@
                     <a href="<?php echo CONSULTING_URL; ?>">
                         <picture class="p-common-service__list-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img01.jpg"
                                 alt="事業コンサルティングのイメージ画像" width="310" height="174" loading="lazy">
                         </picture>
                         <div class="p-common-service__list-title">事業コンサルティング</div>
@@ -22,9 +22,9 @@
                     <a href="<?php echo ACADEMY_URL; ?>">
                         <picture class="p-common-service__list-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img02.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img02.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img02.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img02.jpg"
                                 alt="飲食店ネット通販アカデミーのイメージ画像" width="310" height="174" loading="lazy">
                         </picture>
                         <div class="p-common-service__list-title">飲食店ネット通販アカデミー</div>
@@ -39,9 +39,9 @@
                     <a href="<?php echo WELL_URL; ?>">
                         <picture class="p-common-service__list-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img03.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img03.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/service_img03.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/service_img03.jpg"
                                 alt="発展途上国の教育支援のイメージ画像" width="310" height="174" loading="lazy">
                         </picture>
                         <div class="p-common-service__list-title">発展途上国の教育支援</div>

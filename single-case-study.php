@@ -16,7 +16,7 @@ $case_client = get_field('case_client');
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--case">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case-study-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case-study-white.svg"
                     alt="case study" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title10">
@@ -50,14 +50,12 @@ $case_client = get_field('case_client');
                 <div class="p-single-case__main-content">
                     <figure class="p-single-case__main-img">
                         <?php
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail();
-                                    } else {
-                                    ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/common/no-img.png"
+    if (has_post_thumbnail()) {
+        the_post_thumbnail();
+    } else { ?>
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/no-img.png"
                             alt="">
-                        <?php
-                                    } ?>
+                        <?php } ?>
                     </figure>
                     <div class="p-single-case__link-box">
                         <span class="p-single-case__link-label">無料</span>
@@ -82,29 +80,29 @@ $case_client = get_field('case_client');
                         <div class="p-single-case__author-info">
                             <picture class="p-single-case__author-img">
                                 <source
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/case_img01.webp"
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case_img01.webp"
                                     type="image/webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case_img01.jpg"
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case_img01.jpg"
                                     alt="亀井 良真氏の写真" width="117" height="117" loading="lazy">
                             </picture>
                             <div class="p-single-case__author-item">
                                 <div class="p-single-case__author-name">亀井 良真</div>
                                 <ul class="p-single-case__author-sns">
                                     <li class="p-single-case__author-list">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/x-blue.svg"
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/x-blue.svg"
                                             alt="X" width="20" height="20" loading="lazy">
                                         <a href="https://x.com/kameimind " class="p-single-case__author-link"
                                             target="_blank" rel="noopener noreferrer">X</a>
                                     </li>
                                     <li class="p-single-case__author-list">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/facebook-blue.svg"
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/facebook-blue.svg"
                                             alt="Facebook" width="20" height="20" loading="lazy">
                                         <a href="https://www.facebook.com/kameituhan/ "
                                             class="p-single-case__author-link" target="_blank"
                                             rel="noopener noreferrer">Facebook</a>
                                     </li>
                                     <li class="p-single-case__author-list">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/insta-blue.svg"
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/insta-blue.svg"
                                             alt="Instagram" width="20" height="20" loading="lazy">
                                         <a href="https://www.instagram.com/kamechan_d/"
                                             class="p-single-case__author-link" target="_blank"
@@ -139,9 +137,9 @@ $case_client = get_field('case_client');
                                         </div>
                                         <figure class="p-case-related__img">
                                             <?php if (has_post_thumbnail()) {
-                                        the_post_thumbnail();
-                                    } else { ?>
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/common-old/no-img.jpg"
+        the_post_thumbnail();
+    } else { ?>
+                                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/no-img.png"
                                                 alt="">
                                             <?php } ?>
                                         </figure>

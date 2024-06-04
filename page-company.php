@@ -11,7 +11,7 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--company">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/company-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/company-white.svg"
                     alt="company" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title10">
@@ -28,9 +28,9 @@ $page_slug = $post->post_name;
             <h2 class="p-company__title">会社概要</h2>
             <div class="p-company__box">
                 <picture class="p-company__img">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/company_img01.webp"
+                    <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/company_img01.webp"
                         type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/company_img01.jpg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/company_img01.jpg"
                         alt="亀井 良真氏" width="310" height="310" loading="lazy">
                 </picture>
                 <div class="p-company__message">僕は飲食店を経営する両親の元で育てられ、小さい規模ながらも飲食店経営をしてきました。<br>

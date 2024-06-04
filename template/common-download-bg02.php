@@ -8,7 +8,7 @@
                         class="c-common-download__contact c-common-download__contact--mail">メールでお問い合わせ</a>
                 </li>
                 <li class="c-common-download__item">
-                    <a href="https://line.me/R/ti/p/kame8823"
+                    <a href="https://line.me/R/ti/p/~kame8823"
                         class="c-common-download__contact c-common-download__contact--line" target="_blank"
                         rel="noopener noreferrer">LINEでお問い合わせ</a>
                 </li>

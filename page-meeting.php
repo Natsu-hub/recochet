@@ -11,7 +11,7 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--meeting">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/meeting-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/meeting-white.svg"
                     alt="meeting" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title10">

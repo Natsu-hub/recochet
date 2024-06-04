@@ -4,7 +4,7 @@
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--404">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/404-white.svg" alt="404"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/404-white.svg" alt="404"
                     width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title30">

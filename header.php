@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
-    <meta name="viewport" content="width=device-width,initiascale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content="noindex">
 
@@ -11,7 +11,7 @@
     <!-- <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/icon-192x192.png">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"> -->
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/favicon.ico"> -->
     <?php wp_head(); ?>
 </head>
 
@@ -23,15 +23,16 @@
         <div class="p-header__inner">
             <?php if ( is_front_page() ) : ?>
             <h1 class="p-header__logo">株式会社リコシェ
-                <a href="#body"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg"
+                <a href="#body"><img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo.svg"
                         alt="株式会社リコシェ" width="161" height="61" loading="lazy">
                 </a>
             </h1>
             <?php else : ?>
             <div class="p-header__logo">株式会社リコシェ
                 <a href="<?php echo HOME_URL; ?>"> <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="株式会社リコシェ"
-                        width="161" height="61" loading="lazy">
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo.svg"
+                        alt="株式会社リコシェ" width="161" height="61" loading="lazy">
                 </a>
             </div>
             <?php endif; ?>
@@ -46,7 +47,7 @@
                             <p class="p-header__nav-link">
                                 <span>サービス概要</span>
                                 <picture class="p-header__nav-link-arrow">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-black.svg"
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-black.svg"
                                         alt="" width="11" height="7" loading="lazy">
                                 </picture>
                             </p>
@@ -107,7 +108,7 @@
                                     <a class="p-header__drawer-menu-link <?php if (is_page("consulting")): ?>current<?php endif; ?>"
                                         href="<?php echo CONSULTING_URL; ?>">
                                         <picture class="p-header__drawer-menu-arrow">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-black.svg"
+                                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-black.svg"
                                                 alt="" width="11" height="7" loading="lazy">
                                         </picture>
                                         <span>事業コンサルティング</span>
@@ -117,7 +118,7 @@
                                     <a class="p-header__drawer-menu-link <?php if (is_page("online-shopping-academy")): ?>current<?php endif; ?>"
                                         href="<?php echo ACADEMY_URL; ?>">
                                         <picture class="p-header__drawer-menu-arrow">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-black.svg"
+                                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-black.svg"
                                                 alt="" width="11" height="7" loading="lazy">
                                         </picture>
                                         <span>飲食店ネット通販アカデミー</span>
@@ -146,7 +147,7 @@
                                     <a href="https://m.larosebistro.com/p/r/jZrKvZ19" target="_blank"
                                         rel="noopener noreferrer">
                                         <picture class="c-cta__arrow">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"
                                                 alt="" width="11" height="7" loading="lazy">
                                         </picture>
                                         <p>メールマガジンのご登録</p>
@@ -156,16 +157,16 @@
                             <div class="c-cta__item">
                                 <div class="c-cta__text c-cta__text--mobile">LINEでご相談、お問い合わせ</div>
                                 <div class="c-cta__link">
-                                    <a href="https://line.me/R/ti/p/kame8823" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">
                                         <picture class="c-cta__arrow">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/arrow-white.svg"
+                                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"
                                                 alt="" width="11" height="7" loading="lazy">
                                         </picture>
                                         <picture class="c-cta__icon">
                                             <source
-                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.webp"
+                                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/line_icon.webp"
                                                 type="image/webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/line_icon.png"
+                                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/line_icon.png"
                                                 alt="LINEのアイコン" width="15" height="15" loading="lazy">
                                         </picture>
                                         <p>リコシェ公式ライン</p>

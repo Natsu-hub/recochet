@@ -11,7 +11,7 @@ $page_slug = $post->post_name;
     <section class="c-below-mv">
         <div class="c-below-mv__inner">
             <div class="c-below-mv__sub-title c-below-mv__sub-title--service">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service-mv-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service-mv-white.svg"
                     alt="service" width="152" height="71" loading="lazy">
             </div>
             <h1 class="c-below-mv__title l-title30">
@@ -33,9 +33,9 @@ $page_slug = $post->post_name;
             </h2>
             <div class="p-service-top__body">
                 <picture class="p-service-top__img">
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img01.webp"
+                    <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img01.webp"
                         type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img01.png"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img01.png"
                         alt="悩んでいる男性のイメージイラスト" width="160" height="260" loading="lazy">
                 </picture>
                 <ul class="p-service-top__lists">
@@ -133,15 +133,15 @@ $page_slug = $post->post_name;
                     <li class="p-service-case__item" id="well-being01">
                         <picture class="p-service-case__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img02.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img02.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img02.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img02.jpg"
                                 alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
                         </picture>
                         <div class="p-service-case__item-content">
                             <div class="p-service-case__item-title">
                                 <div class="p-service-case__item-number">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case01.svg"
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case01.svg"
                                         alt="case01" width="67" height="58" loading="lazy">
                                 </div>
                                 <div class="p-service-case__item-lead">
@@ -161,15 +161,15 @@ $page_slug = $post->post_name;
                     <li class="p-service-case__item" id="well-being02">
                         <picture class="p-service-case__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img03.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img03.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img03.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img03.jpg"
                                 alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
                         </picture>
                         <div class="p-service-case__item-content">
                             <div class="p-service-case__item-title">
                                 <div class="p-service-case__item-number">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case02.svg"
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case02.svg"
                                         alt="case02" width="67" height="58" loading="lazy">
                                 </div>
                                 <div class="p-service-case__item-lead">
@@ -189,15 +189,15 @@ $page_slug = $post->post_name;
                     <li class="p-service-case__item" id="well-being03">
                         <picture class="p-service-case__item-img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img04.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img04.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img04.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img04.jpg"
                                 alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
                         </picture>
                         <div class="p-service-case__item-content">
                             <div class="p-service-case__item-title">
                                 <div class="p-service-case__item-number">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/case03.svg"
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case03.svg"
                                         alt="case03" width="67" height="58" loading="lazy">
                                 </div>
                                 <div class="p-service-case__item-lead">
@@ -223,7 +223,7 @@ $page_slug = $post->post_name;
     <section class="p-service">
         <div class="p-service__inner l-inner">
             <div class="p-service__en-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service-white.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service-white.svg"
                     alt="service" width="556" height="362" loading="lazy">
             </div>
             <h2 class="p-service__title">
@@ -242,12 +242,12 @@ $page_slug = $post->post_name;
                     <li class="p-service__item">
                         <picture class="p-service__img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img05-sp.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img05-sp.webp"
                                 type="image/webp" media="(max-width: 768px)">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img05.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img05.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img05.png"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img05.png"
                                 alt="コンサルティングのイメージ画像" width="283" height="206" loading="lazy">
                         </picture>
                         <div class="p-service__content">
@@ -259,12 +259,12 @@ $page_slug = $post->post_name;
                     <li class="p-service__item">
                         <picture class="p-service__img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img06-sp.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img06-sp.webp"
                                 type="image/webp" media="(max-width: 768px)">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img06.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img06.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img06.png"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img06.png"
                                 alt="コンサルティングのイメージ画像" width="283" height="206" loading="lazy">
                         </picture>
                         <div class="p-service__content">
@@ -277,12 +277,12 @@ $page_slug = $post->post_name;
                     <li class="p-service__item">
                         <picture class="p-service__img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img07-sp.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img07-sp.webp"
                                 type="image/webp" media="(max-width: 768px)">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img07.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img07.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img07.png"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img07.png"
                                 alt="コンサルティングのイメージ画像" width="283" height="206" loading="lazy">
                         </picture>
                         <div class="p-service__content">
@@ -301,7 +301,7 @@ $page_slug = $post->post_name;
     <section class="p-service-flow">
         <div class="p-service-flow__inner l-inner">
             <div class="p-service__en-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow-white.svg" alt="flow"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow-white.svg" alt="flow"
                     width="483" height="424" loading="lazy">
             </div>
             <h2 class="p-service-flow__title">ヒアリングから役務提供の流れ
@@ -310,15 +310,15 @@ $page_slug = $post->post_name;
                 <ul class="p-service-flow__items">
                     <li class="p-service-flow__item">
                         <div class="p-service-flow__number">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number01.svg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/number01.svg"
                                 alt="1" width="71" height="71" loading="lazy">
                         </div>
                         <div class="p-service-flow__box">
                             <picture class="p-service-flow__img">
                                 <source
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img09.webp"
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow_img09.webp"
                                     type="image/webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img09.png"
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow_img09.png"
                                     alt="LPからお申し込み" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
@@ -335,15 +335,15 @@ $page_slug = $post->post_name;
                     </li>
                     <li class="p-service-flow__item">
                         <div class="p-service-flow__number">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number02.svg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/number02.svg"
                                 alt="2" width="71" height="71" loading="lazy">
                         </div>
                         <div class="p-service-flow__box">
                             <picture class="p-service-flow__img">
                                 <source
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img02.webp"
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow_img02.webp"
                                     type="image/webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img02.png"
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow_img02.png"
                                     alt="サロンへの招待リンク発行" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
@@ -356,15 +356,15 @@ $page_slug = $post->post_name;
                     </li>
                     <li class="p-service-flow__item">
                         <div class="p-service-flow__number">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/number03.svg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/number03.svg"
                                 alt="3" width="71" height="71" loading="lazy">
                         </div>
                         <div class="p-service-flow__box">
                             <picture class="p-service-flow__img">
                                 <source
-                                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img08.webp"
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow_img08.webp"
                                     type="image/webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/flow_img08.png"
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/flow_img08.png"
                                     alt="飲食店ネット通販アカデミーへご参加" width="273" height="154" loading="lazy">
                             </picture>
                             <div class="p-service-flow__content">
@@ -385,7 +385,7 @@ $page_slug = $post->post_name;
     <section class="p-service-voice">
         <div class="p-service-voice__inner l-inner">
             <div class="p-service__en-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice-white.svg" alt="case"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice-white.svg" alt="case"
                     width="369" height="396" loading="lazy">
             </div>
             <h2 class="p-service-voice__title">
@@ -398,9 +398,9 @@ $page_slug = $post->post_name;
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img01.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img01.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img01.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img01.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
@@ -414,9 +414,9 @@ $page_slug = $post->post_name;
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img02.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img02.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img02.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img02.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
@@ -430,9 +430,9 @@ $page_slug = $post->post_name;
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img03.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img03.webp"
                                 type="image/webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/voice_img03.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img03.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
@@ -452,7 +452,7 @@ $page_slug = $post->post_name;
     <section class="p-service-price--online">
         <div class="p-service-price--online__inner">
             <div class="p-service__en-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/price-white.svg" alt="price"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/price-white.svg" alt="price"
                     width="415" height="362" loading="lazy">
             </div>
             <h2 class="p-service-price--online__title c-service-title">飲食店ネット通販アカデミー<br class="u-mobile">ご参加料金
