@@ -2,31 +2,36 @@
 
 
 .p-service-case {
-    overflow: hidden;
-    padding-top: rem(83);
-    padding-bottom: rem(120);
-    background-color: $white02;
     z-index: -2;
     position: relative;
+}
+
+.p-service-case__bg {
+    overflow: hidden;
+    background-color: $white02;
+    padding-top: rem(83);
+    padding-bottom: rem(80);
 
     @include mq(md) {
         padding-top: rem(40);
-        padding-bottom: rem(100);
+        padding-bottom: rem(40);
     }
 }
 
-.p-service-case::after {
+.p-service-case::before {
     content: "";
     position: absolute;
     height: rem(50);
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: $white;
-    clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+    bottom: rem(-49);
+    background-color: $white02;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
 
     @include mq(md) {
         height: rem(40);
+        bottom: rem((-39));
     }
 }
 

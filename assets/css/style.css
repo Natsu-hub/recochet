@@ -2430,19 +2430,23 @@ span.wpcf7-spinner {
 }
 
 .p-service-case {
-	background-color: #F1F1F1;
-	overflow: hidden;
-	padding-bottom: 7.5rem;
-	padding-top: 5.1875rem;
 	position: relative;
 	z-index: -2;
 }
 
-.p-service-case::after {
-	-webkit-clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
-	background-color: #fff;
+.p-service-case__bg {
+	background-color: #F1F1F1;
+	overflow: hidden;
+	padding-bottom: 5rem;
+	padding-top: 5.1875rem;
+}
+
+.p-service-case::before {
+	-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+	background-color: #F1F1F1;
 	bottom: 0;
-	clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+	bottom: -3.0625rem;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
 	content: "";
 	height: 3.125rem;
 	left: 0;
@@ -2732,36 +2736,50 @@ span.wpcf7-spinner {
 .p-service-merit {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #F1F1F1));
 	background: linear-gradient(to bottom, #fff 50%, #F1F1F1 50%);
+	position: relative;
+}
+
+.p-service-merit::before {
+	-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+	background-color: #fff;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	content: "";
+	height: 3.25rem;
+	left: 0;
+	position: absolute;
+	top: -0.125rem;
+	width: 100%;
+	z-index: 10;
 }
 
 .p-service-merit__bg {
-	background: url(../images/below/service_bg01.png) center center/cover no-repeat;
-	padding-bottom: 5.75rem;
+	background: url(../images/below/service_bg01.png) center bottom/cover no-repeat;
+	padding-bottom: 5.5rem;
 	padding-top: 9.5rem;
 	position: relative;
 }
 
 .p-service-merit__bg::before,
 .p-service-merit__bg::after {
+	background-color: #F1F1F1;
+	bottom: -0.125rem;
 	content: "";
-	height: 3.125rem;
-	left: 0;
+	height: 3.25rem;
 	position: absolute;
-	width: 100%;
+	width: 50%;
+	z-index: 10;
 }
 
 .p-service-merit__bg::before {
-	-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
-	background-color: #fff;
-	clip-path: polygon(50% 100%, 0 0, 100% 0);
-	top: -1px;
+	-webkit-clip-path: polygon(100% 100%, 0 0, 0 100%);
+	clip-path: polygon(100% 100%, 0 0, 0 100%);
+	left: 0;
 }
 
 .p-service-merit__bg::after {
-	-webkit-clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
-	background-color: #F1F1F1;
-	bottom: 0;
-	clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+	-webkit-clip-path: polygon(100% 100%, 100% 0, 0 100%);
+	clip-path: polygon(100% 100%, 100% 0, 0 100%);
+	right: 0;
 }
 
 .p-service-merit__sub-title {
@@ -3449,7 +3467,7 @@ span.wpcf7-spinner {
 }
 
 .p-service {
-	padding-top: 1.875rem;
+	padding-top: 5rem;
 }
 
 .p-service__en-title {
@@ -5314,6 +5332,11 @@ html {
 	padding: 1.25rem 1.5625rem;
 }
 
+.p-service-merit__bg::before,
+.p-service-merit__bg::after {
+	bottom: -1px;
+}
+
 .u-pc {
 	display: none;
 }
@@ -6020,12 +6043,13 @@ textarea {
 	margin-top: 0;
 }
 
-.p-service-case {
-	padding-bottom: 6.25rem;
+.p-service-case__bg {
+	padding-bottom: 2.5rem;
 	padding-top: 2.5rem;
 }
 
-.p-service-case::after {
+.p-service-case::before {
+	bottom: -2.4375rem;
 	height: 2.5rem;
 }
 
@@ -6216,14 +6240,19 @@ textarea {
 	max-width: 25rem;
 }
 
+.p-service-merit::before {
+	height: 2.5rem;
+}
+
 .p-service-merit__bg {
-	background: url(../images/below/service_bg01-sp.png) center center/cover no-repeat;
+	background: url(../images/below/service_bg01-sp.png) center bottom/cover no-repeat;
 	padding-bottom: 4.375rem;
 	padding-top: 4.9375rem;
 }
 
 .p-service-merit__bg::before,
 .p-service-merit__bg::after {
+	bottom: 0;
 	height: 2.5rem;
 }
 

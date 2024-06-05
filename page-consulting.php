@@ -129,94 +129,97 @@ $page_slug = $post->post_name;
 
     <!-- p-service-case -->
     <div class="p-service-case">
-        <div class="p-service-case__inner l-inner">
-            <div class="p-service-case__body">
-                <ul class="p-service-case__items">
-                    <li class="p-service-case__item" id="well-being01">
-                        <picture class="p-service-case__item-img">
-                            <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img02.webp"
-                                type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img02.jpg"
-                                alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
-                        </picture>
-                        <div class="p-service-case__item-content">
-                            <div class="p-service-case__item-title">
-                                <div class="p-service-case__item-number">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case01.svg"
-                                        alt="case01" width="67" height="58" loading="lazy">
-                                </div>
-                                <div class="p-service-case__item-lead">
-                                    <div class="p-service-case__item-sub-lead">和歌山県のイタリアンレストラン
+        <div class="p-service-case__bg">
+            <div class="p-service-case__inner l-inner">
+                <div class="p-service-case__body">
+                    <ul class="p-service-case__items">
+                        <li class="p-service-case__item" id="well-being01">
+                            <picture class="p-service-case__item-img">
+                                <source
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img02.webp"
+                                    type="image/webp">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img02.jpg"
+                                    alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
+                            </picture>
+                            <div class="p-service-case__item-content">
+                                <div class="p-service-case__item-title">
+                                    <div class="p-service-case__item-number">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case01.svg"
+                                            alt="case01" width="67" height="58" loading="lazy">
                                     </div>
-                                    <div class="p-service-case__item-main-lead">目標月商<br class="u-desktop">300万円を達成！
+                                    <div class="p-service-case__item-lead">
+                                        <div class="p-service-case__item-sub-lead">和歌山県のイタリアンレストラン
+                                        </div>
+                                        <div class="p-service-case__item-main-lead">目標月商<br class="u-desktop">300万円を達成！
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="p-service-case__item-text">
+                                    いずれ飲食店を辞めたいと思っていたところから、「バスクチーズケーキ」の通販を始めることにしました。<br>
+                                    特性に合ったモールを提案してもらい、問題点の答えを教えていただいたおかげで、目標だった月商300万円を達成。<br>
+                                    コンサルを受ける中で、マインドセットが前向きになったのも良かった点です。
+                                </p>
                             </div>
-                            <p class="p-service-case__item-text">
-                                いずれ飲食店を辞めたいと思っていたところから、「バスクチーズケーキ」の通販を始めることにしました。<br>
-                                特性に合ったモールを提案してもらい、問題点の答えを教えていただいたおかげで、目標だった月商300万円を達成。<br>
-                                コンサルを受ける中で、マインドセットが前向きになったのも良かった点です。
-                            </p>
-                        </div>
-                    </li>
-                    <li class="p-service-case__item" id="well-being02">
-                        <picture class="p-service-case__item-img">
-                            <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img03.webp"
-                                type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img03.jpg"
-                                alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
-                        </picture>
-                        <div class="p-service-case__item-content">
-                            <div class="p-service-case__item-title">
-                                <div class="p-service-case__item-number">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case02.svg"
-                                        alt="case02" width="67" height="58" loading="lazy">
-                                </div>
-                                <div class="p-service-case__item-lead">
-                                    <div class="p-service-case__item-sub-lead">岐阜県のピザ屋さん
+                        </li>
+                        <li class="p-service-case__item" id="well-being02">
+                            <picture class="p-service-case__item-img">
+                                <source
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img03.webp"
+                                    type="image/webp">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img03.jpg"
+                                    alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
+                            </picture>
+                            <div class="p-service-case__item-content">
+                                <div class="p-service-case__item-title">
+                                    <div class="p-service-case__item-number">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case02.svg"
+                                            alt="case02" width="67" height="58" loading="lazy">
                                     </div>
-                                    <div class="p-service-case__item-main-lead">月商ではなく、<br class="u-desktop">日商100万円達成！
+                                    <div class="p-service-case__item-lead">
+                                        <div class="p-service-case__item-sub-lead">岐阜県のピザ屋さん
+                                        </div>
+                                        <div class="p-service-case__item-main-lead">月商ではなく、<br
+                                                class="u-desktop">日商100万円達成！
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="p-service-case__item-text">
+                                    店舗営業の弊害、商圏という枠を抜け、全国の人に店舗ピザを知ってもらいたかったので通販を始めました。<br>
+                                    コンサルを受けAmazonにてブラックフライデー販売をすると、月商ではなく日商100万円を達成。<br>
+                                    店舗で暇な時もピコンピコンとスマホに注文の通知がくるようになり、何もしなくても売上が上がっていくのが楽しくなりました。
+                                </p>
                             </div>
-                            <p class="p-service-case__item-text">
-                                店舗営業の弊害、商圏という枠を抜け、全国の人に店舗ピザを知ってもらいたかったので通販を始めました。<br>
-                                コンサルを受けAmazonにてブラックフライデー販売をすると、月商ではなく日商100万円を達成。<br>
-                                店舗で暇な時もピコンピコンとスマホに注文の通知がくるようになり、何もしなくても売上が上がっていくのが楽しくなりました。
-                            </p>
-                        </div>
-                    </li>
-                    <li class="p-service-case__item" id="well-being03">
-                        <picture class="p-service-case__item-img">
-                            <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img04.webp"
-                                type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img04.jpg"
-                                alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
-                        </picture>
-                        <div class="p-service-case__item-content">
-                            <div class="p-service-case__item-title">
-                                <div class="p-service-case__item-number">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case03.svg"
-                                        alt="case03" width="67" height="58" loading="lazy">
-                                </div>
-                                <div class="p-service-case__item-lead">
-                                    <div class="p-service-case__item-sub-lead">IT企業勤めから飲食の通販を開始
+                        </li>
+                        <li class="p-service-case__item" id="well-being03">
+                            <picture class="p-service-case__item-img">
+                                <source
+                                    srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img04.webp"
+                                    type="image/webp">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/service_img04.jpg"
+                                    alt="飲食店で働く人のイメージ画像" width="683" height="385" loading="lazy">
+                            </picture>
+                            <div class="p-service-case__item-content">
+                                <div class="p-service-case__item-title">
+                                    <div class="p-service-case__item-number">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/case03.svg"
+                                            alt="case03" width="67" height="58" loading="lazy">
                                     </div>
-                                    <div class="p-service-case__item-main-lead"><span>クラウドファンディングで</span><br
-                                            class="u-desktop">800万円達成！
+                                    <div class="p-service-case__item-lead">
+                                        <div class="p-service-case__item-sub-lead">IT企業勤めから飲食の通販を開始
+                                        </div>
+                                        <div class="p-service-case__item-main-lead"><span>クラウドファンディングで</span><br
+                                                class="u-desktop">800万円達成！
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="p-service-case__item-text">
+                                    IT企業が本業でしたが、美味しいもの好きというのもあり、飲食を通じて本当に美味しいものを提供したいと思いコンサルを受けることを決めました。<br>
+                                    通販の基本的なことや結果を出す上で、結果を出すうんぬんというより成功するための本質的な考え方や概念を学ぶことができました。
+                                </p>
                             </div>
-                            <p class="p-service-case__item-text">
-                                IT企業が本業でしたが、美味しいもの好きというのもあり、飲食を通じて本当に美味しいものを提供したいと思いコンサルを受けることを決めました。<br>
-                                通販の基本的なことや結果を出す上で、結果を出すうんぬんというより成功するための本質的な考え方や概念を学ぶことができました。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -563,7 +566,8 @@ $page_slug = $post->post_name;
             <div class="p-service-price__body">
                 <div class="p-service-price__label">
                     <p class="p-service-price__label30">初期費用</p>
-                    <p class="p-service-price__label36">30,000円<span class="p-service-price__label18">（税抜）</span></p>
+                    <p class="p-service-price__label36">30,000円<span class="p-service-price__label18">（税抜）</span>
+                    </p>
                 </div>
                 <div class="p-service-price__box">
                     <p class="p-service-price__label30">月額費用<span class="p-service-price__label18">（半年更新）</span></p>

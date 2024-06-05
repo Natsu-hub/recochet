@@ -28,7 +28,8 @@ $page_slug = $post->post_name;
             <h2 class="p-company__title">会社概要</h2>
             <div class="p-company__box">
                 <picture class="p-company__img">
-                    <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/company_img01.webp"
+                    <source
+                        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/company_img01.webp"
                         type="image/webp">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/company_img01.jpg"
                         alt="亀井 良真氏" width="310" height="310" loading="lazy">
@@ -115,8 +116,11 @@ $page_slug = $post->post_name;
             </div>
         </div>
     </section>
-    <!-- p-common-service -->
+    <!-- template/common-service -->
     <?php get_template_part('template/common-service'); ?>
+
+    <!-- template/common-download -->
+    <?php get_template_part('template/common-download'); ?>
 
 
 

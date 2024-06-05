@@ -2,45 +2,69 @@
 
 .p-service-merit {
     background: linear-gradient(to bottom, $white 50%, $white02 50%);
-}
-
-.p-service-merit__bg {
     position: relative;
-    padding-top: rem(152);
-    padding-bottom: rem(92);
-    background: url(../images/below/service_bg01.png) center center / cover no-repeat;
-
-    @include mq(md) {
-        padding-top: rem(79);
-        padding-bottom: rem(70);
-        background: url(../images/below/service_bg01-sp.png) center center / cover no-repeat;
-
-    }
 }
 
-.p-service-merit__bg::before,
-.p-service-merit__bg::after {
+.p-service-merit::before {
     content: "";
     position: absolute;
-    height: rem(50);
+    height: rem(52);
     width: 100%;
     left: 0;
+    top: rem(-2);
+    background-color: $white;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    z-index: 10;
 
     @include mq(md) {
         height: rem(40);
     }
 }
 
+
+.p-service-merit__bg {
+    position: relative;
+    padding-top: rem(152);
+    padding-bottom: rem(88);
+    background: url(../images/below/service_bg01.png) center bottom / cover no-repeat;
+
+    @include mq(md) {
+        padding-top: rem(79);
+        padding-bottom: rem(70);
+        background: url(../images/below/service_bg01-sp.png) center bottom / cover no-repeat;
+
+    }
+}
+
+
+.p-service-merit__bg::before,
+.p-service-merit__bg::after {
+    content: "";
+    position: absolute;
+    height: rem(52);
+    width: 50%;
+    bottom: rem(-2);
+    z-index: 10;
+    background-color: $white02;
+
+    @include mq('lg') {
+        bottom: -1px;
+    }
+
+    @include mq(md) {
+        height: rem(40);
+        bottom: 0;
+    }
+}
+
 .p-service-merit__bg::before {
-    top: -1px;
-    background-color: $white;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    left: 0;
+    clip-path: polygon(100% 100%, 0 0, 0 100%);
 }
 
 .p-service-merit__bg::after {
-    bottom: 0;
-    background-color: $white02;
-    clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+    right: 0;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
 }
 
 .p-service-merit__sub-title {

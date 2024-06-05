@@ -155,8 +155,12 @@ $case_client = get_field('case_client');
         </div>
     </div>
 
-    <!-- 事業内容 -->
+    <!-- template/common-service -->
     <?php get_template_part('template/common-service'); ?>
+
+
+    <!-- template/common-download -->
+    <?php get_template_part('template/common-download'); ?>
 
 </main>
 <?php get_footer(); ?>
