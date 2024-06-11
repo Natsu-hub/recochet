@@ -89,15 +89,9 @@ $case_client = get_field('case_client');
                                 <div class="p-single-case__author-name">亀井 良真</div>
                                 <ul class="p-single-case__author-sns">
                                     <li class="p-single-case__author-list">
-                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/x-blue.svg"
-                                            alt="X" width="20" height="20" loading="lazy">
-                                        <a href="https://x.com/kameimind " class="p-single-case__author-link"
-                                            target="_blank" rel="noopener noreferrer">X</a>
-                                    </li>
-                                    <li class="p-single-case__author-list">
                                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/facebook-blue.svg"
                                             alt="Facebook" width="20" height="20" loading="lazy">
-                                        <a href="https://www.facebook.com/kameituhan/ "
+                                        <a href="https://www.facebook.com/kameituhan/"
                                             class="p-single-case__author-link" target="_blank"
                                             rel="noopener noreferrer">Facebook</a>
                                     </li>

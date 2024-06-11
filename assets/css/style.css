@@ -4122,10 +4122,10 @@ span.wpcf7-spinner {
 	display: -ms-grid;
 	display: grid;
 	gap: 1.25rem;
-	-ms-grid-columns: (1fr)[3];
-	grid-template-columns: repeat(3, 1fr);
+	-ms-grid-columns: (1fr)[2];
+	grid-template-columns: repeat(2, 1fr);
 	margin-top: 1.5rem;
-	max-width: 12.25rem;
+	max-width: 7.75rem;
 	width: 100%;
 }
 

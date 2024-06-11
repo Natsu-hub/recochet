@@ -8,10 +8,10 @@
     <meta name="robots" content="noindex">
 
     <!-- icon -->
-    <!-- <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/icon-192x192.png">
-    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/favicon.ico"> -->
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/favicon.ico">
     <?php wp_head(); ?>
 </head>
 
@@ -63,7 +63,7 @@
                             </ul>
                         </li>
                         <li class="p-header__nav-item">
-                            <a class="p-header__nav-link <?php if (is_archive("case-study")): ?>current<?php endif; ?>"
+                            <a class="p-header__nav-link <?php if (is_post_type_archive("case-study") || is_singular("case-study")): ?>current<?php endif; ?>"
                                 href="<?php echo CASE_URL; ?>">コンサルの効果</a>
                         </li>
                         <li class="p-header__nav-item">
@@ -127,7 +127,7 @@
                             </ul>
                         </li>
                         <li class="p-header__drawer-item">
-                            <a class="p-header__drawer-link <?php if (is_archive("case-study")): ?>current<?php endif; ?>"
+                            <a class="p-header__drawer-link <?php if (is_post_type_archive("case-study") || is_singular("case-study")): ?>current<?php endif; ?>"
                                 href="<?php echo CASE_URL; ?>">コンサルの効果</a>
                         </li>
                         <li class="p-header__drawer-item">
@@ -157,7 +157,8 @@
                             <div class="c-cta__item">
                                 <div class="c-cta__text c-cta__text--mobile">LINEでご相談、お問い合わせ</div>
                                 <div class="c-cta__link">
-                                    <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://line.me/R/ti/p/~kame8823" target="_blank"
+                                        rel="noopener noreferrer">
                                         <picture class="c-cta__arrow">
                                             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"
                                                 alt="" width="11" height="7" loading="lazy">

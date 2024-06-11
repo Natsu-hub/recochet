@@ -155,11 +155,11 @@
 
 .p-footer__sns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: rem(20);
     margin-top: rem(24);
     width: 100%;
-    max-width: rem(196);
+    max-width: rem(124);
 
     @include mq(md) {
         order: 20;

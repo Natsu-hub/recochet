@@ -153,7 +153,7 @@
                     </li>
                 </ul>
                 <div class="p-footer__sns">
-                    <a href="https://www.facebook.com/kameituhan/ " target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/kameituhan/" target="_blank" rel="noopener noreferrer">
                         <picture class="p-footer__sns-img">
                             <source type="image/webp"
                                 srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/facebook_icon.webp">
@@ -161,15 +161,7 @@
                                 alt="フェイスブック" width="29" height="29" loading="lazy">
                         </picture>
                     </a>
-                    <a href="https://x.com/kameimind " target="_blank" rel="noopener noreferrer">
-                        <picture class="p-footer__sns-img">
-                            <source type="image/webp"
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/x_icon.webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/x_icon.png"
-                                alt="エックス" width="29" height="29" loading="lazy">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/kamechan_d/ " target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/kamechan_d/" target="_blank" rel="noopener noreferrer">
                         <picture class="p-footer__sns-img">
                             <source type="image/webp"
                                 srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/insta_icon.webp">
