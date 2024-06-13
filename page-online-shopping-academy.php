@@ -408,43 +408,45 @@ $page_slug = $post->post_name;
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
-                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__lead">コンサル入会後月商300万円を達成！新たな収入の柱に。</div>
                             <div class="p-service-voice__text">
-                                説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                                企業として一つの柱だけではリスクがあると感じ通販事業を始めましたが、作成しただけでは売れない事を認識。<br>
+                                コンサル入会後、売上ゼロから月商300万円を達成。仕組みを構築していくにはピッタリのコンサルです！
                             </div>
-                            <div class="p-service-voice__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">岐阜県　ピッツェリア　白木様</div>
                         </div>
                     </li>
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img02.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img04.webp"
                                 type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img02.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img04.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
-                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__lead">チャンスは一度。あの時即決して良かったと思っています。</div>
                             <div class="p-service-voice__text">
-                                説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                                コンサル参加から３年、通販なんて個人店でできるわけがないと勝手に思っていたのが初月に全国から50万近く注文をいただき驚きました。「お客様が望むものを売る」それをどうやって見つけだすかを教わり続けています。
                             </div>
-                            <div class="p-service-voice__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">東京都　焼肉　多賀様</div>
                         </div>
                     </li>
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img03.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img05.webp"
                                 type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img03.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img05.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
-                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__lead">お客さんに寄り添う発想ができるようになり、全てが解決。</div>
                             <div class="p-service-voice__text">
-                                説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                                当初は売上補充になればとの割と浅い考えで、どこへ向かうのか見えていない中がむしゃらにやっていました。<br>
+                                コンサルの参加費は安くはないので躊躇するかもしれませんが、今では実にそれ以上の収穫を得ています！
                             </div>
-                            <div class="p-service-voice__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">北海道　ネット通販　根布様</div>
                         </div>
                     </li>
                 </ul>

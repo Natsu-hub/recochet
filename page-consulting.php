@@ -510,11 +510,12 @@ $page_slug = $post->post_name;
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
-                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__lead">コンサル入会後月商300万円を達成！新たな収入の柱に。</div>
                             <div class="p-service-voice__text">
-                                説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                                企業として一つの柱だけではリスクがあると感じ通販事業を始めましたが、作成しただけでは売れない事を認識。<br>
+                                コンサル入会後、売上ゼロから月商300万円を達成。仕組みを構築していくにはピッタリのコンサルです！
                             </div>
-                            <div class="p-service-voice__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">岐阜県　ピッツェリア　白木様</div>
                         </div>
                     </li>
                     <li class="p-service-voice__item">
@@ -526,11 +527,11 @@ $page_slug = $post->post_name;
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
-                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__lead">最新情報を得ながら商品を作り、事業の基盤も再構築！</div>
                             <div class="p-service-voice__text">
-                                説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                                コンサル前は通販の商品を作る事が出来ず動く事ができませんでした。亀井さんとメンバーの皆さんのお話を聞き特別な環境に身を置く事で、保健所の許可やAmazon出店、ECサイト制作など自分の殻を破ることができました！
                             </div>
-                            <div class="p-service-voice__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">大阪府　フレンチ　奥野様</div>
                         </div>
                     </li>
                     <li class="p-service-voice__item">
@@ -542,11 +543,12 @@ $page_slug = $post->post_name;
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
-                            <div class="p-service-voice__lead">これまで大変だった〇〇〇〇が〇〇〇〇になりました！</div>
+                            <div class="p-service-voice__lead">仲間がいるという心強さと、人生レベルで学びを得る場所</div>
                             <div class="p-service-voice__text">
-                                説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストが入ります説明テキストす説明テキストが入ります説明テキストが入ります説明テキストが入ります。
+                                以前は不安・思考停止・迷い・自己否定などマインドが下がっていて藁にもすがる状態でのコンサル参加でした。<br>
+                                今ではここで得た仲間たちと共に、自分の中に積み上がるものがあると確信しています。コンサル最高です！
                             </div>
-                            <div class="p-service-voice__name">〇〇業界　K様</div>
+                            <div class="p-service-voice__name">東京都　日本料理店　横山様</div>
                         </div>
                     </li>
                 </ul>

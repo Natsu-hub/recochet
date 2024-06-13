@@ -1382,7 +1382,7 @@ body {
 .c-entry-content p {
 	line-height: 1.75;
 	margin-top: 2rem;
-	padding-bottom: 2.5rem;
+	padding-bottom: 0.625rem;
 }
 
 .c-entry-content h3 {
@@ -3681,7 +3681,7 @@ span.wpcf7-spinner {
 }
 
 .p-single-case__btn {
-	margin-top: 0.625rem;
+	margin-top: 3.75rem;
 }
 
 .p-single-case__btn a {
@@ -3693,10 +3693,6 @@ span.wpcf7-spinner {
 .p-single-case__sidebar {
 	margin-left: 1.875rem;
 	padding-bottom: 1.875rem;
-}
-
-.p-single-case__author-title {
-	font-size: 1.125rem;
 }
 
 .p-single-case__author-info {
@@ -5711,8 +5707,7 @@ body {
 }
 
 .c-entry-content p {
-	margin-top: 0.625rem;
-	padding-bottom: 1.25rem;
+	margin-top: 1.25rem;
 }
 
 .c-entry-content h3 {
@@ -6691,10 +6686,6 @@ textarea {
 .p-single-case__sidebar {
 	margin-left: 0;
 	padding-bottom: 0;
-}
-
-.p-single-case__author-title {
-	font-size: 1rem;
 }
 
 .p-single-case__author-img {

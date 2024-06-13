@@ -192,7 +192,7 @@
 }
 
 .p-single-case__btn {
-    margin-top: rem(10);
+    margin-top: rem(60);
 }
 
 .p-single-case__btn a {
@@ -217,14 +217,6 @@
 
 .p-single-case__author-box {
     @include mq(md) {}
-}
-
-.p-single-case__author-title {
-    font-size: rem(18);
-
-    @include mq(md) {
-        font-size: rem(16);
-    }
 }
 
 .p-single-case__author-info {

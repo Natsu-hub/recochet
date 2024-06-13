@@ -75,8 +75,6 @@ $case_client = get_field('case_client');
                 </div>
                 <aside class="p-single-case__sidebar">
                     <div class="p-single-case__author-box">
-                        <div class="p-single-case__author-title">著者情報
-                        </div>
                         <div class="p-single-case__author-info">
                             <picture class="p-single-case__author-img">
                                 <source
