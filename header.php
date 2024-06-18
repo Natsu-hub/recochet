@@ -5,7 +5,6 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="noindex">
 
     <!-- icon -->
     <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
@@ -157,7 +156,7 @@
                             <div class="c-cta__item">
                                 <div class="c-cta__text c-cta__text--mobile">LINEでご相談、お問い合わせ</div>
                                 <div class="c-cta__link">
-                                    <a href="https://line.me/R/ti/p/~kame8823" target="_blank"
+                                    <a href="https://page.line.me/433angvf" target="_blank"
                                         rel="noopener noreferrer">
                                         <picture class="c-cta__arrow">
                                             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"

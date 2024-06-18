@@ -17,7 +17,7 @@
         <div class="c-cta__item">
             <div class="c-cta__text">LINEでご相談、お問い合わせ</div>
             <div class="c-cta__link">
-                <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">
+                <a href="https://page.line.me/433angvf" target="_blank" rel="noopener noreferrer">
                     <picture class="c-cta__arrow">
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/arrow-white.svg"
                             alt="" width="11" height="7" loading="lazy">
@@ -126,7 +126,7 @@
                         </a>
                     </li>
                     <li class="p-footer__nav-item">
-                        <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">公式ライン
+                        <a href="https://page.line.me/433angvf" target="_blank" rel="noopener noreferrer">公式ライン
                         </a>
                     </li>
                     <li class="p-footer__nav-item">
@@ -143,7 +143,7 @@
                         </a>
                     </li>
                     <li class="p-footer__link">
-                        <a href="https://line.me/R/ti/p/~kame8823" target="_blank" rel="noopener noreferrer">公式ライン
+                        <a href="https://page.line.me/433angvf" target="_blank" rel="noopener noreferrer">公式ライン
                         </a>
                     </li>
                     <li class="p-footer__link">

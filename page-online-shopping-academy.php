@@ -419,9 +419,9 @@ $page_slug = $post->post_name;
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img04.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img05.webp"
                                 type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img04.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img05.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
@@ -435,9 +435,9 @@ $page_slug = $post->post_name;
                     <li class="p-service-voice__item">
                         <picture class="p-service-voice__img">
                             <source
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img05.webp"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img06.webp"
                                 type="image/webp">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img05.jpg"
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/below/voice_img06.jpg"
                                 alt="お客様の声" width="220" height="220" loading="lazy">
                         </picture>
                         <div class="p-service-voice__message">
